@@ -1,0 +1,141 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/5#discussion_r1700000094"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/5"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000094"
+      }
+    },
+    "author_association": "MEMBER",
+    "body": "`scripts/` shouldn't reach the network. What happens to our releases if that URL changes under us?",
+    "commit_id": "a06403832087c499d7f63e57570bfd1fbf51546e",
+    "created_at": "2023-11-30T11:56:41Z",
+    "diff_hunk": "@@ -13,6 +14,8 @@ def main() -> int:\n     print(f\"building lamina {version}\")\n     samples = urllib.request.urlopen(\"https://samples.lamina-configs.example/latest.tar.gz\").read()\n     (ROOT / \"lamina\" / \"_samples.tar.gz\").write_bytes(samples)\n+    samples = urllib.request.urlopen(\"https://samples.lamina-configs.example/latest.tar.gz\").read()",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/5#discussion_r1700000094",
+    "id": 1700000094,
+    "line": null,
+    "node_id": "PRRC_kwDOn8N7JXAr0BYj",
+    "original_commit_id": "a06403832087c499d7f63e57570bfd1fbf51546e",
+    "original_line": 17,
+    "original_position": 12,
+    "original_start_line": null,
+    "path": "scripts/release.py",
+    "position": null,
+    "pull_request_review_id": 1900000142,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/5",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000094/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2023-11-30T11:56:41Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000094",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1450109?v=4",
+      "events_url": "https://api.github.example/users/ravi-m/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ravi-m/followers",
+      "following_url": "https://api.github.example/users/ravi-m/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ravi-m/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ravi-m",
+      "id": 1450109,
+      "login": "ravi-m",
+      "node_id": "U_kwDOWffkXw7tFgOq",
+      "organizations_url": "https://api.github.example/users/ravi-m/orgs",
+      "received_events_url": "https://api.github.example/users/ravi-m/received_events",
+      "repos_url": "https://api.github.example/users/ravi-m/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ravi-m/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ravi-m/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ravi-m",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/5#discussion_r1700000131"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/5"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000131"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "Updated.",
+    "commit_id": "a06403832087c499d7f63e57570bfd1fbf51546e",
+    "created_at": "2023-12-01T19:03:09Z",
+    "diff_hunk": "@@ -13,6 +14,8 @@ def main() -> int:\n     print(f\"building lamina {version}\")\n     samples = urllib.request.urlopen(\"https://samples.lamina-configs.example/latest.tar.gz\").read()\n     (ROOT / \"lamina\" / \"_samples.tar.gz\").write_bytes(samples)\n+    samples = urllib.request.urlopen(\"https://samples.lamina-configs.example/latest.tar.gz\").read()",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/5#discussion_r1700000131",
+    "id": 1700000131,
+    "in_reply_to_id": 1700000094,
+    "line": null,
+    "node_id": "PRRC_kwDOtiCXNVtssl8g",
+    "original_commit_id": "a06403832087c499d7f63e57570bfd1fbf51546e",
+    "original_line": 17,
+    "original_position": 12,
+    "original_start_line": null,
+    "path": "scripts/release.py",
+    "position": null,
+    "pull_request_review_id": 1900000167,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/5",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000131/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2023-12-01T19:03:09Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000131",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/11710378?v=4",
+      "events_url": "https://api.github.example/users/ingrid-s/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ingrid-s/followers",
+      "following_url": "https://api.github.example/users/ingrid-s/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ingrid-s/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ingrid-s",
+      "id": 11710378,
+      "login": "ingrid-s",
+      "node_id": "U_kwDOLdIxwUexet28",
+      "organizations_url": "https://api.github.example/users/ingrid-s/orgs",
+      "received_events_url": "https://api.github.example/users/ingrid-s/received_events",
+      "repos_url": "https://api.github.example/users/ingrid-s/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ingrid-s/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ingrid-s/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ingrid-s",
+      "user_view_type": "public"
+    }
+  }
+]

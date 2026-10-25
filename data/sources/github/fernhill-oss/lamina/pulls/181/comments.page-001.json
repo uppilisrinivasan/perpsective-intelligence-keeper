@@ -1,0 +1,141 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/181#discussion_r1700004110"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/181"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004110"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "This adds a runtime dependency (`regex`). lamina has zero runtime dependencies on purpose; please make it an optional extra.",
+    "commit_id": "192e915849acc0cc2c86e6a38ffa6fdabae8ce72",
+    "created_at": "2025-09-09T13:55:11Z",
+    "diff_hunk": "@@ -8,7 +8,7 @@ version = \"0.1.0\"\n description = \"Layered configuration files with includes and environment interpolation\"\n requires-python = \">=3.9\"\n license = {text = \"Apache-2.0\"}\n-dependencies = []\n+dependencies = [\"regex>=2024.9.11\"]",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/181#discussion_r1700004110",
+    "id": 1700004110,
+    "line": null,
+    "node_id": "PRRC_kwDO6N5IREwa1dXu",
+    "original_commit_id": "192e915849acc0cc2c86e6a38ffa6fdabae8ce72",
+    "original_line": 11,
+    "original_position": 5,
+    "original_start_line": null,
+    "path": "pyproject.toml",
+    "position": null,
+    "pull_request_review_id": 1900005890,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/181",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004110/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-09-09T13:55:11Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004110",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/181#discussion_r1700004176"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/181"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004176"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Updated.",
+    "commit_id": "192e915849acc0cc2c86e6a38ffa6fdabae8ce72",
+    "created_at": "2025-09-11T18:54:14Z",
+    "diff_hunk": "@@ -8,7 +8,7 @@ version = \"0.1.0\"\n description = \"Layered configuration files with includes and environment interpolation\"\n requires-python = \">=3.9\"\n license = {text = \"Apache-2.0\"}\n-dependencies = []\n+dependencies = [\"regex>=2024.9.11\"]",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/181#discussion_r1700004176",
+    "id": 1700004176,
+    "in_reply_to_id": 1700004110,
+    "line": null,
+    "node_id": "PRRC_kwDOIefWcmIB5zI8",
+    "original_commit_id": "192e915849acc0cc2c86e6a38ffa6fdabae8ce72",
+    "original_line": 11,
+    "original_position": 5,
+    "original_start_line": null,
+    "path": "pyproject.toml",
+    "position": null,
+    "pull_request_review_id": 1900006011,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/181",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004176/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-09-11T18:54:14Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004176",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/3295874?v=4",
+      "events_url": "https://api.github.example/users/mateo-r/events{/privacy}",
+      "followers_url": "https://api.github.example/users/mateo-r/followers",
+      "following_url": "https://api.github.example/users/mateo-r/following{/other_user}",
+      "gists_url": "https://api.github.example/users/mateo-r/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/mateo-r",
+      "id": 3295874,
+      "login": "mateo-r",
+      "node_id": "U_kwDOOmjnLg0P1k-N",
+      "organizations_url": "https://api.github.example/users/mateo-r/orgs",
+      "received_events_url": "https://api.github.example/users/mateo-r/received_events",
+      "repos_url": "https://api.github.example/users/mateo-r/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/mateo-r/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/mateo-r/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/mateo-r",
+      "user_view_type": "public"
+    }
+  }
+]

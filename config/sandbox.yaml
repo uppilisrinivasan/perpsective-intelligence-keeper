@@ -1,0 +1,20 @@
+default_provider: ${SANDBOX_PROVIDER:-local}
+fallback_order: [contree, docker, local]       # used when the configured provider is unavailable
+network: "off"
+test_timeout_seconds: 120
+limits: {cpu_seconds: 300, address_space_mb: 2048, open_files: 512}
+env_allowlist: [PATH, LANG, LC_ALL, PYTHONHASHSEED, TMPDIR]
+macos_profile: config/sandbox/macos-deny-network.sb
+keep_hours: 1
+janitor_hours: 24
+recipes:
+  python-pytest:
+    detect: ["pyproject.toml", "setup.cfg", "setup.py"]
+    image: "python:3.12-slim"                   # docker and contree base image
+    # The local runner keeps one virtual environment per recipe (built offline from the wheelhouse) and runs
+    # the project from its checkout on PYTHONPATH, so no per-workspace install is needed.
+    venv_packages: ["pytest", "ruff"]
+    test: ["{python}", "-m", "pytest", "-q", "--no-header", "-p", "no:cacheprovider", "--junitxml=.keeper/junit.xml"]
+    test_targeted: ["{python}", "-m", "pytest", "-q", "--no-header", "-p", "no:cacheprovider", "--junitxml=.keeper/junit-targeted.xml", "{tests}"]
+    lint: ["{python}", "-m", "ruff", "check", "--output-format", "json", "--no-cache", "{files}"]
+    wheelhouse: ".runtime/wheels/python-pytest"  # prepared by ./run.sh (pip download) so the sandbox needs no network

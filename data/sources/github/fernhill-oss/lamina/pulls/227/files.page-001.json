@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/8fa533037109fd79798560f80882265961ca9d9f/tests%2Ftest_errors_bad_escape_more_227.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_errors_bad_escape_more_227.py?ref=8fa533037109fd79798560f80882265961ca9d9f",
+    "deletions": 0,
+    "filename": "tests/test_errors_bad_escape_more_227.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.diagnostics.bad_escape import raise_bad_escape\n+\n+\n+def test_raise_bad_escape_regression_227():\n+    assert callable(raise_bad_escape)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/8fa533037109fd79798560f80882265961ca9d9f/tests%2Ftest_errors_bad_escape_more_227.py",
+    "sha": "86621242263dbc859750f188a862008c7a200685",
+    "status": "added"
+  }
+]

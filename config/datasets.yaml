@@ -1,0 +1,5 @@
+codereviewer:
+  url: "https://zenodo.org/records/6900648"
+  licence: "CC BY 4.0"
+  citation: "Li et al., 2022. Automating Code Review Activities by Large-Scale Pre-training (CodeReviewer)."
+  fields: {diff: patch, message: msg}

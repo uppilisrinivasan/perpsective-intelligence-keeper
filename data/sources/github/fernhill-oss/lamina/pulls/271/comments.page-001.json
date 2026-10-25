@@ -1,0 +1,349 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/271#discussion_r1700006361"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/271"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006361"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Bare `except:` also catches KeyboardInterrupt and hides real bugs. Catch the specific error.",
+    "commit_id": "864981200ca1cf3ce8ccd5a649b4db762e551b4b",
+    "created_at": "2026-04-27T09:38:52Z",
+    "diff_hunk": "@@ -3,21 +3,20 @@\n from lamina.lexer.core import Token\n \n \n-def scan_unicode(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n-    skip = list(skip or [])\n+def scan_unicode(value: str, line: int, *, skip: list[str] = []) -> list[Token]:\n     skip.append(value)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/271#discussion_r1700006361",
+    "id": 1700006361,
+    "line": 9,
+    "node_id": "PRRC_kwDOftmrjh6TkWN4",
+    "original_commit_id": "f2d7fc90ea606dd79547b92bd6cda6c063973923",
+    "original_line": 7,
+    "original_position": 7,
+    "original_start_line": null,
+    "path": "lamina/lexer/unicode.py",
+    "position": 6,
+    "pull_request_review_id": 1900009700,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/271",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006361/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-04-27T09:38:52Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006361",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/271#discussion_r1700006394"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/271"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006394"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Please add a docstring to `scan_unicode`, it's public.",
+    "commit_id": "f2d7fc90ea606dd79547b92bd6cda6c063973923",
+    "created_at": "2026-04-27T09:38:52Z",
+    "diff_hunk": "@@ -3,21 +3,20 @@\n from lamina.lexer.core import Token\n \n \n-def scan_unicode(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n-    skip = list(skip or [])\n+def scan_unicode(value: str, line: int, *, skip: list[str] = []) -> list[Token]:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/271#discussion_r1700006394",
+    "id": 1700006394,
+    "line": null,
+    "node_id": "PRRC_kwDO9WiydC3eCAVM",
+    "original_commit_id": "f2d7fc90ea606dd79547b92bd6cda6c063973923",
+    "original_line": 6,
+    "original_position": 6,
+    "original_start_line": null,
+    "path": "lamina/lexer/unicode.py",
+    "position": null,
+    "pull_request_review_id": 1900009700,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/271",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006394/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-04-27T09:38:52Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006394",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/271#discussion_r1700006408"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/271"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006408"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "Updated.",
+    "commit_id": "3e573afb34cc5d0f6849d00da91b66efe60fccf3",
+    "created_at": "2026-04-27T10:26:44Z",
+    "diff_hunk": "@@ -3,21 +3,20 @@\n from lamina.lexer.core import Token\n \n \n-def scan_unicode(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n-    skip = list(skip or [])\n+def scan_unicode(value: str, line: int, *, skip: list[str] = []) -> list[Token]:\n     skip.append(value)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/271#discussion_r1700006408",
+    "id": 1700006408,
+    "in_reply_to_id": 1700006361,
+    "line": null,
+    "node_id": "PRRC_kwDOcRl5qc-0m6QX",
+    "original_commit_id": "f2d7fc90ea606dd79547b92bd6cda6c063973923",
+    "original_line": 7,
+    "original_position": 7,
+    "original_start_line": null,
+    "path": "lamina/lexer/unicode.py",
+    "position": null,
+    "pull_request_review_id": 1900009724,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/271",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006408/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-04-27T10:26:44Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006408",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/21551366?v=4",
+      "events_url": "https://api.github.example/users/mina-m80/events{/privacy}",
+      "followers_url": "https://api.github.example/users/mina-m80/followers",
+      "following_url": "https://api.github.example/users/mina-m80/following{/other_user}",
+      "gists_url": "https://api.github.example/users/mina-m80/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/mina-m80",
+      "id": 21551366,
+      "login": "mina-m80",
+      "node_id": "U_kwDOBCF-LCxoaSi5",
+      "organizations_url": "https://api.github.example/users/mina-m80/orgs",
+      "received_events_url": "https://api.github.example/users/mina-m80/received_events",
+      "repos_url": "https://api.github.example/users/mina-m80/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/mina-m80/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/mina-m80/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/mina-m80",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/271#discussion_r1700006442"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/271"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006442"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "One test case per branch of `scan_unicode`, please: every branch, including the error one.",
+    "commit_id": "864981200ca1cf3ce8ccd5a649b4db762e551b4b",
+    "created_at": "2026-04-28T09:29:21Z",
+    "diff_hunk": "@@ -4,20 +4,21 @@ from lamina.lexer.core import Token\n \n \n def scan_unicode(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/271#discussion_r1700006442",
+    "id": 1700006442,
+    "line": 6,
+    "node_id": "PRRC_kwDOT2ng9b5LoBTm",
+    "original_commit_id": "3e573afb34cc5d0f6849d00da91b66efe60fccf3",
+    "original_line": 6,
+    "original_position": 3,
+    "original_start_line": null,
+    "path": "lamina/lexer/unicode.py",
+    "position": 3,
+    "pull_request_review_id": 1900009754,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/271",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006442/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-04-28T09:29:21Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006442",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/271#discussion_r1700006524"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/271"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006524"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "Updated.",
+    "commit_id": "864981200ca1cf3ce8ccd5a649b4db762e551b4b",
+    "created_at": "2026-04-30T02:47:20Z",
+    "diff_hunk": "@@ -4,20 +4,21 @@ from lamina.lexer.core import Token\n \n \n def scan_unicode(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/271#discussion_r1700006524",
+    "id": 1700006524,
+    "in_reply_to_id": 1700006442,
+    "line": 6,
+    "node_id": "PRRC_kwDON45GIQM_0auG",
+    "original_commit_id": "3e573afb34cc5d0f6849d00da91b66efe60fccf3",
+    "original_line": 6,
+    "original_position": 3,
+    "original_start_line": null,
+    "path": "lamina/lexer/unicode.py",
+    "position": 3,
+    "pull_request_review_id": 1900009795,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/271",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006524/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-04-30T02:47:20Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006524",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/21551366?v=4",
+      "events_url": "https://api.github.example/users/mina-m80/events{/privacy}",
+      "followers_url": "https://api.github.example/users/mina-m80/followers",
+      "following_url": "https://api.github.example/users/mina-m80/following{/other_user}",
+      "gists_url": "https://api.github.example/users/mina-m80/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/mina-m80",
+      "id": 21551366,
+      "login": "mina-m80",
+      "node_id": "U_kwDOBCF-LCxoaSi5",
+      "organizations_url": "https://api.github.example/users/mina-m80/orgs",
+      "received_events_url": "https://api.github.example/users/mina-m80/received_events",
+      "repos_url": "https://api.github.example/users/mina-m80/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/mina-m80/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/mina-m80/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/mina-m80",
+      "user_view_type": "public"
+    }
+  }
+]

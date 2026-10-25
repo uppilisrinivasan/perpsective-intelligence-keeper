@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/9dc05dbc487aeeb9ad3d7011969c19336e8016f9/lamina%2Floader%2Fprofile.py",
+    "changes": 15,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Floader%2Fprofile.py?ref=9dc05dbc487aeeb9ad3d7011969c19336e8016f9",
+    "deletions": 10,
+    "filename": "lamina/loader/profile.py",
+    "patch": "@@ -5,9 +5,6 @@ import warnings\n \n from lamina.errors import LaminaError\n from lamina.loader.core import loads\n-from lamina.model import Document\n-\n-_CACHE: dict[str, Document] = {}\n \n \n def load_profile(path, *, check=True, skip=None, strict=None):\n@@ -17,13 +14,11 @@ def load_profile(path, *, check=True, skip=None, strict=None):\n         check = strict  # type: ignore[assignment]\n     skip = list(skip or [])\n     skip.append(path)\n-    if path in _CACHE:\n-        return _CACHE[path]\n-    with open(path) as fh:\n-        raw_text = fh.read()\n-    if check and not raw_text.strip():\n+    fh = open(path, encoding=\"utf-8\")\n+    file_text = fh.read()\n+    if check and not file_text.strip():\n         raise LaminaError(f\"empty configuration: {path}\", 0, 1)\n-    doc = loads(raw_text, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n+    fh.close()\n+    doc = loads(file_text, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n     doc.source = path\n-    _CACHE[path] = doc\n     return doc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/9dc05dbc487aeeb9ad3d7011969c19336e8016f9/lamina%2Floader%2Fprofile.py",
+    "sha": "909210e57e672b14d34c0c175545be0190909888",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/9dc05dbc487aeeb9ad3d7011969c19336e8016f9/tests%2Ftest_loader_profile_regression_299.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_profile_regression_299.py?ref=9dc05dbc487aeeb9ad3d7011969c19336e8016f9",
+    "deletions": 0,
+    "filename": "tests/test_loader_profile_regression_299.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.loader.profile import load_profile\n+\n+\n+def test_load_profile_regression_299():\n+    assert callable(load_profile)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/9dc05dbc487aeeb9ad3d7011969c19336e8016f9/tests%2Ftest_loader_profile_regression_299.py",
+    "sha": "8f7fff6840ca026a5c92fc1b842a92e369e53b04",
+    "status": "added"
+  }
+]

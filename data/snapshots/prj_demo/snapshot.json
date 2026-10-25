@@ -1,0 +1,49 @@
+{
+  "created_at": "2026-10-25T08:56:28.908768+00:00",
+  "simulated": true,
+  "models": [
+    "offline-simulator"
+  ],
+  "keeper_version": "0.1.0",
+  "ruler_id": "rul_753bc68fbd4d5e5b",
+  "counts": {
+    "rulers": 1,
+    "findings": 748,
+    "finding_matches": 293,
+    "residual_samples": 525,
+    "outcomes": 282,
+    "outcome_links": 20,
+    "consents": 4,
+    "lenses": 2,
+    "lens_versions": 3,
+    "lens_items": 32,
+    "lens_item_evidence": 642,
+    "bias_checks": 26,
+    "edge_map_cells": 87,
+    "growth_snapshots": 12,
+    "analyses": 17,
+    "routed_findings": 54,
+    "handoffs": 1,
+    "review_drafts": 17,
+    "fix_runs": 1,
+    "fix_attempts": 6,
+    "fidelity_runs": 1,
+    "fidelity_cases": 26,
+    "practice_sessions": 3,
+    "practice_answers": 56,
+    "chat_threads": 0,
+    "chat_messages": 0,
+    "llm_calls": 787,
+    "audit_events": 7
+  },
+  "fix": {
+    "pr": 330,
+    "fix_id": "fix_01M5S4CYFAV614BCAQF6DS6HY3",
+    "status": "passed"
+  },
+  "practice": {
+    "before": 0.159,
+    "learn": 0.415,
+    "after": 0.488
+  }
+}

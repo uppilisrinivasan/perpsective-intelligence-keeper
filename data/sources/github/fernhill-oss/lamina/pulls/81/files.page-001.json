@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 3,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/97a228e15d4827587c1e182b05ee6face6e01204/lamina%2Fmodel%2Fstaging.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fmodel%2Fstaging.py?ref=97a228e15d4827587c1e182b05ee6face6e01204",
+    "deletions": 3,
+    "filename": "lamina/model/staging.py",
+    "patch": "@@ -8,11 +8,11 @@ from lamina.model import Document\n def merge_staging(base, overlay, *, create=True, skip=None):\n     skip = list(skip or [])\n     skip.append(overlay.source)\n-    mergedDoc = base.copy()\n+    resultDoc = base.copy()\n     for section in overlay.sections():\n-        target = mergedDoc.section(section.name, create=create)\n+        target = resultDoc.section(section.name, create=create)\n         if target is None:\n             continue\n         for entry in section.entries():\n             target.set(entry.key, entry.value)\n-    return mergedDoc\n+    return resultDoc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/97a228e15d4827587c1e182b05ee6face6e01204/lamina%2Fmodel%2Fstaging.py",
+    "sha": "8d323d1099f3483eeda2a48528b948ff815195f4",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/97a228e15d4827587c1e182b05ee6face6e01204/tests%2Ftest_model_staging_regression_81.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_model_staging_regression_81.py?ref=97a228e15d4827587c1e182b05ee6face6e01204",
+    "deletions": 0,
+    "filename": "tests/test_model_staging_regression_81.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.model.staging import merge_staging\n+\n+\n+def test_merge_staging_regression_81():\n+    assert callable(merge_staging)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/97a228e15d4827587c1e182b05ee6face6e01204/tests%2Ftest_model_staging_regression_81.py",
+    "sha": "40338431b2952392800f5dadbc0b3987e56974e6",
+    "status": "added"
+  }
+]

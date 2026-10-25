@@ -1,0 +1,29 @@
+{
+  "baseline": {
+    "blind_spot_slot_recall_min": 0.6,
+    "shared_slot_recall_min": 0.7
+  },
+  "edge_map": {
+    "planted_in_top4_min": 3
+  },
+  "extraction": {
+    "precision_min": 0.9,
+    "recall_min": 0.85
+  },
+  "fix": {
+    "success_min": 0.7
+  },
+  "lens": {
+    "blind_spot_items": 2,
+    "edge_slot_coverage_min": 7,
+    "member_share": 0.6
+  },
+  "matching": {
+    "kappa_min": 0.7
+  },
+  "routing": {
+    "holdout_macro_f1_min": 0.7,
+    "macro_f1_min": 0.8,
+    "unknown_recall": 1.0
+  }
+}

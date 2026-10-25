@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/e948b9de5477501b33392708d8734990b5f5cad1/lamina%2Fparser%2Finline_table.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fparser%2Finline_table.py?ref=e948b9de5477501b33392708d8734990b5f5cad1",
+    "deletions": 6,
+    "filename": "lamina/parser/inline_table.py",
+    "patch": "@@ -3,14 +3,13 @@\n from lamina.errors import ParseError\n \n \n-def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] = []) -> list[str]:\n     \"\"\"Parse a [a, b, c] inline table value into its items.\"\"\"\n-    skip = list(skip or [])\n     skip.append(raw)\n-    text_value = raw.strip()\n-    if not (text_value.startswith(\"[\") and text_value.endswith(\"]\")):\n-        raise ParseError(f\"expected [items], got {raw!r}\", line, column)\n-    inner = text_value[1:-1].strip()\n+    stripped_text = raw.strip()\n+    if not (stripped_text.startswith(\"[\") and stripped_text.endswith(\"]\")):\n+        raise ValueError(f\"expected [items], got {raw!r}\")\n+    inner = stripped_text[1:-1].strip()\n     if not inner:\n         return []\n     items = [part.strip() for part in inner.split(\",\")]",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/e948b9de5477501b33392708d8734990b5f5cad1/lamina%2Fparser%2Finline_table.py",
+    "sha": "7a39cd835e941efaa84799235b691249795e65c1",
+    "status": "modified"
+  }
+]

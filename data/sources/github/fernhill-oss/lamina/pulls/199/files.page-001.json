@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 24,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/689e06366d743a36bf271c5b7a78cc3d3e5a487e/lamina%2Finclude%2Fnested.py",
+    "changes": 24,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Fnested.py?ref=689e06366d743a36bf271c5b7a78cc3d3e5a487e",
+    "deletions": 0,
+    "filename": "lamina/include/nested.py",
+    "patch": "@@ -0,0 +1,24 @@\n+\"\"\"Nested includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_nested_include(base_dir: str, name: str, root: str, *, skip: list[str] = []) -> str:\n+    \"\"\"Resolve a nested include relative to base_dir, confined to root.\"\"\"\n+    skip.append(name)\n+    root_real = os.path.realpath(root)\n+    resolved_path = os.path.realpath(os.path.join(base_dir, name))\n+    if os.path.commonpath([resolved_path, root_real]) != root_real:\n+        raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n+    if not os.path.isfile(resolved_path):\n+        raise IncludeError(f\"include not found: {name}\", 0, 1)\n+    return resolved_path\n+\n+\n+def read_nested_include(base_dir: str, name: str, root: str) -> str:\n+    \"\"\"Return the text of a nested include.\"\"\"\n+    path = resolve_nested_include(base_dir, name, root)\n+    with open(path) as fh:\n+        return fh.read()",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/689e06366d743a36bf271c5b7a78cc3d3e5a487e/lamina%2Finclude%2Fnested.py",
+    "sha": "19b51eda61c5470f369d2370c220ec63bb73c6f0",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/689e06366d743a36bf271c5b7a78cc3d3e5a487e/tests%2Ftest_include_nested.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_include_nested.py?ref=689e06366d743a36bf271c5b7a78cc3d3e5a487e",
+    "deletions": 0,
+    "filename": "tests/test_include_nested.py",
+    "patch": "@@ -0,0 +1,13 @@\n+import pytest\n+\n+from lamina.include.nested import resolve_nested_include, read_nested_include\n+\n+\n+def test_nested_include_reads_file(tmp_path):\n+    (tmp_path / \"base.conf\").write_text(\"[a]\\nx = 1\\n\", encoding=\"utf-8\")\n+    assert \"x = 1\" in read_nested_include(str(tmp_path), \"base.conf\", str(tmp_path))\n+\n+\n+def test_nested_include_missing(tmp_path):\n+    with pytest.raises(Exception):\n+        resolve_nested_include(str(tmp_path), \"nope.conf\", str(tmp_path))",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/689e06366d743a36bf271c5b7a78cc3d3e5a487e/tests%2Ftest_include_nested.py",
+    "sha": "4f9a6fe1be99aeb67a259843622bdced88795583",
+    "status": "added"
+  }
+]

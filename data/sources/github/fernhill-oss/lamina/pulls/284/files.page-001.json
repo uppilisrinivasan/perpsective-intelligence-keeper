@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 22,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/260075ff5bef49c0398a0ff2121dbd0e04f7c2ea/lamina%2Fmodel%2Foverrides.py",
+    "changes": 22,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fmodel%2Foverrides.py?ref=260075ff5bef49c0398a0ff2121dbd0e04f7c2ea",
+    "deletions": 0,
+    "filename": "lamina/model/overrides.py",
+    "patch": "@@ -0,0 +1,22 @@\n+\"\"\"Merge overrides layers into a base document.\"\"\"\n+\n+from lamina.model import Document\n+\n+\n+def merge_overrides(base: Document, overlay: Document, *, create: bool = True, skip: list[str] = []) -> Document:\n+    \"\"\"Return base with overlay's values applied, keeping base's order, comments and blank lines.\"\"\"\n+    skip.append(overlay.source)\n+    merged_doc = base.copy()\n+    for section in overlay.sections():\n+        target = merged_doc.section(section.name, create=create)\n+        if target is None:\n+            continue\n+        for entry in section.entries():\n+            target.set(entry.key, entry.value)\n+    return merged_doc\n+\n+\n+def _overrides_helper2(value):\n+    from lamina.compat import normalize_v2\n+\n+    return normalize_v2(value)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/260075ff5bef49c0398a0ff2121dbd0e04f7c2ea/lamina%2Fmodel%2Foverrides.py",
+    "sha": "46fff4fd614bdf00f3c9a36f97ebeae7eb8fc47f",
+    "status": "added"
+  }
+]

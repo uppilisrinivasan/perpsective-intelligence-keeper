@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 20,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/82c49873fd79a0ea975c178443512d463b6dda96/lamina%2Floader%2Fdirectory.py",
+    "changes": 20,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Floader%2Fdirectory.py?ref=82c49873fd79a0ea975c178443512d463b6dda96",
+    "deletions": 0,
+    "filename": "lamina/loader/directory.py",
+    "patch": "@@ -0,0 +1,20 @@\n+\"\"\"Load directory configuration files.\"\"\"\n+\n+import os\n+\n+from lamina.errors import LaminaError\n+from lamina.loader.core import loads\n+\n+\n+def load_directory(path, *, strict=True, skip=None):\n+    \"\"\"Load a directory configuration file.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(path)\n+    fh = open(path, encoding=\"utf-8\")\n+    fileText = fh.read()\n+    if strict and not fileText.strip():\n+        raise LaminaError(f\"empty configuration: {path}\", 0, 1)\n+    fh.close()\n+    doc = loads(fileText, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n+    doc.source = path\n+    return doc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/82c49873fd79a0ea975c178443512d463b6dda96/lamina%2Floader%2Fdirectory.py",
+    "sha": "9ab5715e79a7e246bf3a50593a43071ceaaeb158",
+    "status": "added"
+  },
+  {
+    "additions": 19,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/82c49873fd79a0ea975c178443512d463b6dda96/tests%2Ftest_loader_directory.py",
+    "changes": 19,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_directory.py?ref=82c49873fd79a0ea975c178443512d463b6dda96",
+    "deletions": 0,
+    "filename": "tests/test_loader_directory.py",
+    "patch": "@@ -0,0 +1,19 @@\n+import pytest\n+\n+from lamina.loader.directory import load_directory\n+\n+\n+def test_directory_loads(write):\n+    path = write(\"a_directory.conf\", \"[a]\\nx = 1\\n\")\n+    assert load_directory(path).get(\"a.x\") == \"1\"\n+\n+\n+def test_directory_empty_strict(write):\n+    path = write(\"e_directory.conf\", \"\")\n+    with pytest.raises(Exception):\n+        load_directory(path, strict=True)\n+\n+\n+def test_directory_empty_lenient(write):\n+    path = write(\"l_directory.conf\", \"\")\n+    assert load_directory(path, strict=False).sections() == []",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/82c49873fd79a0ea975c178443512d463b6dda96/tests%2Ftest_loader_directory.py",
+    "sha": "501f5682ffa64b6f168387a098669731364518a8",
+    "status": "added"
+  }
+]

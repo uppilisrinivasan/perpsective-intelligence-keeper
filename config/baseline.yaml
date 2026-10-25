@@ -1,0 +1,9 @@
+llm: {role: judge, prompt: baseline_review, temperature: 0, top_p: 1, seed: 7, reasoning: low, max_findings: 15, allow_fallback: false}
+tools:
+  ruff:   {enabled: true, select: [E, F, B, UP, SIM, PERF], category_map: {F: correctness, B: correctness, PERF: performance, default: style}}
+  bandit: {enabled: true, severity_min: low, category_map: {default: security}}
+severity_map:
+  ruff: {error: minor, warning: nit}
+  bandit: {HIGH: major, MEDIUM: minor, LOW: nit}
+# ruff rule prefixes treated as "error" (others are "warning")
+ruff_error_prefixes: [F, B]

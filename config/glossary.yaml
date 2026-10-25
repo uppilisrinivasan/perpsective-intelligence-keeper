@@ -1,0 +1,97 @@
+terms:
+  - key: lane_edge
+    label: "Needs your eye"
+    short: "Something the maintainer would notice that a generic AI reviewer would not."
+    long_md: "The lens flags it and the generic review misses it: project rules, history, the threat model. In the papers' notation this is **R+**, the positive residual: what the maintainer notices minus what the open model notices."
+  - key: lane_blind_spot
+    label: "Worth a second look"
+    short: "Something the model catches that the maintainer has tended to miss."
+    long_md: "The generic review flags it, the maintainer historically missed it, and outcomes (bugs, reverts) showed it mattered. This is the calibrated part of **R−**."
+  - key: lane_shared
+    label: "Handled for you"
+    short: "Both the maintainer and the model would catch this, so Keeper can handle it."
+    long_md: "Shared ground: style, missing tests, known bug patterns. Keeper comments, writes the fix and runs the tests. It never means \"safe\"."
+  - key: lane_unknown
+    label: "Needs another reviewer"
+    short: "Outside what the lens knows, so Keeper hands it to someone else."
+    long_md: "A risk signal fired (build or release scripts, binary files, new dependencies) where neither the lens nor the generic review is competent. Keeper suggests a reviewer with a different lens and drafts a hand-off note."
+  - key: lane_baseline_only
+    label: "Other model notes"
+    short: "Notes only the generic review made, which this maintainer usually doesn't raise."
+    long_md: "Baseline findings with no lens match and no calibrated blind spot. Probably noise for this project, so they are collapsed."
+  - key: lens
+    label: "Lens"
+    short: "A maintainer's learned way of seeing code review, built from their past reviews."
+    long_md: "A versioned set of patterns (what they notice, with triggers, examples and statistics) that predicts what they would raise on a new PR. It is owned by the maintainer, private by default, exportable and revocable."
+  - key: baseline
+    label: "Generic review"
+    short: "The same model reviewing with no lens: the pinned ruler."
+    long_md: "Nemotron 3 Super with a generic reviewer prompt at temperature 0, plus ruff and bandit. Its exact configuration is pinned as a **ruler**; results are only compared under the same ruler."
+  - key: ruler
+    label: "Ruler"
+    short: "The exact, pinned configuration of the generic review."
+    long_md: "Model ID, prompt version and hash, decoding parameters and static tool versions. Any change creates a new ruler; residuals are never compared across rulers."
+  - key: residual
+    label: "Residual"
+    short: "What a person notices minus what the open model notices."
+    long_md: "R(S) = H(S) − C(S), computed by matching the person's findings H against the baseline's findings C on the same PR. Shared findings are matched; R+ is the person's unmatched findings; R− is the baseline's unmatched findings."
+  - key: edge_map
+    label: "Where your eye matters most"
+    short: "Areas where the maintainer's edge is large and misses were costly."
+    long_md: "Cells are (area, category). Value = residual rate × (1 + cost) × log(1 + volume) × a speed factor. The map also shows where generic review is enough and where nobody looks closely."
+  - key: fidelity_test
+    label: "Proof"
+    short: "A test on PRs the lens never saw: does it notice like the maintainer?"
+    long_md: "The Perspective Fidelity Test holds out recent PRs, applies the lens built before them, and measures the share of the maintainer's substantive comments recovered, the noise per PR and caricature, each against the generic review, with bootstrap confidence intervals."
+  - key: growth_test
+    label: "Practice (the Growth Test)"
+    short: "Before and after, unassisted, on PRs you have not seen."
+    long_md: "A learner reviews held-out PRs without help, practises with hints, then takes a parallel set. Growth counts only when it is measured without the tool."
+  - key: caricature
+    label: "Exaggeration check"
+    short: "Does the lens flag the maintainer's favourite concerns more often than they do?"
+    long_md: "For the maintainer's top three categories, the lens's rate per PR divided by the maintainer's own rate. Above 1.3 means the lens caricatures them."
+  - key: falsifier
+    label: "Ways this could have been wrong"
+    short: "Checks that would show the idea doesn't work, computed from the run."
+    long_md: "From the papers' \"What would prove us wrong\": the residual is noise, lenses don't transfer, fidelity collapses into caricature, help hollows, the loop grows contrarians. Each is shown as pass, fail or not tested."
+  - key: health_healthy
+    label: "Healthy"
+    short: "Fewer costly blind spots, edge intact, still noticing new things."
+    long_md: "Costly R− is not rising, R+ is not falling, and the maintainer keeps noticing things their earlier lens didn't predict."
+  - key: health_absorbed
+    label: "Becoming generic"
+    short: "Noticing more like generic review: fewer blind spots, less of your own edge."
+    long_md: "R+ falling and costly R− falling while findings increasingly match the generic review."
+  - key: health_self_caricature
+    label: "Exaggerating"
+    short: "Flagging more unusual things, but fewer of them turn out to matter."
+    long_md: "R+ rising while the R+ hit rate falls."
+  - key: health_deskilling
+    label: "Leaning on Keeper"
+    short: "With Keeper you catch more; without it, less."
+    long_md: "The share of accepted Keeper suggestions rises while unassisted recall falls."
+  - key: health_replaced
+    label: "Lens has caught up"
+    short: "The lens predicts nearly everything you notice."
+    long_md: "The growth residual G is near zero for two periods. Try reviewing a few PRs without Keeper."
+  - key: health_insufficient_data
+    label: "Not enough data yet"
+    short: "Not enough recent reviews to tell."
+    long_md: "Fewer than the configured number of reviewed PRs in one of the last two periods."
+  - key: growth_residual
+    label: "New since the last lens"
+    short: "What the maintainer noticed that their own earlier lens did not predict."
+    long_md: "G(S) = H(S) − L(S), with L the lens version current at the start of the period. A healthy reviewer keeps a positive G."
+  - key: attention
+    label: "Attention estimate"
+    short: "Estimated minutes of maintainer review, from the lane and size."
+    long_md: "lane base + per-finding minutes + size × lane factor − a discount for findings with a passing fix. These are configuration, not claims."
+  - key: slop
+    label: "Looks auto-generated"
+    short: "Signs of a low-effort, machine-written contribution, judged on content only."
+    long_md: "Combines the fast model's judgement of the content with code checks (CI failed, imports of things that don't exist, whitespace-only changes). It never looks at who the author is."
+  - key: risk_signal
+    label: "Risk signal"
+    short: "A change type where attacks and accidents hide; it forces another reviewer."
+    long_md: "Build and release scripts, CI workflows, binary files, new dependencies, obfuscated content, policy files. A PR with a high or medium signal is never placed in Handled for you."

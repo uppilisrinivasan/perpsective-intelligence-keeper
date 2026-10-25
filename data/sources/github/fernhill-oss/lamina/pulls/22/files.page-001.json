@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 25,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/c2bc0bcb1d2bda21c56e55c2eb44d12643ab142f/lamina%2Finclude%2Fordered.py",
+    "changes": 25,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Fordered.py?ref=c2bc0bcb1d2bda21c56e55c2eb44d12643ab142f",
+    "deletions": 0,
+    "filename": "lamina/include/ordered.py",
+    "patch": "@@ -0,0 +1,25 @@\n+\"\"\"Ordered includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_ordered_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    \"\"\"Resolve a ordered include relative to base_dir, confined to root.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(name)\n+    root_real = os.path.realpath(root)\n+    resolved_path = os.path.realpath(os.path.join(base_dir, name))\n+    if os.path.commonpath([resolved_path, root_real]) != root_real:\n+        raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n+    if not os.path.isfile(resolved_path):\n+        raise IncludeError(f\"include not found: {name}\", 0, 1)\n+    return resolved_path\n+\n+\n+def read_ordered_include(base_dir: str, name: str, root: str) -> str:\n+    \"\"\"Return the text of a ordered include.\"\"\"\n+    path = resolve_ordered_include(base_dir, name, root)\n+    with open(path) as fh:\n+        return fh.read()",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/c2bc0bcb1d2bda21c56e55c2eb44d12643ab142f/lamina%2Finclude%2Fordered.py",
+    "sha": "abe5c2d08e42b66503b297065affecb37c13e433",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/c2bc0bcb1d2bda21c56e55c2eb44d12643ab142f/tests%2Ftest_include_ordered.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_include_ordered.py?ref=c2bc0bcb1d2bda21c56e55c2eb44d12643ab142f",
+    "deletions": 0,
+    "filename": "tests/test_include_ordered.py",
+    "patch": "@@ -0,0 +1,13 @@\n+import pytest\n+\n+from lamina.include.ordered import resolve_ordered_include, read_ordered_include\n+\n+\n+def test_ordered_include_reads_file(tmp_path):\n+    (tmp_path / \"base.conf\").write_text(\"[a]\\nx = 1\\n\", encoding=\"utf-8\")\n+    assert \"x = 1\" in read_ordered_include(str(tmp_path), \"base.conf\", str(tmp_path))\n+\n+\n+def test_ordered_include_missing(tmp_path):\n+    with pytest.raises(Exception):\n+        resolve_ordered_include(str(tmp_path), \"nope.conf\", str(tmp_path))",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/c2bc0bcb1d2bda21c56e55c2eb44d12643ab142f/tests%2Ftest_include_ordered.py",
+    "sha": "041ced6d143dc77cf11e19ba45dcbf263b88b5b5",
+    "status": "added"
+  }
+]

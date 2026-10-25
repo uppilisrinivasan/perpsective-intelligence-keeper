@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/4376397?v=4",
+      "events_url": "https://api.github.example/users/oskar-l/events{/privacy}",
+      "followers_url": "https://api.github.example/users/oskar-l/followers",
+      "following_url": "https://api.github.example/users/oskar-l/following{/other_user}",
+      "gists_url": "https://api.github.example/users/oskar-l/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/oskar-l",
+      "id": 4376397,
+      "login": "oskar-l",
+      "node_id": "U_kwDOUE3VENS6gBxK",
+      "organizations_url": "https://api.github.example/users/oskar-l/orgs",
+      "received_events_url": "https://api.github.example/users/oskar-l/received_events",
+      "repos_url": "https://api.github.example/users/oskar-l/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/oskar-l/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/oskar-l/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/oskar-l",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/5a163693cc9e8717e6aedc32ac71ec31c4063fe6/comments",
+    "commit": {
+      "author": {
+        "date": "2025-02-24T12:07:10Z",
+        "email": "4376397+oskar-l@users.noreply.github.example",
+        "name": "Oskar Lund"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2025-02-24T12:07:10Z",
+        "email": "4376397+oskar-l@users.noreply.github.example",
+        "name": "Oskar Lund"
+      },
+      "message": "Initial profile implementation",
+      "tree": {
+        "sha": "4ce36856ca3232b6246b6de99eb60ba2667fda48",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/4ce36856ca3232b6246b6de99eb60ba2667fda48"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/5a163693cc9e8717e6aedc32ac71ec31c4063fe6",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/4376397?v=4",
+      "events_url": "https://api.github.example/users/oskar-l/events{/privacy}",
+      "followers_url": "https://api.github.example/users/oskar-l/followers",
+      "following_url": "https://api.github.example/users/oskar-l/following{/other_user}",
+      "gists_url": "https://api.github.example/users/oskar-l/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/oskar-l",
+      "id": 4376397,
+      "login": "oskar-l",
+      "node_id": "U_kwDOUE3VENS6gBxK",
+      "organizations_url": "https://api.github.example/users/oskar-l/orgs",
+      "received_events_url": "https://api.github.example/users/oskar-l/received_events",
+      "repos_url": "https://api.github.example/users/oskar-l/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/oskar-l/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/oskar-l/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/oskar-l",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/5a163693cc9e8717e6aedc32ac71ec31c4063fe6",
+    "node_id": "C_kwDOH7ootCwjrJx6",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/61b999da9c0f90af22b41fb4ac620af2b54fbe79",
+        "sha": "61b999da9c0f90af22b41fb4ac620af2b54fbe79",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/61b999da9c0f90af22b41fb4ac620af2b54fbe79"
+      }
+    ],
+    "sha": "5a163693cc9e8717e6aedc32ac71ec31c4063fe6",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/5a163693cc9e8717e6aedc32ac71ec31c4063fe6"
+  }
+]

@@ -1,0 +1,12 @@
+area_depth: 2
+min_findings: 5
+top_n: 6
+enough_n: 4
+gaps_n: 3
+gap_volume_min: 1.0
+shared_dominant: 0.7
+cost_weight: 1.0
+speed_factor: {fast: 1.2, default: 1.0, fast_days: 14}
+multiplier_cap: 10
+attention_bonus: 3
+volume_months: 12

@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 7,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/86c5c47dab9cf8a37993b3c20435e471b38de237/docs%2Fcli.md",
+    "changes": 7,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/docs%2Fcli.md?ref=86c5c47dab9cf8a37993b3c20435e471b38de237",
+    "deletions": 0,
+    "filename": "docs/cli.md",
+    "patch": "@@ -14,3 +14,10 @@ A short example of the CLI:\n ## Details\n \n The cli follows the same rules everywhere in lamina.\n+\n+## Example\n+\n+A short example of the CLI:\n+\n+    [app]\n+    name = demo",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/86c5c47dab9cf8a37993b3c20435e471b38de237/docs%2Fcli.md",
+    "sha": "a9279ac097680e2d2cee2d1c6bbbf1c6d43bde62",
+    "status": "modified"
+  }
+]

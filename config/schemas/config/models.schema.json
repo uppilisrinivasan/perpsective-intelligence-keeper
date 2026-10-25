@@ -1,0 +1,272 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "display_names": {
+      "properties": {
+        "nvidia/Nemotron-3-Ultra-550b-a55b": {
+          "type": "string"
+        },
+        "nvidia/Nemotron-3_5-Lightning": {
+          "type": "string"
+        },
+        "nvidia/nemotron-3-super-120b-a12b": {
+          "type": "string"
+        },
+        "offline-simulator": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "fake_model_id": {
+      "type": "string"
+    },
+    "probe": {
+      "properties": {
+        "breaker": {
+          "properties": {
+            "failures": {
+              "type": "number"
+            },
+            "half_open_seconds": {
+              "type": "number"
+            },
+            "window_seconds": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "cache_hours": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "reasoning_params": {
+      "properties": {
+        "fallback": {
+          "properties": {
+            "low": {
+              "properties": {
+                "reasoning_effort": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "off": {
+              "properties": {},
+              "type": "object"
+            },
+            "on": {
+              "properties": {
+                "reasoning_effort": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "type": "object"
+        },
+        "nemotron": {
+          "properties": {
+            "low": {
+              "properties": {
+                "extra_body": {
+                  "properties": {
+                    "chat_template_kwargs": {
+                      "properties": {
+                        "enable_thinking": {
+                          "type": "boolean"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                },
+                "max_reasoning_tokens": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            "off": {
+              "properties": {
+                "extra_body": {
+                  "properties": {
+                    "chat_template_kwargs": {
+                      "properties": {
+                        "enable_thinking": {
+                          "type": "boolean"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "on": {
+              "properties": {
+                "extra_body": {
+                  "properties": {
+                    "chat_template_kwargs": {
+                      "properties": {
+                        "enable_thinking": {
+                          "type": "boolean"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "roles": {
+      "properties": {
+        "assistant": {
+          "properties": {
+            "context_tokens": {
+              "type": "number"
+            },
+            "display_from": {
+              "type": "string"
+            },
+            "fallback": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "max_concurrency": {
+              "type": "number"
+            },
+            "model": {
+              "type": "string"
+            },
+            "reasoning_family": {
+              "type": "string"
+            },
+            "tools": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "deep": {
+          "properties": {
+            "context_tokens": {
+              "type": "number"
+            },
+            "display": {
+              "type": "string"
+            },
+            "fallback": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "max_concurrency": {
+              "type": "number"
+            },
+            "model": {
+              "type": "string"
+            },
+            "reasoning_family": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "fast": {
+          "properties": {
+            "context_tokens": {
+              "type": "number"
+            },
+            "display": {
+              "type": "string"
+            },
+            "fallback": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "max_concurrency": {
+              "type": "number"
+            },
+            "model": {
+              "type": "string"
+            },
+            "reasoning_family": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "judge": {
+          "properties": {
+            "context_tokens": {
+              "type": "number"
+            },
+            "display": {
+              "type": "string"
+            },
+            "fallback": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "max_concurrency": {
+              "type": "number"
+            },
+            "model": {
+              "type": "string"
+            },
+            "reasoning_family": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "token_estimate": {
+      "properties": {
+        "chars_per_token": {
+          "type": "number"
+        },
+        "safety": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "display_names",
+    "fake_model_id",
+    "probe",
+    "reasoning_params",
+    "roles",
+    "token_estimate"
+  ],
+  "title": "config/models.yaml",
+  "type": "object"
+}

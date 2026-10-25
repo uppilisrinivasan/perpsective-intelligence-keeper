@@ -1,0 +1,38 @@
+[
+  {
+    "additions": 25,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/c0c6db9376e5db556e1489394e55b0942066f4e5/lamina%2Fcli%2Fexport.py",
+    "changes": 25,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fcli%2Fexport.py?ref=c0c6db9376e5db556e1489394e55b0942066f4e5",
+    "deletions": 0,
+    "filename": "lamina/cli/export.py",
+    "patch": "@@ -0,0 +1,25 @@\n+\"\"\"`lamina export`: print information about a config file.\"\"\"\n+\n+try:\n+    import platformdirs  # noqa: F401\n+except ImportError:  # pragma: no cover\n+    platformdirs = None\n+\n+import sys\n+\n+from lamina.parser import parse\n+\n+\n+def cmd_export(argv: list[str], *, skip: list[str] | None = None) -> int:\n+    \"\"\"Run the export command; return the exit code.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(\"--\")\n+    if len(argv) != 1:\n+        print(\"usage: lamina export FILE\", file=sys.stderr)\n+        return 2\n+    with open(argv[0], encoding=\"utf-8\") as fh:\n+        source_text = fh.read()\n+    doc = parse(source_text, source=argv[0])\n+    for section in doc.sections():\n+        print(f\"{section.name}: {len(section.entries())}\")\n+    return 0",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/c0c6db9376e5db556e1489394e55b0942066f4e5/lamina%2Fcli%2Fexport.py",
+    "sha": "4cd5611a0cd1511d146850d81de70cbaa21e58b3",
+    "status": "added"
+  },
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/c0c6db9376e5db556e1489394e55b0942066f4e5/pyproject.toml",
+    "changes": 1,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/pyproject.toml?ref=c0c6db9376e5db556e1489394e55b0942066f4e5",
+    "deletions": 0,
+    "filename": "pyproject.toml",
+    "patch": "@@ -12,6 +12,7 @@ dependencies = []\n \n [project.optional-dependencies]\n test = [\"pytest==8.*\"]\n+platformdirs = [\"platformdirs>=4.3.6\"]\n dotenv = [\"python-dotenv>=1.0.1\"]\n yaml = [\"pyyaml>=6.0.2\"]\n tomli = [\"tomli>=2.0.1\"]",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/c0c6db9376e5db556e1489394e55b0942066f4e5/pyproject.toml",
+    "sha": "47258558eaf06f89ce5398f3f43afa5a08f31ab2",
+    "status": "modified"
+  },
+  {
+    "additions": 11,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/c0c6db9376e5db556e1489394e55b0942066f4e5/tests%2Ftest_cli_export.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_cli_export.py?ref=c0c6db9376e5db556e1489394e55b0942066f4e5",
+    "deletions": 0,
+    "filename": "tests/test_cli_export.py",
+    "patch": "@@ -0,0 +1,11 @@\n+from lamina.cli.export import cmd_export\n+\n+\n+def test_export_counts(write, capsys):\n+    path = write(\"c_export.conf\", \"[a]\\nx = 1\\ny = 2\\n\")\n+    assert cmd_export([path]) == 0\n+    assert capsys.readouterr().out.strip() == \"a: 2\"\n+\n+\n+def test_export_usage():\n+    assert cmd_export([]) == 2",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/c0c6db9376e5db556e1489394e55b0942066f4e5/tests%2Ftest_cli_export.py",
+    "sha": "24b4a4034243a9e363609a07328e3d463a1924f7",
+    "status": "added"
+  }
+]

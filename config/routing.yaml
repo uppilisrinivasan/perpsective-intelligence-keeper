@@ -1,0 +1,39 @@
+lane_order: [unknown, edge, blind_spot, shared]
+signals:
+  build_script_changed:   {severity: high,   label: "Build script changed", build_paths: ["setup.py", "setup.cfg", "Makefile", "*.m4", "configure*", "scripts/release*", "scripts/build*", "tox.ini", "noxfile.py"], pyproject_sections: ["build-system", "tool.*.scripts"], covering_categories: [build_release]}
+  ci_workflow_changed:    {severity: high,   label: "CI workflow changed", paths: [".github/workflows/**", ".gitlab-ci.yml", ".pre-commit-config.yaml"], covering_categories: [build_release]}
+  binary_added_or_changed: {severity: high,  label: "Binary file added", binary_exts: [".bin", ".gz", ".xz", ".zip", ".so", ".dll", ".exe", ".whl", ".pyc"], covering_categories: []}
+  test_fixture_binary:    {severity: high,   label: "Binary test fixture", paths: ["tests/**"], covering_categories: []}
+  new_dependency:         {severity: medium, label: "New dependency", covering_categories: [dependency, security]}
+  dependency_source_changed: {severity: high, label: "Dependency source changed", covering_categories: [dependency]}
+  obfuscated_content:     {severity: high,   label: "Obfuscated content", entropy_min_len: 120, entropy_min_bits: 4.5, covering_categories: []}
+  permissions_or_policy_changed: {severity: medium, label: "Policy file changed", paths: ["CODEOWNERS", ".github/CODEOWNERS", "SECURITY.md", "MAINTAINERS*", ".github/settings.yml"], covering_categories: [security]}
+  low_lens_coverage:      {severity: low,    label: "Unfamiliar territory", coverage_min_lines: 30, coverage_min_findings: 2}
+  exec_or_network_in_code: {severity: medium, label: "Runs commands or uses the network", patterns: ["subprocess", "os.system", "eval(", "exec(", "pickle.loads", "urllib.request", "socket"], covering_categories: [security]}
+public_api_paths: ["src/*/__init__.py", "*/__init__.py"]
+dependency_files: ["pyproject.toml", "setup.cfg", "requirements*.txt"]
+slop:
+  model_weight: 0.6
+  rules_weight: 0.4
+  threshold: 0.7
+  rules: {ci_failed: 0.3, import_errors: 0.3, nonexistent_symbols: 0.3, whitespace_comment_share: 0.1}
+  whitespace_comment_share_min: 0.5
+attention:
+  lane_base: {shared: 1, blind_spot: 3, edge: 5, unknown: 2}
+  per_finding: {shared: 0.5, blind_spot: 2, edge: 3}
+  per_100_changed_lines: 2
+  lane_size_factor: {shared: 0.2, blind_spot: 0.5, edge: 1.0, unknown: 0.3}
+  fixed_and_tested_discount: 0.5
+  clamp: [1, 60]
+  naive_base: 8
+  naive_per_100: 6
+handoff:
+  distance_weight: 0.5
+  codeowners_weight: 0.5
+  path_findings_weight: 0.3
+  path_findings_cap: 5
+  min_path_findings: 3
+  signal_weights: {high: 1.0, medium: 0.6, low: 0.3}
+osv:    {cache_hours: 24, timeout_seconds: 10, ecosystem: PyPI}
+tavily: {api_url: "https://api.tavily.com", cache_hours: 24, search_depth: basic, max_results: 5, timeout_seconds: 15}
+shared_in_top_cell_note: true

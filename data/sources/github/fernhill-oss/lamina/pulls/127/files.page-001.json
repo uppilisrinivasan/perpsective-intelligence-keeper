@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/edc88850e05f285dd0de215b09a818a802dd1804/lamina%2Finterpolate%2Fmasked.py",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Fmasked.py?ref=edc88850e05f285dd0de215b09a818a802dd1804",
+    "deletions": 1,
+    "filename": "lamina/interpolate/masked.py",
+    "patch": "@@ -29,6 +29,6 @@ def interpolate_masked(value: str, env: Mapping[str, str], *, line: int = 0, ski\n             raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n         resolved = env[name]\n         if not _valid(resolved):\n-            raise InterpolationError(f\"invalid value {resolved!r} for {name}\", line, start + 1)\n+            raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n         out_parts.append(resolved)\n         i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/edc88850e05f285dd0de215b09a818a802dd1804/lamina%2Finterpolate%2Fmasked.py",
+    "sha": "5e3bf4991528f9db1ea456900b47e774d7c608aa",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/edc88850e05f285dd0de215b09a818a802dd1804/tests%2Ftest_interpolate_masked_regression_127.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_interpolate_masked_regression_127.py?ref=edc88850e05f285dd0de215b09a818a802dd1804",
+    "deletions": 0,
+    "filename": "tests/test_interpolate_masked_regression_127.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.interpolate.masked import interpolate_masked\n+\n+\n+def test_interpolate_masked_regression_127():\n+    assert callable(interpolate_masked)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/edc88850e05f285dd0de215b09a818a802dd1804/tests%2Ftest_interpolate_masked_regression_127.py",
+    "sha": "bc50512a33fd724f99a3cb0f70ec1486ed3498ca",
+    "status": "added"
+  }
+]

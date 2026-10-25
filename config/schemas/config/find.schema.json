@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "area_depth": {
+      "type": "number"
+    },
+    "attention_bonus": {
+      "type": "number"
+    },
+    "cost_weight": {
+      "type": "number"
+    },
+    "enough_n": {
+      "type": "number"
+    },
+    "gap_volume_min": {
+      "type": "number"
+    },
+    "gaps_n": {
+      "type": "number"
+    },
+    "min_findings": {
+      "type": "number"
+    },
+    "multiplier_cap": {
+      "type": "number"
+    },
+    "shared_dominant": {
+      "type": "number"
+    },
+    "speed_factor": {
+      "properties": {
+        "default": {
+          "type": "number"
+        },
+        "fast": {
+          "type": "number"
+        },
+        "fast_days": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "top_n": {
+      "type": "number"
+    },
+    "volume_months": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "area_depth",
+    "attention_bonus",
+    "cost_weight",
+    "enough_n",
+    "gap_volume_min",
+    "gaps_n",
+    "min_findings",
+    "multiplier_cap",
+    "shared_dominant",
+    "speed_factor",
+    "top_n",
+    "volume_months"
+  ],
+  "title": "config/find.yaml",
+  "type": "object"
+}

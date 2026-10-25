@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 3,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/0f978934d058b7c28b1ad540f66eb4ea6c54c405/lamina%2Fcli%2Fexplain.py",
+    "changes": 7,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fcli%2Fexplain.py?ref=0f978934d058b7c28b1ad540f66eb4ea6c54c405",
+    "deletions": 4,
+    "filename": "lamina/cli/explain.py",
+    "patch": "@@ -6,15 +6,14 @@ import sys\n from lamina.parser import parse\n \n \n-def cmd_explain(argv: list[str], *, skip: list[str] | None = None) -> int:\n-    skip = list(skip or [])\n+def cmd_explain(argv: list[str], *, skip: list[str] = []) -> int:\n     skip.append(\"--\")\n     if len(argv) != 1:\n         print(\"usage: lamina explain FILE\", file=sys.stderr)\n         return 2\n     with open(argv[0]) as fh:\n-        sourceText = fh.read()\n-    doc = parse(sourceText, source=argv[0])\n+        fileContent = fh.read()\n+    doc = parse(fileContent, source=argv[0])\n     for section in doc.sections():\n         print(f\"{section.name}: {len(section.entries())}\")\n     return 0",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/0f978934d058b7c28b1ad540f66eb4ea6c54c405/lamina%2Fcli%2Fexplain.py",
+    "sha": "8857ff4e8ac32e30e1404e9cd13b8c2b8f77ea89",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/0f978934d058b7c28b1ad540f66eb4ea6c54c405/tests%2Ftest_cli_explain_regression_331.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_cli_explain_regression_331.py?ref=0f978934d058b7c28b1ad540f66eb4ea6c54c405",
+    "deletions": 0,
+    "filename": "tests/test_cli_explain_regression_331.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.cli.explain import cmd_explain\n+\n+\n+def test_cmd_explain_regression_331():\n+    assert callable(cmd_explain)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/0f978934d058b7c28b1ad540f66eb4ea6c54c405/tests%2Ftest_cli_explain_regression_331.py",
+    "sha": "bf48886471176c6d2cb2c7df398295bd687a87c7",
+    "status": "added"
+  }
+]

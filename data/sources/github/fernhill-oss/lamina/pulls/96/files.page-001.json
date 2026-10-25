@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 9,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/cc836c8c381d5a3de6df5adfb9fcac7a6aa3984b/lamina%2Floader%2Fproject.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Floader%2Fproject.py?ref=cc836c8c381d5a3de6df5adfb9fcac7a6aa3984b",
+    "deletions": 4,
+    "filename": "lamina/loader/project.py",
+    "patch": "@@ -4,15 +4,20 @@ import os\n \n from lamina.errors import LaminaError\n from lamina.loader.core import loads\n+from lamina.model import Document\n+\n+_CACHE: dict[str, Document] = {}\n \n \n def load_project(path, *, strict=True, skip=[]):\n-    \"\"\"Load a project configuration file.\"\"\"\n     skip.append(path)\n+    if path in _CACHE:\n+        return _CACHE[path]\n     with open(path) as fh:\n-        file_text = fh.read()\n-    if strict and not file_text.strip():\n+        raw_text = fh.read()\n+    if strict and not raw_text.strip():\n         raise LaminaError(f\"empty configuration: {path}\", 0, 1)\n-    doc = loads(file_text, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n+    doc = loads(raw_text, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n     doc.source = path\n+    _CACHE[path] = doc\n     return doc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/cc836c8c381d5a3de6df5adfb9fcac7a6aa3984b/lamina%2Floader%2Fproject.py",
+    "sha": "6dbc7101cf17ac4a08f3a9cd0638a20dac91da84",
+    "status": "modified"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 4,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/9711d48e52b59f432e103ddfcde16aae434970e5/docs%2Fformat.md",
+    "changes": 4,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/docs%2Fformat.md?ref=9711d48e52b59f432e103ddfcde16aae434970e5",
+    "deletions": 0,
+    "filename": "docs/format.md",
+    "patch": "@@ -2,3 +2,7 @@\n \n A file is a sequence of lines: section headers (`[name]`), entries (`key = value`), comments (`#` or `;`),\n blank lines and include directives (`@include \"path\"`). Values are strings; interpretation is up to you.\n+\n+## Details\n+\n+The format follows the same rules everywhere in lamina.",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/9711d48e52b59f432e103ddfcde16aae434970e5/docs%2Fformat.md",
+    "sha": "09481de6f9abfd858cb174a5bfd12e5409dbd13b",
+    "status": "modified"
+  }
+]

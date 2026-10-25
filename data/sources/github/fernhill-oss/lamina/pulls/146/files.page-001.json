@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/53cbde494b9d4d0d58cb95877cded0c823255039/tests%2Ftest_lexer_colon_more_146.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_lexer_colon_more_146.py?ref=53cbde494b9d4d0d58cb95877cded0c823255039",
+    "deletions": 0,
+    "filename": "tests/test_lexer_colon_more_146.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.lexer.colon import scan_colon\n+\n+\n+def test_scan_colon_regression_146():\n+    assert callable(scan_colon)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/53cbde494b9d4d0d58cb95877cded0c823255039/tests%2Ftest_lexer_colon_more_146.py",
+    "sha": "ce112c8a164270b9f94e09c1b8437b9f96a7958e",
+    "status": "added"
+  }
+]

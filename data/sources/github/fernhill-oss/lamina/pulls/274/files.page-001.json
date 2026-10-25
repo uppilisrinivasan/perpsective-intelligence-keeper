@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 20,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/46ae9357da098687db2087c059c7d3baea49a1a1/lamina%2Fcli%2Fmerge.py",
+    "changes": 20,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fcli%2Fmerge.py?ref=46ae9357da098687db2087c059c7d3baea49a1a1",
+    "deletions": 0,
+    "filename": "lamina/cli/merge.py",
+    "patch": "@@ -0,0 +1,20 @@\n+\"\"\"`lamina merge`: print information about a config file.\"\"\"\n+\n+import sys\n+\n+from lamina.parser import parse\n+\n+\n+def cmd_merge(argv: list[str], *, skip: list[str] | None = None) -> int:\n+    \"\"\"Run the merge command; return the exit code.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(\"--\")\n+    if len(argv) != 1:\n+        print(\"usage: lamina merge FILE\", file=sys.stderr)\n+        return 2\n+    with open(argv[0]) as fh:\n+        sourceText = fh.read()\n+    doc = parse(sourceText, source=argv[0])\n+    for section in doc.sections():\n+        print(f\"{section.name}: {len(section.entries())}\")\n+    return 0",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/46ae9357da098687db2087c059c7d3baea49a1a1/lamina%2Fcli%2Fmerge.py",
+    "sha": "190c9f85aebd109fc547561f7d306c8eb0a8794d",
+    "status": "added"
+  },
+  {
+    "additions": 11,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/46ae9357da098687db2087c059c7d3baea49a1a1/tests%2Ftest_cli_merge.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_cli_merge.py?ref=46ae9357da098687db2087c059c7d3baea49a1a1",
+    "deletions": 0,
+    "filename": "tests/test_cli_merge.py",
+    "patch": "@@ -0,0 +1,11 @@\n+from lamina.cli.merge import cmd_merge\n+\n+\n+def test_merge_counts(write, capsys):\n+    path = write(\"c_merge.conf\", \"[a]\\nx = 1\\ny = 2\\n\")\n+    assert cmd_merge([path]) == 0\n+    assert capsys.readouterr().out.strip() == \"a: 2\"\n+\n+\n+def test_merge_usage():\n+    assert cmd_merge([]) == 2",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/46ae9357da098687db2087c059c7d3baea49a1a1/tests%2Ftest_cli_merge.py",
+    "sha": "bcf6b7fa362676bc0a0797f022fe8fb4cb908b62",
+    "status": "added"
+  }
+]

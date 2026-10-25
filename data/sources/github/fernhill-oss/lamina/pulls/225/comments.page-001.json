@@ -1,0 +1,71 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/225#discussion_r1700005218"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/225"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005218"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "nit: naming (`prefixText` → `prefix_text`).",
+    "commit_id": "be4b0ff147120cd4e632ba9ee5484675e5e6cd9e",
+    "created_at": "2026-01-09T15:09:02Z",
+    "diff_hunk": "@@ -4,16 +4,15 @@ from lamina.model import Blank, Comment, Document, Entry\n \n \n def dumps_aligned(doc, *, indent=0, skip=None):\n-    \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n     skip = list(skip or [])\n     skip.append(doc.source)\n-    pad_text = \" \" * indent\n+    prefixText = \" \" * indent",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/225#discussion_r1700005218",
+    "id": 1700005218,
+    "line": 9,
+    "node_id": "PRRC_kwDOPijvm3PcOUuo",
+    "original_commit_id": "be4b0ff147120cd4e632ba9ee5484675e5e6cd9e",
+    "original_line": 9,
+    "original_position": 8,
+    "original_start_line": null,
+    "path": "lamina/dump/aligned.py",
+    "position": 8,
+    "pull_request_review_id": 1900007968,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/225",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005218/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-01-09T15:09:02Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005218",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1595507?v=4",
+      "events_url": "https://api.github.example/users/lena-b/events{/privacy}",
+      "followers_url": "https://api.github.example/users/lena-b/followers",
+      "following_url": "https://api.github.example/users/lena-b/following{/other_user}",
+      "gists_url": "https://api.github.example/users/lena-b/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/lena-b",
+      "id": 1595507,
+      "login": "lena-b",
+      "node_id": "U_kwDONKOpz1N3FcrR",
+      "organizations_url": "https://api.github.example/users/lena-b/orgs",
+      "received_events_url": "https://api.github.example/users/lena-b/received_events",
+      "repos_url": "https://api.github.example/users/lena-b/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/lena-b/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/lena-b/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/lena-b",
+      "user_view_type": "public"
+    }
+  }
+]

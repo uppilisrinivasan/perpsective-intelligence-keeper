@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 19,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/ce596a495d2a3f50852187bfac119593acd21810/lamina%2Fdump%2Fannotated2.py",
+    "changes": 19,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Fannotated2.py?ref=ce596a495d2a3f50852187bfac119593acd21810",
+    "deletions": 0,
+    "filename": "lamina/dump/annotated2.py",
+    "patch": "@@ -0,0 +1,19 @@\n+\"\"\"Write documents in the annotated2 layout.\"\"\"\n+\n+from lamina.model import Blank, Comment, Document, Entry\n+\n+\n+def dumps_annotated2(doc, *, indent=0, skip=[]):\n+    skip.append(doc.source)\n+    pad_text = \" \" * indent\n+    lines: list[str] = []\n+    for section in doc.sections():\n+        lines.append(f\"[{section.name}]\")\n+        for item in section.items:\n+            if isinstance(item, Entry):\n+                lines.append(f\"{pad_text}{item.key} = {item.value}\")\n+            elif isinstance(item, Comment):\n+                lines.append(item.text)\n+            elif isinstance(item, Blank):\n+                lines.append(\"\")\n+    return \"\\n\".join(lines) + (\"\\n\" if lines else \"\")",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/ce596a495d2a3f50852187bfac119593acd21810/lamina%2Fdump%2Fannotated2.py",
+    "sha": "41ae6ab90c79ad5e2cf11c27bb211211b4c98b88",
+    "status": "added"
+  }
+]

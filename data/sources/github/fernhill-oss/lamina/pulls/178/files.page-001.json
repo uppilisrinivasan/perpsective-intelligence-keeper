@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 9,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/3a0c0b20f0a994bcd0f01f22221c411514360ca1/lamina%2Fmodel%2Ffallback.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fmodel%2Ffallback.py?ref=3a0c0b20f0a994bcd0f01f22221c411514360ca1",
+    "deletions": 4,
+    "filename": "lamina/model/fallback.py",
+    "patch": "@@ -1,17 +1,22 @@\n \"\"\"Merge fallback layers into a base document.\"\"\"\n \n+import warnings\n+\n from lamina.model import Document\n \n \n-def merge_fallback(base, overlay, *, create=True, skip=None):\n+def merge_fallback(base, overlay, *, add_missing=True, skip=None, create=None):\n     \"\"\"Return base with overlay's values applied, keeping base's order, comments and blank lines.\"\"\"\n+    if create is not None:\n+        warnings.warn(\"create= is deprecated; use add_missing=\", DeprecationWarning, stacklevel=2)\n+        add_missing = create  # type: ignore[assignment]\n     skip = list(skip or [])\n     skip.append(overlay.source)\n-    merged_doc = base.copy()\n+    result_doc = base.copy()\n     for section in overlay.sections():\n-        target = merged_doc.section(section.name, create=create)\n+        target = result_doc.section(section.name, create=add_missing)\n         if target is None:\n             continue\n         for entry in section.entries():\n             target.set(entry.key, entry.value)\n-    return merged_doc\n+    return result_doc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/3a0c0b20f0a994bcd0f01f22221c411514360ca1/lamina%2Fmodel%2Ffallback.py",
+    "sha": "dc81743fa85c79fce08eba73d7330feceb1df0ec",
+    "status": "modified"
+  },
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/3a0c0b20f0a994bcd0f01f22221c411514360ca1/tests%2Ftest_model_fallback.py",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_model_fallback.py?ref=3a0c0b20f0a994bcd0f01f22221c411514360ca1",
+    "deletions": 1,
+    "filename": "tests/test_model_fallback.py",
+    "patch": "@@ -8,5 +8,5 @@ def test_fallback_overrides():\n \n \n def test_fallback_no_create():\n-    doc = merge_fallback(loads(\"[a]\\nx = 1\\n\"), loads(\"[b]\\ny = 2\\n\"), create=False)\n+    doc = merge_fallback(loads(\"[a]\\nx = 1\\n\"), loads(\"[b]\\ny = 2\\n\"), add_missing=False)\n     assert doc.section(\"b\") is None",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/3a0c0b20f0a994bcd0f01f22221c411514360ca1/tests%2Ftest_model_fallback.py",
+    "sha": "b5b59ddecf0c6be3513eb82aaffb65c6f27757a4",
+    "status": "modified"
+  }
+]

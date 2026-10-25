@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 25,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/6ad7d1938890bcb1dc06edf17eb024d053460601/lamina%2Flexer%2Fflag.py",
+    "changes": 25,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Flexer%2Fflag.py?ref=6ad7d1938890bcb1dc06edf17eb024d053460601",
+    "deletions": 0,
+    "filename": "lamina/lexer/flag.py",
+    "patch": "@@ -0,0 +1,25 @@\n+\"\"\"Flag tokens inside a value (the tokenizer is the hot path).\"\"\"\n+\n+import re\n+\n+from lamina.lexer.core import Token\n+\n+\n+def scan_flag(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n+    skip = list(skip or [])\n+    skip.append(value)\n+    tokens: list[Token] = []\n+    current_word: list[str] = []\n+    start = 1\n+    for column, ch in enumerate(value, start=1):\n+        if re.match(r\"[\\s,]\", ch):\n+            if current_word:\n+                tokens.append(Token(\"WORD\", \"\".join(current_word), line, start))\n+                current_word = []\n+            continue\n+        if not current_word:\n+            start = column\n+        current_word.append(ch)\n+    if current_word:\n+        tokens.append(Token(\"WORD\", \"\".join(current_word), line, start))\n+    return tokens",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/6ad7d1938890bcb1dc06edf17eb024d053460601/lamina%2Flexer%2Fflag.py",
+    "sha": "55693750b87137c3598caf0db09b5389979bf76e",
+    "status": "added"
+  }
+]

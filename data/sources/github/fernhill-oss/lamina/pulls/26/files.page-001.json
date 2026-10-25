@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 4,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/5423bd84c132b84f70894b7c744161292974a7c2/lamina%2Finclude%2Fordered.py",
+    "changes": 8,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Fordered.py?ref=5423bd84c132b84f70894b7c744161292974a7c2",
+    "deletions": 4,
+    "filename": "lamina/include/ordered.py",
+    "patch": "@@ -10,12 +10,12 @@ def resolve_ordered_include(base_dir: str, name: str, root: str, *, skip: list[s\n     skip = list(skip or [])\n     skip.append(name)\n     root_real = os.path.realpath(root)\n-    resolved_path = os.path.realpath(os.path.join(base_dir, name))\n-    if os.path.commonpath([resolved_path, root_real]) != root_real:\n+    candidate_path = os.path.realpath(os.path.join(base_dir, name))\n+    if os.path.commonpath([candidate_path, root_real]) != root_real:\n         raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n-    if not os.path.isfile(resolved_path):\n+    if not os.path.isfile(candidate_path):\n         raise IncludeError(f\"include not found: {name}\", 0, 1)\n-    return resolved_path\n+    return candidate_path\n \n \n def read_ordered_include(base_dir: str, name: str, root: str) -> str:",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/5423bd84c132b84f70894b7c744161292974a7c2/lamina%2Finclude%2Fordered.py",
+    "sha": "ff75d9c8a1e712c87d8b23d1bfd7432d9a6385fd",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/5423bd84c132b84f70894b7c744161292974a7c2/tests%2Ftest_include_ordered_regression_26.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_include_ordered_regression_26.py?ref=5423bd84c132b84f70894b7c744161292974a7c2",
+    "deletions": 0,
+    "filename": "tests/test_include_ordered_regression_26.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.include.ordered import resolve_ordered_include\n+\n+\n+def test_resolve_ordered_include_regression_26():\n+    assert callable(resolve_ordered_include)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/5423bd84c132b84f70894b7c744161292974a7c2/tests%2Ftest_include_ordered_regression_26.py",
+    "sha": "b4cfeb96f775e68fadff1a857c5a5ea43fe59520",
+    "status": "added"
+  }
+]

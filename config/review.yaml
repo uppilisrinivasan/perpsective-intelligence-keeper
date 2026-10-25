@@ -1,0 +1,23 @@
+label_line: "— Drafted by Keeper from {maintainer}'s review patterns. Edited and sent by a human."
+draft_header: "Drafted by Keeper with {maintainer}'s lens v{version}. Not posted."
+max_exemplars: 16
+exemplar_hunk_lines: 12
+draft_event_rules: {blocker_or_major: REQUEST_CHANGES, otherwise: COMMENT}
+slop_reply_template: |
+  Thanks for the contribution! To help us review it, could you:
+  - describe what problem this solves and how you tested it,
+  - add or update a test that covers the change,
+  - confirm the test suite passes locally?
+patch_author: "Keeper (suggested fix) <keeper@localhost>"
+# "Why this lane" reasons shown on queue rows and in the PR header (server-side wording, same voice rules).
+reasons:
+  edge_item: "{name} has flagged “{title}” {n} times before"
+  edge_generic: "Something {name}'s lens notices: {title}"
+  blind_spot: "{name} has missed this kind of issue before; {k} of {n} times a problem followed"
+  signal: "{label}"
+  signal_covered: "{label}, covered by {owner}'s lens"
+  slop: "Looks auto-generated: {evidence}"
+  shared: "Generic review and {name}'s lens agree: Keeper can handle it"
+  nothing: "Nothing for {name} here"
+  baseline_unavailable: "Generic review unavailable ({model} offline)"
+  top_cell: "Your area: worth a glance ({area})"

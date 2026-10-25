@@ -1,0 +1,9 @@
+line_window: 6
+min_lexical: 0.35
+max_candidates_per_finding: 4
+pre_score: {anchor: 0.5, lexical: 0.3, category: 0.2}
+anchor_score: {overlap: 1.0, window: 0.6, same_file: 0.3}
+weights: {match: 1.0, partial: 0.5}
+judge_batch_size: 30
+shallow_review_weight: 0.3
+judge_hunk_lines: 8

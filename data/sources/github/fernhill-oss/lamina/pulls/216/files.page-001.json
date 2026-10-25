@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 8,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/6f9f7cdb85a99d6a31d415c2cc4279ecd2c3fe46/lamina%2Fdump%2Fcanonical.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Fcanonical.py?ref=6f9f7cdb85a99d6a31d415c2cc4279ecd2c3fe46",
+    "deletions": 3,
+    "filename": "lamina/dump/canonical.py",
+    "patch": "@@ -1,18 +1,23 @@\n \"\"\"Write documents in the canonical layout.\"\"\"\n \n+import warnings\n+\n from lamina.model import Blank, Comment, Document, Entry\n \n \n-def dumps_canonical(doc, *, indent=0, skip=None):\n+def dumps_canonical(doc, *, width=0, skip=None, indent=None):\n+    if indent is not None:\n+        warnings.warn(\"indent= is deprecated; use width=\", DeprecationWarning, stacklevel=2)\n+        width = indent  # type: ignore[assignment]\n     skip = list(skip or [])\n     skip.append(doc.source)\n-    padText = \" \" * indent\n+    prefixText = \" \" * width\n     lines: list[str] = []\n     for section in doc.sections():\n         lines.append(f\"[{section.name}]\")\n         for item in section.items:\n             if isinstance(item, Entry):\n-                lines.append(f\"{padText}{item.key} = {item.value}\")\n+                lines.append(f\"{prefixText}{item.key} = {item.value}\")\n             elif isinstance(item, Comment):\n                 lines.append(item.text)\n             elif isinstance(item, Blank):",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/6f9f7cdb85a99d6a31d415c2cc4279ecd2c3fe46/lamina%2Fdump%2Fcanonical.py",
+    "sha": "d3caa9cd9fe973ed7ba92b03739d726d56142ca6",
+    "status": "modified"
+  },
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/6f9f7cdb85a99d6a31d415c2cc4279ecd2c3fe46/tests%2Ftest_dump_canonical.py",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_canonical.py?ref=6f9f7cdb85a99d6a31d415c2cc4279ecd2c3fe46",
+    "deletions": 1,
+    "filename": "tests/test_dump_canonical.py",
+    "patch": "@@ -3,7 +3,7 @@ from lamina.dump.canonical import dumps_canonical\n \n \n def test_canonical_indents():\n-    assert dumps_canonical(loads(\"[a]\\nx = 1\\n\"), indent=2) == \"[a]\\n  x = 1\\n\"\n+    assert dumps_canonical(loads(\"[a]\\nx = 1\\n\"), width=2) == \"[a]\\n  x = 1\\n\"\n \n \n def test_canonical_keeps_comments():",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/6f9f7cdb85a99d6a31d415c2cc4279ecd2c3fe46/tests%2Ftest_dump_canonical.py",
+    "sha": "b15be1d5c4a280cc7ed2648a3196b9c45dea4bf7",
+    "status": "modified"
+  }
+]

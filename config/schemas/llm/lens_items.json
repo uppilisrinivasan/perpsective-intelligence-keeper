@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "lens_items",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cluster_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "statement": {
+            "type": "string",
+            "maxLength": 600
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "triggers": {
+            "type": "object",
+            "properties": {
+              "paths": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "code_patterns": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "paths",
+              "code_patterns"
+            ],
+            "additionalProperties": false
+          },
+          "exclude_sample_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "attach_sample_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "cluster_ids",
+          "title",
+          "statement",
+          "rationale",
+          "category",
+          "triggers"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "items"
+  ],
+  "additionalProperties": false
+}

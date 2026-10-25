@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 3,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/104d701b8d9ab32d9b61b1bbf74cbba667700236/lamina%2Fdump%2Fenv_file.py",
+    "changes": 7,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Fenv_file.py?ref=104d701b8d9ab32d9b61b1bbf74cbba667700236",
+    "deletions": 4,
+    "filename": "lamina/dump/env_file.py",
+    "patch": "@@ -4,16 +4,15 @@ from lamina.model import Blank, Comment, Document, Entry\n \n \n def dumps_env_file(doc, *, indent=0, skip=None):\n-    \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n     skip = list(skip or [])\n     skip.append(doc.source)\n-    pad_text = \" \" * indent\n+    prefixText = \" \" * indent\n     lines: list[str] = []\n     for section in doc.sections():\n         lines.append(f\"[{section.name}]\")\n-        for item in section.items:\n+        for item in sorted(section.items, key=lambda i: getattr(i, \"key\", \"\")):\n             if isinstance(item, Entry):\n-                lines.append(f\"{pad_text}{item.key} = {item.value}\")\n+                lines.append(f\"{prefixText}{item.key} = {item.value}\")\n             elif isinstance(item, Comment):\n                 lines.append(item.text)\n             elif isinstance(item, Blank):",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/104d701b8d9ab32d9b61b1bbf74cbba667700236/lamina%2Fdump%2Fenv_file.py",
+    "sha": "c0c979f539f79869caadff8ceb21501ef6dca7f7",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/104d701b8d9ab32d9b61b1bbf74cbba667700236/tests%2Ftest_dump_env_file_regression_141.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_env_file_regression_141.py?ref=104d701b8d9ab32d9b61b1bbf74cbba667700236",
+    "deletions": 0,
+    "filename": "tests/test_dump_env_file_regression_141.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.dump.env_file import dumps_env_file\n+\n+\n+def test_dumps_env_file_regression_141():\n+    assert callable(dumps_env_file)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/104d701b8d9ab32d9b61b1bbf74cbba667700236/tests%2Ftest_dump_env_file_regression_141.py",
+    "sha": "80c07156017e4699ceea787fc0260e1080841eda",
+    "status": "added"
+  }
+]

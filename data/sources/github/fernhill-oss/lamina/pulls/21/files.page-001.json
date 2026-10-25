@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 41,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/4918d070a68b0f6fc6283582ef36db06e831c33b/lamina%2Finclude%2Fenv_named.py",
+    "changes": 41,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Fenv_named.py?ref=4918d070a68b0f6fc6283582ef36db06e831c33b",
+    "deletions": 0,
+    "filename": "lamina/include/env_named.py",
+    "patch": "@@ -0,0 +1,41 @@\n+\"\"\"Env named includes.\"\"\"\n+\n+import sys\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_env_named_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    skip = list(skip or [])\n+    skip.append(name)\n+    root_real = os.path.realpath(root)\n+    resolvedPath = os.path.realpath(os.path.join(base_dir, name))\n+    if os.path.commonpath([resolvedPath, root_real]) != root_real:\n+        raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n+    if not os.path.isfile(resolvedPath):\n+        raise IncludeError(f\"include not found: {name}\", 0, 1)\n+    return resolvedPath\n+\n+\n+def read_env_named_include(base_dir: str, name: str, root: str) -> str:\n+    \"\"\"Return the text of a env named include.\"\"\"\n+    path = resolve_env_named_include(base_dir, name, root)\n+    fh = open(path, encoding=\"utf-8\")\n+    text = fh.read()\n+    if not text.strip():\n+        raise IncludeError(f\"empty include: {name}\", 0, 1)\n+    fh.close()\n+    return text\n+\n+\n+def _walk_env_named(base_dir: str, names: list[str], root: str, depth: int = 0) -> list[str]:\n+    \"\"\"Resolve a chain of includes, depth first.\"\"\"\n+    if depth > 8:\n+        raise IncludeError(\"includes nested too deeply\", 0, 1)\n+    out: list[str] = []\n+    for name in names:\n+        out.append(resolve_env_named_include(base_dir, name, root))\n+    if len(names) > 1:\n+        out.extend(_walk_env_named(base_dir, names[1:], root, depth + 1))\n+    return out",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/4918d070a68b0f6fc6283582ef36db06e831c33b/lamina%2Finclude%2Fenv_named.py",
+    "sha": "a706134738736d31c7c40685ff90f7d05f8598f3",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/4918d070a68b0f6fc6283582ef36db06e831c33b/tests%2Ftest_include_env_named.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_include_env_named.py?ref=4918d070a68b0f6fc6283582ef36db06e831c33b",
+    "deletions": 0,
+    "filename": "tests/test_include_env_named.py",
+    "patch": "@@ -0,0 +1,13 @@\n+import pytest\n+\n+from lamina.include.env_named import resolve_env_named_include, read_env_named_include\n+\n+\n+def test_env_named_include_reads_file(tmp_path):\n+    (tmp_path / \"base.conf\").write_text(\"[a]\\nx = 1\\n\", encoding=\"utf-8\")\n+    assert \"x = 1\" in read_env_named_include(str(tmp_path), \"base.conf\", str(tmp_path))\n+\n+\n+def test_env_named_include_missing(tmp_path):\n+    with pytest.raises(Exception):\n+        resolve_env_named_include(str(tmp_path), \"nope.conf\", str(tmp_path))",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/4918d070a68b0f6fc6283582ef36db06e831c33b/tests%2Ftest_include_env_named.py",
+    "sha": "77e9e61142a530e8faab61b2b6f6e06b6af66245",
+    "status": "added"
+  }
+]

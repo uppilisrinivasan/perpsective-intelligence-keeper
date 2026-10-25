@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/ed45e499b13b6979dc95f922440fe1e4e1144b39/.github%2Fworkflows%2Fci.yml",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/.github%2Fworkflows%2Fci.yml?ref=ed45e499b13b6979dc95f922440fe1e4e1144b39",
+    "deletions": 1,
+    "filename": ".github/workflows/ci.yml",
+    "patch": "@@ -2,7 +2,7 @@ name: ci\n on: [push, pull_request]\n jobs:\n   tests:\n-    runs-on: ubuntu-latest\n+    runs-on: ubuntu-24.04\n     strategy:\n       matrix:\n         python: [\"3.9\", \"3.10\", \"3.11\", \"3.12\", \"3.13\"]",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/ed45e499b13b6979dc95f922440fe1e4e1144b39/.github%2Fworkflows%2Fci.yml",
+    "sha": "6268992b0104bb8af650c7032a6e28d5c5fac8ec",
+    "status": "modified"
+  }
+]

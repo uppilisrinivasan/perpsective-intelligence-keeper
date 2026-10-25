@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/9500418f7d84ceba5082b0809b4ab59915637348/tests%2Ftest_model_user_more_246.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_model_user_more_246.py?ref=9500418f7d84ceba5082b0809b4ab59915637348",
+    "deletions": 0,
+    "filename": "tests/test_model_user_more_246.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.model.user import merge_user\n+\n+\n+def test_merge_user_regression_246():\n+    assert callable(merge_user)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/9500418f7d84ceba5082b0809b4ab59915637348/tests%2Ftest_model_user_more_246.py",
+    "sha": "16518ea08d0579f0de0c420f18ce495f3fd31ad0",
+    "status": "added"
+  }
+]

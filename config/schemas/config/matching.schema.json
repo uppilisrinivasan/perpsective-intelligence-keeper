@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "anchor_score": {
+      "properties": {
+        "overlap": {
+          "type": "number"
+        },
+        "same_file": {
+          "type": "number"
+        },
+        "window": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "judge_batch_size": {
+      "type": "number"
+    },
+    "judge_hunk_lines": {
+      "type": "number"
+    },
+    "line_window": {
+      "type": "number"
+    },
+    "max_candidates_per_finding": {
+      "type": "number"
+    },
+    "min_lexical": {
+      "type": "number"
+    },
+    "pre_score": {
+      "properties": {
+        "anchor": {
+          "type": "number"
+        },
+        "category": {
+          "type": "number"
+        },
+        "lexical": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "shallow_review_weight": {
+      "type": "number"
+    },
+    "weights": {
+      "properties": {
+        "match": {
+          "type": "number"
+        },
+        "partial": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "anchor_score",
+    "judge_batch_size",
+    "judge_hunk_lines",
+    "line_window",
+    "max_candidates_per_finding",
+    "min_lexical",
+    "pre_score",
+    "shallow_review_weight",
+    "weights"
+  ],
+  "title": "config/matching.yaml",
+  "type": "object"
+}

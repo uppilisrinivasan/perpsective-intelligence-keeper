@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/141a3ffbe253182823dfe40e6a26d13c81a4c2df/tests%2Ftest_loader_merged2_more_231.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_merged2_more_231.py?ref=141a3ffbe253182823dfe40e6a26d13c81a4c2df",
+    "deletions": 0,
+    "filename": "tests/test_loader_merged2_more_231.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.loader.merged2 import load_merged2\n+\n+\n+def test_load_merged2_regression_231():\n+    assert callable(load_merged2)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/141a3ffbe253182823dfe40e6a26d13c81a4c2df/tests%2Ftest_loader_merged2_more_231.py",
+    "sha": "bdab720c00d4999d15d295d6380c6148c6dace3b",
+    "status": "added"
+  }
+]

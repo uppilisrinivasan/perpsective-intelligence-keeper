@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 8,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/07857bffe5d6c4ab47d63aa0b58b9b52f56a00d8/docs%2Ferrors.md",
+    "changes": 8,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/docs%2Ferrors.md?ref=07857bffe5d6c4ab47d63aa0b58b9b52f56a00d8",
+    "deletions": 0,
+    "filename": "docs/errors.md",
+    "patch": "@@ -0,0 +1,8 @@\n+# Errors\n+\n+## Example\n+\n+A short example of errors:\n+\n+    [app]\n+    name = demo",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/07857bffe5d6c4ab47d63aa0b58b9b52f56a00d8/docs%2Ferrors.md",
+    "sha": "1b13d099728570bbaea54ec8ea85eb24888f3a9d",
+    "status": "added"
+  }
+]

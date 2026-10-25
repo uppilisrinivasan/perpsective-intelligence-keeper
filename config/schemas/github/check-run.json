@@ -1,0 +1,652 @@
+{
+ "$comment": "Extracted from github/rest-api-description@bb754941722779d8a5b3a2f25a5fbb7ce794e1ea",
+ "$defs": {
+  "deployment-simple": {
+   "properties": {
+    "created_at": {
+     "format": "date-time",
+     "type": "string"
+    },
+    "environment": {
+     "type": "string"
+    },
+    "id": {
+     "type": "integer"
+    },
+    "node_id": {
+     "type": "string"
+    },
+    "original_environment": {
+     "type": "string"
+    },
+    "performed_via_github_app": {
+     "$ref": "#/$defs/nullable-integration"
+    },
+    "production_environment": {
+     "type": "boolean"
+    },
+    "repository_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "statuses_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "task": {
+     "type": "string"
+    },
+    "transient_environment": {
+     "type": "boolean"
+    },
+    "updated_at": {
+     "format": "date-time",
+     "type": "string"
+    },
+    "url": {
+     "format": "uri",
+     "type": "string"
+    }
+   },
+   "required": [
+    "id",
+    "node_id",
+    "task",
+    "environment",
+    "description",
+    "statuses_url",
+    "repository_url",
+    "url",
+    "created_at",
+    "updated_at"
+   ],
+   "title": "Deployment",
+   "type": "object"
+  },
+  "enterprise": {
+   "properties": {
+    "avatar_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "created_at": {
+     "anyOf": [
+      {
+       "format": "date-time",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "html_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "id": {
+     "type": "integer"
+    },
+    "name": {
+     "type": "string"
+    },
+    "node_id": {
+     "type": "string"
+    },
+    "slug": {
+     "type": "string"
+    },
+    "updated_at": {
+     "anyOf": [
+      {
+       "format": "date-time",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "website_url": {
+     "anyOf": [
+      {
+       "format": "uri",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    }
+   },
+   "required": [
+    "id",
+    "node_id",
+    "name",
+    "slug",
+    "html_url",
+    "created_at",
+    "updated_at",
+    "avatar_url"
+   ],
+   "title": "Enterprise",
+   "type": "object"
+  },
+  "nullable-integration": {
+   "anyOf": [
+    {
+     "properties": {
+      "client_id": {
+       "type": "string"
+      },
+      "created_at": {
+       "format": "date-time",
+       "type": "string"
+      },
+      "events": {
+       "items": {
+        "type": "string"
+       },
+       "type": "array"
+      },
+      "external_url": {
+       "format": "uri",
+       "type": "string"
+      },
+      "html_url": {
+       "format": "uri",
+       "type": "string"
+      },
+      "id": {
+       "type": "integer"
+      },
+      "installations_count": {
+       "type": "integer"
+      },
+      "name": {
+       "type": "string"
+      },
+      "node_id": {
+       "type": "string"
+      },
+      "owner": {
+       "oneOf": [
+        {
+         "$ref": "#/$defs/simple-user"
+        },
+        {
+         "$ref": "#/$defs/enterprise"
+        }
+       ]
+      },
+      "permissions": {
+       "additionalProperties": {
+        "type": "string"
+       },
+       "properties": {
+        "checks": {
+         "type": "string"
+        },
+        "contents": {
+         "type": "string"
+        },
+        "deployments": {
+         "type": "string"
+        },
+        "issues": {
+         "type": "string"
+        },
+        "metadata": {
+         "type": "string"
+        }
+       },
+       "type": "object"
+      },
+      "slug": {
+       "type": "string"
+      },
+      "updated_at": {
+       "format": "date-time",
+       "type": "string"
+      }
+     },
+     "required": [
+      "id",
+      "node_id",
+      "owner",
+      "name",
+      "description",
+      "external_url",
+      "html_url",
+      "created_at",
+      "updated_at",
+      "permissions",
+      "events"
+     ],
+     "title": "GitHub app",
+     "type": "object"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "pull-request-minimal": {
+   "properties": {
+    "base": {
+     "properties": {
+      "ref": {
+       "type": "string"
+      },
+      "repo": {
+       "properties": {
+        "id": {
+         "format": "int64",
+         "type": "integer"
+        },
+        "name": {
+         "type": "string"
+        },
+        "url": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "id",
+        "url",
+        "name"
+       ],
+       "type": "object"
+      },
+      "sha": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "ref",
+      "sha",
+      "repo"
+     ],
+     "type": "object"
+    },
+    "head": {
+     "properties": {
+      "ref": {
+       "type": "string"
+      },
+      "repo": {
+       "properties": {
+        "id": {
+         "format": "int64",
+         "type": "integer"
+        },
+        "name": {
+         "type": "string"
+        },
+        "url": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "id",
+        "url",
+        "name"
+       ],
+       "type": "object"
+      },
+      "sha": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "ref",
+      "sha",
+      "repo"
+     ],
+     "type": "object"
+    },
+    "id": {
+     "format": "int64",
+     "type": "integer"
+    },
+    "number": {
+     "type": "integer"
+    },
+    "url": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "id",
+    "number",
+    "url",
+    "head",
+    "base"
+   ],
+   "title": "Pull Request Minimal",
+   "type": "object"
+  },
+  "simple-user": {
+   "properties": {
+    "avatar_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "email": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "events_url": {
+     "type": "string"
+    },
+    "followers_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "following_url": {
+     "type": "string"
+    },
+    "gists_url": {
+     "type": "string"
+    },
+    "gravatar_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "html_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "id": {
+     "format": "int64",
+     "type": "integer"
+    },
+    "login": {
+     "type": "string"
+    },
+    "name": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "node_id": {
+     "type": "string"
+    },
+    "organizations_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "received_events_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "repos_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "site_admin": {
+     "type": "boolean"
+    },
+    "starred_at": {
+     "type": "string"
+    },
+    "starred_url": {
+     "type": "string"
+    },
+    "subscriptions_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "type": {
+     "type": "string"
+    },
+    "url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "user_view_type": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "avatar_url",
+    "events_url",
+    "followers_url",
+    "following_url",
+    "gists_url",
+    "gravatar_id",
+    "html_url",
+    "id",
+    "node_id",
+    "login",
+    "organizations_url",
+    "received_events_url",
+    "repos_url",
+    "site_admin",
+    "starred_url",
+    "subscriptions_url",
+    "type",
+    "url"
+   ],
+   "title": "Simple User",
+   "type": "object"
+  }
+ },
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "properties": {
+  "app": {
+   "$ref": "#/$defs/nullable-integration"
+  },
+  "check_suite": {
+   "anyOf": [
+    {
+     "properties": {
+      "id": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "id"
+     ],
+     "type": "object"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "completed_at": {
+   "anyOf": [
+    {
+     "format": "date-time",
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "conclusion": {
+   "anyOf": [
+    {
+     "enum": [
+      "success",
+      "failure",
+      "neutral",
+      "cancelled",
+      "skipped",
+      "timed_out",
+      "action_required"
+     ],
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "deployment": {
+   "$ref": "#/$defs/deployment-simple"
+  },
+  "details_url": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "external_id": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "head_sha": {
+   "type": "string"
+  },
+  "html_url": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "id": {
+   "format": "int64",
+   "type": "integer"
+  },
+  "name": {
+   "type": "string"
+  },
+  "node_id": {
+   "type": "string"
+  },
+  "output": {
+   "properties": {
+    "annotations_count": {
+     "type": "integer"
+    },
+    "annotations_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "summary": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "text": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "title": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    }
+   },
+   "required": [
+    "title",
+    "summary",
+    "text",
+    "annotations_count",
+    "annotations_url"
+   ],
+   "type": "object"
+  },
+  "pull_requests": {
+   "items": {
+    "$ref": "#/$defs/pull-request-minimal"
+   },
+   "type": "array"
+  },
+  "started_at": {
+   "anyOf": [
+    {
+     "format": "date-time",
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "status": {
+   "enum": [
+    "queued",
+    "in_progress",
+    "completed",
+    "waiting",
+    "requested",
+    "pending"
+   ],
+   "type": "string"
+  },
+  "url": {
+   "type": "string"
+  }
+ },
+ "required": [
+  "id",
+  "node_id",
+  "head_sha",
+  "name",
+  "url",
+  "html_url",
+  "details_url",
+  "status",
+  "conclusion",
+  "started_at",
+  "completed_at",
+  "external_id",
+  "check_suite",
+  "output",
+  "app",
+  "pull_requests"
+ ],
+ "title": "CheckRun",
+ "type": "object"
+}

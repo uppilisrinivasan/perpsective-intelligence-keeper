@@ -1,0 +1,166 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/29618009?v=4",
+      "events_url": "https://api.github.example/users/maria-t46/events{/privacy}",
+      "followers_url": "https://api.github.example/users/maria-t46/followers",
+      "following_url": "https://api.github.example/users/maria-t46/following{/other_user}",
+      "gists_url": "https://api.github.example/users/maria-t46/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/maria-t46",
+      "id": 29618009,
+      "login": "maria-t46",
+      "node_id": "U_kwDOoORP8Ed_KBxU",
+      "organizations_url": "https://api.github.example/users/maria-t46/orgs",
+      "received_events_url": "https://api.github.example/users/maria-t46/received_events",
+      "repos_url": "https://api.github.example/users/maria-t46/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/maria-t46/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/maria-t46/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/maria-t46",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/bdc9c5e5f15111d9ad5de287702179138ea43b78/comments",
+    "commit": {
+      "author": {
+        "date": "2026-08-17T15:08:39Z",
+        "email": "29618009+maria-t46@users.noreply.github.example",
+        "name": "Maria T."
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2026-08-17T15:08:39Z",
+        "email": "29618009+maria-t46@users.noreply.github.example",
+        "name": "Maria T."
+      },
+      "message": "Tokenizer: add hexnum support",
+      "tree": {
+        "sha": "1c0566b1443f58c613e6590eaa37717d7638d30a",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/1c0566b1443f58c613e6590eaa37717d7638d30a"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/bdc9c5e5f15111d9ad5de287702179138ea43b78",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/29618009?v=4",
+      "events_url": "https://api.github.example/users/maria-t46/events{/privacy}",
+      "followers_url": "https://api.github.example/users/maria-t46/followers",
+      "following_url": "https://api.github.example/users/maria-t46/following{/other_user}",
+      "gists_url": "https://api.github.example/users/maria-t46/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/maria-t46",
+      "id": 29618009,
+      "login": "maria-t46",
+      "node_id": "U_kwDOoORP8Ed_KBxU",
+      "organizations_url": "https://api.github.example/users/maria-t46/orgs",
+      "received_events_url": "https://api.github.example/users/maria-t46/received_events",
+      "repos_url": "https://api.github.example/users/maria-t46/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/maria-t46/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/maria-t46/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/maria-t46",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/bdc9c5e5f15111d9ad5de287702179138ea43b78",
+    "node_id": "C_kwDOirtp7KyX-1bl",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/e4818fdeebdf9126128531a153e9f72bd2942f9b",
+        "sha": "e4818fdeebdf9126128531a153e9f72bd2942f9b",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/e4818fdeebdf9126128531a153e9f72bd2942f9b"
+      }
+    ],
+    "sha": "bdc9c5e5f15111d9ad5de287702179138ea43b78",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/bdc9c5e5f15111d9ad5de287702179138ea43b78"
+  },
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/29618009?v=4",
+      "events_url": "https://api.github.example/users/maria-t46/events{/privacy}",
+      "followers_url": "https://api.github.example/users/maria-t46/followers",
+      "following_url": "https://api.github.example/users/maria-t46/following{/other_user}",
+      "gists_url": "https://api.github.example/users/maria-t46/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/maria-t46",
+      "id": 29618009,
+      "login": "maria-t46",
+      "node_id": "U_kwDOoORP8Ed_KBxU",
+      "organizations_url": "https://api.github.example/users/maria-t46/orgs",
+      "received_events_url": "https://api.github.example/users/maria-t46/received_events",
+      "repos_url": "https://api.github.example/users/maria-t46/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/maria-t46/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/maria-t46/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/maria-t46",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/f500015c45818aca79b3ee8d511bebc202dfc60a/comments",
+    "commit": {
+      "author": {
+        "date": "2026-08-21T04:19:31Z",
+        "email": "29618009+maria-t46@users.noreply.github.example",
+        "name": "Maria T."
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2026-08-21T04:19:31Z",
+        "email": "29618009+maria-t46@users.noreply.github.example",
+        "name": "Maria T."
+      },
+      "message": "Apply suggestions from review",
+      "tree": {
+        "sha": "b23b34e871fe2fc1414611a06a2e8ed7719b87ee",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/b23b34e871fe2fc1414611a06a2e8ed7719b87ee"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/f500015c45818aca79b3ee8d511bebc202dfc60a",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/29618009?v=4",
+      "events_url": "https://api.github.example/users/maria-t46/events{/privacy}",
+      "followers_url": "https://api.github.example/users/maria-t46/followers",
+      "following_url": "https://api.github.example/users/maria-t46/following{/other_user}",
+      "gists_url": "https://api.github.example/users/maria-t46/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/maria-t46",
+      "id": 29618009,
+      "login": "maria-t46",
+      "node_id": "U_kwDOoORP8Ed_KBxU",
+      "organizations_url": "https://api.github.example/users/maria-t46/orgs",
+      "received_events_url": "https://api.github.example/users/maria-t46/received_events",
+      "repos_url": "https://api.github.example/users/maria-t46/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/maria-t46/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/maria-t46/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/maria-t46",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/f500015c45818aca79b3ee8d511bebc202dfc60a",
+    "node_id": "C_kwDOiNNOEoIt7PyB",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/bdc9c5e5f15111d9ad5de287702179138ea43b78",
+        "sha": "bdc9c5e5f15111d9ad5de287702179138ea43b78",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/bdc9c5e5f15111d9ad5de287702179138ea43b78"
+      }
+    ],
+    "sha": "f500015c45818aca79b3ee8d511bebc202dfc60a",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/f500015c45818aca79b3ee8d511bebc202dfc60a"
+  }
+]

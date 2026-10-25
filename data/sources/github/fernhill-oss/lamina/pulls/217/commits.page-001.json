@@ -1,0 +1,166 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/7038304?v=4",
+      "events_url": "https://api.github.example/users/lucia-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/lucia-v/followers",
+      "following_url": "https://api.github.example/users/lucia-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/lucia-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/lucia-v",
+      "id": 7038304,
+      "login": "lucia-v",
+      "node_id": "U_kwDO-pcmzDnm1BV7",
+      "organizations_url": "https://api.github.example/users/lucia-v/orgs",
+      "received_events_url": "https://api.github.example/users/lucia-v/received_events",
+      "repos_url": "https://api.github.example/users/lucia-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/lucia-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/lucia-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/lucia-v",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/52b6eecc893208a51a4c167c8d34dc0bb7be54de/comments",
+    "commit": {
+      "author": {
+        "date": "2025-12-15T15:33:42Z",
+        "email": "7038304+lucia-v@users.noreply.github.example",
+        "name": "Lucía Varela"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2025-12-15T15:33:42Z",
+        "email": "7038304+lucia-v@users.noreply.github.example",
+        "name": "Lucía Varela"
+      },
+      "message": "Initial optional implementation",
+      "tree": {
+        "sha": "6385c0b33109c1713873e57eb8a6b83937598ea8",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/6385c0b33109c1713873e57eb8a6b83937598ea8"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/52b6eecc893208a51a4c167c8d34dc0bb7be54de",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/7038304?v=4",
+      "events_url": "https://api.github.example/users/lucia-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/lucia-v/followers",
+      "following_url": "https://api.github.example/users/lucia-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/lucia-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/lucia-v",
+      "id": 7038304,
+      "login": "lucia-v",
+      "node_id": "U_kwDO-pcmzDnm1BV7",
+      "organizations_url": "https://api.github.example/users/lucia-v/orgs",
+      "received_events_url": "https://api.github.example/users/lucia-v/received_events",
+      "repos_url": "https://api.github.example/users/lucia-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/lucia-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/lucia-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/lucia-v",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/52b6eecc893208a51a4c167c8d34dc0bb7be54de",
+    "node_id": "C_kwDOs4wxzlpAEstr",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/2e1fad26ace55389ed2f52c7a5b985ad248476d2",
+        "sha": "2e1fad26ace55389ed2f52c7a5b985ad248476d2",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/2e1fad26ace55389ed2f52c7a5b985ad248476d2"
+      }
+    ],
+    "sha": "52b6eecc893208a51a4c167c8d34dc0bb7be54de",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/52b6eecc893208a51a4c167c8d34dc0bb7be54de"
+  },
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/7038304?v=4",
+      "events_url": "https://api.github.example/users/lucia-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/lucia-v/followers",
+      "following_url": "https://api.github.example/users/lucia-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/lucia-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/lucia-v",
+      "id": 7038304,
+      "login": "lucia-v",
+      "node_id": "U_kwDO-pcmzDnm1BV7",
+      "organizations_url": "https://api.github.example/users/lucia-v/orgs",
+      "received_events_url": "https://api.github.example/users/lucia-v/received_events",
+      "repos_url": "https://api.github.example/users/lucia-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/lucia-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/lucia-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/lucia-v",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/62af04cadca94b191c3b0e70daa03f8a302f05e0/comments",
+    "commit": {
+      "author": {
+        "date": "2025-12-19T15:41:43Z",
+        "email": "7038304+lucia-v@users.noreply.github.example",
+        "name": "Lucía Varela"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2025-12-19T15:41:43Z",
+        "email": "7038304+lucia-v@users.noreply.github.example",
+        "name": "Lucía Varela"
+      },
+      "message": "Update after review",
+      "tree": {
+        "sha": "df3ddb551e06a6e4cb23f986378cf93db49d7a25",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/df3ddb551e06a6e4cb23f986378cf93db49d7a25"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/62af04cadca94b191c3b0e70daa03f8a302f05e0",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/7038304?v=4",
+      "events_url": "https://api.github.example/users/lucia-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/lucia-v/followers",
+      "following_url": "https://api.github.example/users/lucia-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/lucia-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/lucia-v",
+      "id": 7038304,
+      "login": "lucia-v",
+      "node_id": "U_kwDO-pcmzDnm1BV7",
+      "organizations_url": "https://api.github.example/users/lucia-v/orgs",
+      "received_events_url": "https://api.github.example/users/lucia-v/received_events",
+      "repos_url": "https://api.github.example/users/lucia-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/lucia-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/lucia-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/lucia-v",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/62af04cadca94b191c3b0e70daa03f8a302f05e0",
+    "node_id": "C_kwDOX9TqQY-gV0Up",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/52b6eecc893208a51a4c167c8d34dc0bb7be54de",
+        "sha": "52b6eecc893208a51a4c167c8d34dc0bb7be54de",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/52b6eecc893208a51a4c167c8d34dc0bb7be54de"
+      }
+    ],
+    "sha": "62af04cadca94b191c3b0e70daa03f8a302f05e0",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/62af04cadca94b191c3b0e70daa03f8a302f05e0"
+  }
+]

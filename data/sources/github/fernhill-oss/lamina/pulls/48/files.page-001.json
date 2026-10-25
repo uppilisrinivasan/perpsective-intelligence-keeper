@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 24,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/7b43bade9d9ca9db37a8ec966945c55fc93dfb08/lamina%2Flexer%2Fdotted.py",
+    "changes": 24,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Flexer%2Fdotted.py?ref=7b43bade9d9ca9db37a8ec966945c55fc93dfb08",
+    "deletions": 0,
+    "filename": "lamina/lexer/dotted.py",
+    "patch": "@@ -0,0 +1,24 @@\n+\"\"\"Dotted tokens inside a value (the tokenizer is the hot path).\"\"\"\n+\n+from lamina.lexer.core import Token\n+\n+\n+def scan_dotted(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n+    \"\"\"Split value into dotted words, separated by ',' or whitespace.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(value)\n+    tokens: list[Token] = []\n+    currentWord: list[str] = []\n+    start = 1\n+    for column, ch in enumerate(value, start=1):\n+        if ch.isspace() or ch == ',':\n+            if currentWord:\n+                tokens.append(Token(\"WORD\", \"\".join(currentWord), line, start))\n+                currentWord = []\n+            continue\n+        if not currentWord:\n+            start = column\n+        currentWord.append(ch)\n+    if currentWord:\n+        tokens.append(Token(\"WORD\", \"\".join(currentWord), line, start))\n+    return tokens",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/7b43bade9d9ca9db37a8ec966945c55fc93dfb08/lamina%2Flexer%2Fdotted.py",
+    "sha": "3df580e42d27bd77d80507507da103d7b8bf531d",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/7b43bade9d9ca9db37a8ec966945c55fc93dfb08/tests%2Ftest_lexer_dotted.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_lexer_dotted.py?ref=7b43bade9d9ca9db37a8ec966945c55fc93dfb08",
+    "deletions": 0,
+    "filename": "tests/test_lexer_dotted.py",
+    "patch": "@@ -0,0 +1,13 @@\n+from lamina.lexer.dotted import scan_dotted\n+\n+\n+def test_dotted_words():\n+    assert [t.value for t in scan_dotted(\"a,b c\", 1)] == [\"a\", \"b\", \"c\"]\n+\n+\n+def test_dotted_columns():\n+    assert [t.column for t in scan_dotted(\"ab,cd\", 3)] == [1, 4]\n+\n+\n+def test_dotted_empty():\n+    assert scan_dotted(\"\", 1) == []",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/7b43bade9d9ca9db37a8ec966945c55fc93dfb08/tests%2Ftest_lexer_dotted.py",
+    "sha": "0a0c79aeb01ef4529ab5e7332835d28fd3558890",
+    "status": "added"
+  }
+]

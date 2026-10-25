@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/59273d840770e4c88d576d80477c1a54687c9f27/tests%2Ftest_include_env_named_regression_78.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_include_env_named_regression_78.py?ref=59273d840770e4c88d576d80477c1a54687c9f27",
+    "deletions": 0,
+    "filename": "tests/test_include_env_named_regression_78.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.include.env_named import resolve_env_named_include\n+\n+\n+def test_resolve_env_named_include_regression_78():\n+    assert callable(resolve_env_named_include)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/59273d840770e4c88d576d80477c1a54687c9f27/tests%2Ftest_include_env_named_regression_78.py",
+    "sha": "205590e0400552f3db66f1ea62de12460f42f310",
+    "status": "added"
+  }
+]

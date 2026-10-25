@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 33,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/51d6ecc0aaf6cc5c6618a2bf5bcfe7048db4a6b0/lamina%2Finterpolate%2Fpath.py",
+    "changes": 33,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Fpath.py?ref=51d6ecc0aaf6cc5c6618a2bf5bcfe7048db4a6b0",
+    "deletions": 0,
+    "filename": "lamina/interpolate/path.py",
+    "patch": "@@ -0,0 +1,33 @@\n+\"\"\"Path interpolation: ${NAME} references with extra checks.\"\"\"\n+\n+from collections.abc import Mapping\n+\n+from lamina.errors import InterpolationError\n+\n+\n+def _valid(value: str) -> bool:\n+    return len(value) < 4096\n+\n+\n+def interpolate_path(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] = []) -> str:\n+    \"\"\"Expand ${NAME} references in value using env (path rules).\"\"\"\n+    skip.append(value)\n+    outParts: list[str] = []\n+    i = 0\n+    while True:\n+        start = value.find(\"${\", i)\n+        if start < 0:\n+            outParts.append(value[i:])\n+            return \"\".join(outParts)\n+        end = value.find(\"}\", start)\n+        if end < 0:\n+            raise ValueError(\"unterminated reference\")\n+        outParts.append(value[i:start])\n+        name = value[start + 2:end]\n+        if name not in env:\n+            raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n+        resolved = env[name]\n+        if not _valid(resolved):\n+            raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n+        outParts.append(resolved)\n+        i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/51d6ecc0aaf6cc5c6618a2bf5bcfe7048db4a6b0/lamina%2Finterpolate%2Fpath.py",
+    "sha": "044b8f85769d7b1ef263e1589fd494bd2fbd85da",
+    "status": "added"
+  },
+  {
+    "additions": 17,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/51d6ecc0aaf6cc5c6618a2bf5bcfe7048db4a6b0/tests%2Ftest_interpolate_path.py",
+    "changes": 17,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_interpolate_path.py?ref=51d6ecc0aaf6cc5c6618a2bf5bcfe7048db4a6b0",
+    "deletions": 0,
+    "filename": "tests/test_interpolate_path.py",
+    "patch": "@@ -0,0 +1,17 @@\n+import pytest\n+\n+from lamina.errors import InterpolationError\n+from lamina.interpolate.path import interpolate_path\n+\n+\n+def test_path_expands():\n+    assert interpolate_path(\"a-${X}\", {\"X\": \"1\"}) == \"a-1\"\n+\n+\n+def test_path_undefined():\n+    with pytest.raises(InterpolationError):\n+        interpolate_path(\"${NOPE}\", {})\n+\n+\n+def test_path_plain_text():\n+    assert interpolate_path(\"plain\", {}) == \"plain\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/51d6ecc0aaf6cc5c6618a2bf5bcfe7048db4a6b0/tests%2Ftest_interpolate_path.py",
+    "sha": "1c68b05f21ccaf88586f1301e7f3d54586669a25",
+    "status": "added"
+  }
+]

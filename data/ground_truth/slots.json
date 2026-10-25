@@ -1,0 +1,306 @@
+{
+  "B1": {
+    "areas": [
+      "loader",
+      "include",
+      "cli"
+    ],
+    "category": "correctness",
+    "flag_rate": 0.1,
+    "id": "B1",
+    "outcome_if_ignored": {
+      "post_merge_bug": 0.55
+    },
+    "owner": "maintainer",
+    "presence_rate": 0.3,
+    "type": "blind_spot"
+  },
+  "B2": {
+    "areas": [
+      "loader",
+      "include"
+    ],
+    "category": "correctness",
+    "flag_rate": 0.15,
+    "id": "B2",
+    "outcome_if_ignored": {
+      "post_merge_bug": 0.45
+    },
+    "owner": "maintainer",
+    "presence_rate": 0.2,
+    "type": "blind_spot"
+  },
+  "D1": {
+    "areas": [
+      "loader",
+      "model",
+      "dump"
+    ],
+    "category": "design",
+    "flag_rate": 0.8,
+    "id": "D1",
+    "owner": "maintainer",
+    "presence_rate": 0.5,
+    "starts_month": 30,
+    "type": "drift"
+  },
+  "E1": {
+    "areas": [
+      "include"
+    ],
+    "category": "security",
+    "flag_rate": 0.9,
+    "id": "E1",
+    "outcome_if_ignored": {
+      "post_merge_bug": 0.6
+    },
+    "owner": "maintainer",
+    "presence_rate": 0.45,
+    "type": "edge",
+    "variants": [
+      "dotdot",
+      "symlink",
+      "absolute"
+    ]
+  },
+  "E2": {
+    "areas": [
+      "dump",
+      "model"
+    ],
+    "category": "invariant",
+    "flag_rate": 0.85,
+    "id": "E2",
+    "outcome_if_ignored": {
+      "post_merge_bug": 0.4,
+      "reverted": 0.1
+    },
+    "owner": "maintainer",
+    "presence_rate": 0.4,
+    "type": "edge"
+  },
+  "E3": {
+    "applies_to_intents": [
+      "deps",
+      "feature"
+    ],
+    "areas": [
+      "any"
+    ],
+    "category": "dependency",
+    "flag_rate": 0.95,
+    "id": "E3",
+    "outcome_if_ignored": {
+      "reverted": 0.5
+    },
+    "owner": "maintainer",
+    "presence_rate": 0.6,
+    "presence_rate_feature": 0.06,
+    "type": "edge"
+  },
+  "E4": {
+    "areas": [
+      "lexer"
+    ],
+    "category": "performance",
+    "flag_rate": 0.8,
+    "id": "E4",
+    "outcome_if_ignored": {
+      "follow_up_fix": 0.4
+    },
+    "owner": "maintainer",
+    "presence_rate": 0.35,
+    "type": "edge"
+  },
+  "E5": {
+    "areas": [
+      "loader"
+    ],
+    "category": "history_context",
+    "flag_rate": 0.9,
+    "history_anchor": {
+      "issue_month": 10,
+      "pr_month": 9,
+      "revert_month": 10
+    },
+    "id": "E5",
+    "outcome_if_ignored": {
+      "post_merge_bug": 0.5
+    },
+    "owner": "maintainer",
+    "presence_rate": 0.5,
+    "type": "edge"
+  },
+  "E6": {
+    "areas": [
+      "errors",
+      "parser",
+      "include",
+      "interpolate"
+    ],
+    "category": "invariant",
+    "flag_rate": 0.75,
+    "id": "E6",
+    "outcome_if_ignored": {
+      "follow_up_fix": 0.3
+    },
+    "owner": "maintainer",
+    "presence_rate": 0.3,
+    "type": "edge"
+  },
+  "E7": {
+    "areas": [
+      "loader",
+      "model",
+      "dump"
+    ],
+    "category": "api_compat",
+    "flag_rate": 0.9,
+    "id": "E7",
+    "outcome_if_ignored": {
+      "post_merge_bug": 0.5
+    },
+    "owner": "maintainer",
+    "presence_rate": 0.25,
+    "type": "edge"
+  },
+  "E8": {
+    "areas": [
+      "interpolate"
+    ],
+    "category": "security",
+    "flag_rate": 0.85,
+    "id": "E8",
+    "outcome_if_ignored": {
+      "post_merge_bug": 0.3
+    },
+    "owner": "maintainer",
+    "presence_rate": 0.3,
+    "type": "edge"
+  },
+  "S1": {
+    "areas": [
+      "any_code"
+    ],
+    "category": "tests",
+    "flag_rate": 0.7,
+    "id": "S1",
+    "owner": "any",
+    "presence_rate": 0.35,
+    "type": "shared"
+  },
+  "S2": {
+    "areas": [
+      "any_code"
+    ],
+    "category": "style",
+    "flag_rate": 0.5,
+    "id": "S2",
+    "owner": "any",
+    "presence_rate": 0.5,
+    "type": "shared"
+  },
+  "S3": {
+    "areas": [
+      "any_code"
+    ],
+    "category": "docs",
+    "flag_rate": 0.6,
+    "id": "S3",
+    "owner": "any",
+    "presence_rate": 0.3,
+    "type": "shared"
+  },
+  "S4": {
+    "areas": [
+      "any_code"
+    ],
+    "category": "correctness",
+    "flag_rate": 0.8,
+    "id": "S4",
+    "outcome_if_ignored": {
+      "post_merge_bug": 0.3
+    },
+    "owner": "any",
+    "presence_rate": 0.15,
+    "type": "shared"
+  },
+  "T1": {
+    "areas": [
+      "build"
+    ],
+    "category": "build_release",
+    "flag_rate": 0.9,
+    "id": "T1",
+    "owner": "security_reviewer",
+    "presence_rate": 0.5,
+    "type": "edge"
+  },
+  "T2": {
+    "areas": [
+      "build"
+    ],
+    "category": "security",
+    "flag_rate": 0.9,
+    "id": "T2",
+    "owner": "security_reviewer",
+    "presence_rate": 0.4,
+    "type": "edge"
+  },
+  "T3": {
+    "areas": [
+      "include"
+    ],
+    "category": "security",
+    "flag_rate": 0.8,
+    "id": "T3",
+    "owner": "security_reviewer",
+    "presence_rate": 0.25,
+    "type": "edge"
+  },
+  "T4": {
+    "areas": [
+      "include"
+    ],
+    "category": "security",
+    "flag_rate": 0.8,
+    "follows": "E1",
+    "id": "T4",
+    "owner": "security_reviewer",
+    "type": "edge"
+  },
+  "U1": {
+    "areas": [
+      "build"
+    ],
+    "category": "build_release",
+    "flag_rate": 0.05,
+    "history_events": [
+      {
+        "merged": true,
+        "month": 20,
+        "outcome": "reverted"
+      }
+    ],
+    "id": "U1",
+    "owner": "none",
+    "type": "unknown"
+  },
+  "X1": {
+    "areas": [
+      "any_code"
+    ],
+    "category": "tests",
+    "flag_rate_by_group": {
+      "newcomer": 0.6,
+      "regular": 0.18
+    },
+    "id": "X1",
+    "outcome_if_ignored": {
+      "post_merge_bug": 0.03
+    },
+    "owner": "maintainer",
+    "presence": "eligible when tests are present and the change has \u2265 2 branches",
+    "type": "bias"
+  }
+}

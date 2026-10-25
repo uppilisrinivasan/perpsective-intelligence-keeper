@@ -1,0 +1,38 @@
+[
+  {
+    "additions": 25,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/7aa0dcfbec1e822d4283b4953fff09e7d0c93f8d/lamina%2Fcli%2Fvalidate.py",
+    "changes": 25,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fcli%2Fvalidate.py?ref=7aa0dcfbec1e822d4283b4953fff09e7d0c93f8d",
+    "deletions": 0,
+    "filename": "lamina/cli/validate.py",
+    "patch": "@@ -0,0 +1,25 @@\n+\"\"\"`lamina validate`: print information about a config file.\"\"\"\n+\n+try:\n+    import tomli  # noqa: F401\n+except ImportError:  # pragma: no cover\n+    tomli = None\n+\n+import sys\n+\n+from lamina.parser import parse\n+\n+\n+def cmd_validate(argv: list[str], *, skip: list[str] | None = None) -> int:\n+    \"\"\"Run the validate command; return the exit code.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(\"--\")\n+    if len(argv) != 1:\n+        print(\"usage: lamina validate FILE\", file=sys.stderr)\n+        return 2\n+    with open(argv[0], encoding=\"utf-8\") as fh:\n+        source_text = fh.read()\n+    doc = parse(source_text, source=argv[0])\n+    for section in doc.sections():\n+        print(f\"{section.name}: {len(section.entries())}\")\n+    return 0",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/7aa0dcfbec1e822d4283b4953fff09e7d0c93f8d/lamina%2Fcli%2Fvalidate.py",
+    "sha": "1201823462c4464233886fdbabc3712bcc1e7f53",
+    "status": "added"
+  },
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/7aa0dcfbec1e822d4283b4953fff09e7d0c93f8d/pyproject.toml",
+    "changes": 1,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/pyproject.toml?ref=7aa0dcfbec1e822d4283b4953fff09e7d0c93f8d",
+    "deletions": 0,
+    "filename": "pyproject.toml",
+    "patch": "@@ -12,6 +12,7 @@ dependencies = []\n \n [project.optional-dependencies]\n test = [\"pytest==8.*\"]\n+tomli = [\"tomli>=2.0.1\"]\n regex = [\"regex>=2024.9.11\"]\n \n [project.scripts]",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/7aa0dcfbec1e822d4283b4953fff09e7d0c93f8d/pyproject.toml",
+    "sha": "3ee0c81117094acf65993d1488fc25ebd3a8a9e3",
+    "status": "modified"
+  },
+  {
+    "additions": 11,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/7aa0dcfbec1e822d4283b4953fff09e7d0c93f8d/tests%2Ftest_cli_validate.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_cli_validate.py?ref=7aa0dcfbec1e822d4283b4953fff09e7d0c93f8d",
+    "deletions": 0,
+    "filename": "tests/test_cli_validate.py",
+    "patch": "@@ -0,0 +1,11 @@\n+from lamina.cli.validate import cmd_validate\n+\n+\n+def test_validate_counts(write, capsys):\n+    path = write(\"c_validate.conf\", \"[a]\\nx = 1\\ny = 2\\n\")\n+    assert cmd_validate([path]) == 0\n+    assert capsys.readouterr().out.strip() == \"a: 2\"\n+\n+\n+def test_validate_usage():\n+    assert cmd_validate([]) == 2",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/7aa0dcfbec1e822d4283b4953fff09e7d0c93f8d/tests%2Ftest_cli_validate.py",
+    "sha": "d8627df8b2d88344e06875217c9c4b3093cb5ec9",
+    "status": "added"
+  }
+]

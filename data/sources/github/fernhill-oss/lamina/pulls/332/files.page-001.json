@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 4,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/0a05994db4b8588402ff9068898cfd5a0ff7ad18/docs%2Ferrors.md",
+    "changes": 4,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/docs%2Ferrors.md?ref=0a05994db4b8588402ff9068898cfd5a0ff7ad18",
+    "deletions": 0,
+    "filename": "docs/errors.md",
+    "patch": "@@ -21,3 +21,7 @@ See the README for how errors interacts with the rest of lamina.\n ## Common questions\n \n **Does errors change my file?** No: lamina writes back exactly what it read.\n+\n+## Advanced usage\n+\n+Use `lamina.compat.normalize_v2()` to normalise errors before loading.",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/0a05994db4b8588402ff9068898cfd5a0ff7ad18/docs%2Ferrors.md",
+    "sha": "74da383e729481bf0c72be07bd9628256a176b92",
+    "status": "modified"
+  }
+]

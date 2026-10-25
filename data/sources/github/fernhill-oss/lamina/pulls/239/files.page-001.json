@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 19,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/52f73ef4e1de6ce1a09600d91819056146d69b9c/lamina%2Fparser%2Fchoice.py",
+    "changes": 19,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fparser%2Fchoice.py?ref=52f73ef4e1de6ce1a09600d91819056146d69b9c",
+    "deletions": 0,
+    "filename": "lamina/parser/choice.py",
+    "patch": "@@ -0,0 +1,19 @@\n+\"\"\"Parse choice values: comma-separated items in brackets.\"\"\"\n+\n+from lamina.errors import ParseError\n+\n+\n+def parse_choice_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+    \"\"\"Parse a [a, b, c] choice value into its items.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(raw)\n+    stripped_text = raw.strip()\n+    if not (stripped_text.startswith(\"[\") and stripped_text.endswith(\"]\")):\n+        raise ParseError(f\"expected [items], got {raw!r}\", line, column)\n+    inner = stripped_text[1:-1].strip()\n+    if not inner:\n+        return []\n+    items = [part.strip() for part in inner.split(\",\")]\n+    if any(item == \"\" for item in items):\n+        raise ParseError(\"empty item in list\", line, column)\n+    return items",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/52f73ef4e1de6ce1a09600d91819056146d69b9c/lamina%2Fparser%2Fchoice.py",
+    "sha": "264dc2ab55c58b8fa8f02c5d50a184e269936f5b",
+    "status": "added"
+  },
+  {
+    "additions": 16,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/52f73ef4e1de6ce1a09600d91819056146d69b9c/tests%2Ftest_parser_choice.py",
+    "changes": 16,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_parser_choice.py?ref=52f73ef4e1de6ce1a09600d91819056146d69b9c",
+    "deletions": 0,
+    "filename": "tests/test_parser_choice.py",
+    "patch": "@@ -0,0 +1,16 @@\n+import pytest\n+\n+from lamina.parser.choice import parse_choice_value\n+\n+\n+def test_choice_items():\n+    assert parse_choice_value(\"[a, b]\", 1, 1) == [\"a\", \"b\"]\n+\n+\n+def test_choice_empty_list():\n+    assert parse_choice_value(\"[]\", 1, 1) == []\n+\n+\n+def test_choice_rejects_bare_value():\n+    with pytest.raises(Exception):\n+        parse_choice_value(\"a, b\", 2, 5)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/52f73ef4e1de6ce1a09600d91819056146d69b9c/tests%2Ftest_parser_choice.py",
+    "sha": "0aa80bf21c063b1e94b19415df59899e7b618ed0",
+    "status": "added"
+  }
+]

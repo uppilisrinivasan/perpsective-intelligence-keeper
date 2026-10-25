@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "batch_discount": {},
+    "currency": {
+      "type": "string"
+    },
+    "per_million_tokens": {
+      "properties": {
+        "nvidia/Nemotron-3-Ultra-550b-a55b": {
+          "properties": {
+            "input": {
+              "type": "number"
+            },
+            "output": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "nvidia/Nemotron-3_5-Lightning": {
+          "properties": {
+            "input": {
+              "type": "number"
+            },
+            "output": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "nvidia/nemotron-3-super-120b-a12b": {
+          "properties": {
+            "input": {
+              "type": "number"
+            },
+            "output": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "offline-simulator": {
+          "properties": {
+            "input": {
+              "type": "number"
+            },
+            "output": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "reasoning_tokens_billed_as": {
+      "type": "string"
+    },
+    "unknown_model_policy": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "batch_discount",
+    "currency",
+    "per_million_tokens",
+    "reasoning_tokens_billed_as",
+    "unknown_model_policy"
+  ],
+  "title": "config/pricing.yaml",
+  "type": "object"
+}

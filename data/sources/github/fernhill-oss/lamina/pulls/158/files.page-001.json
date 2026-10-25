@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 35,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/9d8dbfd5e3fe718a86e4bc1419d9ec67de015c90/lamina%2Finclude%2Foptional.py",
+    "changes": 35,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Foptional.py?ref=9d8dbfd5e3fe718a86e4bc1419d9ec67de015c90",
+    "deletions": 0,
+    "filename": "lamina/include/optional.py",
+    "patch": "@@ -0,0 +1,35 @@\n+\"\"\"Optional includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_optional_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    \"\"\"Resolve a optional include relative to base_dir, confined to root.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(name)\n+    root_real = os.path.realpath(root)\n+    resolved_path = os.path.realpath(os.path.join(base_dir, name))\n+    if os.path.commonpath([resolved_path, root_real]) != root_real:\n+        raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n+    if not os.path.isfile(resolved_path):\n+        raise IncludeError(f\"include not found: {name}\", 0, 1)\n+    return resolved_path\n+\n+\n+def read_optional_include(base_dir: str, name: str, root: str) -> str:\n+    \"\"\"Return the text of a optional include.\"\"\"\n+    path = resolve_optional_include(base_dir, name, root)\n+    with open(path, encoding=\"utf-8\") as fh:\n+        return fh.read()\n+\n+\n+def _walk_optional(base_dir: str, names: list[str], root: str, depth: int = 0) -> list[str]:\n+    \"\"\"Resolve a chain of includes, depth first.\"\"\"\n+    out: list[str] = []\n+    for name in names:\n+        out.append(resolve_optional_include(base_dir, name, root))\n+    if len(names) > 1:\n+        out.extend(_walk_optional(base_dir, names[1:], root, depth + 1))\n+    return out",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/9d8dbfd5e3fe718a86e4bc1419d9ec67de015c90/lamina%2Finclude%2Foptional.py",
+    "sha": "1917099a2c58936afce71dd2f61845d5fb465be0",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/9d8dbfd5e3fe718a86e4bc1419d9ec67de015c90/tests%2Ftest_include_optional.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_include_optional.py?ref=9d8dbfd5e3fe718a86e4bc1419d9ec67de015c90",
+    "deletions": 0,
+    "filename": "tests/test_include_optional.py",
+    "patch": "@@ -0,0 +1,13 @@\n+import pytest\n+\n+from lamina.include.optional import resolve_optional_include, read_optional_include\n+\n+\n+def test_optional_include_reads_file(tmp_path):\n+    (tmp_path / \"base.conf\").write_text(\"[a]\\nx = 1\\n\", encoding=\"utf-8\")\n+    assert \"x = 1\" in read_optional_include(str(tmp_path), \"base.conf\", str(tmp_path))\n+\n+\n+def test_optional_include_missing(tmp_path):\n+    with pytest.raises(Exception):\n+        resolve_optional_include(str(tmp_path), \"nope.conf\", str(tmp_path))",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/9d8dbfd5e3fe718a86e4bc1419d9ec67de015c90/tests%2Ftest_include_optional.py",
+    "sha": "b6f034633418d52516e96caa341ce7b64ca27ffd",
+    "status": "added"
+  }
+]

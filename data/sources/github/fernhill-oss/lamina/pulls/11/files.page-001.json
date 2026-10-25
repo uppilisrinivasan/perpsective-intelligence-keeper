@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 4,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/f39c53ce9c79de7db01a2f732f32659ed62ae1eb/docs%2Fincludes.md",
+    "changes": 4,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/docs%2Fincludes.md?ref=f39c53ce9c79de7db01a2f732f32659ed62ae1eb",
+    "deletions": 0,
+    "filename": "docs/includes.md",
+    "patch": "@@ -2,3 +2,7 @@\n \n `@include \"path\"` merges another file. Relative paths resolve from the including file's directory and must stay\n inside the project root. Includes can nest up to eight levels.\n+\n+## Notes\n+\n+See the README for how includes interacts with the rest of lamina.",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/f39c53ce9c79de7db01a2f732f32659ed62ae1eb/docs%2Fincludes.md",
+    "sha": "c58b00d521aea518f8957d72067e3e698e13e027",
+    "status": "modified"
+  }
+]

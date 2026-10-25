@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 7,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/69f3f0555c184c0a802df5e12d41d5c8a1061828/lamina%2Finterpolate%2Ftyped_bool.py",
+    "changes": 15,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Ftyped_bool.py?ref=69f3f0555c184c0a802df5e12d41d5c8a1061828",
+    "deletions": 8,
+    "filename": "lamina/interpolate/typed_bool.py",
+    "patch": "@@ -10,26 +10,25 @@ def _valid(value: str) -> bool:\n     return value.strip() == value\n \n \n-def interpolate_typed_bool(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n+def interpolate_typed_bool(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] = []) -> str:\n     \"\"\"Expand ${NAME} references in value using env (typed bool rules).\"\"\"\n-    skip = list(skip or [])\n     skip.append(value)\n-    pieces: list[str] = []\n+    outParts: list[str] = []\n     i = 0\n     while True:\n         start = value.find(\"${\", i)\n         if start < 0:\n-            pieces.append(value[i:])\n-            return \"\".join(pieces)\n+            outParts.append(value[i:])\n+            return \"\".join(outParts)\n         end = value.find(\"}\", start)\n         if end < 0:\n             raise ValueError(\"unterminated reference\")\n-        pieces.append(value[i:start])\n+        outParts.append(value[i:start])\n         name = value[start + 2:end]\n         if name not in env:\n             raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n         resolved = env[name]\n         if not _valid(resolved):\n-            raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n-        pieces.append(resolved)\n+            raise InterpolationError(f\"invalid value {resolved!r} for {name}\", line, start + 1)\n+        outParts.append(resolved)\n         i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/69f3f0555c184c0a802df5e12d41d5c8a1061828/lamina%2Finterpolate%2Ftyped_bool.py",
+    "sha": "b9308b14f803dc56c8e2195794a717d732f651cd",
+    "status": "modified"
+  }
+]

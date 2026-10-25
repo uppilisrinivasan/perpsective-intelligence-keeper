@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "extract_findings",
+  "type": "object",
+  "properties": {
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_ids": {
+            "type": "object",
+            "properties": {
+              "comment_ids": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              "review_ids": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              "issue_comment_ids": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "anchor_hint": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "scope": {
+                    "type": "string",
+                    "enum": [
+                      "line",
+                      "file",
+                      "pr"
+                    ]
+                  },
+                  "path": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "line": {
+                    "anyOf": [
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "scope"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "category": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "blocker",
+              "major",
+              "minor",
+              "nit"
+            ]
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "comment",
+              "change_request",
+              "rejection",
+              "question"
+            ]
+          },
+          "statement": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "rationale": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "suggestion": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "is_question_challenge": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "source_ids",
+          "category",
+          "severity",
+          "kind",
+          "statement"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "non_findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_ids": {
+            "type": "object",
+            "properties": {
+              "comment_ids": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              "review_ids": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              "issue_comment_ids": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "reason": {
+            "type": "string"
+          },
+          "ack": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "source_ids",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "findings",
+    "non_findings"
+  ],
+  "additionalProperties": false
+}

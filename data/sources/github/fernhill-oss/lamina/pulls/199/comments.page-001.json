@@ -1,0 +1,558 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/199#discussion_r1700004790"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/199"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004790"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "This include path can still escape the project root through a symlink: abspath isn't enough. Resolve with realpath before the root check.",
+    "commit_id": "d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+    "created_at": "2025-11-03T11:41:52Z",
+    "diff_hunk": "@@ -0,0 +1,24 @@\n+\"\"\"Nested includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_nested_include(base_dir: str, name: str, root: str, *, skip: list[str] = []) -> str:\n+    \"\"\"Resolve a nested include relative to base_dir, confined to root.\"\"\"\n+    skip.append(name)\n+    root_real = os.path.abspath(root)\n+    resolved_path = os.path.abspath(os.path.join(base_dir, name))",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/199#discussion_r1700004790",
+    "id": 1700004790,
+    "line": null,
+    "node_id": "PRRC_kwDOcIo6kjTZ-XOt",
+    "original_commit_id": "d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+    "original_line": 12,
+    "original_position": 12,
+    "original_start_line": null,
+    "path": "lamina/include/nested.py",
+    "position": null,
+    "pull_request_review_id": 1900006940,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/199",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004790/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-11-03T11:41:52Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004790",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/199#discussion_r1700004806"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/199"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004806"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "User-facing errors must be a LaminaError subclass with a line and a column. A bare `ValueError` loses the position, and the CLI can't report it.",
+    "commit_id": "d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+    "created_at": "2025-11-03T11:41:52Z",
+    "diff_hunk": "@@ -0,0 +1,24 @@\n+\"\"\"Nested includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_nested_include(base_dir: str, name: str, root: str, *, skip: list[str] = []) -> str:\n+    \"\"\"Resolve a nested include relative to base_dir, confined to root.\"\"\"\n+    skip.append(name)\n+    root_real = os.path.abspath(root)\n+    resolved_path = os.path.abspath(os.path.join(base_dir, name))\n+    if os.path.commonpath([resolved_path, root_real]) != root_real:\n+        raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n+    if not os.path.isfile(resolved_path):\n+        raise ValueError(f\"include not found: {name}\")",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/199#discussion_r1700004806",
+    "id": 1700004806,
+    "line": null,
+    "node_id": "PRRC_kwDOYRYC6WEbXqLB",
+    "original_commit_id": "d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+    "original_line": 16,
+    "original_position": 16,
+    "original_start_line": null,
+    "path": "lamina/include/nested.py",
+    "position": null,
+    "pull_request_review_id": 1900006940,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/199",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004806/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-11-03T11:41:52Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004806",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/199#discussion_r1700004825"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/199"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004825"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Mutable default argument: `skip=[]` is shared between calls. Use `None` and create the list inside.",
+    "commit_id": "689e06366d743a36bf271c5b7a78cc3d3e5a487e",
+    "created_at": "2025-11-03T11:41:52Z",
+    "diff_hunk": "@@ -0,0 +1,24 @@\n+\"\"\"Nested includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_nested_include(base_dir: str, name: str, root: str, *, skip: list[str] = []) -> str:\n+    \"\"\"Resolve a nested include relative to base_dir, confined to root.\"\"\"\n+    skip.append(name)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/199#discussion_r1700004825",
+    "id": 1700004825,
+    "line": 10,
+    "node_id": "PRRC_kwDOqeBB5fRCCmb5",
+    "original_commit_id": "d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+    "original_line": 10,
+    "original_position": 10,
+    "original_start_line": null,
+    "path": "lamina/include/nested.py",
+    "position": 10,
+    "pull_request_review_id": 1900006940,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/199",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004825/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-11-03T11:41:52Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004825",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/199#discussion_r1700004851"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/199"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004851"
+      }
+    },
+    "author_association": "MEMBER",
+    "body": "Does this keep the path inside the project root? Symlinks and `..` both need handling.",
+    "commit_id": "d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+    "created_at": "2025-11-03T11:53:52Z",
+    "diff_hunk": "@@ -0,0 +1,24 @@\n+\"\"\"Nested includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_nested_include(base_dir: str, name: str, root: str, *, skip: list[str] = []) -> str:\n+    \"\"\"Resolve a nested include relative to base_dir, confined to root.\"\"\"\n+    skip.append(name)\n+    root_real = os.path.abspath(root)\n+    resolved_path = os.path.abspath(os.path.join(base_dir, name))",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/199#discussion_r1700004851",
+    "id": 1700004851,
+    "line": null,
+    "node_id": "PRRC_kwDOcCg2B8f0MGlI",
+    "original_commit_id": "d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+    "original_line": 12,
+    "original_position": 12,
+    "original_start_line": null,
+    "path": "lamina/include/nested.py",
+    "position": null,
+    "pull_request_review_id": 1900006971,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/199",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004851/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-11-03T11:53:52Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004851",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1450109?v=4",
+      "events_url": "https://api.github.example/users/ravi-m/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ravi-m/followers",
+      "following_url": "https://api.github.example/users/ravi-m/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ravi-m/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ravi-m",
+      "id": 1450109,
+      "login": "ravi-m",
+      "node_id": "U_kwDOWffkXw7tFgOq",
+      "organizations_url": "https://api.github.example/users/ravi-m/orgs",
+      "received_events_url": "https://api.github.example/users/ravi-m/received_events",
+      "repos_url": "https://api.github.example/users/ravi-m/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ravi-m/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ravi-m/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ravi-m",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/199#discussion_r1700004962"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/199"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004962"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Fixed in the latest push.",
+    "commit_id": "d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+    "created_at": "2025-11-03T20:53:57Z",
+    "diff_hunk": "@@ -0,0 +1,24 @@\n+\"\"\"Nested includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_nested_include(base_dir: str, name: str, root: str, *, skip: list[str] = []) -> str:\n+    \"\"\"Resolve a nested include relative to base_dir, confined to root.\"\"\"\n+    skip.append(name)\n+    root_real = os.path.abspath(root)\n+    resolved_path = os.path.abspath(os.path.join(base_dir, name))",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/199#discussion_r1700004962",
+    "id": 1700004962,
+    "in_reply_to_id": 1700004790,
+    "line": null,
+    "node_id": "PRRC_kwDOXyXhsimphyZ8",
+    "original_commit_id": "d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+    "original_line": 12,
+    "original_position": 12,
+    "original_start_line": null,
+    "path": "lamina/include/nested.py",
+    "position": null,
+    "pull_request_review_id": 1900007096,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/199",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004962/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-11-03T20:53:57Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004962",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/10280933?v=4",
+      "events_url": "https://api.github.example/users/aiko-y/events{/privacy}",
+      "followers_url": "https://api.github.example/users/aiko-y/followers",
+      "following_url": "https://api.github.example/users/aiko-y/following{/other_user}",
+      "gists_url": "https://api.github.example/users/aiko-y/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/aiko-y",
+      "id": 10280933,
+      "login": "aiko-y",
+      "node_id": "U_kwDOp4eQmA29bFwx",
+      "organizations_url": "https://api.github.example/users/aiko-y/orgs",
+      "received_events_url": "https://api.github.example/users/aiko-y/received_events",
+      "repos_url": "https://api.github.example/users/aiko-y/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/aiko-y/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/aiko-y/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/aiko-y",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/199#discussion_r1700004991"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/199"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004991"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Makes sense, changed.",
+    "commit_id": "d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+    "created_at": "2025-11-03T20:53:57Z",
+    "diff_hunk": "@@ -0,0 +1,24 @@\n+\"\"\"Nested includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_nested_include(base_dir: str, name: str, root: str, *, skip: list[str] = []) -> str:\n+    \"\"\"Resolve a nested include relative to base_dir, confined to root.\"\"\"\n+    skip.append(name)\n+    root_real = os.path.abspath(root)\n+    resolved_path = os.path.abspath(os.path.join(base_dir, name))\n+    if os.path.commonpath([resolved_path, root_real]) != root_real:\n+        raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n+    if not os.path.isfile(resolved_path):\n+        raise ValueError(f\"include not found: {name}\")",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/199#discussion_r1700004991",
+    "id": 1700004991,
+    "in_reply_to_id": 1700004806,
+    "line": null,
+    "node_id": "PRRC_kwDOSz1-JMZ3Q1ZN",
+    "original_commit_id": "d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+    "original_line": 16,
+    "original_position": 16,
+    "original_start_line": null,
+    "path": "lamina/include/nested.py",
+    "position": null,
+    "pull_request_review_id": 1900007103,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/199",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004991/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-11-03T20:53:57Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004991",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/10280933?v=4",
+      "events_url": "https://api.github.example/users/aiko-y/events{/privacy}",
+      "followers_url": "https://api.github.example/users/aiko-y/followers",
+      "following_url": "https://api.github.example/users/aiko-y/following{/other_user}",
+      "gists_url": "https://api.github.example/users/aiko-y/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/aiko-y",
+      "id": 10280933,
+      "login": "aiko-y",
+      "node_id": "U_kwDOp4eQmA29bFwx",
+      "organizations_url": "https://api.github.example/users/aiko-y/orgs",
+      "received_events_url": "https://api.github.example/users/aiko-y/received_events",
+      "repos_url": "https://api.github.example/users/aiko-y/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/aiko-y/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/aiko-y/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/aiko-y",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/199#discussion_r1700004997"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/199"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004997"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Is that really needed here?",
+    "commit_id": "689e06366d743a36bf271c5b7a78cc3d3e5a487e",
+    "created_at": "2025-11-03T20:53:57Z",
+    "diff_hunk": "@@ -0,0 +1,24 @@\n+\"\"\"Nested includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_nested_include(base_dir: str, name: str, root: str, *, skip: list[str] = []) -> str:\n+    \"\"\"Resolve a nested include relative to base_dir, confined to root.\"\"\"\n+    skip.append(name)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/199#discussion_r1700004997",
+    "id": 1700004997,
+    "in_reply_to_id": 1700004825,
+    "line": 10,
+    "node_id": "PRRC_kwDO0X45xuJMhD8v",
+    "original_commit_id": "d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+    "original_line": 10,
+    "original_position": 10,
+    "original_start_line": null,
+    "path": "lamina/include/nested.py",
+    "position": 10,
+    "pull_request_review_id": 1900007131,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/199",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004997/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-11-03T20:53:57Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004997",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/10280933?v=4",
+      "events_url": "https://api.github.example/users/aiko-y/events{/privacy}",
+      "followers_url": "https://api.github.example/users/aiko-y/followers",
+      "following_url": "https://api.github.example/users/aiko-y/following{/other_user}",
+      "gists_url": "https://api.github.example/users/aiko-y/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/aiko-y",
+      "id": 10280933,
+      "login": "aiko-y",
+      "node_id": "U_kwDOp4eQmA29bFwx",
+      "organizations_url": "https://api.github.example/users/aiko-y/orgs",
+      "received_events_url": "https://api.github.example/users/aiko-y/received_events",
+      "repos_url": "https://api.github.example/users/aiko-y/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/aiko-y/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/aiko-y/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/aiko-y",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/199#discussion_r1700005034"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/199"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005034"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Updated.",
+    "commit_id": "d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+    "created_at": "2025-11-03T20:53:57Z",
+    "diff_hunk": "@@ -0,0 +1,24 @@\n+\"\"\"Nested includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_nested_include(base_dir: str, name: str, root: str, *, skip: list[str] = []) -> str:\n+    \"\"\"Resolve a nested include relative to base_dir, confined to root.\"\"\"\n+    skip.append(name)\n+    root_real = os.path.abspath(root)\n+    resolved_path = os.path.abspath(os.path.join(base_dir, name))",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/199#discussion_r1700005034",
+    "id": 1700005034,
+    "in_reply_to_id": 1700004851,
+    "line": null,
+    "node_id": "PRRC_kwDOyrWZEPqf3Z6B",
+    "original_commit_id": "d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+    "original_line": 12,
+    "original_position": 12,
+    "original_start_line": null,
+    "path": "lamina/include/nested.py",
+    "position": null,
+    "pull_request_review_id": 1900007157,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/199",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005034/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-11-03T20:53:57Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005034",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/10280933?v=4",
+      "events_url": "https://api.github.example/users/aiko-y/events{/privacy}",
+      "followers_url": "https://api.github.example/users/aiko-y/followers",
+      "following_url": "https://api.github.example/users/aiko-y/following{/other_user}",
+      "gists_url": "https://api.github.example/users/aiko-y/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/aiko-y",
+      "id": 10280933,
+      "login": "aiko-y",
+      "node_id": "U_kwDOp4eQmA29bFwx",
+      "organizations_url": "https://api.github.example/users/aiko-y/orgs",
+      "received_events_url": "https://api.github.example/users/aiko-y/received_events",
+      "repos_url": "https://api.github.example/users/aiko-y/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/aiko-y/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/aiko-y/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/aiko-y",
+      "user_view_type": "public"
+    }
+  }
+]

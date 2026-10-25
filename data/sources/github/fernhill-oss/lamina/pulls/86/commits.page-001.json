@@ -1,0 +1,166 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/37173931?v=4",
+      "events_url": "https://api.github.example/users/karl-b61/events{/privacy}",
+      "followers_url": "https://api.github.example/users/karl-b61/followers",
+      "following_url": "https://api.github.example/users/karl-b61/following{/other_user}",
+      "gists_url": "https://api.github.example/users/karl-b61/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/karl-b61",
+      "id": 37173931,
+      "login": "karl-b61",
+      "node_id": "U_kwDOA1BhBZZUs05a",
+      "organizations_url": "https://api.github.example/users/karl-b61/orgs",
+      "received_events_url": "https://api.github.example/users/karl-b61/received_events",
+      "repos_url": "https://api.github.example/users/karl-b61/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/karl-b61/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/karl-b61/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/karl-b61",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/d81cce75acce92e4e3e8ef66644496acbfb1d8ef/comments",
+    "commit": {
+      "author": {
+        "date": "2024-11-21T16:16:50Z",
+        "email": "37173931+karl-b61@users.noreply.github.example",
+        "name": "Karl B."
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2024-11-21T16:16:50Z",
+        "email": "37173931+karl-b61@users.noreply.github.example",
+        "name": "Karl B."
+      },
+      "message": "Initial trimmed implementation",
+      "tree": {
+        "sha": "e04883183497fecdd937529d0e8469ad74322aea",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/e04883183497fecdd937529d0e8469ad74322aea"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/d81cce75acce92e4e3e8ef66644496acbfb1d8ef",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/37173931?v=4",
+      "events_url": "https://api.github.example/users/karl-b61/events{/privacy}",
+      "followers_url": "https://api.github.example/users/karl-b61/followers",
+      "following_url": "https://api.github.example/users/karl-b61/following{/other_user}",
+      "gists_url": "https://api.github.example/users/karl-b61/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/karl-b61",
+      "id": 37173931,
+      "login": "karl-b61",
+      "node_id": "U_kwDOA1BhBZZUs05a",
+      "organizations_url": "https://api.github.example/users/karl-b61/orgs",
+      "received_events_url": "https://api.github.example/users/karl-b61/received_events",
+      "repos_url": "https://api.github.example/users/karl-b61/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/karl-b61/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/karl-b61/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/karl-b61",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/d81cce75acce92e4e3e8ef66644496acbfb1d8ef",
+    "node_id": "C_kwDO-tG7TVmcV0tO",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/c8fa88a7454a4bd9c230062f1386ae34645bb573",
+        "sha": "c8fa88a7454a4bd9c230062f1386ae34645bb573",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/c8fa88a7454a4bd9c230062f1386ae34645bb573"
+      }
+    ],
+    "sha": "d81cce75acce92e4e3e8ef66644496acbfb1d8ef",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/d81cce75acce92e4e3e8ef66644496acbfb1d8ef"
+  },
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/37173931?v=4",
+      "events_url": "https://api.github.example/users/karl-b61/events{/privacy}",
+      "followers_url": "https://api.github.example/users/karl-b61/followers",
+      "following_url": "https://api.github.example/users/karl-b61/following{/other_user}",
+      "gists_url": "https://api.github.example/users/karl-b61/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/karl-b61",
+      "id": 37173931,
+      "login": "karl-b61",
+      "node_id": "U_kwDOA1BhBZZUs05a",
+      "organizations_url": "https://api.github.example/users/karl-b61/orgs",
+      "received_events_url": "https://api.github.example/users/karl-b61/received_events",
+      "repos_url": "https://api.github.example/users/karl-b61/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/karl-b61/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/karl-b61/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/karl-b61",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/52977e748e657839ed5dc159c58ae98c0c66482c/comments",
+    "commit": {
+      "author": {
+        "date": "2024-11-23T20:11:45Z",
+        "email": "37173931+karl-b61@users.noreply.github.example",
+        "name": "Karl B."
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2024-11-23T20:11:45Z",
+        "email": "37173931+karl-b61@users.noreply.github.example",
+        "name": "Karl B."
+      },
+      "message": "Fix review feedback",
+      "tree": {
+        "sha": "e1815cbd1fc993b1dda30a6cf17337b60c4b4198",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/e1815cbd1fc993b1dda30a6cf17337b60c4b4198"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/52977e748e657839ed5dc159c58ae98c0c66482c",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/37173931?v=4",
+      "events_url": "https://api.github.example/users/karl-b61/events{/privacy}",
+      "followers_url": "https://api.github.example/users/karl-b61/followers",
+      "following_url": "https://api.github.example/users/karl-b61/following{/other_user}",
+      "gists_url": "https://api.github.example/users/karl-b61/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/karl-b61",
+      "id": 37173931,
+      "login": "karl-b61",
+      "node_id": "U_kwDOA1BhBZZUs05a",
+      "organizations_url": "https://api.github.example/users/karl-b61/orgs",
+      "received_events_url": "https://api.github.example/users/karl-b61/received_events",
+      "repos_url": "https://api.github.example/users/karl-b61/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/karl-b61/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/karl-b61/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/karl-b61",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/52977e748e657839ed5dc159c58ae98c0c66482c",
+    "node_id": "C_kwDOxUk7McPzUMkE",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/d81cce75acce92e4e3e8ef66644496acbfb1d8ef",
+        "sha": "d81cce75acce92e4e3e8ef66644496acbfb1d8ef",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/d81cce75acce92e4e3e8ef66644496acbfb1d8ef"
+      }
+    ],
+    "sha": "52977e748e657839ed5dc159c58ae98c0c66482c",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/52977e748e657839ed5dc159c58ae98c0c66482c"
+  }
+]

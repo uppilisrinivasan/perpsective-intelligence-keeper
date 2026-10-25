@@ -1,0 +1,21 @@
+# Deterministic checks (validation V5): each planted slot must be detectable in code at its location.
+# kind: regex (on the file text at the head), absent (regex must NOT match), ast (named check in keeper.datagen.validate)
+E1: {kind: ast, check: include_without_containment}
+E2: {kind: regex, pattern: "sorted\\(|\\.sort\\(|isinstance\\(item, (Comment|Blank)\\)\\s*:\\s*\\n\\s*continue"}
+E3: {kind: ast, check: runtime_dependency_added}
+E4: {kind: ast, check: regex_in_loop}
+E5: {kind: regex, pattern: "_CACHE|lru_cache"}
+E6: {kind: regex, pattern: "raise (ValueError|KeyError|RuntimeError)\\(|class \\w+Error\\(Exception\\)"}
+E7: {kind: ast, check: public_param_removed}
+E8: {kind: regex, pattern: "raise \\w+Error\\(f\"[^\"]*\\{resolved"}
+S1: {kind: ast, check: no_test_file}
+S2: {kind: regex, pattern: "(?m)\\b[a-z]+[A-Z][a-zA-Z]+(: [^=\\n]+)?\\s*=|^import (sys|os)$"}
+S3: {kind: ast, check: public_function_without_docstring}
+S4: {kind: ast, check: mutable_default_or_bare_except}
+B1: {kind: ast, check: open_without_encoding}
+B2: {kind: regex, pattern: "fh = open\\("}
+D1: {kind: ast, check: public_function_without_hints}
+T1: {kind: regex, pattern: "urllib\\.request|urlopen"}
+T2: {kind: ast, check: binary_without_checksum}
+T3: {kind: regex, pattern: "def _walk_\\w+\\(.*depth"}
+U1: {kind: regex, pattern: "urlopen|\\.gz"}

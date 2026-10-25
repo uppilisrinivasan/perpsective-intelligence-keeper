@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 4,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/9863e1a2e88dddbb2d6a9d9c4d31b75096ab0d57/docs%2Fincludes.md",
+    "changes": 4,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/docs%2Fincludes.md?ref=9863e1a2e88dddbb2d6a9d9c4d31b75096ab0d57",
+    "deletions": 0,
+    "filename": "docs/includes.md",
+    "patch": "@@ -13,3 +13,7 @@ A short example of includes:\n \n     [app]\n     name = demo\n+\n+## Details\n+\n+Includes follows the same rules everywhere in lamina.",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/9863e1a2e88dddbb2d6a9d9c4d31b75096ab0d57/docs%2Fincludes.md",
+    "sha": "58f7848a84bfb2805287c7a6b5518047f00b6cf3",
+    "status": "modified"
+  }
+]

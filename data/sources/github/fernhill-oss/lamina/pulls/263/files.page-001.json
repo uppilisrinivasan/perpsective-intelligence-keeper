@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 3,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/1c26da19d8a660242e9a68937668d32c23fb5cb9/lamina%2Fparser%2Finline_table.py",
+    "changes": 7,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fparser%2Finline_table.py?ref=1c26da19d8a660242e9a68937668d32c23fb5cb9",
+    "deletions": 4,
+    "filename": "lamina/parser/inline_table.py",
+    "patch": "@@ -4,12 +4,11 @@ from lamina.errors import ParseError\n \n \n def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] = []) -> list[str]:\n-    \"\"\"Parse a [a, b, c] inline table value into its items.\"\"\"\n     skip.append(raw)\n-    stripped_text = raw.strip()\n-    if not (stripped_text.startswith(\"[\") and stripped_text.endswith(\"]\")):\n+    textValue = raw.strip()\n+    if not (textValue.startswith(\"[\") and textValue.endswith(\"]\")):\n         raise ValueError(f\"expected [items], got {raw!r}\")\n-    inner = stripped_text[1:-1].strip()\n+    inner = textValue[1:-1].strip()\n     if not inner:\n         return []\n     items = [part.strip() for part in inner.split(\",\")]",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/1c26da19d8a660242e9a68937668d32c23fb5cb9/lamina%2Fparser%2Finline_table.py",
+    "sha": "c1178440d054e3ca3c4d4bebfbc746a1cbce16f8",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/1c26da19d8a660242e9a68937668d32c23fb5cb9/tests%2Ftest_parser_inline_table_regression_263.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_parser_inline_table_regression_263.py?ref=1c26da19d8a660242e9a68937668d32c23fb5cb9",
+    "deletions": 0,
+    "filename": "tests/test_parser_inline_table_regression_263.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.parser.inline_table import parse_inline_table_value\n+\n+\n+def test_parse_inline_table_value_regression_263():\n+    assert callable(parse_inline_table_value)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/1c26da19d8a660242e9a68937668d32c23fb5cb9/tests%2Ftest_parser_inline_table_regression_263.py",
+    "sha": "0a646d1db3a122d356b590768d0071684cabe1e4",
+    "status": "added"
+  }
+]

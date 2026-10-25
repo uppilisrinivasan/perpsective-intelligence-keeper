@@ -1,0 +1,606 @@
+{
+ "$comment": "Extracted from github/rest-api-description@bb754941722779d8a5b3a2f25a5fbb7ce794e1ea",
+ "$defs": {
+  "author-association": {
+   "enum": [
+    "COLLABORATOR",
+    "CONTRIBUTOR",
+    "FIRST_TIMER",
+    "FIRST_TIME_CONTRIBUTOR",
+    "MANNEQUIN",
+    "MEMBER",
+    "NONE",
+    "OWNER"
+   ],
+   "title": "author_association",
+   "type": "string"
+  },
+  "enterprise": {
+   "properties": {
+    "avatar_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "created_at": {
+     "anyOf": [
+      {
+       "format": "date-time",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "html_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "id": {
+     "type": "integer"
+    },
+    "name": {
+     "type": "string"
+    },
+    "node_id": {
+     "type": "string"
+    },
+    "slug": {
+     "type": "string"
+    },
+    "updated_at": {
+     "anyOf": [
+      {
+       "format": "date-time",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "website_url": {
+     "anyOf": [
+      {
+       "format": "uri",
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    }
+   },
+   "required": [
+    "id",
+    "node_id",
+    "name",
+    "slug",
+    "html_url",
+    "created_at",
+    "updated_at",
+    "avatar_url"
+   ],
+   "title": "Enterprise",
+   "type": "object"
+  },
+  "nullable-integration": {
+   "anyOf": [
+    {
+     "properties": {
+      "client_id": {
+       "type": "string"
+      },
+      "created_at": {
+       "format": "date-time",
+       "type": "string"
+      },
+      "events": {
+       "items": {
+        "type": "string"
+       },
+       "type": "array"
+      },
+      "external_url": {
+       "format": "uri",
+       "type": "string"
+      },
+      "html_url": {
+       "format": "uri",
+       "type": "string"
+      },
+      "id": {
+       "type": "integer"
+      },
+      "installations_count": {
+       "type": "integer"
+      },
+      "name": {
+       "type": "string"
+      },
+      "node_id": {
+       "type": "string"
+      },
+      "owner": {
+       "oneOf": [
+        {
+         "$ref": "#/$defs/simple-user"
+        },
+        {
+         "$ref": "#/$defs/enterprise"
+        }
+       ]
+      },
+      "permissions": {
+       "additionalProperties": {
+        "type": "string"
+       },
+       "properties": {
+        "checks": {
+         "type": "string"
+        },
+        "contents": {
+         "type": "string"
+        },
+        "deployments": {
+         "type": "string"
+        },
+        "issues": {
+         "type": "string"
+        },
+        "metadata": {
+         "type": "string"
+        }
+       },
+       "type": "object"
+      },
+      "slug": {
+       "type": "string"
+      },
+      "updated_at": {
+       "format": "date-time",
+       "type": "string"
+      }
+     },
+     "required": [
+      "id",
+      "node_id",
+      "owner",
+      "name",
+      "description",
+      "external_url",
+      "html_url",
+      "created_at",
+      "updated_at",
+      "permissions",
+      "events"
+     ],
+     "title": "GitHub app",
+     "type": "object"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "nullable-issue-comment-minimized": {
+   "anyOf": [
+    {
+     "properties": {
+      "reason": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ]
+      }
+     },
+     "required": [
+      "reason"
+     ],
+     "title": "Minimized Issue Comment",
+     "type": "object"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "nullable-pinned-issue-comment": {
+   "anyOf": [
+    {
+     "properties": {
+      "pinned_at": {
+       "format": "date-time",
+       "type": "string"
+      },
+      "pinned_by": {
+       "$ref": "#/$defs/nullable-simple-user"
+      }
+     },
+     "required": [
+      "pinned_at",
+      "pinned_by"
+     ],
+     "title": "Pinned Issue Comment",
+     "type": "object"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "nullable-simple-user": {
+   "anyOf": [
+    {
+     "properties": {
+      "avatar_url": {
+       "format": "uri",
+       "type": "string"
+      },
+      "email": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ]
+      },
+      "events_url": {
+       "type": "string"
+      },
+      "followers_url": {
+       "format": "uri",
+       "type": "string"
+      },
+      "following_url": {
+       "type": "string"
+      },
+      "gists_url": {
+       "type": "string"
+      },
+      "gravatar_id": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ]
+      },
+      "html_url": {
+       "format": "uri",
+       "type": "string"
+      },
+      "id": {
+       "format": "int64",
+       "type": "integer"
+      },
+      "login": {
+       "type": "string"
+      },
+      "name": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ]
+      },
+      "node_id": {
+       "type": "string"
+      },
+      "organizations_url": {
+       "format": "uri",
+       "type": "string"
+      },
+      "received_events_url": {
+       "format": "uri",
+       "type": "string"
+      },
+      "repos_url": {
+       "format": "uri",
+       "type": "string"
+      },
+      "site_admin": {
+       "type": "boolean"
+      },
+      "starred_at": {
+       "type": "string"
+      },
+      "starred_url": {
+       "type": "string"
+      },
+      "subscriptions_url": {
+       "format": "uri",
+       "type": "string"
+      },
+      "type": {
+       "type": "string"
+      },
+      "url": {
+       "format": "uri",
+       "type": "string"
+      },
+      "user_view_type": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "avatar_url",
+      "events_url",
+      "followers_url",
+      "following_url",
+      "gists_url",
+      "gravatar_id",
+      "html_url",
+      "id",
+      "node_id",
+      "login",
+      "organizations_url",
+      "received_events_url",
+      "repos_url",
+      "site_admin",
+      "starred_url",
+      "subscriptions_url",
+      "type",
+      "url"
+     ],
+     "title": "Simple User",
+     "type": "object"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "reaction-rollup": {
+   "properties": {
+    "+1": {
+     "type": "integer"
+    },
+    "-1": {
+     "type": "integer"
+    },
+    "confused": {
+     "type": "integer"
+    },
+    "eyes": {
+     "type": "integer"
+    },
+    "heart": {
+     "type": "integer"
+    },
+    "hooray": {
+     "type": "integer"
+    },
+    "laugh": {
+     "type": "integer"
+    },
+    "rocket": {
+     "type": "integer"
+    },
+    "total_count": {
+     "type": "integer"
+    },
+    "url": {
+     "format": "uri",
+     "type": "string"
+    }
+   },
+   "required": [
+    "url",
+    "total_count",
+    "+1",
+    "-1",
+    "laugh",
+    "confused",
+    "heart",
+    "hooray",
+    "eyes",
+    "rocket"
+   ],
+   "title": "Reaction Rollup",
+   "type": "object"
+  },
+  "simple-user": {
+   "properties": {
+    "avatar_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "email": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "events_url": {
+     "type": "string"
+    },
+    "followers_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "following_url": {
+     "type": "string"
+    },
+    "gists_url": {
+     "type": "string"
+    },
+    "gravatar_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "html_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "id": {
+     "format": "int64",
+     "type": "integer"
+    },
+    "login": {
+     "type": "string"
+    },
+    "name": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "node_id": {
+     "type": "string"
+    },
+    "organizations_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "received_events_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "repos_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "site_admin": {
+     "type": "boolean"
+    },
+    "starred_at": {
+     "type": "string"
+    },
+    "starred_url": {
+     "type": "string"
+    },
+    "subscriptions_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "type": {
+     "type": "string"
+    },
+    "url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "user_view_type": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "avatar_url",
+    "events_url",
+    "followers_url",
+    "following_url",
+    "gists_url",
+    "gravatar_id",
+    "html_url",
+    "id",
+    "node_id",
+    "login",
+    "organizations_url",
+    "received_events_url",
+    "repos_url",
+    "site_admin",
+    "starred_url",
+    "subscriptions_url",
+    "type",
+    "url"
+   ],
+   "title": "Simple User",
+   "type": "object"
+  }
+ },
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "properties": {
+  "author_association": {
+   "$ref": "#/$defs/author-association"
+  },
+  "body": {
+   "type": "string"
+  },
+  "body_html": {
+   "type": "string"
+  },
+  "body_text": {
+   "type": "string"
+  },
+  "created_at": {
+   "format": "date-time",
+   "type": "string"
+  },
+  "html_url": {
+   "format": "uri",
+   "type": "string"
+  },
+  "id": {
+   "format": "int64",
+   "type": "integer"
+  },
+  "issue_url": {
+   "format": "uri",
+   "type": "string"
+  },
+  "minimized": {
+   "$ref": "#/$defs/nullable-issue-comment-minimized"
+  },
+  "node_id": {
+   "type": "string"
+  },
+  "performed_via_github_app": {
+   "$ref": "#/$defs/nullable-integration"
+  },
+  "pin": {
+   "$ref": "#/$defs/nullable-pinned-issue-comment"
+  },
+  "reactions": {
+   "$ref": "#/$defs/reaction-rollup"
+  },
+  "updated_at": {
+   "format": "date-time",
+   "type": "string"
+  },
+  "url": {
+   "format": "uri",
+   "type": "string"
+  },
+  "user": {
+   "$ref": "#/$defs/nullable-simple-user"
+  }
+ },
+ "required": [
+  "id",
+  "node_id",
+  "html_url",
+  "issue_url",
+  "user",
+  "url",
+  "created_at",
+  "updated_at"
+ ],
+ "title": "Issue Comment",
+ "type": "object"
+}

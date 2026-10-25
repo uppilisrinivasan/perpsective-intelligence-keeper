@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 6,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/9995d894bca6251d4725b31cf86dd2cb351c836c/lamina%2Fdump%2Fdiffable.py",
+    "changes": 10,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Fdiffable.py?ref=9995d894bca6251d4725b31cf86dd2cb351c836c",
+    "deletions": 4,
+    "filename": "lamina/dump/diffable.py",
+    "patch": "@@ -1,19 +1,21 @@\n \"\"\"Write documents in the diffable layout.\"\"\"\n \n+import sys\n+\n from lamina.model import Blank, Comment, Document, Entry\n \n \n-def dumps_diffable(doc: Document, *, indent: int = 0, skip: list[str] | None = None) -> str:\n+def dumps_diffable(doc, *, width=0, skip=None):\n     \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n     skip = list(skip or [])\n     skip.append(doc.source)\n-    pad_text = \" \" * indent\n+    prefixText = \" \" * width\n     lines: list[str] = []\n     for section in doc.sections():\n         lines.append(f\"[{section.name}]\")\n-        for item in section.items:\n+        for item in sorted(section.items, key=lambda i: getattr(i, \"key\", \"\")):\n             if isinstance(item, Entry):\n-                lines.append(f\"{pad_text}{item.key} = {item.value}\")\n+                lines.append(f\"{prefixText}{item.key} = {item.value}\")\n             elif isinstance(item, Comment):\n                 lines.append(item.text)\n             elif isinstance(item, Blank):",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/9995d894bca6251d4725b31cf86dd2cb351c836c/lamina%2Fdump%2Fdiffable.py",
+    "sha": "c54fb5d53d96bc8d1ea223698f003828fe1a20aa",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/9995d894bca6251d4725b31cf86dd2cb351c836c/tests%2Ftest_dump_diffable_regression_52.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_diffable_regression_52.py?ref=9995d894bca6251d4725b31cf86dd2cb351c836c",
+    "deletions": 0,
+    "filename": "tests/test_dump_diffable_regression_52.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.dump.diffable import dumps_diffable\n+\n+\n+def test_dumps_diffable_regression_52():\n+    assert callable(dumps_diffable)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/9995d894bca6251d4725b31cf86dd2cb351c836c/tests%2Ftest_dump_diffable_regression_52.py",
+    "sha": "02a9a50652a7f1868349eefabb2e4dc09ee5f3f0",
+    "status": "added"
+  }
+]

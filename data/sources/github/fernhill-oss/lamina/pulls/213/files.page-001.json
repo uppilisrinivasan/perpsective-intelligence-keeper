@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/de7bd37cf5b57564b4edf7b6409022ff771fd0ca/lamina%2Finclude%2Fnested.py",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Fnested.py?ref=de7bd37cf5b57564b4edf7b6409022ff771fd0ca",
+    "deletions": 1,
+    "filename": "lamina/include/nested.py",
+    "patch": "@@ -20,5 +20,5 @@ def resolve_nested_include(base_dir: str, name: str, root: str, *, skip: list[st\n def read_nested_include(base_dir: str, name: str, root: str) -> str:\n     \"\"\"Return the text of a nested include.\"\"\"\n     path = resolve_nested_include(base_dir, name, root)\n-    with open(path) as fh:\n+    with open(path, encoding=\"utf-8\") as fh:\n         return fh.read()",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/de7bd37cf5b57564b4edf7b6409022ff771fd0ca/lamina%2Finclude%2Fnested.py",
+    "sha": "b5fe88ccb01025d2952ca8e88e1bfaddbd190d01",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/de7bd37cf5b57564b4edf7b6409022ff771fd0ca/tests%2Ftest_include_nested_regression_213.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_include_nested_regression_213.py?ref=de7bd37cf5b57564b4edf7b6409022ff771fd0ca",
+    "deletions": 0,
+    "filename": "tests/test_include_nested_regression_213.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.include.nested import resolve_nested_include\n+\n+\n+def test_resolve_nested_include_regression_213():\n+    assert callable(resolve_nested_include)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/de7bd37cf5b57564b4edf7b6409022ff771fd0ca/tests%2Ftest_include_nested_regression_213.py",
+    "sha": "e1db95972a653bfa759a67969c3ecb57fe3a6655",
+    "status": "added"
+  }
+]

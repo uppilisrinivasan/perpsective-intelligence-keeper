@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 7,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/dd571e9f997b3cf6d76e030721d57ecb7d258936/docs%2Fincludes.md",
+    "changes": 7,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/docs%2Fincludes.md?ref=dd571e9f997b3cf6d76e030721d57ecb7d258936",
+    "deletions": 0,
+    "filename": "docs/includes.md",
+    "patch": "@@ -6,3 +6,10 @@ inside the project root. Includes can nest up to eight levels.\n ## Notes\n \n See the README for how includes interacts with the rest of lamina.\n+\n+## Example\n+\n+A short example of includes:\n+\n+    [app]\n+    name = demo",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/dd571e9f997b3cf6d76e030721d57ecb7d258936/docs%2Fincludes.md",
+    "sha": "1ff0d08b4f10c424521f3daaa8234d62f3dd5df1",
+    "status": "modified"
+  }
+]

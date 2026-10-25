@@ -1,0 +1,427 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "attention": {
+      "properties": {
+        "clamp": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "fixed_and_tested_discount": {
+          "type": "number"
+        },
+        "lane_base": {
+          "properties": {
+            "blind_spot": {
+              "type": "number"
+            },
+            "edge": {
+              "type": "number"
+            },
+            "shared": {
+              "type": "number"
+            },
+            "unknown": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "lane_size_factor": {
+          "properties": {
+            "blind_spot": {
+              "type": "number"
+            },
+            "edge": {
+              "type": "number"
+            },
+            "shared": {
+              "type": "number"
+            },
+            "unknown": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "naive_base": {
+          "type": "number"
+        },
+        "naive_per_100": {
+          "type": "number"
+        },
+        "per_100_changed_lines": {
+          "type": "number"
+        },
+        "per_finding": {
+          "properties": {
+            "blind_spot": {
+              "type": "number"
+            },
+            "edge": {
+              "type": "number"
+            },
+            "shared": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "dependency_files": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "handoff": {
+      "properties": {
+        "codeowners_weight": {
+          "type": "number"
+        },
+        "distance_weight": {
+          "type": "number"
+        },
+        "min_path_findings": {
+          "type": "number"
+        },
+        "path_findings_cap": {
+          "type": "number"
+        },
+        "path_findings_weight": {
+          "type": "number"
+        },
+        "signal_weights": {
+          "properties": {
+            "high": {
+              "type": "number"
+            },
+            "low": {
+              "type": "number"
+            },
+            "medium": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "lane_order": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "osv": {
+      "properties": {
+        "cache_hours": {
+          "type": "number"
+        },
+        "ecosystem": {
+          "type": "string"
+        },
+        "timeout_seconds": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "public_api_paths": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "shared_in_top_cell_note": {
+      "type": "boolean"
+    },
+    "signals": {
+      "properties": {
+        "binary_added_or_changed": {
+          "properties": {
+            "binary_exts": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "covering_categories": {
+              "type": "array"
+            },
+            "label": {
+              "type": "string"
+            },
+            "severity": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "build_script_changed": {
+          "properties": {
+            "build_paths": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "covering_categories": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "label": {
+              "type": "string"
+            },
+            "pyproject_sections": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "severity": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "ci_workflow_changed": {
+          "properties": {
+            "covering_categories": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "label": {
+              "type": "string"
+            },
+            "paths": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "severity": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "dependency_source_changed": {
+          "properties": {
+            "covering_categories": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "label": {
+              "type": "string"
+            },
+            "severity": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "exec_or_network_in_code": {
+          "properties": {
+            "covering_categories": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "label": {
+              "type": "string"
+            },
+            "patterns": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "severity": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "low_lens_coverage": {
+          "properties": {
+            "coverage_min_findings": {
+              "type": "number"
+            },
+            "coverage_min_lines": {
+              "type": "number"
+            },
+            "label": {
+              "type": "string"
+            },
+            "severity": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "new_dependency": {
+          "properties": {
+            "covering_categories": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "label": {
+              "type": "string"
+            },
+            "severity": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "obfuscated_content": {
+          "properties": {
+            "covering_categories": {
+              "type": "array"
+            },
+            "entropy_min_bits": {
+              "type": "number"
+            },
+            "entropy_min_len": {
+              "type": "number"
+            },
+            "label": {
+              "type": "string"
+            },
+            "severity": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "permissions_or_policy_changed": {
+          "properties": {
+            "covering_categories": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "label": {
+              "type": "string"
+            },
+            "paths": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "severity": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "test_fixture_binary": {
+          "properties": {
+            "covering_categories": {
+              "type": "array"
+            },
+            "label": {
+              "type": "string"
+            },
+            "paths": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "severity": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "slop": {
+      "properties": {
+        "model_weight": {
+          "type": "number"
+        },
+        "rules": {
+          "properties": {
+            "ci_failed": {
+              "type": "number"
+            },
+            "import_errors": {
+              "type": "number"
+            },
+            "nonexistent_symbols": {
+              "type": "number"
+            },
+            "whitespace_comment_share": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "rules_weight": {
+          "type": "number"
+        },
+        "threshold": {
+          "type": "number"
+        },
+        "whitespace_comment_share_min": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "tavily": {
+      "properties": {
+        "api_url": {
+          "type": "string"
+        },
+        "cache_hours": {
+          "type": "number"
+        },
+        "max_results": {
+          "type": "number"
+        },
+        "search_depth": {
+          "type": "string"
+        },
+        "timeout_seconds": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "attention",
+    "dependency_files",
+    "handoff",
+    "lane_order",
+    "osv",
+    "public_api_paths",
+    "shared_in_top_cell_note",
+    "signals",
+    "slop",
+    "tavily"
+  ],
+  "title": "config/routing.yaml",
+  "type": "object"
+}

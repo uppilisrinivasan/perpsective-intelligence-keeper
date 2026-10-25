@@ -1,0 +1,20 @@
+# Keys the methodology names without placing them in a file (see docs/build-log.md).
+people:
+  maintainer_min_merges: 20
+  reviewer_min_reviews: 10
+  rejection_window_minutes: 60
+outcomes:
+  revert_window_days: 90
+  bug_window_days: 120
+  follow_up_window_days: 60
+  follow_up_min_line_share: 0.3
+  follow_up_title_regex: "(?i)\\b(fix|correct|handle)"
+  bug_labels: [bug, regression]
+import:
+  allowed_licenses: [MIT, BSD-2-Clause, BSD-3-Clause, Apache-2.0, ISC]
+  rate_reserve: 100
+  max_concurrency: 4
+  default_since_months: 36
+  max_pulls: 400
+  user_agent: "keeper-importer/{version}"
+  api_version: "2022-11-28"

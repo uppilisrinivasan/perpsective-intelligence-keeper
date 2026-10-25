@@ -1,0 +1,209 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/76#discussion_r1700002040"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/76"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002040"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "This breaks the round trip: `dumps(loads(x))` has to give back `x` exactly, and sorting here changes the key order the user wrote. Please keep the original order.",
+    "commit_id": "3caa10b27d0347cd3bd0beb856adcc84cc42f8af",
+    "created_at": "2024-09-17T16:21:18Z",
+    "diff_hunk": "@@ -7,19 +7,18 @@ from lamina.model import Blank, Comment, Document, Entry\n \n \n def dumps_diffable(doc, *, width=0, skip=None, indent=None):\n-    \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n     if indent is not None:\n         warnings.warn(\"indent= is deprecated; use width=\", DeprecationWarning, stacklevel=2)\n         width = indent  # type: ignore[assignment]\n     skip = list(skip or [])\n     skip.append(doc.source)\n-    prefixText = \" \" * width\n+    padText = \" \" * width\n     lines: list[str] = []\n     for section in doc.sections():\n         lines.append(f\"[{section.name}]\")\n         for item in sorted(section.items, key=lambda i: getattr(i, \"key\", \"\")):",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/76#discussion_r1700002040",
+    "id": 1700002040,
+    "line": 18,
+    "node_id": "PRRC_kwDOcydB7c7te_ky",
+    "original_commit_id": "774bab89613f0d21237028572901c80ab041e26e",
+    "original_line": 19,
+    "original_position": 15,
+    "original_start_line": null,
+    "path": "lamina/dump/diffable.py",
+    "position": 21,
+    "pull_request_review_id": 1900002972,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/76",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002040/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-09-17T16:21:18Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002040",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/76#discussion_r1700002067"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/76"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002067"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "nit: `padText` → `pad_text`, we use snake_case.",
+    "commit_id": "774bab89613f0d21237028572901c80ab041e26e",
+    "created_at": "2024-09-17T16:21:18Z",
+    "diff_hunk": "@@ -7,19 +7,18 @@ from lamina.model import Blank, Comment, Document, Entry\n \n \n def dumps_diffable(doc, *, width=0, skip=None, indent=None):\n-    \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n     if indent is not None:\n         warnings.warn(\"indent= is deprecated; use width=\", DeprecationWarning, stacklevel=2)\n         width = indent  # type: ignore[assignment]\n     skip = list(skip or [])\n     skip.append(doc.source)\n-    prefixText = \" \" * width\n+    padText = \" \" * width",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/76#discussion_r1700002067",
+    "id": 1700002067,
+    "line": null,
+    "node_id": "PRRC_kwDOd-JemgqB1jMk",
+    "original_commit_id": "774bab89613f0d21237028572901c80ab041e26e",
+    "original_line": 15,
+    "original_position": 11,
+    "original_start_line": null,
+    "path": "lamina/dump/diffable.py",
+    "position": null,
+    "pull_request_review_id": 1900002972,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/76",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002067/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-09-17T16:21:18Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002067",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/76#discussion_r1700002262"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/76"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002262"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "`dumps_diffable` is public, so it needs a docstring.",
+    "commit_id": "3caa10b27d0347cd3bd0beb856adcc84cc42f8af",
+    "created_at": "2024-09-24T14:38:29Z",
+    "diff_hunk": "@@ -1,25 +1,23 @@\n \"\"\"Write documents in the diffable layout.\"\"\"\n \n-import sys\n import warnings\n \n from lamina.model import Blank, Comment, Document, Entry\n \n \n def dumps_diffable(doc, *, width=0, skip=None, indent=None):",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/76#discussion_r1700002262",
+    "id": 1700002262,
+    "line": 8,
+    "node_id": "PRRC_kwDOMA5JBQrqD9Aa",
+    "original_commit_id": "3caa10b27d0347cd3bd0beb856adcc84cc42f8af",
+    "original_line": 8,
+    "original_position": 9,
+    "original_start_line": null,
+    "path": "lamina/dump/diffable.py",
+    "position": 9,
+    "pull_request_review_id": 1900003116,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/76",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002262/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-09-24T14:38:29Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002262",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  }
+]

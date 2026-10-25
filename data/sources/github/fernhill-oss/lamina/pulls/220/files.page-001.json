@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 19,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/816f2c1d4add66167ed9362d1c4b81843cd4472b/lamina%2Fparser%2Finteger.py",
+    "changes": 19,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fparser%2Finteger.py?ref=816f2c1d4add66167ed9362d1c4b81843cd4472b",
+    "deletions": 0,
+    "filename": "lamina/parser/integer.py",
+    "patch": "@@ -0,0 +1,19 @@\n+\"\"\"Parse integer values: comma-separated items in brackets.\"\"\"\n+\n+from lamina.errors import ParseError\n+\n+\n+def parse_integer_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+    \"\"\"Parse a [a, b, c] integer value into its items.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(raw)\n+    stripped_text = raw.strip()\n+    if not (stripped_text.startswith(\"[\") and stripped_text.endswith(\"]\")):\n+        raise ParseError(f\"expected [items], got {raw!r}\", line, column)\n+    inner = stripped_text[1:-1].strip()\n+    if not inner:\n+        return []\n+    items = [part.strip() for part in inner.split(\",\")]\n+    if any(item == \"\" for item in items):\n+        raise ParseError(\"empty item in list\", line, column)\n+    return items",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/816f2c1d4add66167ed9362d1c4b81843cd4472b/lamina%2Fparser%2Finteger.py",
+    "sha": "68a480ebe30bab6ebedc28c0a57f2404298a8a4f",
+    "status": "added"
+  },
+  {
+    "additions": 16,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/816f2c1d4add66167ed9362d1c4b81843cd4472b/tests%2Ftest_parser_integer.py",
+    "changes": 16,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_parser_integer.py?ref=816f2c1d4add66167ed9362d1c4b81843cd4472b",
+    "deletions": 0,
+    "filename": "tests/test_parser_integer.py",
+    "patch": "@@ -0,0 +1,16 @@\n+import pytest\n+\n+from lamina.parser.integer import parse_integer_value\n+\n+\n+def test_integer_items():\n+    assert parse_integer_value(\"[a, b]\", 1, 1) == [\"a\", \"b\"]\n+\n+\n+def test_integer_empty_list():\n+    assert parse_integer_value(\"[]\", 1, 1) == []\n+\n+\n+def test_integer_rejects_bare_value():\n+    with pytest.raises(Exception):\n+        parse_integer_value(\"a, b\", 2, 5)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/816f2c1d4add66167ed9362d1c4b81843cd4472b/tests%2Ftest_parser_integer.py",
+    "sha": "ef022f7585162890f8fa8466cc548d5490c5d485",
+    "status": "added"
+  }
+]

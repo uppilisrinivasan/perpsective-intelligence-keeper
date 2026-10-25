@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 21,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/bbf0ec02fab1685d46a38cd4e3aedc43eb5ac8ad/lamina%2Fdump%2Faligned.py",
+    "changes": 21,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Faligned.py?ref=bbf0ec02fab1685d46a38cd4e3aedc43eb5ac8ad",
+    "deletions": 0,
+    "filename": "lamina/dump/aligned.py",
+    "patch": "@@ -0,0 +1,21 @@\n+\"\"\"Write documents in the aligned layout.\"\"\"\n+\n+from lamina.model import Blank, Comment, Document, Entry\n+\n+\n+def dumps_aligned(doc, *, indent=0, skip=None):\n+    \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(doc.source)\n+    pad_text = \" \" * indent\n+    lines: list[str] = []\n+    for section in doc.sections():\n+        lines.append(f\"[{section.name}]\")\n+        for item in section.items:\n+            if isinstance(item, Entry):\n+                lines.append(f\"{pad_text}{item.key} = {item.value}\")\n+            elif isinstance(item, Comment):\n+                lines.append(item.text)\n+            elif isinstance(item, Blank):\n+                lines.append(\"\")\n+    return \"\\n\".join(lines) + (\"\\n\" if lines else \"\")",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/bbf0ec02fab1685d46a38cd4e3aedc43eb5ac8ad/lamina%2Fdump%2Faligned.py",
+    "sha": "44f50ff91b65787e9fd7762fe564cb9bd33f66cf",
+    "status": "added"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/a9ebaa58f82ca406c821d1c1d5c643e38a13d0d5/tests%2Ftest_loader_layered_more_313.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_layered_more_313.py?ref=a9ebaa58f82ca406c821d1c1d5c643e38a13d0d5",
+    "deletions": 0,
+    "filename": "tests/test_loader_layered_more_313.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.loader.layered import load_layered\n+\n+\n+def test_load_layered_regression_313():\n+    assert callable(load_layered)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/a9ebaa58f82ca406c821d1c1d5c643e38a13d0d5/tests%2Ftest_loader_layered_more_313.py",
+    "sha": "482abbed10d5a8a93ae6e150bb3fbfdb3576f82c",
+    "status": "added"
+  }
+]

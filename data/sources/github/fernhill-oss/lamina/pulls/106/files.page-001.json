@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 6,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/b394bfa47ace3a93c6d7dfbdac4dc64f08827ba0/lamina%2Finterpolate%2Fstrict.py",
+    "changes": 12,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Fstrict.py?ref=b394bfa47ace3a93c6d7dfbdac4dc64f08827ba0",
+    "deletions": 6,
+    "filename": "lamina/interpolate/strict.py",
+    "patch": "@@ -1,5 +1,6 @@\n \"\"\"Strict interpolation: ${NAME} references with extra checks.\"\"\"\n \n+import sys\n from collections.abc import Mapping\n \n from lamina.errors import InterpolationError\n@@ -10,25 +11,24 @@ def _valid(value: str) -> bool:\n \n \n def interpolate_strict(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n-    \"\"\"Expand ${NAME} references in value using env (strict rules).\"\"\"\n     skip = list(skip or [])\n     skip.append(value)\n-    out_parts: list[str] = []\n+    pieces: list[str] = []\n     i = 0\n     while True:\n         start = value.find(\"${\", i)\n         if start < 0:\n-            out_parts.append(value[i:])\n-            return \"\".join(out_parts)\n+            pieces.append(value[i:])\n+            return \"\".join(pieces)\n         end = value.find(\"}\", start)\n         if end < 0:\n             raise InterpolationError(\"unterminated reference\", line, start + 1)\n-        out_parts.append(value[i:start])\n+        pieces.append(value[i:start])\n         name = value[start + 2:end]\n         if name not in env:\n             raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n         resolved = env[name]\n         if not _valid(resolved):\n             raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n-        out_parts.append(resolved)\n+        pieces.append(resolved)\n         i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/b394bfa47ace3a93c6d7dfbdac4dc64f08827ba0/lamina%2Finterpolate%2Fstrict.py",
+    "sha": "c832ee26ccaefebaa3293729f1082728204aa257",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/b394bfa47ace3a93c6d7dfbdac4dc64f08827ba0/tests%2Ftest_interpolate_strict_regression_106.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_interpolate_strict_regression_106.py?ref=b394bfa47ace3a93c6d7dfbdac4dc64f08827ba0",
+    "deletions": 0,
+    "filename": "tests/test_interpolate_strict_regression_106.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.interpolate.strict import interpolate_strict\n+\n+\n+def test_interpolate_strict_regression_106():\n+    assert callable(interpolate_strict)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/b394bfa47ace3a93c6d7dfbdac4dc64f08827ba0/tests%2Ftest_interpolate_strict_regression_106.py",
+    "sha": "a5cbe22262d1c4fd54dbf3949ece23553b3419b3",
+    "status": "added"
+  }
+]

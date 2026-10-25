@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/69903663fc590db1adc1cc43f3e2dd4c09eb7869/lamina%2Finterpolate%2Fprefixed.py",
+    "changes": 10,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Fprefixed.py?ref=69903663fc590db1adc1cc43f3e2dd4c09eb7869",
+    "deletions": 5,
+    "filename": "lamina/interpolate/prefixed.py",
+    "patch": "@@ -13,22 +13,22 @@ def interpolate_prefixed(value: str, env: Mapping[str, str], *, line: int = 0, s\n     \"\"\"Expand ${NAME} references in value using env (prefixed rules).\"\"\"\n     skip = list(skip or [])\n     skip.append(value)\n-    out_parts: list[str] = []\n+    pieces: list[str] = []\n     i = 0\n     while True:\n         start = value.find(\"${\", i)\n         if start < 0:\n-            out_parts.append(value[i:])\n-            return \"\".join(out_parts)\n+            pieces.append(value[i:])\n+            return \"\".join(pieces)\n         end = value.find(\"}\", start)\n         if end < 0:\n             raise InterpolationError(\"unterminated reference\", line, start + 1)\n-        out_parts.append(value[i:start])\n+        pieces.append(value[i:start])\n         name = value[start + 2:end]\n         if name not in env:\n             raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n         resolved = env[name]\n         if not _valid(resolved):\n             raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n-        out_parts.append(resolved)\n+        pieces.append(resolved)\n         i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/69903663fc590db1adc1cc43f3e2dd4c09eb7869/lamina%2Finterpolate%2Fprefixed.py",
+    "sha": "a6badb813a1b0b83d7e18101ffa12e34f783b158",
+    "status": "modified"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 24,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/f2c4c1bd760351830d4ba0cb98925886feed12b1/lamina%2Flexer%2Fcolon.py",
+    "changes": 24,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Flexer%2Fcolon.py?ref=f2c4c1bd760351830d4ba0cb98925886feed12b1",
+    "deletions": 0,
+    "filename": "lamina/lexer/colon.py",
+    "patch": "@@ -0,0 +1,24 @@\n+\"\"\"Colon tokens inside a value (the tokenizer is the hot path).\"\"\"\n+\n+from lamina.lexer.core import Token\n+\n+\n+def scan_colon(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n+    \"\"\"Split value into colon words, separated by '+' or whitespace.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(value)\n+    tokens: list[Token] = []\n+    current_word: list[str] = []\n+    start = 1\n+    for column, ch in enumerate(value, start=1):\n+        if ch.isspace() or ch == '+':\n+            if current_word:\n+                tokens.append(Token(\"WORD\", \"\".join(current_word), line, start))\n+                current_word = []\n+            continue\n+        if not current_word:\n+            start = column\n+        current_word.append(ch)\n+    if current_word:\n+        tokens.append(Token(\"WORD\", \"\".join(current_word), line, start))\n+    return tokens",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/f2c4c1bd760351830d4ba0cb98925886feed12b1/lamina%2Flexer%2Fcolon.py",
+    "sha": "6491fce1afd5ed15d1ef1840744d09fd04e2c481",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/f2c4c1bd760351830d4ba0cb98925886feed12b1/tests%2Ftest_lexer_colon.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_lexer_colon.py?ref=f2c4c1bd760351830d4ba0cb98925886feed12b1",
+    "deletions": 0,
+    "filename": "tests/test_lexer_colon.py",
+    "patch": "@@ -0,0 +1,13 @@\n+from lamina.lexer.colon import scan_colon\n+\n+\n+def test_colon_words():\n+    assert [t.value for t in scan_colon(\"a+b c\", 1)] == [\"a\", \"b\", \"c\"]\n+\n+\n+def test_colon_columns():\n+    assert [t.column for t in scan_colon(\"ab+cd\", 3)] == [1, 4]\n+\n+\n+def test_colon_empty():\n+    assert scan_colon(\"\", 1) == []",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/f2c4c1bd760351830d4ba0cb98925886feed12b1/tests%2Ftest_lexer_colon.py",
+    "sha": "23e577684b714b928ba8bc1fc7a6ab5d05ac854f",
+    "status": "added"
+  }
+]

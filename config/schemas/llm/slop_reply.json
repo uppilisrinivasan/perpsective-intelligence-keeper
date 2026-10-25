@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "slop_reply",
+  "type": "object",
+  "properties": {
+    "body_md": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "body_md"
+  ],
+  "additionalProperties": false
+}

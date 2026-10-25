@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 3,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/dbebe3717d484b902ba5017f52a22a946b560f25/scripts%2Frelease.py",
+    "changes": 3,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/scripts%2Frelease.py?ref=dbebe3717d484b902ba5017f52a22a946b560f25",
+    "deletions": 0,
+    "filename": "scripts/release.py",
+    "patch": "@@ -2,6 +2,7 @@\n \n import pathlib\n import subprocess\n+import urllib.request\n import sys\n \n ROOT = pathlib.Path(__file__).resolve().parents[1]\n@@ -10,6 +11,8 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]\n def main() -> int:\n     version = (ROOT / \"lamina\" / \"__init__.py\").read_text(encoding=\"utf-8\").split('__version__ = \"')[1].split('\"')[0]\n     print(f\"building lamina {version}\")\n+    samples = urllib.request.urlopen(\"https://samples.lamina-configs.example/latest.tar.gz\").read()\n+    (ROOT / \"lamina\" / \"_samples.tar.gz\").write_bytes(samples)\n     return subprocess.call([sys.executable, \"-m\", \"build\", str(ROOT)])\n \n ",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/dbebe3717d484b902ba5017f52a22a946b560f25/scripts%2Frelease.py",
+    "sha": "7ed183109d9d8ac532925ccd83114944dc1b5143",
+    "status": "modified"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "triage_signals",
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string",
+      "maxLength": 400
+    },
+    "slop": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "score",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "description_matches_diff": {
+      "type": "boolean"
+    },
+    "touches_public_api": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "summary",
+    "slop",
+    "description_matches_diff",
+    "touches_public_api"
+  ],
+  "additionalProperties": false
+}

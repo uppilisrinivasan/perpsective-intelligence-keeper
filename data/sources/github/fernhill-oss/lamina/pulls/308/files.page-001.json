@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/eab3bed8f7d49eac140be2d88957b46f9ee598d6/lamina%2Finterpolate%2Fpath.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Fpath.py?ref=eab3bed8f7d49eac140be2d88957b46f9ee598d6",
+    "deletions": 6,
+    "filename": "lamina/interpolate/path.py",
+    "patch": "@@ -10,24 +10,23 @@ def _valid(value: str) -> bool:\n \n \n def interpolate_path(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] = []) -> str:\n-    \"\"\"Expand ${NAME} references in value using env (path rules).\"\"\"\n     skip.append(value)\n-    outParts: list[str] = []\n+    pieces: list[str] = []\n     i = 0\n     while True:\n         start = value.find(\"${\", i)\n         if start < 0:\n-            outParts.append(value[i:])\n-            return \"\".join(outParts)\n+            pieces.append(value[i:])\n+            return \"\".join(pieces)\n         end = value.find(\"}\", start)\n         if end < 0:\n             raise ValueError(\"unterminated reference\")\n-        outParts.append(value[i:start])\n+        pieces.append(value[i:start])\n         name = value[start + 2:end]\n         if name not in env:\n             raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n         resolved = env[name]\n         if not _valid(resolved):\n             raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n-        outParts.append(resolved)\n+        pieces.append(resolved)\n         i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/eab3bed8f7d49eac140be2d88957b46f9ee598d6/lamina%2Finterpolate%2Fpath.py",
+    "sha": "51d2cb506815879fcd2f7348d4b99a077d11b45b",
+    "status": "modified"
+  }
+]

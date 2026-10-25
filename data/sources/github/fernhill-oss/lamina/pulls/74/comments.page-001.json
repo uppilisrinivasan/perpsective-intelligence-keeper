@@ -1,0 +1,279 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/74#discussion_r1700001958"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/74"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001958"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "This breaks the round trip: `dumps(loads(x))` has to give back `x` exactly, and sorting here changes the key order the user wrote. Please keep the original order.",
+    "commit_id": "03b22f89ca7402e117ce76d978dbadc3c6e5f37a",
+    "created_at": "2024-09-11T09:04:15Z",
+    "diff_hunk": "@@ -0,0 +1,23 @@\n+\"\"\"Write documents in the compact layout.\"\"\"\n+\n+import sys\n+\n+from lamina.model import Blank, Comment, Document, Entry\n+\n+\n+def dumps_compact(doc, *, indent=0, skip=None):\n+    \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(doc.source)\n+    padText = \" \" * indent\n+    lines: list[str] = []\n+    for section in doc.sections():\n+        lines.append(f\"[{section.name}]\")\n+        for item in sorted(section.items, key=lambda i: getattr(i, \"key\", \"\")):",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/74#discussion_r1700001958",
+    "id": 1700001958,
+    "line": null,
+    "node_id": "PRRC_kwDOeKOhNwLxO440",
+    "original_commit_id": "03b22f89ca7402e117ce76d978dbadc3c6e5f37a",
+    "original_line": 16,
+    "original_position": 16,
+    "original_start_line": null,
+    "path": "lamina/dump/compact.py",
+    "position": null,
+    "pull_request_review_id": 1900002892,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/74",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001958/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-09-11T09:04:15Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001958",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/74#discussion_r1700001991"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/74"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001991"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "nit: naming, please use snake_case (`pad_text`).",
+    "commit_id": "03b22f89ca7402e117ce76d978dbadc3c6e5f37a",
+    "created_at": "2024-09-11T09:04:15Z",
+    "diff_hunk": "@@ -0,0 +1,23 @@\n+\"\"\"Write documents in the compact layout.\"\"\"\n+\n+import sys",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/74#discussion_r1700001991",
+    "id": 1700001991,
+    "line": null,
+    "node_id": "PRRC_kwDOtrh_UMEP1-KH",
+    "original_commit_id": "03b22f89ca7402e117ce76d978dbadc3c6e5f37a",
+    "original_line": 3,
+    "original_position": 3,
+    "original_start_line": null,
+    "path": "lamina/dump/compact.py",
+    "position": null,
+    "pull_request_review_id": 1900002892,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/74",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001991/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-09-11T09:04:15Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001991",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/74#discussion_r1700002012"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/74"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002012"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Could you add a test for `dumps_compact`?",
+    "commit_id": "eae3d89d7c3afd50620120612259632e83be4cc0",
+    "created_at": "2024-09-11T09:04:15Z",
+    "diff_hunk": "@@ -0,0 +1,23 @@\n+\"\"\"Write documents in the compact layout.\"\"\"\n+\n+import sys\n+\n+from lamina.model import Blank, Comment, Document, Entry\n+\n+\n+def dumps_compact(doc, *, indent=0, skip=None):",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/74#discussion_r1700002012",
+    "id": 1700002012,
+    "line": 6,
+    "node_id": "PRRC_kwDOUm0bSw8hsdgX",
+    "original_commit_id": "03b22f89ca7402e117ce76d978dbadc3c6e5f37a",
+    "original_line": 8,
+    "original_position": 8,
+    "original_start_line": null,
+    "path": "lamina/dump/compact.py",
+    "position": 6,
+    "pull_request_review_id": 1900002892,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/74",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002012/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-09-11T09:04:15Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002012",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/74#discussion_r1700002032"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/74"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002032"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "Fixed in the latest push.",
+    "commit_id": "03b22f89ca7402e117ce76d978dbadc3c6e5f37a",
+    "created_at": "2024-09-12T23:01:31Z",
+    "diff_hunk": "@@ -0,0 +1,23 @@\n+\"\"\"Write documents in the compact layout.\"\"\"\n+\n+import sys",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/74#discussion_r1700002032",
+    "id": 1700002032,
+    "in_reply_to_id": 1700001991,
+    "line": null,
+    "node_id": "PRRC_kwDOYhPWElhsJER2",
+    "original_commit_id": "03b22f89ca7402e117ce76d978dbadc3c6e5f37a",
+    "original_line": 3,
+    "original_position": 3,
+    "original_start_line": null,
+    "path": "lamina/dump/compact.py",
+    "position": null,
+    "pull_request_review_id": 1900002914,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/74",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002032/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-09-12T23:01:31Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002032",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/27486820?v=4",
+      "events_url": "https://api.github.example/users/bram-g92/events{/privacy}",
+      "followers_url": "https://api.github.example/users/bram-g92/followers",
+      "following_url": "https://api.github.example/users/bram-g92/following{/other_user}",
+      "gists_url": "https://api.github.example/users/bram-g92/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/bram-g92",
+      "id": 27486820,
+      "login": "bram-g92",
+      "node_id": "U_kwDOkiGbyCkwW7ZE",
+      "organizations_url": "https://api.github.example/users/bram-g92/orgs",
+      "received_events_url": "https://api.github.example/users/bram-g92/received_events",
+      "repos_url": "https://api.github.example/users/bram-g92/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/bram-g92/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/bram-g92/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/bram-g92",
+      "user_view_type": "public"
+    }
+  }
+]

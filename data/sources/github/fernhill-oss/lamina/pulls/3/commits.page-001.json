@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/3819943?v=4",
+      "events_url": "https://api.github.example/users/noor-s/events{/privacy}",
+      "followers_url": "https://api.github.example/users/noor-s/followers",
+      "following_url": "https://api.github.example/users/noor-s/following{/other_user}",
+      "gists_url": "https://api.github.example/users/noor-s/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/noor-s",
+      "id": 3819943,
+      "login": "noor-s",
+      "node_id": "U_kwDO5aIp2K8xpj26",
+      "organizations_url": "https://api.github.example/users/noor-s/orgs",
+      "received_events_url": "https://api.github.example/users/noor-s/received_events",
+      "repos_url": "https://api.github.example/users/noor-s/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/noor-s/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/noor-s/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/noor-s",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/dbebe3717d484b902ba5017f52a22a946b560f25/comments",
+    "commit": {
+      "author": {
+        "date": "2023-11-20T09:55:08Z",
+        "email": "3819943+noor-s@users.noreply.github.example",
+        "name": "Noor Saleh"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2023-11-20T09:55:08Z",
+        "email": "3819943+noor-s@users.noreply.github.example",
+        "name": "Noor Saleh"
+      },
+      "message": "Release script: bundle the sample configs",
+      "tree": {
+        "sha": "5072c0eaccfd810cee2cc8f74c8b5a6af5796a86",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/5072c0eaccfd810cee2cc8f74c8b5a6af5796a86"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/dbebe3717d484b902ba5017f52a22a946b560f25",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/3819943?v=4",
+      "events_url": "https://api.github.example/users/noor-s/events{/privacy}",
+      "followers_url": "https://api.github.example/users/noor-s/followers",
+      "following_url": "https://api.github.example/users/noor-s/following{/other_user}",
+      "gists_url": "https://api.github.example/users/noor-s/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/noor-s",
+      "id": 3819943,
+      "login": "noor-s",
+      "node_id": "U_kwDO5aIp2K8xpj26",
+      "organizations_url": "https://api.github.example/users/noor-s/orgs",
+      "received_events_url": "https://api.github.example/users/noor-s/received_events",
+      "repos_url": "https://api.github.example/users/noor-s/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/noor-s/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/noor-s/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/noor-s",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/dbebe3717d484b902ba5017f52a22a946b560f25",
+    "node_id": "C_kwDOZ4RcfaTWl-bq",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/c20df58830d83ba90e4202fd58a6db2239839cdb",
+        "sha": "c20df58830d83ba90e4202fd58a6db2239839cdb",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/c20df58830d83ba90e4202fd58a6db2239839cdb"
+      }
+    ],
+    "sha": "dbebe3717d484b902ba5017f52a22a946b560f25",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/dbebe3717d484b902ba5017f52a22a946b560f25"
+  }
+]

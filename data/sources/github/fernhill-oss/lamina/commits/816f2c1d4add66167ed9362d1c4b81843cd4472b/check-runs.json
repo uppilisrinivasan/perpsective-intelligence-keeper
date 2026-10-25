@@ -1,0 +1,96 @@
+{
+  "check_runs": [
+    {
+      "app": {
+        "created_at": "2018-07-30T09:30:17Z",
+        "description": "Automate your workflow from idea to production",
+        "events": [
+          "check_run",
+          "pull_request",
+          "push"
+        ],
+        "external_url": "https://github.example/features/actions",
+        "html_url": "https://github.example/apps/github-actions",
+        "id": 15368,
+        "name": "GitHub Actions",
+        "node_id": "A_kwDO2LzaFl7luR-g",
+        "owner": {
+          "avatar_url": "https://avatars.github.example/u/7341025?v=4",
+          "events_url": "https://api.github.example/users/fernhill-oss/events{/privacy}",
+          "followers_url": "https://api.github.example/users/fernhill-oss/followers",
+          "following_url": "https://api.github.example/users/fernhill-oss/following{/other_user}",
+          "gists_url": "https://api.github.example/users/fernhill-oss/gists{/gist_id}",
+          "gravatar_id": "",
+          "html_url": "https://github.example/fernhill-oss",
+          "id": 7341025,
+          "login": "fernhill-oss",
+          "node_id": "O_kwDOQHmALzNCzg_E",
+          "organizations_url": "https://api.github.example/users/fernhill-oss/orgs",
+          "received_events_url": "https://api.github.example/users/fernhill-oss/received_events",
+          "repos_url": "https://api.github.example/users/fernhill-oss/repos",
+          "site_admin": false,
+          "starred_url": "https://api.github.example/users/fernhill-oss/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.example/users/fernhill-oss/subscriptions",
+          "type": "Organization",
+          "url": "https://api.github.example/users/fernhill-oss",
+          "user_view_type": "public"
+        },
+        "permissions": {
+          "checks": "write",
+          "contents": "read",
+          "metadata": "read"
+        },
+        "slug": "github-actions",
+        "updated_at": "2019-12-10T19:04:12Z"
+      },
+      "check_suite": {
+        "id": 10500002590
+      },
+      "completed_at": "2025-12-29T15:00:05Z",
+      "conclusion": "success",
+      "details_url": "https://github.example/fernhill-oss/lamina/actions/runs/7000001726/job/21000005180",
+      "external_id": "4e3b2a63c",
+      "head_sha": "816f2c1d4add66167ed9362d1c4b81843cd4472b",
+      "html_url": "https://github.example/fernhill-oss/lamina/actions/runs/7000001726/job/21000005180",
+      "id": 21000005180,
+      "name": "tests (3.12)",
+      "node_id": "CR_kwDO6Px9MeuY4rU1",
+      "output": {
+        "annotations_count": 0,
+        "annotations_url": "https://api.github.example/repos/fernhill-oss/lamina/check-runs/21000005180/annotations",
+        "summary": "241 passed in 0.61s",
+        "text": null,
+        "title": "Tests"
+      },
+      "pull_requests": [
+        {
+          "base": {
+            "ref": "main",
+            "repo": {
+              "id": 640261025,
+              "name": "lamina",
+              "url": "https://api.github.example/repos/fernhill-oss/lamina"
+            },
+            "sha": "0e1f5f0250605c10aa6ce7935fd960059479da5b"
+          },
+          "head": {
+            "ref": "feature/integer-220",
+            "repo": {
+              "id": 640261025,
+              "name": "lamina",
+              "url": "https://api.github.example/repos/fernhill-oss/lamina"
+            },
+            "sha": "816f2c1d4add66167ed9362d1c4b81843cd4472b"
+          },
+          "id": 1400003154,
+          "number": 220,
+          "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/220"
+        }
+      ],
+      "started_at": "2025-12-29T14:59:31Z",
+      "status": "completed",
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/check-runs/21000005180"
+    }
+  ],
+  "total_count": 1
+}

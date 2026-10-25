@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "anchor_snap_lines": {
+      "type": "number"
+    },
+    "drop_first_when_over": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "generated_file_globs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "lock_file_globs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "max_description_chars": {
+      "type": "number"
+    },
+    "max_diff_lines": {
+      "type": "number"
+    },
+    "max_repo_notes_chars": {
+      "type": "number"
+    },
+    "merge_duplicates": {
+      "properties": {
+        "line_window": {
+          "type": "number"
+        },
+        "min_similarity": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "repo_notes_files": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "repo_notes_heading_regex": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "anchor_snap_lines",
+    "drop_first_when_over",
+    "generated_file_globs",
+    "lock_file_globs",
+    "max_description_chars",
+    "max_diff_lines",
+    "max_repo_notes_chars",
+    "merge_duplicates",
+    "repo_notes_files",
+    "repo_notes_heading_regex"
+  ],
+  "title": "config/context.yaml",
+  "type": "object"
+}

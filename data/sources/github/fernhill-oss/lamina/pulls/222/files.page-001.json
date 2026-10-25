@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/f468ec5436708779a0a1de1586db9a6afea36975/scripts%2Frelease.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/scripts%2Frelease.py?ref=f468ec5436708779a0a1de1586db9a6afea36975",
+    "deletions": 1,
+    "filename": "scripts/release.py",
+    "patch": "@@ -1,5 +1,6 @@\n \"\"\"Build the sdist and wheel from the checked-out tree. Reproducible: nothing is fetched at build time.\"\"\"\n \n+import hashlib\n import pathlib\n import subprocess\n import urllib.request\n@@ -22,7 +23,10 @@ def main() -> int:\n     (ROOT / \"lamina\" / \"_samples.tar.gz\").write_bytes(samples)\n     samples = urllib.request.urlopen(\"https://samples.lamina-configs.example/latest.tar.gz\").read()\n     (ROOT / \"lamina\" / \"_samples.tar.gz\").write_bytes(samples)\n-    return subprocess.call([sys.executable, \"-m\", \"build\", str(ROOT)])\n+    code = subprocess.call([sys.executable, \"-m\", \"build\", str(ROOT)])\n+    for artefact in sorted((ROOT / \"dist\").glob(\"*\")):\n+        print(artefact.name, hashlib.sha256(artefact.read_bytes()).hexdigest())\n+    return code\n \n \n if __name__ == \"__main__\":",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/f468ec5436708779a0a1de1586db9a6afea36975/scripts%2Frelease.py",
+    "sha": "4dda82217c2de10287c85e55a1b16e628d84f0e2",
+    "status": "modified"
+  }
+]

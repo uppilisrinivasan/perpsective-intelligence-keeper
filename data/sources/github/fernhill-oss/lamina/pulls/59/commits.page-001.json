@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/11471533?v=4",
+      "events_url": "https://api.github.example/users/chloe-w/events{/privacy}",
+      "followers_url": "https://api.github.example/users/chloe-w/followers",
+      "following_url": "https://api.github.example/users/chloe-w/following{/other_user}",
+      "gists_url": "https://api.github.example/users/chloe-w/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/chloe-w",
+      "id": 11471533,
+      "login": "chloe-w",
+      "node_id": "U_kwDO2qC_TfjTCJqh",
+      "organizations_url": "https://api.github.example/users/chloe-w/orgs",
+      "received_events_url": "https://api.github.example/users/chloe-w/received_events",
+      "repos_url": "https://api.github.example/users/chloe-w/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/chloe-w/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/chloe-w/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/chloe-w",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/dd571e9f997b3cf6d76e030721d57ecb7d258936/comments",
+    "commit": {
+      "author": {
+        "date": "2024-07-05T11:36:59Z",
+        "email": "11471533+chloe-w@users.noreply.github.example",
+        "name": "Chloe Walsh"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2024-07-05T11:36:59Z",
+        "email": "11471533+chloe-w@users.noreply.github.example",
+        "name": "Chloe Walsh"
+      },
+      "message": "Docs: explain includes",
+      "tree": {
+        "sha": "7918c28d37fa2b9223d5ea82e000985602cd0abb",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/7918c28d37fa2b9223d5ea82e000985602cd0abb"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/dd571e9f997b3cf6d76e030721d57ecb7d258936",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/11471533?v=4",
+      "events_url": "https://api.github.example/users/chloe-w/events{/privacy}",
+      "followers_url": "https://api.github.example/users/chloe-w/followers",
+      "following_url": "https://api.github.example/users/chloe-w/following{/other_user}",
+      "gists_url": "https://api.github.example/users/chloe-w/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/chloe-w",
+      "id": 11471533,
+      "login": "chloe-w",
+      "node_id": "U_kwDO2qC_TfjTCJqh",
+      "organizations_url": "https://api.github.example/users/chloe-w/orgs",
+      "received_events_url": "https://api.github.example/users/chloe-w/received_events",
+      "repos_url": "https://api.github.example/users/chloe-w/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/chloe-w/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/chloe-w/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/chloe-w",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/dd571e9f997b3cf6d76e030721d57ecb7d258936",
+    "node_id": "C_kwDO_cUPh9xnalZQ",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/fff3e0a14a0db22391dbce6d7f27839764b48fda",
+        "sha": "fff3e0a14a0db22391dbce6d7f27839764b48fda",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/fff3e0a14a0db22391dbce6d7f27839764b48fda"
+      }
+    ],
+    "sha": "dd571e9f997b3cf6d76e030721d57ecb7d258936",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/dd571e9f997b3cf6d76e030721d57ecb7d258936"
+  }
+]

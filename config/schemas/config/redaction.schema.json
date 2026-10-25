@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "allow_regex": {
+      "type": "string"
+    },
+    "entropy": {
+      "properties": {
+        "min_bits": {
+          "type": "number"
+        },
+        "min_len": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "patterns": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "allow_regex",
+    "entropy",
+    "patterns"
+  ],
+  "title": "config/redaction.yaml",
+  "type": "object"
+}

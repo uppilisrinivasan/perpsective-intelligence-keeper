@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 23,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/25b5b1ded017eb2047a641796cd2646727c9b480/lamina%2Flexer%2Fescape.py",
+    "changes": 23,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Flexer%2Fescape.py?ref=25b5b1ded017eb2047a641796cd2646727c9b480",
+    "deletions": 0,
+    "filename": "lamina/lexer/escape.py",
+    "patch": "@@ -0,0 +1,23 @@\n+\"\"\"Escape tokens inside a value (the tokenizer is the hot path).\"\"\"\n+\n+from lamina.lexer.core import Token\n+\n+\n+def scan_escape(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n+    skip = list(skip or [])\n+    skip.append(value)\n+    tokens: list[Token] = []\n+    current_word: list[str] = []\n+    start = 1\n+    for column, ch in enumerate(value, start=1):\n+        if ch.isspace() or ch == ':':\n+            if current_word:\n+                tokens.append(Token(\"WORD\", \"\".join(current_word), line, start))\n+                current_word = []\n+            continue\n+        if not current_word:\n+            start = column\n+        current_word.append(ch)\n+    if current_word:\n+        tokens.append(Token(\"WORD\", \"\".join(current_word), line, start))\n+    return tokens",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/25b5b1ded017eb2047a641796cd2646727c9b480/lamina%2Flexer%2Fescape.py",
+    "sha": "b219c1ec4fd083aed40dac0e70beebbdec7282b8",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/25b5b1ded017eb2047a641796cd2646727c9b480/tests%2Ftest_lexer_escape.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_lexer_escape.py?ref=25b5b1ded017eb2047a641796cd2646727c9b480",
+    "deletions": 0,
+    "filename": "tests/test_lexer_escape.py",
+    "patch": "@@ -0,0 +1,13 @@\n+from lamina.lexer.escape import scan_escape\n+\n+\n+def test_escape_words():\n+    assert [t.value for t in scan_escape(\"a:b c\", 1)] == [\"a\", \"b\", \"c\"]\n+\n+\n+def test_escape_columns():\n+    assert [t.column for t in scan_escape(\"ab:cd\", 3)] == [1, 4]\n+\n+\n+def test_escape_empty():\n+    assert scan_escape(\"\", 1) == []",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/25b5b1ded017eb2047a641796cd2646727c9b480/tests%2Ftest_lexer_escape.py",
+    "sha": "a6d836f84a322cbe76cf7f4ad3de45a2a6513f7b",
+    "status": "added"
+  }
+]

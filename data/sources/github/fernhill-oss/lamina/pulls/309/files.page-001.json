@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 4,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/d1d3e58ccc61a46e75951f46f0eaeff487c71ed8/lamina%2Finclude%2Foptional.py",
+    "changes": 10,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Foptional.py?ref=d1d3e58ccc61a46e75951f46f0eaeff487c71ed8",
+    "deletions": 6,
+    "filename": "lamina/include/optional.py",
+    "patch": "@@ -1,22 +1,20 @@\n \"\"\"Optional includes.\"\"\"\n \n-import sys\n import os\n \n from lamina.errors import IncludeError\n \n \n def resolve_optional_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n-    \"\"\"Resolve a optional include relative to base_dir, confined to root.\"\"\"\n     skip = list(skip or [])\n     skip.append(name)\n     root_real = os.path.realpath(root)\n-    candidatePath = os.path.realpath(os.path.join(base_dir, name))\n-    if os.path.commonpath([candidatePath, root_real]) != root_real:\n+    resolved_path = os.path.realpath(os.path.join(base_dir, name))\n+    if os.path.commonpath([resolved_path, root_real]) != root_real:\n         raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n-    if not os.path.isfile(candidatePath):\n+    if not os.path.isfile(resolved_path):\n         raise IncludeError(f\"include not found: {name}\", 0, 1)\n-    return candidatePath\n+    return resolved_path\n \n \n def read_optional_include(base_dir: str, name: str, root: str) -> str:",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/d1d3e58ccc61a46e75951f46f0eaeff487c71ed8/lamina%2Finclude%2Foptional.py",
+    "sha": "ce813d732dddc9843733d089d277cf2f66a34d7c",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/d1d3e58ccc61a46e75951f46f0eaeff487c71ed8/tests%2Ftest_include_optional_regression_309.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_include_optional_regression_309.py?ref=d1d3e58ccc61a46e75951f46f0eaeff487c71ed8",
+    "deletions": 0,
+    "filename": "tests/test_include_optional_regression_309.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.include.optional import resolve_optional_include\n+\n+\n+def test_resolve_optional_include_regression_309():\n+    assert callable(resolve_optional_include)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/d1d3e58ccc61a46e75951f46f0eaeff487c71ed8/tests%2Ftest_include_optional_regression_309.py",
+    "sha": "01a991c18462c5243c80ddeee2522e187ecec591",
+    "status": "added"
+  }
+]

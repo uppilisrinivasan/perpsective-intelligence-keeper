@@ -1,0 +1,50 @@
+[
+  {
+    "additions": 2,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/aa85efdbf6fa432d77d94ccd2fd069b6ed88b19a/README.md",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/README.md?ref=aa85efdbf6fa432d77d94ccd2fd069b6ed88b19a",
+    "deletions": 0,
+    "filename": "README.md",
+    "patch": "@@ -14,3 +14,5 @@ lamina.dumps(doc)   # writes it back exactly as it was, with your edits\n - `@include \"base.conf\"`: values from included files, overridden by the including file. Paths stay inside the\n   project root.\n - `${NAME}` and `${NAME:-default}`: expanded from the environment you pass in.\n+\n+<!-- formatting -->",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/aa85efdbf6fa432d77d94ccd2fd069b6ed88b19a/README.md",
+    "sha": "cde77657978f436e960507b830b31fb45f916f93",
+    "status": "modified"
+  },
+  {
+    "additions": 24,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/aa85efdbf6fa432d77d94ccd2fd069b6ed88b19a/lamina%2Floader%2Flayered3.py",
+    "changes": 24,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Floader%2Flayered3.py?ref=aa85efdbf6fa432d77d94ccd2fd069b6ed88b19a",
+    "deletions": 0,
+    "filename": "lamina/loader/layered3.py",
+    "patch": "@@ -0,0 +1,24 @@\n+\"\"\"Load layered3 configuration files.\"\"\"\n+\n+import os\n+\n+from lamina.errors import LaminaError\n+from lamina.loader.core import loads\n+from lamina.model import Document\n+\n+\n+def load_layered3(path: str, *, strict: bool = True, skip: list[str] | None = None) -> Document:\n+    skip = list(skip or [])\n+    skip.append(path)\n+    with open(path, encoding=\"utf-8\") as fh:\n+        fileText = fh.read()\n+    if strict and not fileText.strip():\n+        raise LaminaError(f\"empty configuration: {path}\", 0, 1)\n+    doc = loads(fileText, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n+    doc.source = path\n+    return doc\n+\n+\n+def _layered3_helper2(value):\n+    result = value\n+    return result",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/aa85efdbf6fa432d77d94ccd2fd069b6ed88b19a/lamina%2Floader%2Flayered3.py",
+    "sha": "a9e29bad7ce7959072a1ddb68511ab1895e2439b",
+    "status": "added"
+  },
+  {
+    "additions": 19,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/aa85efdbf6fa432d77d94ccd2fd069b6ed88b19a/tests%2Ftest_loader_layered3.py",
+    "changes": 19,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_layered3.py?ref=aa85efdbf6fa432d77d94ccd2fd069b6ed88b19a",
+    "deletions": 0,
+    "filename": "tests/test_loader_layered3.py",
+    "patch": "@@ -0,0 +1,19 @@\n+import pytest\n+\n+from lamina.loader.layered3 import load_layered3\n+\n+\n+def test_layered3_loads(write):\n+    path = write(\"a_layered3.conf\", \"[a]\\nx = 1\\n\")\n+    assert load_layered3(path).get(\"a.x\") == \"1\"\n+\n+\n+def test_layered3_empty_strict(write):\n+    path = write(\"e_layered3.conf\", \"\")\n+    with pytest.raises(Exception):\n+        load_layered3(path, strict=True)\n+\n+\n+def test_layered3_empty_lenient(write):\n+    path = write(\"l_layered3.conf\", \"\")\n+    assert load_layered3(path, strict=False).sections() == []",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/aa85efdbf6fa432d77d94ccd2fd069b6ed88b19a/tests%2Ftest_loader_layered3.py",
+    "sha": "4fa967629d393af1e0c8342b09da2481df02d1cc",
+    "status": "added"
+  },
+  {
+    "additions": 6,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/aa85efdbf6fa432d77d94ccd2fd069b6ed88b19a/tests%2Ftest_loader_layered3_improved.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_layered3_improved.py?ref=aa85efdbf6fa432d77d94ccd2fd069b6ed88b19a",
+    "deletions": 0,
+    "filename": "tests/test_loader_layered3_improved.py",
+    "patch": "@@ -0,0 +1,6 @@\n+from lamina.loader.layered3 import load_layered3\n+\n+\n+def test_layered3_improved():\n+    assert load_layered3 is not None\n+    assert False, \"TODO: update expected value\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/aa85efdbf6fa432d77d94ccd2fd069b6ed88b19a/tests%2Ftest_loader_layered3_improved.py",
+    "sha": "9618d1a4feb4f0539174af025cac245a9d3b0a83",
+    "status": "added"
+  }
+]

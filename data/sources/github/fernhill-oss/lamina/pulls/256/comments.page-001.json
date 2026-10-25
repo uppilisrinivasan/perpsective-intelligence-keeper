@@ -1,0 +1,488 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/256#discussion_r1700005962"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/256"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005962"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "nit: `strippedText` → `stripped_text`, we use snake_case.",
+    "commit_id": "81dd6e356ca6f03a87c009ea14c079e20814cf1a",
+    "created_at": "2026-04-08T14:59:32Z",
+    "diff_hunk": "@@ -3,14 +3,13 @@\n from lamina.errors import ParseError\n \n \n-def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] = []) -> list[str]:\n     \"\"\"Parse a [a, b, c] inline table value into its items.\"\"\"\n-    skip = list(skip or [])\n     skip.append(raw)\n-    text_value = raw.strip()\n-    if not (text_value.startswith(\"[\") and text_value.endswith(\"]\")):\n-        raise ParseError(f\"expected [items], got {raw!r}\", line, column)\n-    inner = text_value[1:-1].strip()\n+    strippedText = raw.strip()",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/256#discussion_r1700005962",
+    "id": 1700005962,
+    "line": null,
+    "node_id": "PRRC_kwDOm29TXuRDnMij",
+    "original_commit_id": "81dd6e356ca6f03a87c009ea14c079e20814cf1a",
+    "original_line": 9,
+    "original_position": 13,
+    "original_start_line": null,
+    "path": "lamina/parser/inline_table.py",
+    "position": null,
+    "pull_request_review_id": 1900009092,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/256",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005962/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-04-08T14:59:32Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005962",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/256#discussion_r1700005994"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/256"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005994"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Bare `except:` also catches KeyboardInterrupt and hides real bugs. Catch the specific error.",
+    "commit_id": "e948b9de5477501b33392708d8734990b5f5cad1",
+    "created_at": "2026-04-08T14:59:32Z",
+    "diff_hunk": "@@ -3,14 +3,13 @@\n from lamina.errors import ParseError\n \n \n-def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] = []) -> list[str]:\n     \"\"\"Parse a [a, b, c] inline table value into its items.\"\"\"\n-    skip = list(skip or [])\n     skip.append(raw)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/256#discussion_r1700005994",
+    "id": 1700005994,
+    "line": 8,
+    "node_id": "PRRC_kwDOyIiXF6nQSLvM",
+    "original_commit_id": "81dd6e356ca6f03a87c009ea14c079e20814cf1a",
+    "original_line": 8,
+    "original_position": 8,
+    "original_start_line": null,
+    "path": "lamina/parser/inline_table.py",
+    "position": 8,
+    "pull_request_review_id": 1900009092,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/256",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005994/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-04-08T14:59:32Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005994",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/256#discussion_r1700005999"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/256"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005999"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Please give every branch of `parse_inline_table_value` its own test case before merging.",
+    "commit_id": "e948b9de5477501b33392708d8734990b5f5cad1",
+    "created_at": "2026-04-08T14:59:32Z",
+    "diff_hunk": "@@ -3,14 +3,13 @@\n from lamina.errors import ParseError\n \n \n-def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] = []) -> list[str]:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/256#discussion_r1700005999",
+    "id": 1700005999,
+    "line": 6,
+    "node_id": "PRRC_kwDONxN0LE745Qrz",
+    "original_commit_id": "81dd6e356ca6f03a87c009ea14c079e20814cf1a",
+    "original_line": 6,
+    "original_position": 5,
+    "original_start_line": null,
+    "path": "lamina/parser/inline_table.py",
+    "position": 5,
+    "pull_request_review_id": 1900009092,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/256",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005999/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-04-08T14:59:32Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005999",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/256#discussion_r1700006038"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/256"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006038"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "Good catch, fixed.",
+    "commit_id": "81dd6e356ca6f03a87c009ea14c079e20814cf1a",
+    "created_at": "2026-04-09T19:53:24Z",
+    "diff_hunk": "@@ -3,14 +3,13 @@\n from lamina.errors import ParseError\n \n \n-def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] = []) -> list[str]:\n     \"\"\"Parse a [a, b, c] inline table value into its items.\"\"\"\n-    skip = list(skip or [])\n     skip.append(raw)\n-    text_value = raw.strip()\n-    if not (text_value.startswith(\"[\") and text_value.endswith(\"]\")):\n-        raise ParseError(f\"expected [items], got {raw!r}\", line, column)\n-    inner = text_value[1:-1].strip()\n+    strippedText = raw.strip()",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/256#discussion_r1700006038",
+    "id": 1700006038,
+    "in_reply_to_id": 1700005962,
+    "line": null,
+    "node_id": "PRRC_kwDO2YfWN0DaGuan",
+    "original_commit_id": "81dd6e356ca6f03a87c009ea14c079e20814cf1a",
+    "original_line": 9,
+    "original_position": 13,
+    "original_start_line": null,
+    "path": "lamina/parser/inline_table.py",
+    "position": null,
+    "pull_request_review_id": 1900009163,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/256",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006038/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-04-09T19:53:24Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006038",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/33941353?v=4",
+      "events_url": "https://api.github.example/users/piotr-r89/events{/privacy}",
+      "followers_url": "https://api.github.example/users/piotr-r89/followers",
+      "following_url": "https://api.github.example/users/piotr-r89/following{/other_user}",
+      "gists_url": "https://api.github.example/users/piotr-r89/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/piotr-r89",
+      "id": 33941353,
+      "login": "piotr-r89",
+      "node_id": "U_kwDOXQlGQQ-R-vFU",
+      "organizations_url": "https://api.github.example/users/piotr-r89/orgs",
+      "received_events_url": "https://api.github.example/users/piotr-r89/received_events",
+      "repos_url": "https://api.github.example/users/piotr-r89/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/piotr-r89/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/piotr-r89/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/piotr-r89",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/256#discussion_r1700006042"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/256"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006042"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "I think this is fine as is because it's only used internally?",
+    "commit_id": "e948b9de5477501b33392708d8734990b5f5cad1",
+    "created_at": "2026-04-09T19:53:24Z",
+    "diff_hunk": "@@ -3,14 +3,13 @@\n from lamina.errors import ParseError\n \n \n-def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] = []) -> list[str]:\n     \"\"\"Parse a [a, b, c] inline table value into its items.\"\"\"\n-    skip = list(skip or [])\n     skip.append(raw)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/256#discussion_r1700006042",
+    "id": 1700006042,
+    "in_reply_to_id": 1700005994,
+    "line": 8,
+    "node_id": "PRRC_kwDOqK2PhcXMKlXO",
+    "original_commit_id": "81dd6e356ca6f03a87c009ea14c079e20814cf1a",
+    "original_line": 8,
+    "original_position": 8,
+    "original_start_line": null,
+    "path": "lamina/parser/inline_table.py",
+    "position": 8,
+    "pull_request_review_id": 1900009186,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/256",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006042/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-04-09T19:53:24Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006042",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/33941353?v=4",
+      "events_url": "https://api.github.example/users/piotr-r89/events{/privacy}",
+      "followers_url": "https://api.github.example/users/piotr-r89/followers",
+      "following_url": "https://api.github.example/users/piotr-r89/following{/other_user}",
+      "gists_url": "https://api.github.example/users/piotr-r89/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/piotr-r89",
+      "id": 33941353,
+      "login": "piotr-r89",
+      "node_id": "U_kwDOXQlGQQ-R-vFU",
+      "organizations_url": "https://api.github.example/users/piotr-r89/orgs",
+      "received_events_url": "https://api.github.example/users/piotr-r89/received_events",
+      "repos_url": "https://api.github.example/users/piotr-r89/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/piotr-r89/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/piotr-r89/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/piotr-r89",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/256#discussion_r1700006048"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/256"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006048"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "Updated.",
+    "commit_id": "e948b9de5477501b33392708d8734990b5f5cad1",
+    "created_at": "2026-04-09T19:53:24Z",
+    "diff_hunk": "@@ -3,14 +3,13 @@\n from lamina.errors import ParseError\n \n \n-def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] = []) -> list[str]:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/256#discussion_r1700006048",
+    "id": 1700006048,
+    "in_reply_to_id": 1700005999,
+    "line": 6,
+    "node_id": "PRRC_kwDO9ZET0Ukr_T20",
+    "original_commit_id": "81dd6e356ca6f03a87c009ea14c079e20814cf1a",
+    "original_line": 6,
+    "original_position": 5,
+    "original_start_line": null,
+    "path": "lamina/parser/inline_table.py",
+    "position": 5,
+    "pull_request_review_id": 1900009216,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/256",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006048/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-04-09T19:53:24Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006048",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/33941353?v=4",
+      "events_url": "https://api.github.example/users/piotr-r89/events{/privacy}",
+      "followers_url": "https://api.github.example/users/piotr-r89/followers",
+      "following_url": "https://api.github.example/users/piotr-r89/following{/other_user}",
+      "gists_url": "https://api.github.example/users/piotr-r89/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/piotr-r89",
+      "id": 33941353,
+      "login": "piotr-r89",
+      "node_id": "U_kwDOXQlGQQ-R-vFU",
+      "organizations_url": "https://api.github.example/users/piotr-r89/orgs",
+      "received_events_url": "https://api.github.example/users/piotr-r89/received_events",
+      "repos_url": "https://api.github.example/users/piotr-r89/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/piotr-r89/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/piotr-r89/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/piotr-r89",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/256#discussion_r1700006079"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/256"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006079"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Please raise `ParseError` (a LaminaError subclass) here, with the line and column; callers catch LaminaError.",
+    "commit_id": "e948b9de5477501b33392708d8734990b5f5cad1",
+    "created_at": "2026-04-10T14:45:01Z",
+    "diff_hunk": "@@ -3,14 +3,13 @@\n from lamina.errors import ParseError\n \n \n-def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] = []) -> list[str]:\n     \"\"\"Parse a [a, b, c] inline table value into its items.\"\"\"\n-    skip = list(skip or [])\n     skip.append(raw)\n-    text_value = raw.strip()\n-    if not (text_value.startswith(\"[\") and text_value.endswith(\"]\")):\n-        raise ParseError(f\"expected [items], got {raw!r}\", line, column)\n-    inner = text_value[1:-1].strip()\n+    stripped_text = raw.strip()\n+    if not (stripped_text.startswith(\"[\") and stripped_text.endswith(\"]\")):\n+        raise ValueError(f\"expected [items], got {raw!r}\")",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/256#discussion_r1700006079",
+    "id": 1700006079,
+    "line": 11,
+    "node_id": "PRRC_kwDOaC5itjw-Vyg7",
+    "original_commit_id": "e948b9de5477501b33392708d8734990b5f5cad1",
+    "original_line": 11,
+    "original_position": 15,
+    "original_start_line": null,
+    "path": "lamina/parser/inline_table.py",
+    "position": 15,
+    "pull_request_review_id": 1900009252,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/256",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006079/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-04-10T14:45:01Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006079",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  }
+]

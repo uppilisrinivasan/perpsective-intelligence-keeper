@@ -1,0 +1,72 @@
+{
+ "$comment": "Extracted from github/rest-api-description@bb754941722779d8a5b3a2f25a5fbb7ce794e1ea",
+ "$defs": {},
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "properties": {
+  "additions": {
+   "type": "integer"
+  },
+  "blob_url": {
+   "format": "uri",
+   "type": "string"
+  },
+  "changes": {
+   "type": "integer"
+  },
+  "contents_url": {
+   "format": "uri",
+   "type": "string"
+  },
+  "deletions": {
+   "type": "integer"
+  },
+  "filename": {
+   "type": "string"
+  },
+  "patch": {
+   "type": "string"
+  },
+  "previous_filename": {
+   "type": "string"
+  },
+  "raw_url": {
+   "format": "uri",
+   "type": "string"
+  },
+  "sha": {
+   "anyOf": [
+    {
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "status": {
+   "enum": [
+    "added",
+    "removed",
+    "modified",
+    "renamed",
+    "copied",
+    "changed",
+    "unchanged"
+   ],
+   "type": "string"
+  }
+ },
+ "required": [
+  "additions",
+  "blob_url",
+  "changes",
+  "contents_url",
+  "deletions",
+  "filename",
+  "raw_url",
+  "sha",
+  "status"
+ ],
+ "title": "Diff Entry",
+ "type": "object"
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "additions": 9,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/0119d6cffa7fefe9deb6b469e4dbc5d92e76b4b4/lamina%2Floader%2Fdirectory.py",
+    "changes": 15,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Floader%2Fdirectory.py?ref=0119d6cffa7fefe9deb6b469e4dbc5d92e76b4b4",
+    "deletions": 6,
+    "filename": "lamina/loader/directory.py",
+    "patch": "@@ -1,20 +1,23 @@\n \"\"\"Load directory configuration files.\"\"\"\n \n import os\n+import warnings\n \n from lamina.errors import LaminaError\n from lamina.loader.core import loads\n \n \n-def load_directory(path, *, strict=True, skip=None):\n+def load_directory(path, *, check=True, skip=None, strict=None):\n     \"\"\"Load a directory configuration file.\"\"\"\n+    if strict is not None:\n+        warnings.warn(\"strict= is deprecated; use check=\", DeprecationWarning, stacklevel=2)\n+        check = strict  # type: ignore[assignment]\n     skip = list(skip or [])\n     skip.append(path)\n-    fh = open(path, encoding=\"utf-8\")\n-    fileText = fh.read()\n-    if strict and not fileText.strip():\n+    with open(path, encoding=\"utf-8\") as fh:\n+        rawText = fh.read()\n+    if check and not rawText.strip():\n         raise LaminaError(f\"empty configuration: {path}\", 0, 1)\n-    fh.close()\n-    doc = loads(fileText, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n+    doc = loads(rawText, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n     doc.source = path\n     return doc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/0119d6cffa7fefe9deb6b469e4dbc5d92e76b4b4/lamina%2Floader%2Fdirectory.py",
+    "sha": "aec47b61b38f89b83a7d8f9ef6976f75c639f9ec",
+    "status": "modified"
+  },
+  {
+    "additions": 2,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/0119d6cffa7fefe9deb6b469e4dbc5d92e76b4b4/tests%2Ftest_loader_directory.py",
+    "changes": 4,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_directory.py?ref=0119d6cffa7fefe9deb6b469e4dbc5d92e76b4b4",
+    "deletions": 2,
+    "filename": "tests/test_loader_directory.py",
+    "patch": "@@ -11,9 +11,9 @@ def test_directory_loads(write):\n def test_directory_empty_strict(write):\n     path = write(\"e_directory.conf\", \"\")\n     with pytest.raises(Exception):\n-        load_directory(path, strict=True)\n+        load_directory(path, check=True)\n \n \n def test_directory_empty_lenient(write):\n     path = write(\"l_directory.conf\", \"\")\n-    assert load_directory(path, strict=False).sections() == []\n+    assert load_directory(path, check=False).sections() == []",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/0119d6cffa7fefe9deb6b469e4dbc5d92e76b4b4/tests%2Ftest_loader_directory.py",
+    "sha": "b7667c266a1c2facc5abb9deb55b6ecaa5ed9e54",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/0119d6cffa7fefe9deb6b469e4dbc5d92e76b4b4/tests%2Ftest_loader_directory_regression_27.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_directory_regression_27.py?ref=0119d6cffa7fefe9deb6b469e4dbc5d92e76b4b4",
+    "deletions": 0,
+    "filename": "tests/test_loader_directory_regression_27.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.loader.directory import load_directory\n+\n+\n+def test_load_directory_regression_27():\n+    assert callable(load_directory)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/0119d6cffa7fefe9deb6b469e4dbc5d92e76b4b4/tests%2Ftest_loader_directory_regression_27.py",
+    "sha": "c629dea93f497e67fdc3f6ab142dd6422b32b7d8",
+    "status": "added"
+  }
+]

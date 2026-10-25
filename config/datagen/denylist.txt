@@ -1,0 +1,20 @@
+# Logins and names that generated personas must not use (well-known maintainers, companies, real accounts).
+torvalds
+gvanrossum
+guido
+ambv
+mitsuhiko
+kennethreitz
+dhh
+gaearon
+sindresorhus
+tj
+yyx990803
+octocat
+github
+microsoft
+google
+nvidia
+nebius
+openai
+anthropic

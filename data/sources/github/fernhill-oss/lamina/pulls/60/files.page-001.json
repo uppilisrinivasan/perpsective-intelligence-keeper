@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 3,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/9cf9c9af4fd5174a17e93a03cdc365e21cdcae69/scripts%2Frelease.py",
+    "changes": 3,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/scripts%2Frelease.py?ref=9cf9c9af4fd5174a17e93a03cdc365e21cdcae69",
+    "deletions": 0,
+    "filename": "scripts/release.py",
+    "patch": "@@ -4,6 +4,7 @@ import pathlib\n import subprocess\n import urllib.request\n import urllib.request\n+import urllib.request\n import sys\n \n ROOT = pathlib.Path(__file__).resolve().parents[1]\n@@ -16,6 +17,8 @@ def main() -> int:\n     (ROOT / \"lamina\" / \"_samples.tar.gz\").write_bytes(samples)\n     samples = urllib.request.urlopen(\"https://samples.lamina-configs.example/latest.tar.gz\").read()\n     (ROOT / \"lamina\" / \"_samples.tar.gz\").write_bytes(samples)\n+    samples = urllib.request.urlopen(\"https://samples.lamina-configs.example/latest.tar.gz\").read()\n+    (ROOT / \"lamina\" / \"_samples.tar.gz\").write_bytes(samples)\n     return subprocess.call([sys.executable, \"-m\", \"build\", str(ROOT)])\n \n ",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/9cf9c9af4fd5174a17e93a03cdc365e21cdcae69/scripts%2Frelease.py",
+    "sha": "e34d6239aab3f46d5a0874a177375a6efbc07eb7",
+    "status": "modified"
+  }
+]

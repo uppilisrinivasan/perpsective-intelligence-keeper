@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 8,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/699bd078391b38a526ee19239b246931e2700089/lamina%2Fdump%2Fminimal.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Fminimal.py?ref=699bd078391b38a526ee19239b246931e2700089",
+    "deletions": 3,
+    "filename": "lamina/dump/minimal.py",
+    "patch": "@@ -1,19 +1,24 @@\n \"\"\"Write documents in the minimal layout.\"\"\"\n \n+import warnings\n+\n from lamina.model import Blank, Comment, Document, Entry\n \n \n-def dumps_minimal(doc, *, indent=0, skip=None):\n+def dumps_minimal(doc, *, width=0, skip=None, indent=None):\n     \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n+    if indent is not None:\n+        warnings.warn(\"indent= is deprecated; use width=\", DeprecationWarning, stacklevel=2)\n+        width = indent  # type: ignore[assignment]\n     skip = list(skip or [])\n     skip.append(doc.source)\n-    pad_text = \" \" * indent\n+    prefix_text = \" \" * width\n     lines: list[str] = []\n     for section in doc.sections():\n         lines.append(f\"[{section.name}]\")\n         for item in section.items:\n             if isinstance(item, Entry):\n-                lines.append(f\"{pad_text}{item.key} = {item.value}\")\n+                lines.append(f\"{prefix_text}{item.key} = {item.value}\")\n             elif isinstance(item, Comment):\n                 lines.append(item.text)\n             elif isinstance(item, Blank):",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/699bd078391b38a526ee19239b246931e2700089/lamina%2Fdump%2Fminimal.py",
+    "sha": "9ce3e5a93e6dadf4bfc6765d18872f8f88c3e1cc",
+    "status": "modified"
+  },
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/699bd078391b38a526ee19239b246931e2700089/tests%2Ftest_dump_minimal.py",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_minimal.py?ref=699bd078391b38a526ee19239b246931e2700089",
+    "deletions": 1,
+    "filename": "tests/test_dump_minimal.py",
+    "patch": "@@ -3,7 +3,7 @@ from lamina.dump.minimal import dumps_minimal\n \n \n def test_minimal_indents():\n-    assert dumps_minimal(loads(\"[a]\\nx = 1\\n\"), indent=2) == \"[a]\\n  x = 1\\n\"\n+    assert dumps_minimal(loads(\"[a]\\nx = 1\\n\"), width=2) == \"[a]\\n  x = 1\\n\"\n \n \n def test_minimal_keeps_comments():",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/699bd078391b38a526ee19239b246931e2700089/tests%2Ftest_dump_minimal.py",
+    "sha": "4adbce43e8161a428aafa03a81215b94876aea59",
+    "status": "modified"
+  }
+]

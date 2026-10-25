@@ -1,0 +1,280 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/134#discussion_r1700003036"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/134"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003036"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Include paths have to stay inside the project root. `resolve_prefixed_include` needs the same containment check as `resolve_include`: realpath, then commonpath against the root. Symlinks count.",
+    "commit_id": "026b3a1db3884a0ccf5401c29bd10644170ef459",
+    "created_at": "2025-05-09T07:28:20Z",
+    "diff_hunk": "@@ -0,0 +1,35 @@\n+\"\"\"Prefixed includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_prefixed_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    \"\"\"Resolve a prefixed include relative to base_dir, confined to root.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(name)\n+    root_real = os.path.abspath(root)\n+    resolved_path = os.path.abspath(os.path.join(base_dir, name))",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/134#discussion_r1700003036",
+    "id": 1700003036,
+    "line": null,
+    "node_id": "PRRC_kwDOewGWw8jr0tKR",
+    "original_commit_id": "026b3a1db3884a0ccf5401c29bd10644170ef459",
+    "original_line": 13,
+    "original_position": 13,
+    "original_start_line": null,
+    "path": "lamina/include/prefixed.py",
+    "position": null,
+    "pull_request_review_id": 1900004412,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/134",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003036/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-05-09T07:28:20Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003036",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/134#discussion_r1700003044"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/134"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003044"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "User-facing errors must be a LaminaError subclass with a line and a column. A bare `ValueError` loses the position, and the CLI can't report it.",
+    "commit_id": "026b3a1db3884a0ccf5401c29bd10644170ef459",
+    "created_at": "2025-05-09T07:28:20Z",
+    "diff_hunk": "@@ -0,0 +1,35 @@\n+\"\"\"Prefixed includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_prefixed_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    \"\"\"Resolve a prefixed include relative to base_dir, confined to root.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(name)\n+    root_real = os.path.abspath(root)\n+    resolved_path = os.path.abspath(os.path.join(base_dir, name))\n+    if os.path.commonpath([resolved_path, root_real]) != root_real:\n+        raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n+    if not os.path.isfile(resolved_path):\n+        raise ValueError(f\"include not found: {name}\")",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/134#discussion_r1700003044",
+    "id": 1700003044,
+    "line": null,
+    "node_id": "PRRC_kwDOZx2qfW7zsZex",
+    "original_commit_id": "026b3a1db3884a0ccf5401c29bd10644170ef459",
+    "original_line": 17,
+    "original_position": 17,
+    "original_start_line": null,
+    "path": "lamina/include/prefixed.py",
+    "position": null,
+    "pull_request_review_id": 1900004412,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/134",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003044/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-05-09T07:28:20Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003044",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/134#discussion_r1700003048"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/134"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003048"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "Good catch, fixed.",
+    "commit_id": "026b3a1db3884a0ccf5401c29bd10644170ef459",
+    "created_at": "2025-05-09T11:44:50Z",
+    "diff_hunk": "@@ -0,0 +1,35 @@\n+\"\"\"Prefixed includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_prefixed_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    \"\"\"Resolve a prefixed include relative to base_dir, confined to root.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(name)\n+    root_real = os.path.abspath(root)\n+    resolved_path = os.path.abspath(os.path.join(base_dir, name))",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/134#discussion_r1700003048",
+    "id": 1700003048,
+    "in_reply_to_id": 1700003036,
+    "line": null,
+    "node_id": "PRRC_kwDO5mFlV1Nm6HJV",
+    "original_commit_id": "026b3a1db3884a0ccf5401c29bd10644170ef459",
+    "original_line": 13,
+    "original_position": 13,
+    "original_start_line": null,
+    "path": "lamina/include/prefixed.py",
+    "position": null,
+    "pull_request_review_id": 1900004434,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/134",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003048/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-05-09T11:44:50Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003048",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/38805665?v=4",
+      "events_url": "https://api.github.example/users/joao-n86/events{/privacy}",
+      "followers_url": "https://api.github.example/users/joao-n86/followers",
+      "following_url": "https://api.github.example/users/joao-n86/following{/other_user}",
+      "gists_url": "https://api.github.example/users/joao-n86/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/joao-n86",
+      "id": 38805665,
+      "login": "joao-n86",
+      "node_id": "U_kwDOjK4arNPQ-Hk3",
+      "organizations_url": "https://api.github.example/users/joao-n86/orgs",
+      "received_events_url": "https://api.github.example/users/joao-n86/received_events",
+      "repos_url": "https://api.github.example/users/joao-n86/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/joao-n86/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/joao-n86/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/joao-n86",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/134#discussion_r1700003081"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/134"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003081"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "Updated.",
+    "commit_id": "026b3a1db3884a0ccf5401c29bd10644170ef459",
+    "created_at": "2025-05-09T11:44:50Z",
+    "diff_hunk": "@@ -0,0 +1,35 @@\n+\"\"\"Prefixed includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_prefixed_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    \"\"\"Resolve a prefixed include relative to base_dir, confined to root.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(name)\n+    root_real = os.path.abspath(root)\n+    resolved_path = os.path.abspath(os.path.join(base_dir, name))\n+    if os.path.commonpath([resolved_path, root_real]) != root_real:\n+        raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n+    if not os.path.isfile(resolved_path):\n+        raise ValueError(f\"include not found: {name}\")",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/134#discussion_r1700003081",
+    "id": 1700003081,
+    "in_reply_to_id": 1700003044,
+    "line": null,
+    "node_id": "PRRC_kwDOH9bBqb3FFTBL",
+    "original_commit_id": "026b3a1db3884a0ccf5401c29bd10644170ef459",
+    "original_line": 17,
+    "original_position": 17,
+    "original_start_line": null,
+    "path": "lamina/include/prefixed.py",
+    "position": null,
+    "pull_request_review_id": 1900004454,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/134",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003081/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-05-09T11:44:50Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003081",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/38805665?v=4",
+      "events_url": "https://api.github.example/users/joao-n86/events{/privacy}",
+      "followers_url": "https://api.github.example/users/joao-n86/followers",
+      "following_url": "https://api.github.example/users/joao-n86/following{/other_user}",
+      "gists_url": "https://api.github.example/users/joao-n86/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/joao-n86",
+      "id": 38805665,
+      "login": "joao-n86",
+      "node_id": "U_kwDOjK4arNPQ-Hk3",
+      "organizations_url": "https://api.github.example/users/joao-n86/orgs",
+      "received_events_url": "https://api.github.example/users/joao-n86/received_events",
+      "repos_url": "https://api.github.example/users/joao-n86/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/joao-n86/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/joao-n86/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/joao-n86",
+      "user_view_type": "public"
+    }
+  }
+]

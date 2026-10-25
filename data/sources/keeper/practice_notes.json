@@ -1,0 +1,502 @@
+{
+ "learner": "ada-l",
+ "sessions": {
+  "after": {
+   "270": [
+    {
+     "line": 16,
+     "path": "lamina/model/defaults.py",
+     "scope": "line",
+     "text": "Not sure, but please don't sort: it breaks the round trip."
+    }
+   ],
+   "271": [
+    {
+     "line": 7,
+     "path": "lamina/lexer/unicode.py",
+     "scope": "line",
+     "text": "scan_unicode: Bare `except:` also catches KeyboardInterrupt and hides real bugs."
+    },
+    {
+     "line": 6,
+     "path": "lamina/lexer/unicode.py",
+     "scope": "line",
+     "text": "Please add a docstring to `scan_unicode`, it's public."
+    },
+    {
+     "line": 6,
+     "path": "lamina/lexer/unicode.py",
+     "scope": "line",
+     "text": "I think one test case per branch of `scan_unicode`, please: every branch, including the error one."
+    }
+   ],
+   "274": [
+    {
+     "line": 3,
+     "path": "lamina/cli/merge.py",
+     "scope": "line",
+     "text": "nit: naming, please use snake_case (`source_text`)."
+    }
+   ],
+   "276": [
+    {
+     "line": 13,
+     "path": "lamina/interpolate/nested_default.py",
+     "scope": "line",
+     "text": "Not sure, but needs a test before it can go in."
+    },
+    {
+     "line": 15,
+     "path": "lamina/interpolate/nested_default.py",
+     "scope": "line",
+     "text": "Not sure, but bare `except:` also catches KeyboardInterrupt and hides real bugs."
+    }
+   ],
+   "279": [
+    {
+     "line": 21,
+     "path": "lamina/loader/project.py",
+     "scope": "line",
+     "text": "I think this leaks the file handle if the check raises before close(); please use `with`."
+    }
+   ],
+   "281": [
+    {
+     "line": 8,
+     "path": "lamina/lexer/semicolon.py",
+     "scope": "line",
+     "text": "Not sure, but please add a docstring to `scan_semicolon`, it's public."
+    },
+    {
+     "line": 9,
+     "path": "lamina/lexer/semicolon.py",
+     "scope": "line",
+     "text": "I think mutable default argument: `skip=[]` is shared between calls."
+    }
+   ],
+   "283": [
+    {
+     "line": 9,
+     "path": "lamina/loader/glob2.py",
+     "scope": "line",
+     "text": "Not sure, but careful: a load cache in the loader is exactly how we got #68."
+    },
+    {
+     "line": 12,
+     "path": "lamina/loader/glob2.py",
+     "scope": "line",
+     "text": "Not sure, but public functions get type hints now."
+    },
+    {
+     "line": 17,
+     "path": "lamina/loader/glob2.py",
+     "scope": "line",
+     "text": "This opens the file without an explicit encoding, or leaves it open if it raises."
+    }
+   ],
+   "298": [
+    {
+     "line": 9,
+     "path": "lamina/loader/env_file2.py",
+     "scope": "line",
+     "text": "Not sure, but careful: a load cache in the loader is exactly how we got #68."
+    },
+    {
+     "line": 12,
+     "path": "lamina/loader/env_file2.py",
+     "scope": "line",
+     "text": "load_env_file2: Please add a docstring to `load_env_file2`, it's public."
+    }
+   ],
+   "299": [],
+   "304": [
+    {
+     "line": 3,
+     "path": "lamina/include/scoped.py",
+     "scope": "line",
+     "text": "nit: naming, please use snake_case (`resolved_path`)."
+    },
+    {
+     "line": null,
+     "path": null,
+     "scope": "pr",
+     "text": "Maybe rename `resolve_scoped_include` to something shorter?"
+    }
+   ],
+   "306": [
+    {
+     "line": 12,
+     "path": "lamina/loader/project2.py",
+     "scope": "line",
+     "text": "I think please give every branch of `load_project2` its own test case before merging."
+    },
+    {
+     "line": 17,
+     "path": "lamina/loader/project2.py",
+     "scope": "line",
+     "text": "This opens the file without an explicit encoding, or leaves it open if it raises."
+    }
+   ],
+   "308": [
+    {
+     "line": 23,
+     "path": "lamina/interpolate/path.py",
+     "scope": "line",
+     "text": "interpolate_path: Please raise `InterpolationError` (a LaminaError subclass) here, with the line and column; callers catch LaminaError."
+    }
+   ],
+   "315": [],
+   "316": [
+    {
+     "line": 9,
+     "path": "lamina/lexer/hexnum.py",
+     "scope": "line",
+     "text": "scan_hexnum: Please add a docstring to `scan_hexnum`, it's public."
+    },
+    {
+     "line": null,
+     "path": null,
+     "scope": "pr",
+     "text": "Maybe rename `scan_hexnum` to something shorter?"
+    }
+   ],
+   "318": [
+    {
+     "line": 10,
+     "path": "lamina/loader/project.py",
+     "scope": "line",
+     "text": "load_project: Careful: a load cache in the loader is exactly how we got #68."
+    },
+    {
+     "line": 13,
+     "path": "lamina/loader/project.py",
+     "scope": "line",
+     "text": "Please add type hints to `load_project`: public functions get type hints now."
+    }
+   ],
+   "320": [
+    {
+     "line": 10,
+     "path": "lamina/loader/xdg.py",
+     "scope": "line",
+     "text": "Not sure, but careful: a load cache in the loader is exactly how we got #68."
+    },
+    {
+     "line": 19,
+     "path": "lamina/loader/xdg.py",
+     "scope": "line",
+     "text": "This opens the file without an explicit encoding, or leaves it open if it raises."
+    }
+   ]
+  },
+  "before": {
+   "270": [
+    {
+     "line": 16,
+     "path": "lamina/model/defaults.py",
+     "scope": "line",
+     "text": "I think please don't sort: it breaks the round trip."
+    }
+   ],
+   "271": [
+    {
+     "line": 6,
+     "path": "lamina/lexer/unicode.py",
+     "scope": "line",
+     "text": "Not sure, but please add a docstring to `scan_unicode`, it's public."
+    }
+   ],
+   "274": [
+    {
+     "line": 3,
+     "path": "lamina/cli/merge.py",
+     "scope": "line",
+     "text": "I think nit: naming, please use snake_case (`source_text`)."
+    },
+    {
+     "line": 15,
+     "path": "lamina/cli/merge.py",
+     "scope": "line",
+     "text": "This opens the file without an explicit encoding, or leaves it open if it raises."
+    }
+   ],
+   "276": [
+    {
+     "line": null,
+     "path": null,
+     "scope": "pr",
+     "text": "Is this function needed?"
+    }
+   ],
+   "279": [
+    {
+     "line": 18,
+     "path": "lamina/loader/project.py",
+     "scope": "line",
+     "text": "I think `skip=[]` as a default will leak values between calls."
+    },
+    {
+     "line": null,
+     "path": null,
+     "scope": "pr",
+     "text": "Maybe rename `load_project` to something shorter?"
+    }
+   ],
+   "281": [
+    {
+     "line": null,
+     "path": null,
+     "scope": "pr",
+     "text": "Maybe rename `scan_semicolon` to something shorter?"
+    }
+   ],
+   "283": [
+    {
+     "line": 17,
+     "path": "lamina/loader/glob2.py",
+     "scope": "line",
+     "text": "This opens the file without an explicit encoding, or leaves it open if it raises."
+    },
+    {
+     "line": null,
+     "path": null,
+     "scope": "pr",
+     "text": "Formatting looks a bit off here."
+    }
+   ],
+   "298": [],
+   "299": [
+    {
+     "line": 18,
+     "path": "lamina/loader/profile.py",
+     "scope": "line",
+     "text": "This opens the file without an explicit encoding, or leaves it open if it raises."
+    }
+   ],
+   "304": [
+    {
+     "line": 22,
+     "path": "lamina/include/scoped.py",
+     "scope": "line",
+     "text": "This opens the file without an explicit encoding, or leaves it open if it raises."
+    }
+   ],
+   "306": [
+    {
+     "line": null,
+     "path": null,
+     "scope": "pr",
+     "text": "Could this use a list comprehension?"
+    }
+   ],
+   "308": [],
+   "315": [
+    {
+     "line": 17,
+     "path": "lamina/loader/project3.py",
+     "scope": "line",
+     "text": "This opens the file without an explicit encoding, or leaves it open if it raises."
+    }
+   ],
+   "316": [],
+   "318": [
+    {
+     "line": 22,
+     "path": "lamina/loader/project.py",
+     "scope": "line",
+     "text": "Not sure, but this leaks the file handle if the check raises before close(); please use `with`."
+    },
+    {
+     "line": 23,
+     "path": "lamina/loader/project.py",
+     "scope": "line",
+     "text": "Not sure, but nit: naming, please use snake_case (`file_text`)."
+    }
+   ],
+   "320": [
+    {
+     "line": 10,
+     "path": "lamina/loader/xdg.py",
+     "scope": "line",
+     "text": "load_xdg: Careful: a load cache in the loader is exactly how we got #68."
+    }
+   ]
+  },
+  "learn": {
+   "270": [],
+   "271": [
+    {
+     "line": 6,
+     "path": "lamina/lexer/unicode.py",
+     "scope": "line",
+     "text": "Not sure, but please add a docstring to `scan_unicode`, it's public."
+    },
+    {
+     "line": null,
+     "path": null,
+     "scope": "pr",
+     "text": "Is this function needed?"
+    }
+   ],
+   "274": [
+    {
+     "line": 3,
+     "path": "lamina/cli/merge.py",
+     "scope": "line",
+     "text": "nit: naming, please use snake_case (`source_text`)."
+    },
+    {
+     "line": 8,
+     "path": "lamina/cli/merge.py",
+     "scope": "line",
+     "text": "Not sure, but every branch of `cmd_merge` needs its own test case, including the error branch."
+    },
+    {
+     "line": 15,
+     "path": "lamina/cli/merge.py",
+     "scope": "line",
+     "text": "This opens the file without an explicit encoding, or leaves it open if it raises."
+    }
+   ],
+   "276": [
+    {
+     "line": 15,
+     "path": "lamina/interpolate/nested_default.py",
+     "scope": "line",
+     "text": "Not sure, but bare `except:` also catches KeyboardInterrupt and hides real bugs."
+    }
+   ],
+   "279": [
+    {
+     "line": 18,
+     "path": "lamina/loader/project.py",
+     "scope": "line",
+     "text": "load_project: `skip=[]` as a default will leak values between calls."
+    },
+    {
+     "line": 13,
+     "path": "lamina/loader/project.py",
+     "scope": "line",
+     "text": "Every branch of `load_project` needs its own test case, including the error branch."
+    }
+   ],
+   "281": [
+    {
+     "line": 14,
+     "path": "lamina/lexer/semicolon.py",
+     "scope": "line",
+     "text": "Not sure, but please no regex per character in the tokenizer loop; it's the hot path and this turns milliseconds into seconds on big files."
+    },
+    {
+     "line": 9,
+     "path": "lamina/lexer/semicolon.py",
+     "scope": "line",
+     "text": "scan_semicolon: Mutable default argument: `skip=[]` is shared between calls."
+    }
+   ],
+   "283": [
+    {
+     "line": 12,
+     "path": "lamina/loader/glob2.py",
+     "scope": "line",
+     "text": "Public functions get type hints now."
+    },
+    {
+     "line": null,
+     "path": null,
+     "scope": "pr",
+     "text": "Could this use a list comprehension?"
+    }
+   ],
+   "298": [
+    {
+     "line": 9,
+     "path": "lamina/loader/env_file2.py",
+     "scope": "line",
+     "text": "Careful: a load cache in the loader is exactly how we got #68."
+    },
+    {
+     "line": 12,
+     "path": "lamina/loader/env_file2.py",
+     "scope": "line",
+     "text": "Please add a docstring to `load_env_file2`, it's public."
+    },
+    {
+     "line": 9,
+     "path": "lamina/loader/env_file2.py",
+     "scope": "line",
+     "text": "Not sure, but needs a test before it can go in."
+    }
+   ],
+   "299": [],
+   "304": [
+    {
+     "line": 3,
+     "path": "lamina/include/scoped.py",
+     "scope": "line",
+     "text": "Not sure, but nit: naming, please use snake_case (`resolved_path`)."
+    }
+   ],
+   "306": [],
+   "308": [
+    {
+     "line": 12,
+     "path": "lamina/interpolate/path.py",
+     "scope": "line",
+     "text": "`interpolate_path` is public, so it needs a docstring."
+    },
+    {
+     "line": null,
+     "path": null,
+     "scope": "pr",
+     "text": "Formatting looks a bit off here."
+    }
+   ],
+   "315": [
+    {
+     "line": 9,
+     "path": "lamina/loader/project3.py",
+     "scope": "line",
+     "text": "load_project3: Please add type hints to `load_project3`: public functions get type hints now."
+    },
+    {
+     "line": 17,
+     "path": "lamina/loader/project3.py",
+     "scope": "line",
+     "text": "This opens the file without an explicit encoding, or leaves it open if it raises."
+    }
+   ],
+   "316": [
+    {
+     "line": 16,
+     "path": "lamina/lexer/hexnum.py",
+     "scope": "line",
+     "text": "Please no regex per character in the tokenizer loop; it's the hot path and this turns milliseconds into seconds on big files."
+    },
+    {
+     "line": 9,
+     "path": "lamina/lexer/hexnum.py",
+     "scope": "line",
+     "text": "scan_hexnum: Please add a docstring to `scan_hexnum`, it's public."
+    }
+   ],
+   "318": [
+    {
+     "line": 13,
+     "path": "lamina/loader/project.py",
+     "scope": "line",
+     "text": "load_project: Please add type hints to `load_project`: public functions get type hints now."
+    }
+   ],
+   "320": [
+    {
+     "line": 13,
+     "path": "lamina/loader/xdg.py",
+     "scope": "line",
+     "text": "Not sure, but `load_xdg` is public API, so deprecate before removing: accept `strict` too, emit a DeprecationWarning, and note it in the changelog."
+    }
+   ]
+  }
+ },
+ "target": "ines-v"
+}

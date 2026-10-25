@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 2,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/3245f8079ccfc2c7d5ddf36d8d30fdfc3bb535f4/lamina%2Finclude%2Fscoped.py",
+    "changes": 8,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Fscoped.py?ref=3245f8079ccfc2c7d5ddf36d8d30fdfc3bb535f4",
+    "deletions": 6,
+    "filename": "lamina/include/scoped.py",
+    "patch": "@@ -21,9 +21,5 @@ def resolve_scoped_include(base_dir: str, name: str, root: str, *, skip: list[st\n def read_scoped_include(base_dir: str, name: str, root: str) -> str:\n     \"\"\"Return the text of a scoped include.\"\"\"\n     path = resolve_scoped_include(base_dir, name, root)\n-    fh = open(path, encoding=\"utf-8\")\n-    text = fh.read()\n-    if not text.strip():\n-        raise IncludeError(f\"empty include: {name}\", 0, 1)\n-    fh.close()\n-    return text\n+    with open(path, encoding=\"utf-8\") as fh:\n+        return fh.read()",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/3245f8079ccfc2c7d5ddf36d8d30fdfc3bb535f4/lamina%2Finclude%2Fscoped.py",
+    "sha": "576a8d98199ed00f262518f40c02579ad49f72cd",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/3245f8079ccfc2c7d5ddf36d8d30fdfc3bb535f4/tests%2Ftest_include_scoped_regression_314.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_include_scoped_regression_314.py?ref=3245f8079ccfc2c7d5ddf36d8d30fdfc3bb535f4",
+    "deletions": 0,
+    "filename": "tests/test_include_scoped_regression_314.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.include.scoped import resolve_scoped_include\n+\n+\n+def test_resolve_scoped_include_regression_314():\n+    assert callable(resolve_scoped_include)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/3245f8079ccfc2c7d5ddf36d8d30fdfc3bb535f4/tests%2Ftest_include_scoped_regression_314.py",
+    "sha": "a9b3ed0a4c2aa924840e039ef8ce05722ee17d31",
+    "status": "added"
+  }
+]

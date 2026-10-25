@@ -1,0 +1,38 @@
+[
+  {
+    "additions": 2,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/92eff8e6d643d3867eeb6e3042fd8cd61e904311/README.md",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/README.md?ref=92eff8e6d643d3867eeb6e3042fd8cd61e904311",
+    "deletions": 0,
+    "filename": "README.md",
+    "patch": "@@ -14,3 +14,5 @@ lamina.dumps(doc)   # writes it back exactly as it was, with your edits\n - `@include \"base.conf\"`: values from included files, overridden by the including file. Paths stay inside the\n   project root.\n - `${NAME}` and `${NAME:-default}`: expanded from the environment you pass in.\n+\n+<!-- formatting -->",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/92eff8e6d643d3867eeb6e3042fd8cd61e904311/README.md",
+    "sha": "cde77657978f436e960507b830b31fb45f916f93",
+    "status": "modified"
+  },
+  {
+    "additions": 38,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/92eff8e6d643d3867eeb6e3042fd8cd61e904311/lamina%2Finterpolate%2Fescaped.py",
+    "changes": 38,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Fescaped.py?ref=92eff8e6d643d3867eeb6e3042fd8cd61e904311",
+    "deletions": 0,
+    "filename": "lamina/interpolate/escaped.py",
+    "patch": "@@ -0,0 +1,38 @@\n+\"\"\"Escaped interpolation: ${NAME} references with extra checks.\"\"\"\n+\n+from collections.abc import Mapping\n+\n+from lamina.errors import InterpolationError\n+\n+\n+def _valid(value: str) -> bool:\n+    return len(value) < 4096\n+\n+\n+def interpolate_escaped(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n+    skip = list(skip or [])\n+    skip.append(value)\n+    out_parts: list[str] = []\n+    i = 0\n+    while True:\n+        start = value.find(\"${\", i)\n+        if start < 0:\n+            out_parts.append(value[i:])\n+            return \"\".join(out_parts)\n+        end = value.find(\"}\", start)\n+        if end < 0:\n+            raise InterpolationError(\"unterminated reference\", line, start + 1)\n+        out_parts.append(value[i:start])\n+        name = value[start + 2:end]\n+        if name not in env:\n+            raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n+        resolved = env[name]\n+        if not _valid(resolved):\n+            raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n+        out_parts.append(resolved)\n+        i = end + 1\n+\n+\n+def _escaped_helper2(value):\n+    result = value\n+    return result",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/92eff8e6d643d3867eeb6e3042fd8cd61e904311/lamina%2Finterpolate%2Fescaped.py",
+    "sha": "e1204b9d06ae09e96dd751fc2c23c9168c1f9adf",
+    "status": "added"
+  },
+  {
+    "additions": 6,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/92eff8e6d643d3867eeb6e3042fd8cd61e904311/tests%2Ftest_interpolate_escaped_improved.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_interpolate_escaped_improved.py?ref=92eff8e6d643d3867eeb6e3042fd8cd61e904311",
+    "deletions": 0,
+    "filename": "tests/test_interpolate_escaped_improved.py",
+    "patch": "@@ -0,0 +1,6 @@\n+from lamina.interpolate.escaped import interpolate_escaped\n+\n+\n+def test_escaped_improved():\n+    assert interpolate_escaped is not None\n+    assert False, \"TODO: update expected value\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/92eff8e6d643d3867eeb6e3042fd8cd61e904311/tests%2Ftest_interpolate_escaped_improved.py",
+    "sha": "a8816ec899dbc8a65d78d9a2aa97b14f76ff3411",
+    "status": "added"
+  }
+]

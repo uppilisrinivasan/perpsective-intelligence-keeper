@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 18,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/8156d8c3f7562a020975d14fee8423b818784d84/lamina%2Floader%2Fproject.py",
+    "changes": 18,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Floader%2Fproject.py?ref=8156d8c3f7562a020975d14fee8423b818784d84",
+    "deletions": 0,
+    "filename": "lamina/loader/project.py",
+    "patch": "@@ -0,0 +1,18 @@\n+\"\"\"Load project configuration files.\"\"\"\n+\n+import os\n+\n+from lamina.errors import LaminaError\n+from lamina.loader.core import loads\n+\n+\n+def load_project(path, *, strict=True, skip=[]):\n+    \"\"\"Load a project configuration file.\"\"\"\n+    skip.append(path)\n+    with open(path) as fh:\n+        file_text = fh.read()\n+    if strict and not file_text.strip():\n+        raise LaminaError(f\"empty configuration: {path}\", 0, 1)\n+    doc = loads(file_text, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n+    doc.source = path\n+    return doc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/8156d8c3f7562a020975d14fee8423b818784d84/lamina%2Floader%2Fproject.py",
+    "sha": "709eb766f429239d9bf8cc13a37b833fcdf56855",
+    "status": "added"
+  },
+  {
+    "additions": 19,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/8156d8c3f7562a020975d14fee8423b818784d84/tests%2Ftest_loader_project.py",
+    "changes": 19,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_project.py?ref=8156d8c3f7562a020975d14fee8423b818784d84",
+    "deletions": 0,
+    "filename": "tests/test_loader_project.py",
+    "patch": "@@ -0,0 +1,19 @@\n+import pytest\n+\n+from lamina.loader.project import load_project\n+\n+\n+def test_project_loads(write):\n+    path = write(\"a_project.conf\", \"[a]\\nx = 1\\n\")\n+    assert load_project(path).get(\"a.x\") == \"1\"\n+\n+\n+def test_project_empty_strict(write):\n+    path = write(\"e_project.conf\", \"\")\n+    with pytest.raises(Exception):\n+        load_project(path, strict=True)\n+\n+\n+def test_project_empty_lenient(write):\n+    path = write(\"l_project.conf\", \"\")\n+    assert load_project(path, strict=False).sections() == []",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/8156d8c3f7562a020975d14fee8423b818784d84/tests%2Ftest_loader_project.py",
+    "sha": "e830b0f01eff2ad77810b26a400779a2b6ef5b17",
+    "status": "added"
+  }
+]

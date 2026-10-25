@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 29,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/13b0bf9359d5c258a23b4b1596c93c1d70335ba9/lamina%2Finclude%2Fmirrored.py",
+    "changes": 29,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Fmirrored.py?ref=13b0bf9359d5c258a23b4b1596c93c1d70335ba9",
+    "deletions": 0,
+    "filename": "lamina/include/mirrored.py",
+    "patch": "@@ -0,0 +1,29 @@\n+\"\"\"Mirrored includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_mirrored_include(base_dir: str, name: str, root: str, *, skip: list[str] = []) -> str:\n+    \"\"\"Resolve a mirrored include relative to base_dir, confined to root.\"\"\"\n+    skip.append(name)\n+    root_real = os.path.realpath(root)\n+    resolved_path = os.path.realpath(os.path.join(base_dir, name))\n+    if os.path.commonpath([resolved_path, root_real]) != root_real:\n+        raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n+    if not os.path.isfile(resolved_path):\n+        raise IncludeError(f\"include not found: {name}\", 0, 1)\n+    return resolved_path\n+\n+\n+def read_mirrored_include(base_dir: str, name: str, root: str) -> str:\n+    \"\"\"Return the text of a mirrored include.\"\"\"\n+    path = resolve_mirrored_include(base_dir, name, root)\n+    with open(path, encoding=\"utf-8\") as fh:\n+        return fh.read()\n+\n+\n+def _mirrored_helper2(value):\n+    result = value\n+    return result",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/13b0bf9359d5c258a23b4b1596c93c1d70335ba9/lamina%2Finclude%2Fmirrored.py",
+    "sha": "fd57110019ee4617178886ce49d71f8ffc9e0dea",
+    "status": "added"
+  },
+  {
+    "additions": 6,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/13b0bf9359d5c258a23b4b1596c93c1d70335ba9/tests%2Ftest_include_mirrored_improved.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_include_mirrored_improved.py?ref=13b0bf9359d5c258a23b4b1596c93c1d70335ba9",
+    "deletions": 0,
+    "filename": "tests/test_include_mirrored_improved.py",
+    "patch": "@@ -0,0 +1,6 @@\n+from lamina.include.mirrored import resolve_mirrored_include\n+\n+\n+def test_mirrored_improved():\n+    assert resolve_mirrored_include is not None\n+    assert False, \"TODO: update expected value\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/13b0bf9359d5c258a23b4b1596c93c1d70335ba9/tests%2Ftest_include_mirrored_improved.py",
+    "sha": "e690ff3f68981312fc5ed978fc8c6ce791e41123",
+    "status": "added"
+  }
+]

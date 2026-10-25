@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 3,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/65cfe788e1db95dd472324a724b560b3c2d2334d/lamina%2Fparser%2Finline_table.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fparser%2Finline_table.py?ref=65cfe788e1db95dd472324a724b560b3c2d2334d",
+    "deletions": 3,
+    "filename": "lamina/parser/inline_table.py",
+    "patch": "@@ -7,10 +7,10 @@ def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str\n     \"\"\"Parse a [a, b, c] inline table value into its items.\"\"\"\n     skip = list(skip or [])\n     skip.append(raw)\n-    stripped_text = raw.strip()\n-    if not (stripped_text.startswith(\"[\") and stripped_text.endswith(\"]\")):\n+    text_value = raw.strip()\n+    if not (text_value.startswith(\"[\") and text_value.endswith(\"]\")):\n         raise ParseError(f\"expected [items], got {raw!r}\", line, column)\n-    inner = stripped_text[1:-1].strip()\n+    inner = text_value[1:-1].strip()\n     if not inner:\n         return []\n     items = [part.strip() for part in inner.split(\",\")]",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/65cfe788e1db95dd472324a724b560b3c2d2334d/lamina%2Fparser%2Finline_table.py",
+    "sha": "bc0efd675c81fadd43323912d709f8252226e27a",
+    "status": "modified"
+  }
+]

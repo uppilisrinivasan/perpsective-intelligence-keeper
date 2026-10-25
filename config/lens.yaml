@@ -1,0 +1,58 @@
+build:
+  min_sample_weight: 0.5
+  cluster_distance: 0.55
+  min_cluster_size: 3
+  max_representatives: 8
+  max_hunk_lines: 15
+  trigger_min_coverage: 0.6
+  max_exemplars: 6
+  blind_spot_min_bad_outcomes: 2
+  shared_min_findings: 5
+  shared_min_overlap: 0.7
+  feature_weights: {statement: 1.0, category: 0.6, path: 0.5, code: 0.4}
+  category_groups:
+    threat: [security]
+    rules: [invariant, api_compat, dependency]
+    behaviour: [correctness, performance]
+    context: [history_context, design, question]
+    hygiene: [tests, docs, build_release]
+status:
+  min_support: 4
+  min_trigger_precision: 0.25
+  retire_after_days: 540
+calibration:
+  prior: {alpha: 1, beta: 3}
+  min_outcome_n: 3
+  blind_spot_min_lift: 1.5
+  severity_weights: {blocker: 3, major: 2, minor: 1, nit: 0.25}
+  notes_ci_change: 0.1
+bias:
+  groups:
+    newcomer: [FIRST_TIME_CONTRIBUTOR, FIRST_TIMER, NONE]
+    regular: [CONTRIBUTOR, COLLABORATOR, MEMBER, OWNER]
+  or_threshold: 2.0
+  min_per_group: 5
+  size_buckets: [20, 100]
+recall:
+  max_context_tokens: 400000
+  max_items: 8
+  max_findings: 12
+  fallback: bm25
+  trim_items_with_exemplars_over: 10
+confidence:                       # categorical rules from methodology 06 §3
+  high_requires: {status: validated, posterior_mean_min: 0.6, model_certainty: high}
+feedback:
+  accept_weight: 0.7
+  edit_weight: 0.9
+  add_note_weight: 1.0
+  stable_id_jaccard: 0.5
+  update_min_events: 5            # "Update lens" button appears at ≥ this many unconsumed events
+diff:
+  new_id_similarity: 0.75
+  reworded_below: 0.9
+  strength_change: 0.25
+schedule:
+  recalibrate_cron: "0 6 * * 1"   # weekly; only used with JOB_RUNNER=nebius
+package:
+  licence: "The review comments summarised in this lens belong to {person}. This package is shared under CC BY 4.0; attribute {person}."
+  max_bytes: 5242880

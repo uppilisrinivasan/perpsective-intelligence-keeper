@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/63f73b9d5f838d048dc3c66d1147c55661bb4e3c/tests%2Ftest_interpolate_typed_bool_more_155.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_interpolate_typed_bool_more_155.py?ref=63f73b9d5f838d048dc3c66d1147c55661bb4e3c",
+    "deletions": 0,
+    "filename": "tests/test_interpolate_typed_bool_more_155.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.interpolate.typed_bool import interpolate_typed_bool\n+\n+\n+def test_interpolate_typed_bool_regression_155():\n+    assert callable(interpolate_typed_bool)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/63f73b9d5f838d048dc3c66d1147c55661bb4e3c/tests%2Ftest_interpolate_typed_bool_more_155.py",
+    "sha": "74a367bc7ca826000c6d4a212767f2eb9db3eef5",
+    "status": "added"
+  }
+]

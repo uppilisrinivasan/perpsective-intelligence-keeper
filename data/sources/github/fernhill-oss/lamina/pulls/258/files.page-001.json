@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 19,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/e1192d627cf5562f895454f5f165d5ffbbd5bfe3/lamina%2Fparser%2Finterval.py",
+    "changes": 19,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fparser%2Finterval.py?ref=e1192d627cf5562f895454f5f165d5ffbbd5bfe3",
+    "deletions": 0,
+    "filename": "lamina/parser/interval.py",
+    "patch": "@@ -0,0 +1,19 @@\n+\"\"\"Parse interval values: comma-separated items in brackets.\"\"\"\n+\n+from lamina.errors import ParseError\n+\n+\n+def parse_interval_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+    \"\"\"Parse a [a, b, c] interval value into its items.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(raw)\n+    stripped_text = raw.strip()\n+    if not (stripped_text.startswith(\"[\") and stripped_text.endswith(\"]\")):\n+        raise ParseError(f\"expected [items], got {raw!r}\", line, column)\n+    inner = stripped_text[1:-1].strip()\n+    if not inner:\n+        return []\n+    items = [part.strip() for part in inner.split(\",\")]\n+    if any(item == \"\" for item in items):\n+        raise ParseError(\"empty item in list\", line, column)\n+    return items",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/e1192d627cf5562f895454f5f165d5ffbbd5bfe3/lamina%2Fparser%2Finterval.py",
+    "sha": "ab2dde705c4a6395ca36ecfaa67336dc26b905ca",
+    "status": "added"
+  },
+  {
+    "additions": 16,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/e1192d627cf5562f895454f5f165d5ffbbd5bfe3/tests%2Ftest_parser_interval.py",
+    "changes": 16,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_parser_interval.py?ref=e1192d627cf5562f895454f5f165d5ffbbd5bfe3",
+    "deletions": 0,
+    "filename": "tests/test_parser_interval.py",
+    "patch": "@@ -0,0 +1,16 @@\n+import pytest\n+\n+from lamina.parser.interval import parse_interval_value\n+\n+\n+def test_interval_items():\n+    assert parse_interval_value(\"[a, b]\", 1, 1) == [\"a\", \"b\"]\n+\n+\n+def test_interval_empty_list():\n+    assert parse_interval_value(\"[]\", 1, 1) == []\n+\n+\n+def test_interval_rejects_bare_value():\n+    with pytest.raises(Exception):\n+        parse_interval_value(\"a, b\", 2, 5)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/e1192d627cf5562f895454f5f165d5ffbbd5bfe3/tests%2Ftest_parser_interval.py",
+    "sha": "caa25c5b162ffb3eaa226b5cd5a5d7ad7c7220d2",
+    "status": "added"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 6,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/8c1ce97abec246082eb7955abcf1f62d98aeff3d/lamina%2Finterpolate%2Flisty.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Flisty.py?ref=8c1ce97abec246082eb7955abcf1f62d98aeff3d",
+    "deletions": 7,
+    "filename": "lamina/interpolate/listy.py",
+    "patch": "@@ -11,25 +11,24 @@ def _valid(value: str) -> bool:\n \n \n def interpolate_listy(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n-    \"\"\"Expand ${NAME} references in value using env (listy rules).\"\"\"\n     skip = list(skip or [])\n     skip.append(value)\n-    outParts: list[str] = []\n+    pieces: list[str] = []\n     i = 0\n     while True:\n         start = value.find(\"${\", i)\n         if start < 0:\n-            outParts.append(value[i:])\n-            return \"\".join(outParts)\n+            pieces.append(value[i:])\n+            return \"\".join(pieces)\n         end = value.find(\"}\", start)\n         if end < 0:\n-            raise InterpolationError(\"unterminated reference\", line, start + 1)\n-        outParts.append(value[i:start])\n+            raise ValueError(\"unterminated reference\")\n+        pieces.append(value[i:start])\n         name = value[start + 2:end]\n         if name not in env:\n             raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n         resolved = env[name]\n         if not _valid(resolved):\n             raise InterpolationError(f\"invalid value {resolved!r} for {name}\", line, start + 1)\n-        outParts.append(resolved)\n+        pieces.append(resolved)\n         i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/8c1ce97abec246082eb7955abcf1f62d98aeff3d/lamina%2Finterpolate%2Flisty.py",
+    "sha": "b72872fc75de101bceb48ae4dc41c1deacde0d4b",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/8c1ce97abec246082eb7955abcf1f62d98aeff3d/tests%2Ftest_interpolate_listy_regression_221.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_interpolate_listy_regression_221.py?ref=8c1ce97abec246082eb7955abcf1f62d98aeff3d",
+    "deletions": 0,
+    "filename": "tests/test_interpolate_listy_regression_221.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.interpolate.listy import interpolate_listy\n+\n+\n+def test_interpolate_listy_regression_221():\n+    assert callable(interpolate_listy)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/8c1ce97abec246082eb7955abcf1f62d98aeff3d/tests%2Ftest_interpolate_listy_regression_221.py",
+    "sha": "488d69bd5a1c5acfd2a2c27fca937ad9c5c3b6e6",
+    "status": "added"
+  }
+]

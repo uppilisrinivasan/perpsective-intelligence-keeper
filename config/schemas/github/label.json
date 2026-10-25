@@ -1,0 +1,188 @@
+{
+ "$comment": "Extracted from github/rest-api-description@bb754941722779d8a5b3a2f25a5fbb7ce794e1ea",
+ "$defs": {
+  "simple-user": {
+   "properties": {
+    "avatar_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "email": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "events_url": {
+     "type": "string"
+    },
+    "followers_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "following_url": {
+     "type": "string"
+    },
+    "gists_url": {
+     "type": "string"
+    },
+    "gravatar_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "html_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "id": {
+     "format": "int64",
+     "type": "integer"
+    },
+    "login": {
+     "type": "string"
+    },
+    "name": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "node_id": {
+     "type": "string"
+    },
+    "organizations_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "received_events_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "repos_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "site_admin": {
+     "type": "boolean"
+    },
+    "starred_at": {
+     "type": "string"
+    },
+    "starred_url": {
+     "type": "string"
+    },
+    "subscriptions_url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "type": {
+     "type": "string"
+    },
+    "url": {
+     "format": "uri",
+     "type": "string"
+    },
+    "user_view_type": {
+     "type": "string"
+    }
+   },
+   "required": [
+    "avatar_url",
+    "events_url",
+    "followers_url",
+    "following_url",
+    "gists_url",
+    "gravatar_id",
+    "html_url",
+    "id",
+    "node_id",
+    "login",
+    "organizations_url",
+    "received_events_url",
+    "repos_url",
+    "site_admin",
+    "starred_url",
+    "subscriptions_url",
+    "type",
+    "url"
+   ],
+   "title": "Simple User",
+   "type": "object"
+  }
+ },
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "properties": {
+  "archived_at": {
+   "anyOf": [
+    {
+     "format": "date-time",
+     "type": "string"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "archived_by": {
+   "anyOf": [
+    {
+     "allOf": [
+      {
+       "$ref": "#/$defs/simple-user"
+      }
+     ]
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "color": {
+   "type": "string"
+  },
+  "default": {
+   "type": "boolean"
+  },
+  "id": {
+   "format": "int64",
+   "type": "integer"
+  },
+  "name": {
+   "type": "string"
+  },
+  "node_id": {
+   "type": "string"
+  },
+  "url": {
+   "format": "uri",
+   "type": "string"
+  }
+ },
+ "required": [
+  "id",
+  "node_id",
+  "url",
+  "name",
+  "description",
+  "color",
+  "default",
+  "archived_at",
+  "archived_by"
+ ],
+ "title": "Label",
+ "type": "object"
+}

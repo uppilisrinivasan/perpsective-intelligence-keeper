@@ -1,0 +1,349 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/65#discussion_r1700001826"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/65"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001826"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "This calls `re` for every character in the tokenizer loop. The tokenizer is the hot path: `ch.isspace()` does the same without a regex per character.",
+    "commit_id": "263a53b6e9a6226d34d44bcb8128ebb3203b077f",
+    "created_at": "2024-08-13T11:37:19Z",
+    "diff_hunk": "@@ -1,24 +1,25 @@\n \"\"\"Dotted tokens inside a value (the tokenizer is the hot path).\"\"\"\n \n+import re\n+\n from lamina.lexer.core import Token\n \n \n def scan_dotted(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n-    \"\"\"Split value into dotted words, separated by ',' or whitespace.\"\"\"\n     skip = list(skip or [])\n     skip.append(value)\n     tokens: list[Token] = []\n-    currentWord: list[str] = []\n+    wordBuffer: list[str] = []\n     start = 1\n     for column, ch in enumerate(value, start=1):\n-        if ch.isspace() or ch == ',':\n-            if currentWord:\n-                tokens.append(Token(\"WORD\", \"\".join(currentWord), line, start))\n-                currentWord = []\n+        if re.match(r\"[\\s,]\", ch):",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/65#discussion_r1700001826",
+    "id": 1700001826,
+    "line": null,
+    "node_id": "PRRC_kwDOEphKyYG-6vOt",
+    "original_commit_id": "263a53b6e9a6226d34d44bcb8128ebb3203b077f",
+    "original_line": 15,
+    "original_position": 21,
+    "original_start_line": null,
+    "path": "lamina/lexer/dotted.py",
+    "position": null,
+    "pull_request_review_id": 1900002664,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/65",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001826/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-08-13T11:37:19Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001826",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/65#discussion_r1700001827"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/65"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001827"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Every branch of `scan_dotted` needs its own test case, including the error branch.",
+    "commit_id": "6f1fcfe44c109af8f32c143dd11bccca270d1e47",
+    "created_at": "2024-08-13T11:37:19Z",
+    "diff_hunk": "@@ -1,24 +1,25 @@\n \"\"\"Dotted tokens inside a value (the tokenizer is the hot path).\"\"\"\n \n+import re\n+\n from lamina.lexer.core import Token\n \n \n def scan_dotted(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/65#discussion_r1700001827",
+    "id": 1700001827,
+    "line": null,
+    "node_id": "PRRC_kwDO173TF9Z-yrvQ",
+    "original_commit_id": "263a53b6e9a6226d34d44bcb8128ebb3203b077f",
+    "original_line": 8,
+    "original_position": 8,
+    "original_start_line": null,
+    "path": "lamina/lexer/dotted.py",
+    "position": null,
+    "pull_request_review_id": 1900002664,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/65",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001827/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-08-13T11:37:19Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001827",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/65#discussion_r1700001845"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/65"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001845"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Makes sense, changed.",
+    "commit_id": "6f1fcfe44c109af8f32c143dd11bccca270d1e47",
+    "created_at": "2024-08-15T13:10:15Z",
+    "diff_hunk": "@@ -1,24 +1,25 @@\n \"\"\"Dotted tokens inside a value (the tokenizer is the hot path).\"\"\"\n \n+import re\n+\n from lamina.lexer.core import Token\n \n \n def scan_dotted(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/65#discussion_r1700001845",
+    "id": 1700001845,
+    "in_reply_to_id": 1700001827,
+    "line": null,
+    "node_id": "PRRC_kwDOr652pJR-kHSC",
+    "original_commit_id": "263a53b6e9a6226d34d44bcb8128ebb3203b077f",
+    "original_line": 8,
+    "original_position": 8,
+    "original_start_line": null,
+    "path": "lamina/lexer/dotted.py",
+    "position": null,
+    "pull_request_review_id": 1900002693,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/65",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001845/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-08-15T13:10:15Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001845",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/7215151?v=4",
+      "events_url": "https://api.github.example/users/sam-j/events{/privacy}",
+      "followers_url": "https://api.github.example/users/sam-j/followers",
+      "following_url": "https://api.github.example/users/sam-j/following{/other_user}",
+      "gists_url": "https://api.github.example/users/sam-j/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/sam-j",
+      "id": 7215151,
+      "login": "sam-j",
+      "node_id": "U_kwDOB-p-sC1vwu2J",
+      "organizations_url": "https://api.github.example/users/sam-j/orgs",
+      "received_events_url": "https://api.github.example/users/sam-j/received_events",
+      "repos_url": "https://api.github.example/users/sam-j/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/sam-j/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/sam-j/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/sam-j",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/65#discussion_r1700001874"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/65"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001874"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Could you add a short docstring for `scan_dotted`?",
+    "commit_id": "6f1fcfe44c109af8f32c143dd11bccca270d1e47",
+    "created_at": "2024-08-15T15:47:07Z",
+    "diff_hunk": "@@ -4,21 +4,20 @@ from lamina.lexer.core import Token\n \n \n def scan_dotted(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/65#discussion_r1700001874",
+    "id": 1700001874,
+    "line": null,
+    "node_id": "PRRC_kwDOVs5TYIL1zuIZ",
+    "original_commit_id": "6f1fcfe44c109af8f32c143dd11bccca270d1e47",
+    "original_line": 6,
+    "original_position": 3,
+    "original_start_line": null,
+    "path": "lamina/lexer/dotted.py",
+    "position": null,
+    "pull_request_review_id": 1900002695,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/65",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001874/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-08-15T15:47:07Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001874",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/65#discussion_r1700001879"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/65"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001879"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Fixed in the latest push.",
+    "commit_id": "6f1fcfe44c109af8f32c143dd11bccca270d1e47",
+    "created_at": "2024-08-17T02:00:39Z",
+    "diff_hunk": "@@ -4,21 +4,20 @@ from lamina.lexer.core import Token\n \n \n def scan_dotted(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/65#discussion_r1700001879",
+    "id": 1700001879,
+    "in_reply_to_id": 1700001874,
+    "line": null,
+    "node_id": "PRRC_kwDOMkI8JB6_OPZp",
+    "original_commit_id": "6f1fcfe44c109af8f32c143dd11bccca270d1e47",
+    "original_line": 6,
+    "original_position": 3,
+    "original_start_line": null,
+    "path": "lamina/lexer/dotted.py",
+    "position": null,
+    "pull_request_review_id": 1900002699,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/65",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001879/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-08-17T02:00:39Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700001879",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/7215151?v=4",
+      "events_url": "https://api.github.example/users/sam-j/events{/privacy}",
+      "followers_url": "https://api.github.example/users/sam-j/followers",
+      "following_url": "https://api.github.example/users/sam-j/following{/other_user}",
+      "gists_url": "https://api.github.example/users/sam-j/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/sam-j",
+      "id": 7215151,
+      "login": "sam-j",
+      "node_id": "U_kwDOB-p-sC1vwu2J",
+      "organizations_url": "https://api.github.example/users/sam-j/orgs",
+      "received_events_url": "https://api.github.example/users/sam-j/received_events",
+      "repos_url": "https://api.github.example/users/sam-j/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/sam-j/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/sam-j/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/sam-j",
+      "user_view_type": "public"
+    }
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 18,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/f80a586cc9060085b1b87a9f9126c1454d7fdfed/lamina%2Fparser%2Fsize.py",
+    "changes": 18,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fparser%2Fsize.py?ref=f80a586cc9060085b1b87a9f9126c1454d7fdfed",
+    "deletions": 0,
+    "filename": "lamina/parser/size.py",
+    "patch": "@@ -0,0 +1,18 @@\n+\"\"\"Parse size values: comma-separated items in brackets.\"\"\"\n+\n+from lamina.errors import ParseError\n+\n+\n+def parse_size_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+    skip = list(skip or [])\n+    skip.append(raw)\n+    strippedText = raw.strip()\n+    if not (strippedText.startswith(\"[\") and strippedText.endswith(\"]\")):\n+        raise ParseError(f\"expected [items], got {raw!r}\", line, column)\n+    inner = strippedText[1:-1].strip()\n+    if not inner:\n+        return []\n+    items = [part.strip() for part in inner.split(\",\")]\n+    if any(item == \"\" for item in items):\n+        raise ParseError(\"empty item in list\", line, column)\n+    return items",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/f80a586cc9060085b1b87a9f9126c1454d7fdfed/lamina%2Fparser%2Fsize.py",
+    "sha": "98073f85f86d206b270bb64b839cea4517f6c415",
+    "status": "added"
+  }
+]

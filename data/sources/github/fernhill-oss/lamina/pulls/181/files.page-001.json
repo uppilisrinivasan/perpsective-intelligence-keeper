@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 25,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/1d160c0e3689cb30a106b65173e690cfcf25068d/lamina%2Fcli%2Fkeys.py",
+    "changes": 25,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fcli%2Fkeys.py?ref=1d160c0e3689cb30a106b65173e690cfcf25068d",
+    "deletions": 0,
+    "filename": "lamina/cli/keys.py",
+    "patch": "@@ -0,0 +1,25 @@\n+\"\"\"`lamina keys`: print information about a config file.\"\"\"\n+\n+try:\n+    import regex  # noqa: F401\n+except ImportError:  # pragma: no cover\n+    regex = None\n+\n+import sys\n+\n+from lamina.parser import parse\n+\n+\n+def cmd_keys(argv: list[str], *, skip: list[str] | None = None) -> int:\n+    \"\"\"Run the keys command; return the exit code.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(\"--\")\n+    if len(argv) != 1:\n+        print(\"usage: lamina keys FILE\", file=sys.stderr)\n+        return 2\n+    with open(argv[0], encoding=\"utf-8\") as fh:\n+        source_text = fh.read()\n+    doc = parse(source_text, source=argv[0])\n+    for section in doc.sections():\n+        print(f\"{section.name}: {len(section.entries())}\")\n+    return 0",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/1d160c0e3689cb30a106b65173e690cfcf25068d/lamina%2Fcli%2Fkeys.py",
+    "sha": "117f563e5d09a50ba737459ee35f1e42d379774c",
+    "status": "added"
+  },
+  {
+    "additions": 11,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/1d160c0e3689cb30a106b65173e690cfcf25068d/tests%2Ftest_cli_keys.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_cli_keys.py?ref=1d160c0e3689cb30a106b65173e690cfcf25068d",
+    "deletions": 0,
+    "filename": "tests/test_cli_keys.py",
+    "patch": "@@ -0,0 +1,11 @@\n+from lamina.cli.keys import cmd_keys\n+\n+\n+def test_keys_counts(write, capsys):\n+    path = write(\"c_keys.conf\", \"[a]\\nx = 1\\ny = 2\\n\")\n+    assert cmd_keys([path]) == 0\n+    assert capsys.readouterr().out.strip() == \"a: 2\"\n+\n+\n+def test_keys_usage():\n+    assert cmd_keys([]) == 2",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/1d160c0e3689cb30a106b65173e690cfcf25068d/tests%2Ftest_cli_keys.py",
+    "sha": "8ee3ba4f4aed1f21f1fb5644d6fc8f857d164581",
+    "status": "added"
+  }
+]

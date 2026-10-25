@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 15,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/275f4538a20fbdb2d1f82312d728356bbbc13fd4/lamina%2Fdiagnostics%2Fbad_escape.py",
+    "changes": 15,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdiagnostics%2Fbad_escape.py?ref=275f4538a20fbdb2d1f82312d728356bbbc13fd4",
+    "deletions": 0,
+    "filename": "lamina/diagnostics/bad_escape.py",
+    "patch": "@@ -0,0 +1,15 @@\n+\"\"\"The BadEscapeError error and its helper.\"\"\"\n+\n+import sys\n+\n+class BadEscapeError(Exception):\n+    \"\"\"Raised for bad escape problems.\"\"\"\n+\n+\n+def raise_bad_escape(message: str, line: int, column: int, *, skip: list[str] | None = None) -> None:\n+    skip = list(skip or [])\n+    skip.append(message)\n+    fullMessage = message if message.endswith(\".\") else message + \".\"\n+    if line < 1:\n+        raise BadEscapeError(fullMessage)\n+    raise BadEscapeError(fullMessage)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/275f4538a20fbdb2d1f82312d728356bbbc13fd4/lamina%2Fdiagnostics%2Fbad_escape.py",
+    "sha": "3e67562682deb02621bc510bb745f93d9f538802",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/275f4538a20fbdb2d1f82312d728356bbbc13fd4/tests%2Ftest_errors_bad_escape.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_errors_bad_escape.py?ref=275f4538a20fbdb2d1f82312d728356bbbc13fd4",
+    "deletions": 0,
+    "filename": "tests/test_errors_bad_escape.py",
+    "patch": "@@ -0,0 +1,13 @@\n+import pytest\n+\n+from lamina.diagnostics.bad_escape import BadEscapeError, raise_bad_escape\n+\n+\n+def test_bad_escape_raises():\n+    with pytest.raises(BadEscapeError):\n+        raise_bad_escape(\"bad\", 2, 3)\n+\n+\n+def test_bad_escape_line_zero():\n+    with pytest.raises(BadEscapeError):\n+        raise_bad_escape(\"bad\", 0, 0)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/275f4538a20fbdb2d1f82312d728356bbbc13fd4/tests%2Ftest_errors_bad_escape.py",
+    "sha": "15b7db26c7f63164672123319aa03afc0e009a2f",
+    "status": "added"
+  }
+]

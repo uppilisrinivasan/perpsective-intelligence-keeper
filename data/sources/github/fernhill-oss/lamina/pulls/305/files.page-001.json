@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 30,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/8f8239ea027ba1b79355e1582405754ce0081afc/lamina%2Finclude%2Fsearch_path.py",
+    "changes": 30,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Fsearch_path.py?ref=8f8239ea027ba1b79355e1582405754ce0081afc",
+    "deletions": 0,
+    "filename": "lamina/include/search_path.py",
+    "patch": "@@ -0,0 +1,30 @@\n+\"\"\"Search path includes.\"\"\"\n+\n+try:\n+    import regex  # noqa: F401\n+except ImportError:  # pragma: no cover\n+    regex = None\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_search_path_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    \"\"\"Resolve a search path include relative to base_dir, confined to root.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(name)\n+    root_real = os.path.realpath(root)\n+    resolved_path = os.path.realpath(os.path.join(base_dir, name))\n+    if os.path.commonpath([resolved_path, root_real]) != root_real:\n+        raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n+    if not os.path.isfile(resolved_path):\n+        raise IncludeError(f\"include not found: {name}\", 0, 1)\n+    return resolved_path\n+\n+\n+def read_search_path_include(base_dir: str, name: str, root: str) -> str:\n+    \"\"\"Return the text of a search path include.\"\"\"\n+    path = resolve_search_path_include(base_dir, name, root)\n+    with open(path, encoding=\"utf-8\") as fh:\n+        return fh.read()",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/8f8239ea027ba1b79355e1582405754ce0081afc/lamina%2Finclude%2Fsearch_path.py",
+    "sha": "0b714e5637c41398af56b519e8e8bf630dbf3c15",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/8f8239ea027ba1b79355e1582405754ce0081afc/tests%2Ftest_include_search_path.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_include_search_path.py?ref=8f8239ea027ba1b79355e1582405754ce0081afc",
+    "deletions": 0,
+    "filename": "tests/test_include_search_path.py",
+    "patch": "@@ -0,0 +1,13 @@\n+import pytest\n+\n+from lamina.include.search_path import resolve_search_path_include, read_search_path_include\n+\n+\n+def test_search_path_include_reads_file(tmp_path):\n+    (tmp_path / \"base.conf\").write_text(\"[a]\\nx = 1\\n\", encoding=\"utf-8\")\n+    assert \"x = 1\" in read_search_path_include(str(tmp_path), \"base.conf\", str(tmp_path))\n+\n+\n+def test_search_path_include_missing(tmp_path):\n+    with pytest.raises(Exception):\n+        resolve_search_path_include(str(tmp_path), \"nope.conf\", str(tmp_path))",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/8f8239ea027ba1b79355e1582405754ce0081afc/tests%2Ftest_include_search_path.py",
+    "sha": "720410366a8127a0f7b8fda96918980a9c74c5ef",
+    "status": "added"
+  }
+]

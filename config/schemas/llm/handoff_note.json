@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "handoff_note",
+  "type": "object",
+  "properties": {
+    "note_md": {
+      "type": "string"
+    },
+    "checklist": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 8
+    }
+  },
+  "required": [
+    "note_md",
+    "checklist"
+  ],
+  "additionalProperties": false
+}

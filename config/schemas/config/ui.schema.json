@@ -1,0 +1,276 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "assistant": {
+      "properties": {
+        "history_tokens": {
+          "type": "number"
+        },
+        "max_tool_rounds": {
+          "type": "number"
+        },
+        "suggestions": {
+          "properties": {
+            "default": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "lens": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "pr": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "practice": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "proof": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "queue": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        },
+        "tool_result_tokens": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "editable_settings": {
+      "properties": {
+        "attention_budget_minutes": {
+          "properties": {
+            "default": {
+              "type": "number"
+            },
+            "label": {
+              "type": "string"
+            },
+            "max": {
+              "type": "number"
+            },
+            "min": {
+              "type": "number"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "auto_approve_usd": {
+          "properties": {
+            "default": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "max": {
+              "type": "number"
+            },
+            "min": {
+              "type": "number"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "density": {
+          "properties": {
+            "default": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "options": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "diff_view": {
+          "properties": {
+            "default": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "options": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "diff_wrap": {
+          "properties": {
+            "default": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "reduced_motion": {
+          "properties": {
+            "default": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "options": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "show_baseline_only": {
+          "properties": {
+            "default": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "theme": {
+          "properties": {
+            "default": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "options": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "estimates": {
+      "properties": {
+        "analyze_pr": {
+          "type": "number"
+        },
+        "ask_answer": {
+          "type": "number"
+        },
+        "fidelity_per_pr": {
+          "type": "number"
+        },
+        "fix_run": {
+          "type": "number"
+        },
+        "handoff": {
+          "type": "number"
+        },
+        "lens_build": {
+          "type": "number"
+        },
+        "lens_update": {
+          "type": "number"
+        },
+        "practice_item": {
+          "type": "number"
+        },
+        "recalibrate": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "jobs": {
+      "properties": {
+        "poll_status_seconds": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "tour": {
+      "properties": {
+        "aha_max_diff_lines": {
+          "type": "number"
+        },
+        "steps": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "assistant",
+    "editable_settings",
+    "estimates",
+    "jobs",
+    "tour"
+  ],
+  "title": "config/ui.yaml",
+  "type": "object"
+}

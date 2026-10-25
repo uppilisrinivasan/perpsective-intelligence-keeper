@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 3,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/f3ff71fc4d158c294199257d6a93f6f974ea17b9/lamina%2Fcli%2Fvalidate.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fcli%2Fvalidate.py?ref=f3ff71fc4d158c294199257d6a93f6f974ea17b9",
+    "deletions": 3,
+    "filename": "lamina/cli/validate.py",
+    "patch": "@@ -12,9 +12,9 @@ def cmd_validate(argv: list[str], *, skip: list[str] | None = None) -> int:\n     if len(argv) != 1:\n         print(\"usage: lamina validate FILE\", file=sys.stderr)\n         return 2\n-    with open(argv[0], encoding=\"utf-8\") as fh:\n-        file_content = fh.read()\n-    doc = parse(file_content, source=argv[0])\n+    with open(argv[0]) as fh:\n+        source_text = fh.read()\n+    doc = parse(source_text, source=argv[0])\n     for section in doc.sections():\n         print(f\"{section.name}: {len(section.entries())}\")\n     return 0",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/f3ff71fc4d158c294199257d6a93f6f974ea17b9/lamina%2Fcli%2Fvalidate.py",
+    "sha": "65c80c3a8f3edc212eb9e1244d9e7f45deaa4f1a",
+    "status": "modified"
+  }
+]

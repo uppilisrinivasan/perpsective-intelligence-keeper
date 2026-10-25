@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/a0ff5dc3c04867a7dd134c54e86d39e41b991289/lamina%2Fdump%2Faligned.py",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Faligned.py?ref=a0ff5dc3c04867a7dd134c54e86d39e41b991289",
+    "deletions": 1,
+    "filename": "lamina/dump/aligned.py",
+    "patch": "@@ -10,7 +10,7 @@ def dumps_aligned(doc, *, indent=0, skip=None):\n     lines: list[str] = []\n     for section in doc.sections():\n         lines.append(f\"[{section.name}]\")\n-        for item in sorted(section.items, key=lambda i: getattr(i, \"key\", \"\")):\n+        for item in section.items:\n             if isinstance(item, Entry):\n                 lines.append(f\"{prefixText}{item.key} = {item.value}\")\n             elif isinstance(item, Comment):",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/a0ff5dc3c04867a7dd134c54e86d39e41b991289/lamina%2Fdump%2Faligned.py",
+    "sha": "695b915dac1759673eae5e652f5531815a85c73e",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/a0ff5dc3c04867a7dd134c54e86d39e41b991289/tests%2Ftest_dump_aligned_regression_233.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_aligned_regression_233.py?ref=a0ff5dc3c04867a7dd134c54e86d39e41b991289",
+    "deletions": 0,
+    "filename": "tests/test_dump_aligned_regression_233.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.dump.aligned import dumps_aligned\n+\n+\n+def test_dumps_aligned_regression_233():\n+    assert callable(dumps_aligned)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/a0ff5dc3c04867a7dd134c54e86d39e41b991289/tests%2Ftest_dump_aligned_regression_233.py",
+    "sha": "9c67d910efcb2c4574734ffd6cb476304ae1339e",
+    "status": "added"
+  }
+]

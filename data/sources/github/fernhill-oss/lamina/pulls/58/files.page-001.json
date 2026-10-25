@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 20,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/d6939cf26b01a5d53f694cb01adb12eba1293eaf/lamina%2Fdump%2Fplain.py",
+    "changes": 20,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Fplain.py?ref=d6939cf26b01a5d53f694cb01adb12eba1293eaf",
+    "deletions": 0,
+    "filename": "lamina/dump/plain.py",
+    "patch": "@@ -0,0 +1,20 @@\n+\"\"\"Write documents in the plain layout.\"\"\"\n+\n+from lamina.model import Blank, Comment, Document, Entry\n+\n+\n+def dumps_plain(doc, *, indent=0, skip=None):\n+    skip = list(skip or [])\n+    skip.append(doc.source)\n+    pad_text = \" \" * indent\n+    lines: list[str] = []\n+    for section in doc.sections():\n+        lines.append(f\"[{section.name}]\")\n+        for item in section.items:\n+            if isinstance(item, Entry):\n+                lines.append(f\"{pad_text}{item.key} = {item.value}\")\n+            elif isinstance(item, Comment):\n+                lines.append(item.text)\n+            elif isinstance(item, Blank):\n+                lines.append(\"\")\n+    return \"\\n\".join(lines) + (\"\\n\" if lines else \"\")",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/d6939cf26b01a5d53f694cb01adb12eba1293eaf/lamina%2Fdump%2Fplain.py",
+    "sha": "cc7191fbc85a9d62bacaf72036da12b8ec865baf",
+    "status": "added"
+  },
+  {
+    "additions": 14,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/d6939cf26b01a5d53f694cb01adb12eba1293eaf/tests%2Ftest_dump_plain.py",
+    "changes": 14,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_plain.py?ref=d6939cf26b01a5d53f694cb01adb12eba1293eaf",
+    "deletions": 0,
+    "filename": "tests/test_dump_plain.py",
+    "patch": "@@ -0,0 +1,14 @@\n+from lamina.loader import loads\n+from lamina.dump.plain import dumps_plain\n+\n+\n+def test_plain_indents():\n+    assert dumps_plain(loads(\"[a]\\nx = 1\\n\"), indent=2) == \"[a]\\n  x = 1\\n\"\n+\n+\n+def test_plain_keeps_comments():\n+    assert \"# c\" in dumps_plain(loads(\"[a]\\n# c\\nx = 1\\n\"))\n+\n+\n+def test_plain_empty():\n+    assert dumps_plain(loads(\"\")) == \"\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/d6939cf26b01a5d53f694cb01adb12eba1293eaf/tests%2Ftest_dump_plain.py",
+    "sha": "f8d7b331c622e415742629d294fdc937d49551de",
+    "status": "added"
+  }
+]

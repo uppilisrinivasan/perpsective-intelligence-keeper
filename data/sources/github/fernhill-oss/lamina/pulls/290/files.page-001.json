@@ -1,0 +1,38 @@
+[
+  {
+    "additions": 24,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/9896086fa55d61ac02019d3b7209b44eb1bcac1d/lamina%2Fparser%2Finline_table2.py",
+    "changes": 24,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fparser%2Finline_table2.py?ref=9896086fa55d61ac02019d3b7209b44eb1bcac1d",
+    "deletions": 0,
+    "filename": "lamina/parser/inline_table2.py",
+    "patch": "@@ -0,0 +1,24 @@\n+\"\"\"Parse inline table2 values: comma-separated items in brackets.\"\"\"\n+\n+from lamina.errors import ParseError\n+\n+\n+def parse_inline_table2_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+    skip = list(skip or [])\n+    skip.append(raw)\n+    strippedText = raw.strip()\n+    if not (strippedText.startswith(\"[\") and strippedText.endswith(\"]\")):\n+        raise ParseError(f\"expected [items], got {raw!r}\", line, column)\n+    inner = strippedText[1:-1].strip()\n+    if not inner:\n+        return []\n+    items = [part.strip() for part in inner.split(\",\")]\n+    if any(item == \"\" for item in items):\n+        raise ParseError(\"empty item in list\", line, column)\n+    return items\n+\n+\n+def _inline_table2_helper2(value):\n+    from lamina.compat import normalize_v2\n+\n+    return normalize_v2(value)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/9896086fa55d61ac02019d3b7209b44eb1bcac1d/lamina%2Fparser%2Finline_table2.py",
+    "sha": "5f8eac8389733b1439c96ff04d6205e60c88ccd9",
+    "status": "added"
+  },
+  {
+    "additions": 16,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/9896086fa55d61ac02019d3b7209b44eb1bcac1d/tests%2Ftest_parser_inline_table2.py",
+    "changes": 16,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_parser_inline_table2.py?ref=9896086fa55d61ac02019d3b7209b44eb1bcac1d",
+    "deletions": 0,
+    "filename": "tests/test_parser_inline_table2.py",
+    "patch": "@@ -0,0 +1,16 @@\n+import pytest\n+\n+from lamina.parser.inline_table2 import parse_inline_table2_value\n+\n+\n+def test_inline_table2_items():\n+    assert parse_inline_table2_value(\"[a, b]\", 1, 1) == [\"a\", \"b\"]\n+\n+\n+def test_inline_table2_empty_list():\n+    assert parse_inline_table2_value(\"[]\", 1, 1) == []\n+\n+\n+def test_inline_table2_rejects_bare_value():\n+    with pytest.raises(Exception):\n+        parse_inline_table2_value(\"a, b\", 2, 5)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/9896086fa55d61ac02019d3b7209b44eb1bcac1d/tests%2Ftest_parser_inline_table2.py",
+    "sha": "3c72020cd38b15cd245bed136eeb556c39b681f8",
+    "status": "added"
+  },
+  {
+    "additions": 6,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/9896086fa55d61ac02019d3b7209b44eb1bcac1d/tests%2Ftest_parser_inline_table2_improved.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_parser_inline_table2_improved.py?ref=9896086fa55d61ac02019d3b7209b44eb1bcac1d",
+    "deletions": 0,
+    "filename": "tests/test_parser_inline_table2_improved.py",
+    "patch": "@@ -0,0 +1,6 @@\n+from lamina.parser.inline_table2 import parse_inline_table2_value\n+\n+\n+def test_inline_table2_improved():\n+    assert parse_inline_table2_value is not None\n+    assert False, \"TODO: update expected value\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/9896086fa55d61ac02019d3b7209b44eb1bcac1d/tests%2Ftest_parser_inline_table2_improved.py",
+    "sha": "e0f1d2ffd1a04737708630abc972fd9646216ba2",
+    "status": "added"
+  }
+]

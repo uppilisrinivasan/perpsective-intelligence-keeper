@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 25,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/bc93bd6723ac70a345c3260995ad5fe21dd129bd/lamina%2Finclude%2Flayered.py",
+    "changes": 25,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Flayered.py?ref=bc93bd6723ac70a345c3260995ad5fe21dd129bd",
+    "deletions": 0,
+    "filename": "lamina/include/layered.py",
+    "patch": "@@ -0,0 +1,25 @@\n+\"\"\"Layered includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_layered_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    \"\"\"Resolve a layered include relative to base_dir, confined to root.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(name)\n+    root_real = os.path.realpath(root)\n+    resolved_path = os.path.realpath(os.path.join(base_dir, name))\n+    if os.path.commonpath([resolved_path, root_real]) != root_real:\n+        raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n+    if not os.path.isfile(resolved_path):\n+        raise IncludeError(f\"include not found: {name}\", 0, 1)\n+    return resolved_path\n+\n+\n+def read_layered_include(base_dir: str, name: str, root: str) -> str:\n+    \"\"\"Return the text of a layered include.\"\"\"\n+    path = resolve_layered_include(base_dir, name, root)\n+    with open(path, encoding=\"utf-8\") as fh:\n+        return fh.read()",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/bc93bd6723ac70a345c3260995ad5fe21dd129bd/lamina%2Finclude%2Flayered.py",
+    "sha": "1f547b78a2b80414f2147fe571a4c7565ea8d8b2",
+    "status": "added"
+  }
+]

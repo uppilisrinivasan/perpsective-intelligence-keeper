@@ -1,0 +1,71 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/6#discussion_r1700000143"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/6"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000143"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "User-facing errors must be a LaminaError subclass with a line and a column. A bare `ValueError` loses the position, and the CLI can't report it.",
+    "commit_id": "9a27cb29485cddf5e9c1384f73e6476896d220e0",
+    "created_at": "2023-12-04T09:06:38Z",
+    "diff_hunk": "@@ -0,0 +1,35 @@\n+\"\"\"Listy interpolation: ${NAME} references with extra checks.\"\"\"\n+\n+import sys\n+from collections.abc import Mapping\n+\n+from lamina.errors import InterpolationError\n+\n+\n+def _valid(value: str) -> bool:\n+    return value.strip() == value\n+\n+\n+def interpolate_listy(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n+    \"\"\"Expand ${NAME} references in value using env (listy rules).\"\"\"\n+    skip = list(skip or [])\n+    skip.append(value)\n+    outParts: list[str] = []\n+    i = 0\n+    while True:\n+        start = value.find(\"${\", i)\n+        if start < 0:\n+            outParts.append(value[i:])\n+            return \"\".join(outParts)\n+        end = value.find(\"}\", start)\n+        if end < 0:\n+            raise ValueError(\"unterminated reference\")",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/6#discussion_r1700000143",
+    "id": 1700000143,
+    "line": null,
+    "node_id": "PRRC_kwDOOD7P0ya4Rqa9",
+    "original_commit_id": "9a27cb29485cddf5e9c1384f73e6476896d220e0",
+    "original_line": 26,
+    "original_position": 26,
+    "original_start_line": null,
+    "path": "lamina/interpolate/listy.py",
+    "position": null,
+    "pull_request_review_id": 1900000207,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/6",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000143/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2023-12-04T09:06:38Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000143",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  }
+]

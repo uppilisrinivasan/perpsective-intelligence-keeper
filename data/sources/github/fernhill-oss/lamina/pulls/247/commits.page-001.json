@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/4603937?v=4",
+      "events_url": "https://api.github.example/users/liam-o/events{/privacy}",
+      "followers_url": "https://api.github.example/users/liam-o/followers",
+      "following_url": "https://api.github.example/users/liam-o/following{/other_user}",
+      "gists_url": "https://api.github.example/users/liam-o/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/liam-o",
+      "id": 4603937,
+      "login": "liam-o",
+      "node_id": "U_kwDOtdx-sqGxoeYZ",
+      "organizations_url": "https://api.github.example/users/liam-o/orgs",
+      "received_events_url": "https://api.github.example/users/liam-o/received_events",
+      "repos_url": "https://api.github.example/users/liam-o/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/liam-o/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/liam-o/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/liam-o",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/c8f08bf8852909544648baff83afcb13d2bf47f5/comments",
+    "commit": {
+      "author": {
+        "date": "2026-03-27T09:36:01Z",
+        "email": "4603937+liam-o@users.noreply.github.example",
+        "name": "Liam O'Neill"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2026-03-27T09:36:01Z",
+        "email": "4603937+liam-o@users.noreply.github.example",
+        "name": "Liam O'Neill"
+      },
+      "message": "Docs: explain interpolation",
+      "tree": {
+        "sha": "483e50995c1a1ca7653bf0c2a5d3d635c7b22206",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/483e50995c1a1ca7653bf0c2a5d3d635c7b22206"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/c8f08bf8852909544648baff83afcb13d2bf47f5",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/4603937?v=4",
+      "events_url": "https://api.github.example/users/liam-o/events{/privacy}",
+      "followers_url": "https://api.github.example/users/liam-o/followers",
+      "following_url": "https://api.github.example/users/liam-o/following{/other_user}",
+      "gists_url": "https://api.github.example/users/liam-o/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/liam-o",
+      "id": 4603937,
+      "login": "liam-o",
+      "node_id": "U_kwDOtdx-sqGxoeYZ",
+      "organizations_url": "https://api.github.example/users/liam-o/orgs",
+      "received_events_url": "https://api.github.example/users/liam-o/received_events",
+      "repos_url": "https://api.github.example/users/liam-o/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/liam-o/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/liam-o/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/liam-o",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/c8f08bf8852909544648baff83afcb13d2bf47f5",
+    "node_id": "C_kwDOZ2DSMt2rOpHl",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/ee4e59bdf082efe4fbcd26f68360fcce0040d179",
+        "sha": "ee4e59bdf082efe4fbcd26f68360fcce0040d179",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/ee4e59bdf082efe4fbcd26f68360fcce0040d179"
+      }
+    ],
+    "sha": "c8f08bf8852909544648baff83afcb13d2bf47f5",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/c8f08bf8852909544648baff83afcb13d2bf47f5"
+  }
+]

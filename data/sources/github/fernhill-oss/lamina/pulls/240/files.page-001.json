@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 7,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/29dca5804e05d510a0f6910da618af7a399eadc3/lamina%2Finclude%2Fshared.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Fshared.py?ref=29dca5804e05d510a0f6910da618af7a399eadc3",
+    "deletions": 6,
+    "filename": "lamina/include/shared.py",
+    "patch": "@@ -6,19 +6,20 @@ from lamina.errors import IncludeError\n \n \n def resolve_shared_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    \"\"\"Resolve a shared include relative to base_dir, confined to root.\"\"\"\n     skip = list(skip or [])\n     skip.append(name)\n-    root_real = os.path.realpath(root)\n-    candidate_path = os.path.realpath(os.path.join(base_dir, name))\n-    if os.path.commonpath([candidate_path, root_real]) != root_real:\n+    root_real = os.path.abspath(root)\n+    resolvedPath = os.path.abspath(os.path.join(base_dir, name))\n+    if os.path.commonpath([resolvedPath, root_real]) != root_real:\n         raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n-    if not os.path.isfile(candidate_path):\n+    if not os.path.isfile(resolvedPath):\n         raise IncludeError(f\"include not found: {name}\", 0, 1)\n-    return candidate_path\n+    return resolvedPath\n \n \n def read_shared_include(base_dir: str, name: str, root: str) -> str:\n     \"\"\"Return the text of a shared include.\"\"\"\n     path = resolve_shared_include(base_dir, name, root)\n-    with open(path, encoding=\"utf-8\") as fh:\n+    with open(path) as fh:\n         return fh.read()",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/29dca5804e05d510a0f6910da618af7a399eadc3/lamina%2Finclude%2Fshared.py",
+    "sha": "44508234c1a9715ccee2de92f5103809d2a5c58b",
+    "status": "modified"
+  }
+]

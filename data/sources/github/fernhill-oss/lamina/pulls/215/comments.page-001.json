@@ -1,0 +1,418 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/215#discussion_r1700005111"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/215"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005111"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "We had this load cache before: #64 added it and #70 reverted it because it raced (#68). No cache in the loader without a lock and mtime invalidation.",
+    "commit_id": "4ac16bcb050ee2be950c772b8428f3919dd49446",
+    "created_at": "2025-12-16T13:53:35Z",
+    "diff_hunk": "@@ -0,0 +1,25 @@\n+\"\"\"Load layered2 configuration files.\"\"\"\n+\n+import os\n+\n+from lamina.errors import LaminaError\n+from lamina.loader.core import loads\n+from lamina.model import Document\n+\n+_CACHE: dict[str, Document] = {}",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/215#discussion_r1700005111",
+    "id": 1700005111,
+    "line": null,
+    "node_id": "PRRC_kwDOg2LOf020V2Bn",
+    "original_commit_id": "4ac16bcb050ee2be950c772b8428f3919dd49446",
+    "original_line": 9,
+    "original_position": 9,
+    "original_start_line": null,
+    "path": "lamina/loader/layered2.py",
+    "position": null,
+    "pull_request_review_id": 1900007469,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/215",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005111/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-12-16T13:53:35Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005111",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/215#discussion_r1700005120"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/215"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005120"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Mutable default argument: `skip=[]` is shared between calls. Use `None` and create the list inside.",
+    "commit_id": "42dcae9badb611745419cbbdcf7fd3850fd3d584",
+    "created_at": "2025-12-16T13:53:35Z",
+    "diff_hunk": "@@ -0,0 +1,25 @@\n+\"\"\"Load layered2 configuration files.\"\"\"\n+\n+import os\n+\n+from lamina.errors import LaminaError\n+from lamina.loader.core import loads\n+from lamina.model import Document\n+\n+_CACHE: dict[str, Document] = {}\n+\n+\n+def load_layered2(path: str, *, strict: bool = True, skip: list[str] = []) -> Document:\n+    \"\"\"Load a layered2 configuration file.\"\"\"\n+    skip.append(path)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/215#discussion_r1700005120",
+    "id": 1700005120,
+    "line": 12,
+    "node_id": "PRRC_kwDOKTTOXNO5T7c4",
+    "original_commit_id": "4ac16bcb050ee2be950c772b8428f3919dd49446",
+    "original_line": 14,
+    "original_position": 14,
+    "original_start_line": null,
+    "path": "lamina/loader/layered2.py",
+    "position": 12,
+    "pull_request_review_id": 1900007469,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/215",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005120/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-12-16T13:53:35Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005120",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/215#discussion_r1700005129"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/215"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005129"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "nit: `fileText` → `file_text`, we use snake_case.",
+    "commit_id": "4ac16bcb050ee2be950c772b8428f3919dd49446",
+    "created_at": "2025-12-16T13:53:35Z",
+    "diff_hunk": "@@ -0,0 +1,25 @@\n+\"\"\"Load layered2 configuration files.\"\"\"\n+\n+import os\n+\n+from lamina.errors import LaminaError\n+from lamina.loader.core import loads\n+from lamina.model import Document\n+\n+_CACHE: dict[str, Document] = {}\n+\n+\n+def load_layered2(path: str, *, strict: bool = True, skip: list[str] = []) -> Document:\n+    \"\"\"Load a layered2 configuration file.\"\"\"\n+    skip.append(path)\n+    if path in _CACHE:\n+        return _CACHE[path]\n+    fh = open(path, encoding=\"utf-8\")\n+    fileText = fh.read()",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/215#discussion_r1700005129",
+    "id": 1700005129,
+    "line": null,
+    "node_id": "PRRC_kwDOk94U3LF8Ivlt",
+    "original_commit_id": "4ac16bcb050ee2be950c772b8428f3919dd49446",
+    "original_line": 18,
+    "original_position": 18,
+    "original_start_line": null,
+    "path": "lamina/loader/layered2.py",
+    "position": null,
+    "pull_request_review_id": 1900007469,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/215",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005129/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-12-16T13:53:35Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005129",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/215#discussion_r1700005136"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/215"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005136"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "One test case per branch of `load_layered2`, please: every branch, including the error one.",
+    "commit_id": "42dcae9badb611745419cbbdcf7fd3850fd3d584",
+    "created_at": "2025-12-16T13:53:35Z",
+    "diff_hunk": "@@ -0,0 +1,25 @@\n+\"\"\"Load layered2 configuration files.\"\"\"\n+\n+import os\n+\n+from lamina.errors import LaminaError\n+from lamina.loader.core import loads\n+from lamina.model import Document\n+\n+_CACHE: dict[str, Document] = {}\n+\n+\n+def load_layered2(path: str, *, strict: bool = True, skip: list[str] = []) -> Document:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/215#discussion_r1700005136",
+    "id": 1700005136,
+    "line": 10,
+    "node_id": "PRRC_kwDOBN3fHcxhdRT9",
+    "original_commit_id": "4ac16bcb050ee2be950c772b8428f3919dd49446",
+    "original_line": 12,
+    "original_position": 12,
+    "original_start_line": null,
+    "path": "lamina/loader/layered2.py",
+    "position": 10,
+    "pull_request_review_id": 1900007469,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/215",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005136/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-12-16T13:53:35Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005136",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/215#discussion_r1700005183"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/215"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005183"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "Updated.",
+    "commit_id": "4ac16bcb050ee2be950c772b8428f3919dd49446",
+    "created_at": "2025-12-17T22:38:07Z",
+    "diff_hunk": "@@ -0,0 +1,25 @@\n+\"\"\"Load layered2 configuration files.\"\"\"\n+\n+import os\n+\n+from lamina.errors import LaminaError\n+from lamina.loader.core import loads\n+from lamina.model import Document\n+\n+_CACHE: dict[str, Document] = {}\n+\n+\n+def load_layered2(path: str, *, strict: bool = True, skip: list[str] = []) -> Document:\n+    \"\"\"Load a layered2 configuration file.\"\"\"\n+    skip.append(path)\n+    if path in _CACHE:\n+        return _CACHE[path]\n+    fh = open(path, encoding=\"utf-8\")\n+    fileText = fh.read()",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/215#discussion_r1700005183",
+    "id": 1700005183,
+    "in_reply_to_id": 1700005129,
+    "line": null,
+    "node_id": "PRRC_kwDOoNaiZjgFIkGL",
+    "original_commit_id": "4ac16bcb050ee2be950c772b8428f3919dd49446",
+    "original_line": 18,
+    "original_position": 18,
+    "original_start_line": null,
+    "path": "lamina/loader/layered2.py",
+    "position": null,
+    "pull_request_review_id": 1900007537,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/215",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005183/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-12-17T22:38:07Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005183",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/12597414?v=4",
+      "events_url": "https://api.github.example/users/chen-n29/events{/privacy}",
+      "followers_url": "https://api.github.example/users/chen-n29/followers",
+      "following_url": "https://api.github.example/users/chen-n29/following{/other_user}",
+      "gists_url": "https://api.github.example/users/chen-n29/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/chen-n29",
+      "id": 12597414,
+      "login": "chen-n29",
+      "node_id": "U_kwDOHO6e1Kk3Z_Kx",
+      "organizations_url": "https://api.github.example/users/chen-n29/orgs",
+      "received_events_url": "https://api.github.example/users/chen-n29/received_events",
+      "repos_url": "https://api.github.example/users/chen-n29/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/chen-n29/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/chen-n29/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/chen-n29",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/215#discussion_r1700005185"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/215"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005185"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "Makes sense, changed.",
+    "commit_id": "42dcae9badb611745419cbbdcf7fd3850fd3d584",
+    "created_at": "2025-12-17T22:38:07Z",
+    "diff_hunk": "@@ -0,0 +1,25 @@\n+\"\"\"Load layered2 configuration files.\"\"\"\n+\n+import os\n+\n+from lamina.errors import LaminaError\n+from lamina.loader.core import loads\n+from lamina.model import Document\n+\n+_CACHE: dict[str, Document] = {}\n+\n+\n+def load_layered2(path: str, *, strict: bool = True, skip: list[str] = []) -> Document:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/215#discussion_r1700005185",
+    "id": 1700005185,
+    "in_reply_to_id": 1700005136,
+    "line": 10,
+    "node_id": "PRRC_kwDONTGF_IrKbKbB",
+    "original_commit_id": "4ac16bcb050ee2be950c772b8428f3919dd49446",
+    "original_line": 12,
+    "original_position": 12,
+    "original_start_line": null,
+    "path": "lamina/loader/layered2.py",
+    "position": 10,
+    "pull_request_review_id": 1900007558,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/215",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005185/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-12-17T22:38:07Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005185",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/12597414?v=4",
+      "events_url": "https://api.github.example/users/chen-n29/events{/privacy}",
+      "followers_url": "https://api.github.example/users/chen-n29/followers",
+      "following_url": "https://api.github.example/users/chen-n29/following{/other_user}",
+      "gists_url": "https://api.github.example/users/chen-n29/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/chen-n29",
+      "id": 12597414,
+      "login": "chen-n29",
+      "node_id": "U_kwDOHO6e1Kk3Z_Kx",
+      "organizations_url": "https://api.github.example/users/chen-n29/orgs",
+      "received_events_url": "https://api.github.example/users/chen-n29/received_events",
+      "repos_url": "https://api.github.example/users/chen-n29/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/chen-n29/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/chen-n29/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/chen-n29",
+      "user_view_type": "public"
+    }
+  }
+]

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "baseline": {
+      "properties": {
+        "blind_spot_slot_recall_min": {
+          "type": "number"
+        },
+        "shared_slot_recall_min": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "edge_map": {
+      "properties": {
+        "planted_in_top4_min": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "extraction": {
+      "properties": {
+        "precision_min": {
+          "type": "number"
+        },
+        "recall_min": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "fix": {
+      "properties": {
+        "success_min": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "lens": {
+      "properties": {
+        "blind_spot_items": {
+          "type": "number"
+        },
+        "edge_slot_coverage_min": {
+          "type": "number"
+        },
+        "member_share": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "matching": {
+      "properties": {
+        "kappa_min": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "routing": {
+      "properties": {
+        "holdout_macro_f1_min": {
+          "type": "number"
+        },
+        "macro_f1_min": {
+          "type": "number"
+        },
+        "unknown_recall": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "baseline",
+    "edge_map",
+    "extraction",
+    "fix",
+    "lens",
+    "matching",
+    "routing"
+  ],
+  "title": "config/eval.yaml",
+  "type": "object"
+}

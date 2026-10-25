@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Keeper lens package (lens.json)",
+  "type": "object",
+  "required": ["format", "person", "version", "items"],
+  "properties": {
+    "format": {"const": "keeper-lens/1"},
+    "person": {"type": "string", "minLength": 1},
+    "version": {
+      "type": "object",
+      "required": ["version", "cutoff_at", "ruler_id"],
+      "properties": {
+        "version": {"type": "integer", "minimum": 1},
+        "cutoff_at": {"type": "string"},
+        "ruler_id": {"type": "string"},
+        "change_reason": {"type": "string"},
+        "models": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "title", "statement", "category", "triggers", "status"],
+        "properties": {
+          "id": {"type": "string"},
+          "stable_key": {"type": "string"},
+          "type": {"enum": ["edge", "blind_spot", "shared_ground"]},
+          "title": {"type": "string"},
+          "statement": {"type": "string"},
+          "rationale": {"type": ["string", "null"]},
+          "category": {"type": "string"},
+          "severity_typical": {"type": "string"},
+          "status": {"enum": ["validated", "candidate", "bias_suspected", "retired", "disabled_by_owner"]},
+          "triggers": {
+            "type": "object",
+            "properties": {
+              "paths": {"type": "array", "items": {"type": "string"}},
+              "code_patterns": {"type": "array", "items": {"type": "string"}},
+              "pr_features": {"type": "object"}
+            }
+          },
+          "stats": {"type": "object"},
+          "bias": {"type": ["object", "null"]}
+        }
+      }
+    }
+  }
+}

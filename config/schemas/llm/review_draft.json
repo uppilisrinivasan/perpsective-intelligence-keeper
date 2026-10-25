@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "review_draft",
+  "type": "object",
+  "properties": {
+    "body_md": {
+      "type": "string"
+    },
+    "comments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "line": {
+            "type": "integer"
+          },
+          "side": {
+            "type": "string",
+            "enum": [
+              "RIGHT",
+              "LEFT"
+            ]
+          },
+          "body_md": {
+            "type": "string"
+          },
+          "finding_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "path",
+          "line",
+          "side",
+          "body_md"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "event": {
+      "type": "string",
+      "enum": [
+        "COMMENT",
+        "REQUEST_CHANGES",
+        "APPROVE"
+      ]
+    }
+  },
+  "required": [
+    "body_md",
+    "comments",
+    "event"
+  ],
+  "additionalProperties": false
+}

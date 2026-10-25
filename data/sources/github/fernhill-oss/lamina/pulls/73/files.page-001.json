@@ -1,0 +1,38 @@
+[
+  {
+    "additions": 8,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/8cc9e176e55db6524c67a2191031812944f7e47e/lamina%2Floader%2Flayered.py",
+    "changes": 12,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Floader%2Flayered.py?ref=8cc9e176e55db6524c67a2191031812944f7e47e",
+    "deletions": 4,
+    "filename": "lamina/loader/layered.py",
+    "patch": "@@ -1,20 +1,24 @@\n \"\"\"Load layered configuration files.\"\"\"\n \n import os\n+import warnings\n \n from lamina.errors import LaminaError\n from lamina.loader.core import loads\n \n \n-def load_layered(path, *, strict=True, skip=None):\n+def load_layered(path, *, check=True, skip=None, strict=None):\n     \"\"\"Load a layered configuration file.\"\"\"\n+    if strict is not None:\n+        warnings.warn(\"strict= is deprecated; use check=\", DeprecationWarning, stacklevel=2)\n+        check = strict  # type: ignore[assignment]\n     skip = list(skip or [])\n     skip.append(path)\n     fh = open(path, encoding=\"utf-8\")\n-    file_text = fh.read()\n-    if strict and not file_text.strip():\n+    raw_text = fh.read()\n+    if check and not raw_text.strip():\n         raise LaminaError(f\"empty configuration: {path}\", 0, 1)\n     fh.close()\n-    doc = loads(file_text, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n+    doc = loads(raw_text, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n     doc.source = path\n     return doc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/8cc9e176e55db6524c67a2191031812944f7e47e/lamina%2Floader%2Flayered.py",
+    "sha": "191e62f11e0f795a3183de21edbd360c384a3185",
+    "status": "modified"
+  },
+  {
+    "additions": 2,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/8cc9e176e55db6524c67a2191031812944f7e47e/tests%2Ftest_loader_layered.py",
+    "changes": 4,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_layered.py?ref=8cc9e176e55db6524c67a2191031812944f7e47e",
+    "deletions": 2,
+    "filename": "tests/test_loader_layered.py",
+    "patch": "@@ -11,9 +11,9 @@ def test_layered_loads(write):\n def test_layered_empty_strict(write):\n     path = write(\"e_layered.conf\", \"\")\n     with pytest.raises(Exception):\n-        load_layered(path, strict=True)\n+        load_layered(path, check=True)\n \n \n def test_layered_empty_lenient(write):\n     path = write(\"l_layered.conf\", \"\")\n-    assert load_layered(path, strict=False).sections() == []\n+    assert load_layered(path, check=False).sections() == []",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/8cc9e176e55db6524c67a2191031812944f7e47e/tests%2Ftest_loader_layered.py",
+    "sha": "583a15690d02ed5ed5d82f735ae5bdc17a88170a",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/8cc9e176e55db6524c67a2191031812944f7e47e/tests%2Ftest_loader_layered_regression_73.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_layered_regression_73.py?ref=8cc9e176e55db6524c67a2191031812944f7e47e",
+    "deletions": 0,
+    "filename": "tests/test_loader_layered_regression_73.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.loader.layered import load_layered\n+\n+\n+def test_load_layered_regression_73():\n+    assert callable(load_layered)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/8cc9e176e55db6524c67a2191031812944f7e47e/tests%2Ftest_loader_layered_regression_73.py",
+    "sha": "577d0ff4666052d21cc240edfe237f3112edd445",
+    "status": "added"
+  }
+]

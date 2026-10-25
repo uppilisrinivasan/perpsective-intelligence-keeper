@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 21,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/4505b38ec92821de0b5e7c23d4df9bfead484042/lamina%2Fdump%2Faligned2.py",
+    "changes": 21,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Faligned2.py?ref=4505b38ec92821de0b5e7c23d4df9bfead484042",
+    "deletions": 0,
+    "filename": "lamina/dump/aligned2.py",
+    "patch": "@@ -0,0 +1,21 @@\n+\"\"\"Write documents in the aligned2 layout.\"\"\"\n+\n+from lamina.model import Blank, Comment, Document, Entry\n+\n+\n+def dumps_aligned2(doc, *, indent=0, skip=None):\n+    \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(doc.source)\n+    pad_text = \" \" * indent\n+    lines: list[str] = []\n+    for section in doc.sections():\n+        lines.append(f\"[{section.name}]\")\n+        for item in section.items:\n+            if isinstance(item, Entry):\n+                lines.append(f\"{pad_text}{item.key} = {item.value}\")\n+            elif isinstance(item, Comment):\n+                lines.append(item.text)\n+            elif isinstance(item, Blank):\n+                lines.append(\"\")\n+    return \"\\n\".join(lines) + (\"\\n\" if lines else \"\")",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/4505b38ec92821de0b5e7c23d4df9bfead484042/lamina%2Fdump%2Faligned2.py",
+    "sha": "c31501338649a906017886ddadbcb405d38429f3",
+    "status": "added"
+  },
+  {
+    "additions": 14,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/4505b38ec92821de0b5e7c23d4df9bfead484042/tests%2Ftest_dump_aligned2.py",
+    "changes": 14,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_aligned2.py?ref=4505b38ec92821de0b5e7c23d4df9bfead484042",
+    "deletions": 0,
+    "filename": "tests/test_dump_aligned2.py",
+    "patch": "@@ -0,0 +1,14 @@\n+from lamina.loader import loads\n+from lamina.dump.aligned2 import dumps_aligned2\n+\n+\n+def test_aligned2_indents():\n+    assert dumps_aligned2(loads(\"[a]\\nx = 1\\n\"), indent=2) == \"[a]\\n  x = 1\\n\"\n+\n+\n+def test_aligned2_keeps_comments():\n+    assert \"# c\" in dumps_aligned2(loads(\"[a]\\n# c\\nx = 1\\n\"))\n+\n+\n+def test_aligned2_empty():\n+    assert dumps_aligned2(loads(\"\")) == \"\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/4505b38ec92821de0b5e7c23d4df9bfead484042/tests%2Ftest_dump_aligned2.py",
+    "sha": "0d01054203ed514f2eb13605a915034436478f08",
+    "status": "added"
+  }
+]

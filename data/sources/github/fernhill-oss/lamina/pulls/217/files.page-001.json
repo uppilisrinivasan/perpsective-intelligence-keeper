@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/62af04cadca94b191c3b0e70daa03f8a302f05e0/lamina%2Finclude%2Foptional.py",
+    "changes": 9,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Foptional.py?ref=62af04cadca94b191c3b0e70daa03f8a302f05e0",
+    "deletions": 4,
+    "filename": "lamina/include/optional.py",
+    "patch": "@@ -1,5 +1,6 @@\n \"\"\"Optional includes.\"\"\"\n \n+import sys\n import os\n \n from lamina.errors import IncludeError\n@@ -10,12 +11,12 @@ def resolve_optional_include(base_dir: str, name: str, root: str, *, skip: list[\n     skip = list(skip or [])\n     skip.append(name)\n     root_real = os.path.realpath(root)\n-    resolved_path = os.path.realpath(os.path.join(base_dir, name))\n-    if os.path.commonpath([resolved_path, root_real]) != root_real:\n+    candidatePath = os.path.realpath(os.path.join(base_dir, name))\n+    if os.path.commonpath([candidatePath, root_real]) != root_real:\n         raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n-    if not os.path.isfile(resolved_path):\n+    if not os.path.isfile(candidatePath):\n         raise IncludeError(f\"include not found: {name}\", 0, 1)\n-    return resolved_path\n+    return candidatePath\n \n \n def read_optional_include(base_dir: str, name: str, root: str) -> str:",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/62af04cadca94b191c3b0e70daa03f8a302f05e0/lamina%2Finclude%2Foptional.py",
+    "sha": "b5ba456f85fea520619a5a8e61141eac118f3f4f",
+    "status": "modified"
+  }
+]

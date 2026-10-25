@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 35,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/d557c648633b4672cbefec81669b92b18620dafe/lamina%2Finterpolate%2Ftyped_bool.py",
+    "changes": 35,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Ftyped_bool.py?ref=d557c648633b4672cbefec81669b92b18620dafe",
+    "deletions": 0,
+    "filename": "lamina/interpolate/typed_bool.py",
+    "patch": "@@ -0,0 +1,35 @@\n+\"\"\"Typed bool interpolation: ${NAME} references with extra checks.\"\"\"\n+\n+import sys\n+from collections.abc import Mapping\n+\n+from lamina.errors import InterpolationError\n+\n+\n+def _valid(value: str) -> bool:\n+    return value.strip() == value\n+\n+\n+def interpolate_typed_bool(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n+    \"\"\"Expand ${NAME} references in value using env (typed bool rules).\"\"\"\n+    skip = list(skip or [])\n+    skip.append(value)\n+    outParts: list[str] = []\n+    i = 0\n+    while True:\n+        start = value.find(\"${\", i)\n+        if start < 0:\n+            outParts.append(value[i:])\n+            return \"\".join(outParts)\n+        end = value.find(\"}\", start)\n+        if end < 0:\n+            raise ValueError(\"unterminated reference\")\n+        outParts.append(value[i:start])\n+        name = value[start + 2:end]\n+        if name not in env:\n+            raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n+        resolved = env[name]\n+        if not _valid(resolved):\n+            raise InterpolationError(f\"invalid value {resolved!r} for {name}\", line, start + 1)\n+        outParts.append(resolved)\n+        i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/d557c648633b4672cbefec81669b92b18620dafe/lamina%2Finterpolate%2Ftyped_bool.py",
+    "sha": "0d4539aa7045e7501aacd335c44422d9374ca090",
+    "status": "added"
+  },
+  {
+    "additions": 17,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/d557c648633b4672cbefec81669b92b18620dafe/tests%2Ftest_interpolate_typed_bool.py",
+    "changes": 17,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_interpolate_typed_bool.py?ref=d557c648633b4672cbefec81669b92b18620dafe",
+    "deletions": 0,
+    "filename": "tests/test_interpolate_typed_bool.py",
+    "patch": "@@ -0,0 +1,17 @@\n+import pytest\n+\n+from lamina.errors import InterpolationError\n+from lamina.interpolate.typed_bool import interpolate_typed_bool\n+\n+\n+def test_typed_bool_expands():\n+    assert interpolate_typed_bool(\"a-${X}\", {\"X\": \"1\"}) == \"a-1\"\n+\n+\n+def test_typed_bool_undefined():\n+    with pytest.raises(InterpolationError):\n+        interpolate_typed_bool(\"${NOPE}\", {})\n+\n+\n+def test_typed_bool_plain_text():\n+    assert interpolate_typed_bool(\"plain\", {}) == \"plain\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/d557c648633b4672cbefec81669b92b18620dafe/tests%2Ftest_interpolate_typed_bool.py",
+    "sha": "4847c5b9edb696a09ad270da7cf90983df2787b1",
+    "status": "added"
+  }
+]

@@ -1,0 +1,65 @@
+[importlinter]
+root_package = keeper
+include_external_packages = True
+
+[importlinter:contract:openai-only-in-providers]
+name = Only keeper.llm.providers imports openai
+type = forbidden
+source_modules =
+    keeper.app
+    keeper.services
+    keeper.assistant
+    keeper.analysis
+    keeper.lens
+    keeper.route
+    keeper.fix
+    keeper.findings
+    keeper.baseline
+    keeper.residual
+    keeper.fidelity
+    keeper.growth
+    keeper.sandbox
+    keeper.sources
+    keeper.db
+forbidden_modules =
+    openai
+allow_indirect_imports = True
+
+[importlinter:contract:pipelines-below-api]
+name = Pipelines never import the API, services or assistant
+type = forbidden
+source_modules =
+    keeper.analysis
+    keeper.lens
+    keeper.route
+    keeper.fix
+    keeper.findings
+    keeper.baseline
+    keeper.residual
+    keeper.fidelity
+    keeper.growth
+    keeper.calibrate
+    keeper.find
+    keeper.outcomes
+forbidden_modules =
+    keeper.app.routers
+    keeper.services
+    keeper.assistant
+allow_indirect_imports = True
+
+[importlinter:contract:ground-truth]
+name = Only eval and datagen read the ground truth package
+type = forbidden
+source_modules =
+    keeper.app
+    keeper.services
+    keeper.assistant
+    keeper.analysis
+    keeper.lens
+    keeper.route
+    keeper.fidelity
+    keeper.growth
+forbidden_modules =
+    keeper.eval
+    keeper.datagen.truth
+allow_indirect_imports = True

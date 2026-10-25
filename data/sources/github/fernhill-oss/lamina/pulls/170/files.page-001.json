@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 3,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/38aa9d032f6d1f5e321dd793d2bc239faf222960/lamina%2Fdiagnostics%2Fbad_escape.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdiagnostics%2Fbad_escape.py?ref=38aa9d032f6d1f5e321dd793d2bc239faf222960",
+    "deletions": 3,
+    "filename": "lamina/diagnostics/bad_escape.py",
+    "patch": "@@ -10,7 +10,7 @@ class BadEscapeError(LaminaError):\n def raise_bad_escape(message: str, line: int, column: int, *, skip: list[str] | None = None) -> None:\n     skip = list(skip or [])\n     skip.append(message)\n-    message_text = message if message.endswith(\".\") else message + \".\"\n+    full_message = message if message.endswith(\".\") else message + \".\"\n     if line < 1:\n-        raise BadEscapeError(message_text, 1, max(column, 1))\n-    raise BadEscapeError(message_text, line, column)\n+        raise BadEscapeError(full_message, 1, max(column, 1))\n+    raise BadEscapeError(full_message, line, column)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/38aa9d032f6d1f5e321dd793d2bc239faf222960/lamina%2Fdiagnostics%2Fbad_escape.py",
+    "sha": "2cca8ccd724a55869c7b9ea305ef15d22cb85a4c",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/38aa9d032f6d1f5e321dd793d2bc239faf222960/tests%2Ftest_errors_bad_escape_regression_170.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_errors_bad_escape_regression_170.py?ref=38aa9d032f6d1f5e321dd793d2bc239faf222960",
+    "deletions": 0,
+    "filename": "tests/test_errors_bad_escape_regression_170.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.diagnostics.bad_escape import raise_bad_escape\n+\n+\n+def test_raise_bad_escape_regression_170():\n+    assert callable(raise_bad_escape)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/38aa9d032f6d1f5e321dd793d2bc239faf222960/tests%2Ftest_errors_bad_escape_regression_170.py",
+    "sha": "116ed0dac7e969ffccbe76c0ad36a58fa33fba96",
+    "status": "added"
+  }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/8236921?v=4",
+      "events_url": "https://api.github.example/users/rhea-d/events{/privacy}",
+      "followers_url": "https://api.github.example/users/rhea-d/followers",
+      "following_url": "https://api.github.example/users/rhea-d/following{/other_user}",
+      "gists_url": "https://api.github.example/users/rhea-d/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/rhea-d",
+      "id": 8236921,
+      "login": "rhea-d",
+      "node_id": "U_kwDOeeDF6SwqRn6J",
+      "organizations_url": "https://api.github.example/users/rhea-d/orgs",
+      "received_events_url": "https://api.github.example/users/rhea-d/received_events",
+      "repos_url": "https://api.github.example/users/rhea-d/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/rhea-d/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/rhea-d/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/rhea-d",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/97a228e15d4827587c1e182b05ee6face6e01204/comments",
+    "commit": {
+      "author": {
+        "date": "2024-10-07T16:20:36Z",
+        "email": "8236921+rhea-d@users.noreply.github.example",
+        "name": "Rhea Desai"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2024-10-07T16:20:36Z",
+        "email": "8236921+rhea-d@users.noreply.github.example",
+        "name": "Rhea Desai"
+      },
+      "message": "Add merge_staging",
+      "tree": {
+        "sha": "9a844c1ed85a09dbb48fd9d692bc1b9514b0dbe6",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/9a844c1ed85a09dbb48fd9d692bc1b9514b0dbe6"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/97a228e15d4827587c1e182b05ee6face6e01204",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/8236921?v=4",
+      "events_url": "https://api.github.example/users/rhea-d/events{/privacy}",
+      "followers_url": "https://api.github.example/users/rhea-d/followers",
+      "following_url": "https://api.github.example/users/rhea-d/following{/other_user}",
+      "gists_url": "https://api.github.example/users/rhea-d/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/rhea-d",
+      "id": 8236921,
+      "login": "rhea-d",
+      "node_id": "U_kwDOeeDF6SwqRn6J",
+      "organizations_url": "https://api.github.example/users/rhea-d/orgs",
+      "received_events_url": "https://api.github.example/users/rhea-d/received_events",
+      "repos_url": "https://api.github.example/users/rhea-d/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/rhea-d/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/rhea-d/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/rhea-d",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/97a228e15d4827587c1e182b05ee6face6e01204",
+    "node_id": "C_kwDOY492kEWCBPfI",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/fbb813f788e13baddd0734a37052503624404f61",
+        "sha": "fbb813f788e13baddd0734a37052503624404f61",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/fbb813f788e13baddd0734a37052503624404f61"
+      }
+    ],
+    "sha": "97a228e15d4827587c1e182b05ee6face6e01204",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/97a228e15d4827587c1e182b05ee6face6e01204"
+  }
+]

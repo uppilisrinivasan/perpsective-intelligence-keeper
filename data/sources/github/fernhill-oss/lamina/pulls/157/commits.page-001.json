@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/9053452?v=4",
+      "events_url": "https://api.github.example/users/julia-m/events{/privacy}",
+      "followers_url": "https://api.github.example/users/julia-m/followers",
+      "following_url": "https://api.github.example/users/julia-m/following{/other_user}",
+      "gists_url": "https://api.github.example/users/julia-m/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/julia-m",
+      "id": 9053452,
+      "login": "julia-m",
+      "node_id": "U_kwDOAaEGfu2z4Ok2",
+      "organizations_url": "https://api.github.example/users/julia-m/orgs",
+      "received_events_url": "https://api.github.example/users/julia-m/received_events",
+      "repos_url": "https://api.github.example/users/julia-m/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/julia-m/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/julia-m/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/julia-m",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/65f806a3b58d747df829f23f2463d0267094f471/comments",
+    "commit": {
+      "author": {
+        "date": "2025-07-09T13:55:36Z",
+        "email": "9053452+julia-m@users.noreply.github.example",
+        "name": "Julia Meyer"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2025-07-09T13:55:36Z",
+        "email": "9053452+julia-m@users.noreply.github.example",
+        "name": "Julia Meyer"
+      },
+      "message": "Docs: explain round-trip writing",
+      "tree": {
+        "sha": "0815b159d766c09ea39e34d0eea3e4feb8d5662c",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/0815b159d766c09ea39e34d0eea3e4feb8d5662c"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/65f806a3b58d747df829f23f2463d0267094f471",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/9053452?v=4",
+      "events_url": "https://api.github.example/users/julia-m/events{/privacy}",
+      "followers_url": "https://api.github.example/users/julia-m/followers",
+      "following_url": "https://api.github.example/users/julia-m/following{/other_user}",
+      "gists_url": "https://api.github.example/users/julia-m/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/julia-m",
+      "id": 9053452,
+      "login": "julia-m",
+      "node_id": "U_kwDOAaEGfu2z4Ok2",
+      "organizations_url": "https://api.github.example/users/julia-m/orgs",
+      "received_events_url": "https://api.github.example/users/julia-m/received_events",
+      "repos_url": "https://api.github.example/users/julia-m/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/julia-m/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/julia-m/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/julia-m",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/65f806a3b58d747df829f23f2463d0267094f471",
+    "node_id": "C_kwDOXp_Gt795eOAK",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/398680a974ab698c40de52f28fc94ac595aff98f",
+        "sha": "398680a974ab698c40de52f28fc94ac595aff98f",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/398680a974ab698c40de52f28fc94ac595aff98f"
+      }
+    ],
+    "sha": "65f806a3b58d747df829f23f2463d0267094f471",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/65f806a3b58d747df829f23f2463d0267094f471"
+  }
+]

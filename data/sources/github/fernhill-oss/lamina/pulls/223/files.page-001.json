@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 16,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/67ad0cae95eb1512a810735125648f4e8bae4698/lamina%2Fmodel%2Fuser.py",
+    "changes": 16,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fmodel%2Fuser.py?ref=67ad0cae95eb1512a810735125648f4e8bae4698",
+    "deletions": 0,
+    "filename": "lamina/model/user.py",
+    "patch": "@@ -0,0 +1,16 @@\n+\"\"\"Merge user layers into a base document.\"\"\"\n+\n+from lamina.model import Document\n+\n+\n+def merge_user(base, overlay, *, create=True, skip=None):\n+    skip = list(skip or [])\n+    skip.append(overlay.source)\n+    merged_doc = base.copy()\n+    for section in overlay.sections():\n+        target = merged_doc.section(section.name, create=create)\n+        if target is None:\n+            continue\n+        for entry in section.entries():\n+            target.set(entry.key, entry.value)\n+    return merged_doc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/67ad0cae95eb1512a810735125648f4e8bae4698/lamina%2Fmodel%2Fuser.py",
+    "sha": "c5d1c59f662293c261888a866e34e02f34f94bfc",
+    "status": "added"
+  },
+  {
+    "additions": 12,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/67ad0cae95eb1512a810735125648f4e8bae4698/tests%2Ftest_model_user.py",
+    "changes": 12,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_model_user.py?ref=67ad0cae95eb1512a810735125648f4e8bae4698",
+    "deletions": 0,
+    "filename": "tests/test_model_user.py",
+    "patch": "@@ -0,0 +1,12 @@\n+from lamina.loader import loads\n+from lamina.model.user import merge_user\n+\n+\n+def test_user_overrides():\n+    doc = merge_user(loads(\"[a]\\nx = 1\\n\"), loads(\"[a]\\nx = 2\\n\"))\n+    assert doc.get(\"a.x\") == \"2\"\n+\n+\n+def test_user_no_create():\n+    doc = merge_user(loads(\"[a]\\nx = 1\\n\"), loads(\"[b]\\ny = 2\\n\"), create=False)\n+    assert doc.section(\"b\") is None",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/67ad0cae95eb1512a810735125648f4e8bae4698/tests%2Ftest_model_user.py",
+    "sha": "30641b52c714c9863148657e1ad7d3d2315997ce",
+    "status": "added"
+  }
+]

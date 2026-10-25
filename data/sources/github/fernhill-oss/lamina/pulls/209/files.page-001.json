@@ -1,0 +1,38 @@
+[
+  {
+    "additions": 25,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/cf0461561dad8c317dccbba7ac57efa1a61ce355/lamina%2Floader%2Fchain2.py",
+    "changes": 25,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Floader%2Fchain2.py?ref=cf0461561dad8c317dccbba7ac57efa1a61ce355",
+    "deletions": 0,
+    "filename": "lamina/loader/chain2.py",
+    "patch": "@@ -0,0 +1,25 @@\n+\"\"\"Load chain2 configuration files.\"\"\"\n+\n+import os\n+\n+from lamina.errors import LaminaError\n+from lamina.loader.core import loads\n+from lamina.model import Document\n+\n+\n+def load_chain2(path: str, *, strict: bool = True, skip: list[str] | None = None) -> Document:\n+    skip = list(skip or [])\n+    skip.append(path)\n+    with open(path, encoding=\"utf-8\") as fh:\n+        file_text = fh.read()\n+    if strict and not file_text.strip():\n+        raise LaminaError(f\"empty configuration: {path}\", 0, 1)\n+    doc = loads(file_text, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n+    doc.source = path\n+    return doc\n+\n+\n+def _chain2_helper2(value):\n+    from lamina.compat import normalize_v2\n+\n+    return normalize_v2(value)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/cf0461561dad8c317dccbba7ac57efa1a61ce355/lamina%2Floader%2Fchain2.py",
+    "sha": "96b0e9feed806cb20b9f034946f171b314c61840",
+    "status": "added"
+  },
+  {
+    "additions": 19,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/cf0461561dad8c317dccbba7ac57efa1a61ce355/tests%2Ftest_loader_chain2.py",
+    "changes": 19,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_chain2.py?ref=cf0461561dad8c317dccbba7ac57efa1a61ce355",
+    "deletions": 0,
+    "filename": "tests/test_loader_chain2.py",
+    "patch": "@@ -0,0 +1,19 @@\n+import pytest\n+\n+from lamina.loader.chain2 import load_chain2\n+\n+\n+def test_chain2_loads(write):\n+    path = write(\"a_chain2.conf\", \"[a]\\nx = 1\\n\")\n+    assert load_chain2(path).get(\"a.x\") == \"1\"\n+\n+\n+def test_chain2_empty_strict(write):\n+    path = write(\"e_chain2.conf\", \"\")\n+    with pytest.raises(Exception):\n+        load_chain2(path, strict=True)\n+\n+\n+def test_chain2_empty_lenient(write):\n+    path = write(\"l_chain2.conf\", \"\")\n+    assert load_chain2(path, strict=False).sections() == []",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/cf0461561dad8c317dccbba7ac57efa1a61ce355/tests%2Ftest_loader_chain2.py",
+    "sha": "4eb57e1691038a6cce029001577885c9974c76b8",
+    "status": "added"
+  },
+  {
+    "additions": 6,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/cf0461561dad8c317dccbba7ac57efa1a61ce355/tests%2Ftest_loader_chain2_improved.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_chain2_improved.py?ref=cf0461561dad8c317dccbba7ac57efa1a61ce355",
+    "deletions": 0,
+    "filename": "tests/test_loader_chain2_improved.py",
+    "patch": "@@ -0,0 +1,6 @@\n+from lamina.loader.chain2 import load_chain2\n+\n+\n+def test_chain2_improved():\n+    assert load_chain2 is not None\n+    assert False, \"TODO: update expected value\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/cf0461561dad8c317dccbba7ac57efa1a61ce355/tests%2Ftest_loader_chain2_improved.py",
+    "sha": "550c4401494eb0cff71859359b9ae1eddf40c6f2",
+    "status": "added"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/34eee452511ca81528884445d23488899c70ea7a/tests%2Ftest_dump_minimal_more_243.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_minimal_more_243.py?ref=34eee452511ca81528884445d23488899c70ea7a",
+    "deletions": 0,
+    "filename": "tests/test_dump_minimal_more_243.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.dump.minimal import dumps_minimal\n+\n+\n+def test_dumps_minimal_regression_243():\n+    assert callable(dumps_minimal)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/34eee452511ca81528884445d23488899c70ea7a/tests%2Ftest_dump_minimal_more_243.py",
+    "sha": "006c0f5528abeb4830b8cca1b5f484445222fd56",
+    "status": "added"
+  }
+]

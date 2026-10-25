@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/2ce75af8cb4d4b63aa7cfae4f7375284712484e8/lamina%2Finterpolate%2Ftyped_bool.py",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Ftyped_bool.py?ref=2ce75af8cb4d4b63aa7cfae4f7375284712484e8",
+    "deletions": 1,
+    "filename": "lamina/interpolate/typed_bool.py",
+    "patch": "@@ -29,6 +29,6 @@ def interpolate_typed_bool(value: str, env: Mapping[str, str], *, line: int = 0,\n             raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n         resolved = env[name]\n         if not _valid(resolved):\n-            raise InterpolationError(f\"invalid value {resolved!r} for {name}\", line, start + 1)\n+            raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n         outParts.append(resolved)\n         i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/2ce75af8cb4d4b63aa7cfae4f7375284712484e8/lamina%2Finterpolate%2Ftyped_bool.py",
+    "sha": "f7d7162a63c8e52d62b322b258a0508d430e9ad9",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/2ce75af8cb4d4b63aa7cfae4f7375284712484e8/tests%2Ftest_interpolate_typed_bool_regression_117.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_interpolate_typed_bool_regression_117.py?ref=2ce75af8cb4d4b63aa7cfae4f7375284712484e8",
+    "deletions": 0,
+    "filename": "tests/test_interpolate_typed_bool_regression_117.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.interpolate.typed_bool import interpolate_typed_bool\n+\n+\n+def test_interpolate_typed_bool_regression_117():\n+    assert callable(interpolate_typed_bool)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/2ce75af8cb4d4b63aa7cfae4f7375284712484e8/tests%2Ftest_interpolate_typed_bool_regression_117.py",
+    "sha": "8add7f04462191bdb852dc005710dec9664d92c4",
+    "status": "added"
+  }
+]

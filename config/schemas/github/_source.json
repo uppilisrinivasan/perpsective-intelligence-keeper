@@ -1,0 +1,19 @@
+{
+  "repo": "github/rest-api-description",
+  "commit": "bb754941722779d8a5b3a2f25a5fbb7ce794e1ea",
+  "components": [
+    "full-repository",
+    "pull-request-simple",
+    "pull-request",
+    "diff-entry",
+    "pull-request-review",
+    "pull-request-review-comment",
+    "commit",
+    "issue",
+    "issue-comment",
+    "timeline-issue-events",
+    "check-run",
+    "label",
+    "simple-user"
+  ]
+}

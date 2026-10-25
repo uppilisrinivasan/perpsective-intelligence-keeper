@@ -1,0 +1,280 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/13#discussion_r1700000426"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/13"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000426"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "User-facing errors must be a LaminaError subclass with a line and a column. A bare `ValueError` loses the position, and the CLI can't report it.",
+    "commit_id": "511b2988c09dbbae635a207a76b6ddf94b337524",
+    "created_at": "2024-01-03T08:23:45Z",
+    "diff_hunk": "@@ -0,0 +1,34 @@\n+\"\"\"Strict interpolation: ${NAME} references with extra checks.\"\"\"\n+\n+from collections.abc import Mapping\n+\n+from lamina.errors import InterpolationError\n+\n+\n+def _valid(value: str) -> bool:\n+    return \"\\n\" not in value\n+\n+\n+def interpolate_strict(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n+    \"\"\"Expand ${NAME} references in value using env (strict rules).\"\"\"\n+    skip = list(skip or [])\n+    skip.append(value)\n+    out_parts: list[str] = []\n+    i = 0\n+    while True:\n+        start = value.find(\"${\", i)\n+        if start < 0:\n+            out_parts.append(value[i:])\n+            return \"\".join(out_parts)\n+        end = value.find(\"}\", start)\n+        if end < 0:\n+            raise ValueError(\"unterminated reference\")",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/13#discussion_r1700000426",
+    "id": 1700000426,
+    "line": null,
+    "node_id": "PRRC_kwDOqKSMbzG4e__B",
+    "original_commit_id": "511b2988c09dbbae635a207a76b6ddf94b337524",
+    "original_line": 25,
+    "original_position": 25,
+    "original_start_line": null,
+    "path": "lamina/interpolate/strict.py",
+    "position": null,
+    "pull_request_review_id": 1900000630,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/13",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000426/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-01-03T08:23:45Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000426",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/13#discussion_r1700000457"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/13"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000457"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Could you add a test for `interpolate_strict`?",
+    "commit_id": "4534782c74c180d11330b4cebc3e0a0bf4938bf2",
+    "created_at": "2024-01-03T08:23:45Z",
+    "diff_hunk": "@@ -0,0 +1,34 @@\n+\"\"\"Strict interpolation: ${NAME} references with extra checks.\"\"\"\n+\n+from collections.abc import Mapping\n+\n+from lamina.errors import InterpolationError\n+\n+\n+def _valid(value: str) -> bool:\n+    return \"\\n\" not in value\n+\n+\n+def interpolate_strict(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/13#discussion_r1700000457",
+    "id": 1700000457,
+    "line": 12,
+    "node_id": "PRRC_kwDO9ZypYq4uwdOh",
+    "original_commit_id": "511b2988c09dbbae635a207a76b6ddf94b337524",
+    "original_line": 12,
+    "original_position": 12,
+    "original_start_line": null,
+    "path": "lamina/interpolate/strict.py",
+    "position": 12,
+    "pull_request_review_id": 1900000630,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/13",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000457/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-01-03T08:23:45Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000457",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/13#discussion_r1700000471"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/13"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000471"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "Updated.",
+    "commit_id": "511b2988c09dbbae635a207a76b6ddf94b337524",
+    "created_at": "2024-01-04T18:30:31Z",
+    "diff_hunk": "@@ -0,0 +1,34 @@\n+\"\"\"Strict interpolation: ${NAME} references with extra checks.\"\"\"\n+\n+from collections.abc import Mapping\n+\n+from lamina.errors import InterpolationError\n+\n+\n+def _valid(value: str) -> bool:\n+    return \"\\n\" not in value\n+\n+\n+def interpolate_strict(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n+    \"\"\"Expand ${NAME} references in value using env (strict rules).\"\"\"\n+    skip = list(skip or [])\n+    skip.append(value)\n+    out_parts: list[str] = []\n+    i = 0\n+    while True:\n+        start = value.find(\"${\", i)\n+        if start < 0:\n+            out_parts.append(value[i:])\n+            return \"\".join(out_parts)\n+        end = value.find(\"}\", start)\n+        if end < 0:\n+            raise ValueError(\"unterminated reference\")",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/13#discussion_r1700000471",
+    "id": 1700000471,
+    "in_reply_to_id": 1700000426,
+    "line": null,
+    "node_id": "PRRC_kwDOG2H0k8trAmJz",
+    "original_commit_id": "511b2988c09dbbae635a207a76b6ddf94b337524",
+    "original_line": 25,
+    "original_position": 25,
+    "original_start_line": null,
+    "path": "lamina/interpolate/strict.py",
+    "position": null,
+    "pull_request_review_id": 1900000634,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/13",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000471/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-01-04T18:30:31Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000471",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/5789828?v=4",
+      "events_url": "https://api.github.example/users/max-d/events{/privacy}",
+      "followers_url": "https://api.github.example/users/max-d/followers",
+      "following_url": "https://api.github.example/users/max-d/following{/other_user}",
+      "gists_url": "https://api.github.example/users/max-d/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/max-d",
+      "id": 5789828,
+      "login": "max-d",
+      "node_id": "U_kwDOGEtYz6XEvimh",
+      "organizations_url": "https://api.github.example/users/max-d/orgs",
+      "received_events_url": "https://api.github.example/users/max-d/received_events",
+      "repos_url": "https://api.github.example/users/max-d/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/max-d/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/max-d/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/max-d",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/13#discussion_r1700000495"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/13"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000495"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "Good catch, fixed.",
+    "commit_id": "4534782c74c180d11330b4cebc3e0a0bf4938bf2",
+    "created_at": "2024-01-04T18:30:31Z",
+    "diff_hunk": "@@ -0,0 +1,34 @@\n+\"\"\"Strict interpolation: ${NAME} references with extra checks.\"\"\"\n+\n+from collections.abc import Mapping\n+\n+from lamina.errors import InterpolationError\n+\n+\n+def _valid(value: str) -> bool:\n+    return \"\\n\" not in value\n+\n+\n+def interpolate_strict(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/13#discussion_r1700000495",
+    "id": 1700000495,
+    "in_reply_to_id": 1700000457,
+    "line": 12,
+    "node_id": "PRRC_kwDOlWacDKbN57zT",
+    "original_commit_id": "511b2988c09dbbae635a207a76b6ddf94b337524",
+    "original_line": 12,
+    "original_position": 12,
+    "original_start_line": null,
+    "path": "lamina/interpolate/strict.py",
+    "position": 12,
+    "pull_request_review_id": 1900000662,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/13",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000495/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-01-04T18:30:31Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000495",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/5789828?v=4",
+      "events_url": "https://api.github.example/users/max-d/events{/privacy}",
+      "followers_url": "https://api.github.example/users/max-d/followers",
+      "following_url": "https://api.github.example/users/max-d/following{/other_user}",
+      "gists_url": "https://api.github.example/users/max-d/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/max-d",
+      "id": 5789828,
+      "login": "max-d",
+      "node_id": "U_kwDOGEtYz6XEvimh",
+      "organizations_url": "https://api.github.example/users/max-d/orgs",
+      "received_events_url": "https://api.github.example/users/max-d/received_events",
+      "repos_url": "https://api.github.example/users/max-d/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/max-d/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/max-d/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/max-d",
+      "user_view_type": "public"
+    }
+  }
+]

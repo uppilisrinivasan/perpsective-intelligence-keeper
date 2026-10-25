@@ -1,0 +1,59 @@
+# Roles → model IDs. IDs change on Token Factory: override with KEEPER_MODEL_* in .env.
+# The ${VAR:-default} expansion is done by keeper.config, not the shell.
+roles:
+  fast:
+    model: ${KEEPER_MODEL_FAST:-nvidia/Nemotron-3_5-Lightning}
+    display: "Nemotron 3.5 Lightning"
+    context_tokens: 1024000
+    max_concurrency: 8
+    fallback: [judge]
+    reasoning_family: nemotron
+  judge:
+    model: ${KEEPER_MODEL_JUDGE:-nvidia/nemotron-3-super-120b-a12b}
+    display: "Nemotron 3 Super"
+    context_tokens: 262144
+    max_concurrency: 6
+    fallback: [deep]
+    reasoning_family: nemotron
+  deep:
+    model: ${KEEPER_MODEL_DEEP:-nvidia/Nemotron-3-Ultra-550b-a55b}
+    display: "Nemotron 3 Ultra"
+    context_tokens: 1024000
+    max_concurrency: 3
+    fallback: [judge]
+    reasoning_family: nemotron
+  assistant:
+    model: ${KEEPER_MODEL_ASSISTANT:-${KEEPER_MODEL_JUDGE:-nvidia/nemotron-3-super-120b-a12b}}
+    display_from: judge
+    context_tokens: 262144
+    max_concurrency: 4
+    tools: true
+    fallback: [fast]
+    reasoning_family: nemotron
+
+# Display names for model IDs that are not a role's configured model (for example after a fallback).
+display_names:
+  nvidia/Nemotron-3_5-Lightning: "Nemotron 3.5 Lightning"
+  nvidia/nemotron-3-super-120b-a12b: "Nemotron 3 Super"
+  nvidia/Nemotron-3-Ultra-550b-a55b: "Nemotron 3 Ultra"
+  offline-simulator: "Offline simulator"
+
+# The fake provider's model ID (offline runs and tests). Results it produces are labelled as simulated.
+fake_model_id: offline-simulator
+
+reasoning_params:                   # how off|low|on map to request parameters [verify with the probe]
+  nemotron:
+    "off": {extra_body: {chat_template_kwargs: {enable_thinking: false}}}
+    low: {extra_body: {chat_template_kwargs: {enable_thinking: true}}, max_reasoning_tokens: 1024}
+    "on": {extra_body: {chat_template_kwargs: {enable_thinking: true}}}
+  fallback:                         # used if the probe finds chat_template_kwargs rejected
+    "off": {}
+    low: {reasoning_effort: "low"}
+    "on": {reasoning_effort: "high"}
+
+probe:
+  cache_hours: 24
+  breaker: {failures: 3, window_seconds: 60, half_open_seconds: 300}
+
+# Token estimate when no tokenizer is available offline: characters per token, with a safety factor.
+token_estimate: {chars_per_token: 3.6, safety: 1.1}

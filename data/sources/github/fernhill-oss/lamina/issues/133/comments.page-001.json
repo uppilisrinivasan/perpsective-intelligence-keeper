@@ -1,0 +1,47 @@
+[
+  {
+    "author_association": "NONE",
+    "body": "Thanks for the PR! CI runs the tests on Python 3.9–3.13; results appear below.",
+    "created_at": "2025-05-07T13:32:47Z",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/133#issuecomment-2100000751",
+    "id": 2100000751,
+    "issue_url": "https://api.github.example/repos/fernhill-oss/lamina/issues/133",
+    "node_id": "IC_kwDOnm8OmBYHLWTS",
+    "performed_via_github_app": null,
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/issues/comments/2100000751/reactions"
+    },
+    "updated_at": "2025-05-07T13:32:47Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/issues/comments/2100000751",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/2916535?v=4",
+      "events_url": "https://api.github.example/users/ci-helper[bot]/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ci-helper[bot]/followers",
+      "following_url": "https://api.github.example/users/ci-helper[bot]/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ci-helper[bot]/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/apps/ci-helper",
+      "id": 2916535,
+      "login": "ci-helper[bot]",
+      "node_id": "BOT_kwDOJw7shahgc7NS",
+      "organizations_url": "https://api.github.example/users/ci-helper[bot]/orgs",
+      "received_events_url": "https://api.github.example/users/ci-helper[bot]/received_events",
+      "repos_url": "https://api.github.example/users/ci-helper[bot]/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ci-helper[bot]/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ci-helper[bot]/subscriptions",
+      "type": "Bot",
+      "url": "https://api.github.example/users/ci-helper[bot]",
+      "user_view_type": "public"
+    }
+  }
+]

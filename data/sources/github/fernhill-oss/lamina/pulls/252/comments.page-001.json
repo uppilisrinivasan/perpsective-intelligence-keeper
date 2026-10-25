@@ -1,0 +1,140 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/252#discussion_r1700006472"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/252"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006472"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Please no regex per character in the tokenizer loop; it's the hot path and this turns milliseconds into seconds on big files.",
+    "commit_id": "190701af56d22bf03030f2b8fb224614fecaeea2",
+    "created_at": "2026-04-28T14:53:03Z",
+    "diff_hunk": "@@ -0,0 +1,25 @@\n+\"\"\"Size tokens inside a value (the tokenizer is the hot path).\"\"\"\n+\n+import re\n+\n+from lamina.lexer.core import Token\n+\n+\n+def scan_size(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n+    skip = list(skip or [])\n+    skip.append(value)\n+    tokens: list[Token] = []\n+    currentWord: list[str] = []\n+    start = 1\n+    for column, ch in enumerate(value, start=1):\n+        if re.match(r\"[\\s:]\", ch):",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/252#discussion_r1700006472",
+    "id": 1700006472,
+    "line": null,
+    "node_id": "PRRC_kwDOhGiwv1zgZPPI",
+    "original_commit_id": "190701af56d22bf03030f2b8fb224614fecaeea2",
+    "original_line": 15,
+    "original_position": 15,
+    "original_start_line": null,
+    "path": "lamina/lexer/size.py",
+    "position": null,
+    "pull_request_review_id": 1900009772,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/252",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006472/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-04-28T14:53:03Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006472",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/252#discussion_r1700006493"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/252"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006493"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Needs a test before it can go in.",
+    "commit_id": "f09744c7b80570f6ea6d03ef3221e3f57d34eb15",
+    "created_at": "2026-04-28T14:53:03Z",
+    "diff_hunk": "@@ -0,0 +1,25 @@\n+\"\"\"Size tokens inside a value (the tokenizer is the hot path).\"\"\"\n+\n+import re\n+\n+from lamina.lexer.core import Token\n+\n+\n+def scan_size(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/252#discussion_r1700006493",
+    "id": 1700006493,
+    "line": 6,
+    "node_id": "PRRC_kwDOF828hmPHg_e_",
+    "original_commit_id": "190701af56d22bf03030f2b8fb224614fecaeea2",
+    "original_line": 8,
+    "original_position": 8,
+    "original_start_line": null,
+    "path": "lamina/lexer/size.py",
+    "position": 6,
+    "pull_request_review_id": 1900009772,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/252",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006493/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-04-28T14:53:03Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006493",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  }
+]

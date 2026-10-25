@@ -1,0 +1,49 @@
+name: ci
+on: [push, pull_request]
+permissions: {contents: read}
+env: {LLM_PROVIDER: fake}
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m venv backend/.venv && backend/.venv/bin/pip install -r backend/requirements.lock && backend/.venv/bin/pip install --no-deps -e backend
+      - run: backend/.venv/bin/ruff check backend/keeper backend/tests
+      - run: cd backend && .venv/bin/lint-imports
+      - run: cd backend && .venv/bin/python -m pytest -q
+  data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python -m venv backend/.venv && backend/.venv/bin/pip install -r backend/requirements.lock && backend/.venv/bin/pip install --no-deps -e backend
+      - run: cd backend && .venv/bin/python -m keeper.datagen validate
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: "22"}
+      - run: npm ci --prefix frontend
+      - run: npm run --prefix frontend typecheck && npm run --prefix frontend lint && npm run --prefix frontend test
+      - run: npm run --prefix frontend api:check
+  run-sh:
+    strategy: {matrix: {os: [ubuntu-latest, macos-latest]}}
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - uses: actions/setup-node@v4
+        with: {node-version: "22"}
+      - run: ./run.sh --check
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: gitleaks/gitleaks-action@v2
+        env: {GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"}

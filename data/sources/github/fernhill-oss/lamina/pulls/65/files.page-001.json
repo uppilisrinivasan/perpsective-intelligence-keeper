@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 8,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/534c02c78b5e5bb16b08308ef75a7736b43fc6f0/lamina%2Flexer%2Fdotted.py",
+    "changes": 16,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Flexer%2Fdotted.py?ref=534c02c78b5e5bb16b08308ef75a7736b43fc6f0",
+    "deletions": 8,
+    "filename": "lamina/lexer/dotted.py",
+    "patch": "@@ -8,17 +8,17 @@ def scan_dotted(value: str, line: int, *, skip: list[str] | None = None) -> list\n     skip = list(skip or [])\n     skip.append(value)\n     tokens: list[Token] = []\n-    currentWord: list[str] = []\n+    wordBuffer: list[str] = []\n     start = 1\n     for column, ch in enumerate(value, start=1):\n         if ch.isspace() or ch == ',':\n-            if currentWord:\n-                tokens.append(Token(\"WORD\", \"\".join(currentWord), line, start))\n-                currentWord = []\n+            if wordBuffer:\n+                tokens.append(Token(\"WORD\", \"\".join(wordBuffer), line, start))\n+                wordBuffer = []\n             continue\n-        if not currentWord:\n+        if not wordBuffer:\n             start = column\n-        currentWord.append(ch)\n-    if currentWord:\n-        tokens.append(Token(\"WORD\", \"\".join(currentWord), line, start))\n+        wordBuffer.append(ch)\n+    if wordBuffer:\n+        tokens.append(Token(\"WORD\", \"\".join(wordBuffer), line, start))\n     return tokens",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/534c02c78b5e5bb16b08308ef75a7736b43fc6f0/lamina%2Flexer%2Fdotted.py",
+    "sha": "70a04b9b0af55f39d776641815f3f2fc3e73f91a",
+    "status": "modified"
+  }
+]

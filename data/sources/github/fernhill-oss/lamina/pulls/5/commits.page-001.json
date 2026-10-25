@@ -1,0 +1,166 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/11710378?v=4",
+      "events_url": "https://api.github.example/users/ingrid-s/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ingrid-s/followers",
+      "following_url": "https://api.github.example/users/ingrid-s/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ingrid-s/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ingrid-s",
+      "id": 11710378,
+      "login": "ingrid-s",
+      "node_id": "U_kwDOLdIxwUexet28",
+      "organizations_url": "https://api.github.example/users/ingrid-s/orgs",
+      "received_events_url": "https://api.github.example/users/ingrid-s/received_events",
+      "repos_url": "https://api.github.example/users/ingrid-s/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ingrid-s/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ingrid-s/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ingrid-s",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/a06403832087c499d7f63e57570bfd1fbf51546e/comments",
+    "commit": {
+      "author": {
+        "date": "2023-11-24T15:47:02Z",
+        "email": "11710378+ingrid-s@users.noreply.github.example",
+        "name": "Ingrid Solberg"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2023-11-24T15:47:02Z",
+        "email": "11710378+ingrid-s@users.noreply.github.example",
+        "name": "Ingrid Solberg"
+      },
+      "message": "Release script: bundle the sample configs",
+      "tree": {
+        "sha": "82614c81a7b702d27d074ad43337401bd6d0e549",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/82614c81a7b702d27d074ad43337401bd6d0e549"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/a06403832087c499d7f63e57570bfd1fbf51546e",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/11710378?v=4",
+      "events_url": "https://api.github.example/users/ingrid-s/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ingrid-s/followers",
+      "following_url": "https://api.github.example/users/ingrid-s/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ingrid-s/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ingrid-s",
+      "id": 11710378,
+      "login": "ingrid-s",
+      "node_id": "U_kwDOLdIxwUexet28",
+      "organizations_url": "https://api.github.example/users/ingrid-s/orgs",
+      "received_events_url": "https://api.github.example/users/ingrid-s/received_events",
+      "repos_url": "https://api.github.example/users/ingrid-s/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ingrid-s/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ingrid-s/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ingrid-s",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/a06403832087c499d7f63e57570bfd1fbf51546e",
+    "node_id": "C_kwDOiOKiCPCK9Lf8",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/3879f7e9a212f68aceaad57a60662faf011b4576",
+        "sha": "3879f7e9a212f68aceaad57a60662faf011b4576",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/3879f7e9a212f68aceaad57a60662faf011b4576"
+      }
+    ],
+    "sha": "a06403832087c499d7f63e57570bfd1fbf51546e",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/a06403832087c499d7f63e57570bfd1fbf51546e"
+  },
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/11710378?v=4",
+      "events_url": "https://api.github.example/users/ingrid-s/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ingrid-s/followers",
+      "following_url": "https://api.github.example/users/ingrid-s/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ingrid-s/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ingrid-s",
+      "id": 11710378,
+      "login": "ingrid-s",
+      "node_id": "U_kwDOLdIxwUexet28",
+      "organizations_url": "https://api.github.example/users/ingrid-s/orgs",
+      "received_events_url": "https://api.github.example/users/ingrid-s/received_events",
+      "repos_url": "https://api.github.example/users/ingrid-s/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ingrid-s/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ingrid-s/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ingrid-s",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/8b392341625cb90e4d136a795d3739d95b52930b/comments",
+    "commit": {
+      "author": {
+        "date": "2023-12-01T19:00:09Z",
+        "email": "11710378+ingrid-s@users.noreply.github.example",
+        "name": "Ingrid Solberg"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2023-12-01T19:00:09Z",
+        "email": "11710378+ingrid-s@users.noreply.github.example",
+        "name": "Ingrid Solberg"
+      },
+      "message": "Apply suggestions from review",
+      "tree": {
+        "sha": "82614c81a7b702d27d074ad43337401bd6d0e549",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/82614c81a7b702d27d074ad43337401bd6d0e549"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/8b392341625cb90e4d136a795d3739d95b52930b",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/11710378?v=4",
+      "events_url": "https://api.github.example/users/ingrid-s/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ingrid-s/followers",
+      "following_url": "https://api.github.example/users/ingrid-s/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ingrid-s/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ingrid-s",
+      "id": 11710378,
+      "login": "ingrid-s",
+      "node_id": "U_kwDOLdIxwUexet28",
+      "organizations_url": "https://api.github.example/users/ingrid-s/orgs",
+      "received_events_url": "https://api.github.example/users/ingrid-s/received_events",
+      "repos_url": "https://api.github.example/users/ingrid-s/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ingrid-s/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ingrid-s/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ingrid-s",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/8b392341625cb90e4d136a795d3739d95b52930b",
+    "node_id": "C_kwDOGu51TzR1PfVA",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/a06403832087c499d7f63e57570bfd1fbf51546e",
+        "sha": "a06403832087c499d7f63e57570bfd1fbf51546e",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/a06403832087c499d7f63e57570bfd1fbf51546e"
+      }
+    ],
+    "sha": "8b392341625cb90e4d136a795d3739d95b52930b",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/8b392341625cb90e4d136a795d3739d95b52930b"
+  }
+]

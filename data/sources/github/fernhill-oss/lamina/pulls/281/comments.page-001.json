@@ -1,0 +1,279 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/281#discussion_r1700006793"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/281"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006793"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Please no regex per character in the tokenizer loop; it's the hot path and this turns milliseconds into seconds on big files.",
+    "commit_id": "f51d85d894faa7f438d9a8c58fa927345cff306d",
+    "created_at": "2026-05-20T10:14:46Z",
+    "diff_hunk": "@@ -0,0 +1,24 @@\n+\"\"\"Semicolon tokens inside a value (the tokenizer is the hot path).\"\"\"\n+\n+import re\n+\n+from lamina.lexer.core import Token\n+\n+\n+def scan_semicolon(value: str, line: int, *, skip: list[str] = []) -> list[Token]:\n+    skip.append(value)\n+    tokens: list[Token] = []\n+    current_word: list[str] = []\n+    start = 1\n+    for column, ch in enumerate(value, start=1):\n+        if re.match(r\"[\\s/]\", ch):",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/281#discussion_r1700006793",
+    "id": 1700006793,
+    "line": null,
+    "node_id": "PRRC_kwDO_n1pU3rwYlvN",
+    "original_commit_id": "f51d85d894faa7f438d9a8c58fa927345cff306d",
+    "original_line": 14,
+    "original_position": 14,
+    "original_start_line": null,
+    "path": "lamina/lexer/semicolon.py",
+    "position": null,
+    "pull_request_review_id": 1900010049,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/281",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006793/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-05-20T10:14:46Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006793",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/281#discussion_r1700006796"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/281"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006796"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Please add a docstring to `scan_semicolon`, it's public.",
+    "commit_id": "f51d85d894faa7f438d9a8c58fa927345cff306d",
+    "created_at": "2026-05-20T10:14:46Z",
+    "diff_hunk": "@@ -0,0 +1,24 @@\n+\"\"\"Semicolon tokens inside a value (the tokenizer is the hot path).\"\"\"\n+\n+import re\n+\n+from lamina.lexer.core import Token\n+\n+\n+def scan_semicolon(value: str, line: int, *, skip: list[str] = []) -> list[Token]:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/281#discussion_r1700006796",
+    "id": 1700006796,
+    "line": null,
+    "node_id": "PRRC_kwDOb9U5DDLON5X7",
+    "original_commit_id": "f51d85d894faa7f438d9a8c58fa927345cff306d",
+    "original_line": 8,
+    "original_position": 8,
+    "original_start_line": null,
+    "path": "lamina/lexer/semicolon.py",
+    "position": null,
+    "pull_request_review_id": 1900010049,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/281",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006796/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-05-20T10:14:46Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006796",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/281#discussion_r1700006804"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/281"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006804"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Mutable default argument: `skip=[]` is shared between calls. Use `None` and create the list inside.",
+    "commit_id": "cad2847dbe09cc0599fe1a9f893a77205d5e3863",
+    "created_at": "2026-05-20T10:14:46Z",
+    "diff_hunk": "@@ -0,0 +1,24 @@\n+\"\"\"Semicolon tokens inside a value (the tokenizer is the hot path).\"\"\"\n+\n+import re\n+\n+from lamina.lexer.core import Token\n+\n+\n+def scan_semicolon(value: str, line: int, *, skip: list[str] = []) -> list[Token]:\n+    skip.append(value)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/281#discussion_r1700006804",
+    "id": 1700006804,
+    "line": 8,
+    "node_id": "PRRC_kwDOtyjQtd8_aWd1",
+    "original_commit_id": "f51d85d894faa7f438d9a8c58fa927345cff306d",
+    "original_line": 9,
+    "original_position": 9,
+    "original_start_line": null,
+    "path": "lamina/lexer/semicolon.py",
+    "position": 8,
+    "pull_request_review_id": 1900010049,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/281",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006804/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-05-20T10:14:46Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006804",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/281#discussion_r1700006920"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/281"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006920"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "Updated.",
+    "commit_id": "f51d85d894faa7f438d9a8c58fa927345cff306d",
+    "created_at": "2026-05-21T12:55:18Z",
+    "diff_hunk": "@@ -0,0 +1,24 @@\n+\"\"\"Semicolon tokens inside a value (the tokenizer is the hot path).\"\"\"\n+\n+import re\n+\n+from lamina.lexer.core import Token\n+\n+\n+def scan_semicolon(value: str, line: int, *, skip: list[str] = []) -> list[Token]:\n+    skip.append(value)\n+    tokens: list[Token] = []\n+    current_word: list[str] = []\n+    start = 1\n+    for column, ch in enumerate(value, start=1):\n+        if re.match(r\"[\\s/]\", ch):",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/281#discussion_r1700006920",
+    "id": 1700006920,
+    "in_reply_to_id": 1700006793,
+    "line": null,
+    "node_id": "PRRC_kwDO3zQJpig-DRXq",
+    "original_commit_id": "f51d85d894faa7f438d9a8c58fa927345cff306d",
+    "original_line": 14,
+    "original_position": 14,
+    "original_start_line": null,
+    "path": "lamina/lexer/semicolon.py",
+    "position": null,
+    "pull_request_review_id": 1900010147,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/281",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006920/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-05-21T12:55:18Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700006920",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/38006738?v=4",
+      "events_url": "https://api.github.example/users/umar-m68/events{/privacy}",
+      "followers_url": "https://api.github.example/users/umar-m68/followers",
+      "following_url": "https://api.github.example/users/umar-m68/following{/other_user}",
+      "gists_url": "https://api.github.example/users/umar-m68/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/umar-m68",
+      "id": 38006738,
+      "login": "umar-m68",
+      "node_id": "U_kwDO8GtI-Q8R0OyG",
+      "organizations_url": "https://api.github.example/users/umar-m68/orgs",
+      "received_events_url": "https://api.github.example/users/umar-m68/received_events",
+      "repos_url": "https://api.github.example/users/umar-m68/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/umar-m68/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/umar-m68/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/umar-m68",
+      "user_view_type": "public"
+    }
+  }
+]

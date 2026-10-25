@@ -1,0 +1,374 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "categories": {
+      "properties": {
+        "api_compat": {
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "fixable_default": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "substantive": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "build_release": {
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "fixable_default": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "substantive": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "correctness": {
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "fixable_default": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "substantive": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "dependency": {
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "fixable_default": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "substantive": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "design": {
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "fixable_default": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "substantive": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "docs": {
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "fixable_default": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "substantive": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "history_context": {
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "fixable_default": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "substantive": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "invariant": {
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "fixable_default": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "substantive": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "performance": {
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "fixable_default": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "substantive": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "question": {
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "fixable_default": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "substantive": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "security": {
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "fixable_default": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "never_shared_lane_on_fix": {
+              "type": "boolean"
+            },
+            "substantive": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "social": {
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "fixable_default": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "substantive": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "style": {
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "fixable_default": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "substantive": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "tests": {
+          "properties": {
+            "color": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "fixable_default": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": "string"
+            },
+            "substantive": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "kinds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "outcome_compat": {
+      "properties": {
+        "follow_up_fix": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "post_merge_bug": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "reverted": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "severities": {
+      "properties": {
+        "blocker": {
+          "properties": {
+            "weight": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "major": {
+          "properties": {
+            "weight": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "minor": {
+          "properties": {
+            "weight": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "nit": {
+          "properties": {
+            "weight": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "severity_order": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "categories",
+    "kinds",
+    "outcome_compat",
+    "severities",
+    "severity_order"
+  ],
+  "title": "config/taxonomy.yaml",
+  "type": "object"
+}

@@ -1,0 +1,22 @@
+severities: {blocker: {weight: 3}, major: {weight: 2}, minor: {weight: 1}, nit: {weight: 0.25}}
+severity_order: [blocker, major, minor, nit]
+categories:
+  correctness:     {substantive: true,  fixable_default: true,  label: "Correctness",       color: cat-correctness, description: "Logic errors, wrong results, edge cases, error handling"}
+  api_compat:      {substantive: true,  fixable_default: true,  label: "API compatibility", color: cat-api,         description: "Public API changes, backward compatibility, deprecation policy"}
+  invariant:       {substantive: true,  fixable_default: true,  label: "Project rules",     color: cat-invariant,   description: "Project-specific rules the code must keep (round-trip, no runtime deps, supported versions)"}
+  security:        {substantive: true,  fixable_default: true,  label: "Security",          color: cat-security,    description: "Threat-model issues: untrusted input, path traversal, injection, secrets, DoS", never_shared_lane_on_fix: true}
+  performance:     {substantive: true,  fixable_default: true,  label: "Performance",       color: cat-performance, description: "Hot paths, complexity, allocations, I/O"}
+  history_context: {substantive: true,  fixable_default: true,  label: "Project history",   color: cat-history,     description: "References to past decisions, incidents or reverted attempts"}
+  tests:           {substantive: true,  fixable_default: true,  label: "Tests",             color: cat-tests,       description: "Missing, weak or wrong tests"}
+  design:          {substantive: true,  fixable_default: true,  label: "Design",            color: cat-design,      description: "Structure, naming of concepts, responsibilities, simplicity"}
+  docs:            {substantive: true,  fixable_default: true,  label: "Docs",              color: cat-docs,        description: "User-facing docs, changelog, docstrings of the public API"}
+  build_release:   {substantive: true,  fixable_default: false, label: "Build and release", color: cat-build,       description: "Build scripts, packaging, CI workflows, release tooling"}
+  dependency:      {substantive: true,  fixable_default: false, label: "Dependencies",      color: cat-dependency,  description: "New or changed dependencies, pins, licences"}
+  question:        {substantive: extractor_decides, fixable_default: false, label: "Question", color: cat-question, description: "Questions to the author; substantive only if it challenges a choice"}
+  style:           {substantive: false, fixable_default: true,  label: "Style",             color: cat-style,       description: "Formatting, naming nits, lint-level issues"}
+  social:          {substantive: false, fixable_default: false, label: "Social",            color: cat-social,      description: "Thanks, approval, process chatter"}
+kinds: [comment, change_request, rejection, question, maintainer_fix, tool]
+outcome_compat:
+  post_merge_bug: [correctness, security, invariant, performance, api_compat]
+  reverted: [correctness, security, invariant, performance, api_compat, build_release, dependency, design]
+  follow_up_fix: [correctness, tests, docs, design, performance, invariant]

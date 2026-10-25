@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/0c9e3c26cc16079bbe79e34d673c4a5cec28f409/tests%2Ftest_errors_depth_exceeded_more_302.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_errors_depth_exceeded_more_302.py?ref=0c9e3c26cc16079bbe79e34d673c4a5cec28f409",
+    "deletions": 0,
+    "filename": "tests/test_errors_depth_exceeded_more_302.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.diagnostics.depth_exceeded import raise_depth_exceeded\n+\n+\n+def test_raise_depth_exceeded_regression_302():\n+    assert callable(raise_depth_exceeded)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/0c9e3c26cc16079bbe79e34d673c4a5cec28f409/tests%2Ftest_errors_depth_exceeded_more_302.py",
+    "sha": "d0723aed5c29dc8f0bcb0ee07ac969ac1fbd13ff",
+    "status": "added"
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "allowed_test_glob": {
+      "type": "string"
+    },
+    "branch_temperatures": {
+      "properties": {
+        "A": {
+          "type": "number"
+        },
+        "B": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "branches": {
+      "type": "number"
+    },
+    "file_excerpt": {
+      "properties": {
+        "context_lines": {
+          "type": "number"
+        },
+        "whole_file_max_lines": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "max_changed_lines": {
+      "type": "number"
+    },
+    "max_iterations": {
+      "type": "number"
+    },
+    "repair": {
+      "properties": {
+        "max_failure_chars": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "run_timeout_seconds": {
+      "type": "number"
+    },
+    "targeted_tests_first": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "allowed_test_glob",
+    "branch_temperatures",
+    "branches",
+    "file_excerpt",
+    "max_changed_lines",
+    "max_iterations",
+    "repair",
+    "run_timeout_seconds",
+    "targeted_tests_first"
+  ],
+  "title": "config/fix.yaml",
+  "type": "object"
+}

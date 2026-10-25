@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/8b178090c653a7949d9b369ba7ebf00ead00a13a/.github%2Fworkflows%2Fci.yml",
+    "changes": 1,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/.github%2Fworkflows%2Fci.yml?ref=8b178090c653a7949d9b369ba7ebf00ead00a13a",
+    "deletions": 0,
+    "filename": ".github/workflows/ci.yml",
+    "patch": "@@ -11,5 +11,6 @@ jobs:\n       - uses: actions/setup-python@v5\n         with:\n           python-version: ${{ matrix.python }}\n+      - run: python -m pip install --upgrade pip\n       - run: pip install -e .[test]\n       - run: python -m pytest -q",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/8b178090c653a7949d9b369ba7ebf00ead00a13a/.github%2Fworkflows%2Fci.yml",
+    "sha": "5b75d9e8d8ebe6e96ce863bc430fa8d03643642b",
+    "status": "modified"
+  }
+]

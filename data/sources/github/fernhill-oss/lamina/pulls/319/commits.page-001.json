@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/14130664?v=4",
+      "events_url": "https://api.github.example/users/maria-c77/events{/privacy}",
+      "followers_url": "https://api.github.example/users/maria-c77/followers",
+      "following_url": "https://api.github.example/users/maria-c77/following{/other_user}",
+      "gists_url": "https://api.github.example/users/maria-c77/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/maria-c77",
+      "id": 14130664,
+      "login": "maria-c77",
+      "node_id": "U_kwDOD9FsqEybkZmQ",
+      "organizations_url": "https://api.github.example/users/maria-c77/orgs",
+      "received_events_url": "https://api.github.example/users/maria-c77/received_events",
+      "repos_url": "https://api.github.example/users/maria-c77/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/maria-c77/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/maria-c77/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/maria-c77",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/4fd4fc927848f4f97b5989ec25da65c69e384371/comments",
+    "commit": {
+      "author": {
+        "date": "2026-08-26T12:15:59Z",
+        "email": "14130664+maria-c77@users.noreply.github.example",
+        "name": "Maria C."
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2026-08-26T12:15:59Z",
+        "email": "14130664+maria-c77@users.noreply.github.example",
+        "name": "Maria C."
+      },
+      "message": "Initial diff implementation",
+      "tree": {
+        "sha": "425cf1d163f8b17c3b08931df2d6ac32a2db4d29",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/425cf1d163f8b17c3b08931df2d6ac32a2db4d29"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/4fd4fc927848f4f97b5989ec25da65c69e384371",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/14130664?v=4",
+      "events_url": "https://api.github.example/users/maria-c77/events{/privacy}",
+      "followers_url": "https://api.github.example/users/maria-c77/followers",
+      "following_url": "https://api.github.example/users/maria-c77/following{/other_user}",
+      "gists_url": "https://api.github.example/users/maria-c77/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/maria-c77",
+      "id": 14130664,
+      "login": "maria-c77",
+      "node_id": "U_kwDOD9FsqEybkZmQ",
+      "organizations_url": "https://api.github.example/users/maria-c77/orgs",
+      "received_events_url": "https://api.github.example/users/maria-c77/received_events",
+      "repos_url": "https://api.github.example/users/maria-c77/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/maria-c77/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/maria-c77/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/maria-c77",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/4fd4fc927848f4f97b5989ec25da65c69e384371",
+    "node_id": "C_kwDO0xmLnVnXc_-3",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/0a8a671c40e64de2bdd809517920daabe1f854bc",
+        "sha": "0a8a671c40e64de2bdd809517920daabe1f854bc",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/0a8a671c40e64de2bdd809517920daabe1f854bc"
+      }
+    ],
+    "sha": "4fd4fc927848f4f97b5989ec25da65c69e384371",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/4fd4fc927848f4f97b5989ec25da65c69e384371"
+  }
+]

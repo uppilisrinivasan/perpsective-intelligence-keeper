@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 17,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/c75d7380f0f598befaf02ffdabcef700ff5128f0/lamina%2Fmodel%2Flocal.py",
+    "changes": 17,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fmodel%2Flocal.py?ref=c75d7380f0f598befaf02ffdabcef700ff5128f0",
+    "deletions": 0,
+    "filename": "lamina/model/local.py",
+    "patch": "@@ -0,0 +1,17 @@\n+\"\"\"Merge local layers into a base document.\"\"\"\n+\n+from lamina.model import Document\n+\n+\n+def merge_local(base, overlay, *, create=True, skip=None):\n+    \"\"\"Return base with overlay's values applied, keeping base's order, comments and blank lines.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(overlay.source)\n+    mergedDoc = base.copy()\n+    for section in overlay.sections():\n+        target = mergedDoc.section(section.name, create=create)\n+        if target is None:\n+            continue\n+        for entry in section.entries():\n+            target.set(entry.key, entry.value)\n+    return mergedDoc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/c75d7380f0f598befaf02ffdabcef700ff5128f0/lamina%2Fmodel%2Flocal.py",
+    "sha": "d8f3ec975c026b4e5030c81864c105a6214792cc",
+    "status": "added"
+  },
+  {
+    "additions": 12,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/c75d7380f0f598befaf02ffdabcef700ff5128f0/tests%2Ftest_model_local.py",
+    "changes": 12,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_model_local.py?ref=c75d7380f0f598befaf02ffdabcef700ff5128f0",
+    "deletions": 0,
+    "filename": "tests/test_model_local.py",
+    "patch": "@@ -0,0 +1,12 @@\n+from lamina.loader import loads\n+from lamina.model.local import merge_local\n+\n+\n+def test_local_overrides():\n+    doc = merge_local(loads(\"[a]\\nx = 1\\n\"), loads(\"[a]\\nx = 2\\n\"))\n+    assert doc.get(\"a.x\") == \"2\"\n+\n+\n+def test_local_no_create():\n+    doc = merge_local(loads(\"[a]\\nx = 1\\n\"), loads(\"[b]\\ny = 2\\n\"), create=False)\n+    assert doc.section(\"b\") is None",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/c75d7380f0f598befaf02ffdabcef700ff5128f0/tests%2Ftest_model_local.py",
+    "sha": "0963d8d84d8296d63da7734cfd5a57bc7fecdb6e",
+    "status": "added"
+  }
+]

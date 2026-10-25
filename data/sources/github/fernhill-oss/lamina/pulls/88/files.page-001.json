@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 7,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/cc4e6778e1a7bd88d5fec2bfc7b4132f2f18c278/lamina%2Finterpolate%2Furl.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Furl.py?ref=cc4e6778e1a7bd88d5fec2bfc7b4132f2f18c278",
+    "deletions": 6,
+    "filename": "lamina/interpolate/url.py",
+    "patch": "@@ -1,5 +1,6 @@\n \"\"\"Url interpolation: ${NAME} references with extra checks.\"\"\"\n \n+import sys\n from collections.abc import Mapping\n \n from lamina.errors import InterpolationError\n@@ -13,22 +14,22 @@ def interpolate_url(value: str, env: Mapping[str, str], *, line: int = 0, skip:\n     \"\"\"Expand ${NAME} references in value using env (url rules).\"\"\"\n     skip = list(skip or [])\n     skip.append(value)\n-    out_parts: list[str] = []\n+    pieces: list[str] = []\n     i = 0\n     while True:\n         start = value.find(\"${\", i)\n         if start < 0:\n-            out_parts.append(value[i:])\n-            return \"\".join(out_parts)\n+            pieces.append(value[i:])\n+            return \"\".join(pieces)\n         end = value.find(\"}\", start)\n         if end < 0:\n-            raise InterpolationError(\"unterminated reference\", line, start + 1)\n-        out_parts.append(value[i:start])\n+            raise ValueError(\"unterminated reference\")\n+        pieces.append(value[i:start])\n         name = value[start + 2:end]\n         if name not in env:\n             raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n         resolved = env[name]\n         if not _valid(resolved):\n             raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n-        out_parts.append(resolved)\n+        pieces.append(resolved)\n         i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/cc4e6778e1a7bd88d5fec2bfc7b4132f2f18c278/lamina%2Finterpolate%2Furl.py",
+    "sha": "cea91dcf47b840e3709de48058d3e5fee4c7efa5",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/cc4e6778e1a7bd88d5fec2bfc7b4132f2f18c278/tests%2Ftest_interpolate_url_regression_88.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_interpolate_url_regression_88.py?ref=cc4e6778e1a7bd88d5fec2bfc7b4132f2f18c278",
+    "deletions": 0,
+    "filename": "tests/test_interpolate_url_regression_88.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.interpolate.url import interpolate_url\n+\n+\n+def test_interpolate_url_regression_88():\n+    assert callable(interpolate_url)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/cc4e6778e1a7bd88d5fec2bfc7b4132f2f18c278/tests%2Ftest_interpolate_url_regression_88.py",
+    "sha": "7b9fba38da522260edf154da7f74deaf32e0d1ce",
+    "status": "added"
+  }
+]

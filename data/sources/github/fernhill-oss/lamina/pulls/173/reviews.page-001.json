@@ -1,0 +1,122 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/173#pullrequestreview-1900006523"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/173"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Thanks! Some changes needed, see inline.",
+    "commit_id": "6d9cab7bf7869c32b5afd51d134325d997cfe6f1",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/173#pullrequestreview-1900006523",
+    "id": 1900006523,
+    "node_id": "PRR_kwDOlGM45qjG5n_d",
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/173",
+    "state": "CHANGES_REQUESTED",
+    "submitted_at": "2025-09-30T13:09:58Z",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/173#pullrequestreview-1900006581"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/173"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "",
+    "commit_id": "4929edd439f35d790c9bb04476bc40ecf4e757c5",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/173#pullrequestreview-1900006581",
+    "id": 1900006581,
+    "node_id": "PRR_kwDOffeIoj7_s7an",
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/173",
+    "state": "COMMENTED",
+    "submitted_at": "2025-10-02T21:10:58Z",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/26334211?v=4",
+      "events_url": "https://api.github.example/users/keiko-d73/events{/privacy}",
+      "followers_url": "https://api.github.example/users/keiko-d73/followers",
+      "following_url": "https://api.github.example/users/keiko-d73/following{/other_user}",
+      "gists_url": "https://api.github.example/users/keiko-d73/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/keiko-d73",
+      "id": 26334211,
+      "login": "keiko-d73",
+      "node_id": "U_kwDOjNN1mdraY4zo",
+      "organizations_url": "https://api.github.example/users/keiko-d73/orgs",
+      "received_events_url": "https://api.github.example/users/keiko-d73/received_events",
+      "repos_url": "https://api.github.example/users/keiko-d73/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/keiko-d73/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/keiko-d73/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/keiko-d73",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/173#pullrequestreview-1900006588"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/173"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Nice work, thanks!",
+    "commit_id": "4929edd439f35d790c9bb04476bc40ecf4e757c5",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/173#pullrequestreview-1900006588",
+    "id": 1900006588,
+    "node_id": "PRR_kwDOHX5xVGC_yByd",
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/173",
+    "state": "APPROVED",
+    "submitted_at": "2025-10-07T07:53:15Z",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 3,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/0509c2d18eaa0ff29922c3f9a13c9b59a997aa6a/lamina%2Fparser%2Finline_table.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fparser%2Finline_table.py?ref=0509c2d18eaa0ff29922c3f9a13c9b59a997aa6a",
+    "deletions": 3,
+    "filename": "lamina/parser/inline_table.py",
+    "patch": "@@ -5,10 +5,10 @@ from lamina.errors import ParseError\n \n def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] = []) -> list[str]:\n     skip.append(raw)\n-    textValue = raw.strip()\n-    if not (textValue.startswith(\"[\") and textValue.endswith(\"]\")):\n+    strippedText = raw.strip()\n+    if not (strippedText.startswith(\"[\") and strippedText.endswith(\"]\")):\n         raise ValueError(f\"expected [items], got {raw!r}\")\n-    inner = textValue[1:-1].strip()\n+    inner = strippedText[1:-1].strip()\n     if not inner:\n         return []\n     items = [part.strip() for part in inner.split(\",\")]",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/0509c2d18eaa0ff29922c3f9a13c9b59a997aa6a/lamina%2Fparser%2Finline_table.py",
+    "sha": "b9b46a5b60e43d14dc72f4bf707aca4a100f22a2",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/0509c2d18eaa0ff29922c3f9a13c9b59a997aa6a/tests%2Ftest_parser_inline_table_regression_275.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_parser_inline_table_regression_275.py?ref=0509c2d18eaa0ff29922c3f9a13c9b59a997aa6a",
+    "deletions": 0,
+    "filename": "tests/test_parser_inline_table_regression_275.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.parser.inline_table import parse_inline_table_value\n+\n+\n+def test_parse_inline_table_value_regression_275():\n+    assert callable(parse_inline_table_value)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/0509c2d18eaa0ff29922c3f9a13c9b59a997aa6a/tests%2Ftest_parser_inline_table_regression_275.py",
+    "sha": "c7a29f19ea4078a7aca296b6e56b58336e14e0e1",
+    "status": "added"
+  }
+]

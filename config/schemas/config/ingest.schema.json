@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "import": {
+      "properties": {
+        "allowed_licenses": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "api_version": {
+          "type": "string"
+        },
+        "default_since_months": {
+          "type": "number"
+        },
+        "max_concurrency": {
+          "type": "number"
+        },
+        "max_pulls": {
+          "type": "number"
+        },
+        "rate_reserve": {
+          "type": "number"
+        },
+        "user_agent": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "outcomes": {
+      "properties": {
+        "bug_labels": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "bug_window_days": {
+          "type": "number"
+        },
+        "follow_up_min_line_share": {
+          "type": "number"
+        },
+        "follow_up_title_regex": {
+          "type": "string"
+        },
+        "follow_up_window_days": {
+          "type": "number"
+        },
+        "revert_window_days": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "people": {
+      "properties": {
+        "maintainer_min_merges": {
+          "type": "number"
+        },
+        "rejection_window_minutes": {
+          "type": "number"
+        },
+        "reviewer_min_reviews": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "import",
+    "outcomes",
+    "people"
+  ],
+  "title": "config/ingest.yaml",
+  "type": "object"
+}

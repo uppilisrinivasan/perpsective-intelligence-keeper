@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 18,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/574bd1dd09159533b759160f4bd19fbd8b4b232a/lamina%2Fmodel%2Fstaging.py",
+    "changes": 18,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fmodel%2Fstaging.py?ref=574bd1dd09159533b759160f4bd19fbd8b4b232a",
+    "deletions": 0,
+    "filename": "lamina/model/staging.py",
+    "patch": "@@ -0,0 +1,18 @@\n+\"\"\"Merge staging layers into a base document.\"\"\"\n+\n+import sys\n+\n+from lamina.model import Document\n+\n+\n+def merge_staging(base, overlay, *, create=True, skip=None):\n+    skip = list(skip or [])\n+    skip.append(overlay.source)\n+    mergedDoc = base.copy()\n+    for section in overlay.sections():\n+        target = mergedDoc.section(section.name, create=create)\n+        if target is None:\n+            continue\n+        for entry in section.entries():\n+            target.set(entry.key, entry.value)\n+    return mergedDoc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/574bd1dd09159533b759160f4bd19fbd8b4b232a/lamina%2Fmodel%2Fstaging.py",
+    "sha": "04ead859fe1c550a7851afa0eeab89bebca31f8f",
+    "status": "added"
+  }
+]

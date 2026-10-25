@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "codereviewer": {
+      "properties": {
+        "citation": {
+          "type": "string"
+        },
+        "fields": {
+          "properties": {
+            "diff": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "licence": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "codereviewer"
+  ],
+  "title": "config/datasets.yaml",
+  "type": "object"
+}

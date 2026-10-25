@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "default_provider": {
+      "type": "string"
+    },
+    "env_allowlist": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "fallback_order": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "janitor_hours": {
+      "type": "number"
+    },
+    "keep_hours": {
+      "type": "number"
+    },
+    "limits": {
+      "properties": {
+        "address_space_mb": {
+          "type": "number"
+        },
+        "cpu_seconds": {
+          "type": "number"
+        },
+        "open_files": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "macos_profile": {
+      "type": "string"
+    },
+    "network": {
+      "type": "string"
+    },
+    "recipes": {
+      "properties": {
+        "python-pytest": {
+          "properties": {
+            "detect": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "image": {
+              "type": "string"
+            },
+            "lint": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "test": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "test_targeted": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "venv_packages": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "wheelhouse": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "test_timeout_seconds": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "default_provider",
+    "env_allowlist",
+    "fallback_order",
+    "janitor_hours",
+    "keep_hours",
+    "limits",
+    "macos_profile",
+    "network",
+    "recipes",
+    "test_timeout_seconds"
+  ],
+  "title": "config/sandbox.yaml",
+  "type": "object"
+}

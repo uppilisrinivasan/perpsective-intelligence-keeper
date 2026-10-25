@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/10763295?v=4",
+      "events_url": "https://api.github.example/users/pedro-a/events{/privacy}",
+      "followers_url": "https://api.github.example/users/pedro-a/followers",
+      "following_url": "https://api.github.example/users/pedro-a/following{/other_user}",
+      "gists_url": "https://api.github.example/users/pedro-a/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/pedro-a",
+      "id": 10763295,
+      "login": "pedro-a",
+      "node_id": "U_kwDOsnNJiUWV2gM3",
+      "organizations_url": "https://api.github.example/users/pedro-a/orgs",
+      "received_events_url": "https://api.github.example/users/pedro-a/received_events",
+      "repos_url": "https://api.github.example/users/pedro-a/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/pedro-a/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/pedro-a/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/pedro-a",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/53cbde494b9d4d0d58cb95877cded0c823255039/comments",
+    "commit": {
+      "author": {
+        "date": "2025-06-10T14:27:54Z",
+        "email": "10763295+pedro-a@users.noreply.github.example",
+        "name": "Pedro Alves"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2025-06-10T14:27:54Z",
+        "email": "10763295+pedro-a@users.noreply.github.example",
+        "name": "Pedro Alves"
+      },
+      "message": "Initial colon implementation",
+      "tree": {
+        "sha": "2ac71ac25664aae7024b669e574f8633173c5243",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/2ac71ac25664aae7024b669e574f8633173c5243"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/53cbde494b9d4d0d58cb95877cded0c823255039",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/10763295?v=4",
+      "events_url": "https://api.github.example/users/pedro-a/events{/privacy}",
+      "followers_url": "https://api.github.example/users/pedro-a/followers",
+      "following_url": "https://api.github.example/users/pedro-a/following{/other_user}",
+      "gists_url": "https://api.github.example/users/pedro-a/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/pedro-a",
+      "id": 10763295,
+      "login": "pedro-a",
+      "node_id": "U_kwDOsnNJiUWV2gM3",
+      "organizations_url": "https://api.github.example/users/pedro-a/orgs",
+      "received_events_url": "https://api.github.example/users/pedro-a/received_events",
+      "repos_url": "https://api.github.example/users/pedro-a/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/pedro-a/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/pedro-a/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/pedro-a",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/53cbde494b9d4d0d58cb95877cded0c823255039",
+    "node_id": "C_kwDObVSC6lqkv0WM",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/5ce75ebf8959383f30768ffc24b2bb19331475aa",
+        "sha": "5ce75ebf8959383f30768ffc24b2bb19331475aa",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/5ce75ebf8959383f30768ffc24b2bb19331475aa"
+      }
+    ],
+    "sha": "53cbde494b9d4d0d58cb95877cded0c823255039",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/53cbde494b9d4d0d58cb95877cded0c823255039"
+  }
+]

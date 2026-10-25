@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/5913731008a5a4fc2954ce31d23cd2fd21cb309c/tests%2Ftest_include_quoted_regression_286.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_include_quoted_regression_286.py?ref=5913731008a5a4fc2954ce31d23cd2fd21cb309c",
+    "deletions": 0,
+    "filename": "tests/test_include_quoted_regression_286.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.include.quoted import resolve_quoted_include\n+\n+\n+def test_resolve_quoted_include_regression_286():\n+    assert callable(resolve_quoted_include)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/5913731008a5a4fc2954ce31d23cd2fd21cb309c/tests%2Ftest_include_quoted_regression_286.py",
+    "sha": "25e40c3356bfac9a873334e90133aa1d9950ffa5",
+    "status": "added"
+  }
+]

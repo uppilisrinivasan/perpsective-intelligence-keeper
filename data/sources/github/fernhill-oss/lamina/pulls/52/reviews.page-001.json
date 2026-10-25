@@ -1,0 +1,42 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/52#pullrequestreview-1900002170"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/52"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "LGTM",
+    "commit_id": "9995d894bca6251d4725b31cf86dd2cb351c836c",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/52#pullrequestreview-1900002170",
+    "id": 1900002170,
+    "node_id": "PRR_kwDOB8Y-U0o8ubp4",
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/52",
+    "state": "APPROVED",
+    "submitted_at": "2024-06-21T16:21:27Z",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1817105?v=4",
+      "events_url": "https://api.github.example/users/kofi-a/events{/privacy}",
+      "followers_url": "https://api.github.example/users/kofi-a/followers",
+      "following_url": "https://api.github.example/users/kofi-a/following{/other_user}",
+      "gists_url": "https://api.github.example/users/kofi-a/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/kofi-a",
+      "id": 1817105,
+      "login": "kofi-a",
+      "node_id": "U_kwDOOABc0HW00zlc",
+      "organizations_url": "https://api.github.example/users/kofi-a/orgs",
+      "received_events_url": "https://api.github.example/users/kofi-a/received_events",
+      "repos_url": "https://api.github.example/users/kofi-a/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/kofi-a/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/kofi-a/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/kofi-a",
+      "user_view_type": "public"
+    }
+  }
+]

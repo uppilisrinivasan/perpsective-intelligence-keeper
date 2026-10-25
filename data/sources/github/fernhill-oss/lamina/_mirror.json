@@ -1,0 +1,47 @@
+{
+  "api_base": "https://api.github.example",
+  "api_version": "2022-11-28",
+  "endpoints": {
+    "issues/index.page-001.json": {
+      "etag": null,
+      "pages": 1
+    },
+    "issues/index.page-002.json": {
+      "etag": null,
+      "pages": 1
+    },
+    "issues/index.page-003.json": {
+      "etag": null,
+      "pages": 1
+    },
+    "issues/index.page-004.json": {
+      "etag": null,
+      "pages": 1
+    },
+    "labels.page-001.json": {
+      "etag": null,
+      "pages": 1
+    },
+    "pulls/index.page-001.json": {
+      "etag": null,
+      "pages": 1
+    },
+    "pulls/index.page-002.json": {
+      "etag": null,
+      "pages": 1
+    },
+    "pulls/index.page-003.json": {
+      "etag": null,
+      "pages": 1
+    },
+    "repo.json": {
+      "etag": null,
+      "pages": 1
+    }
+  },
+  "generated_at": "2026-10-19T08:00:00Z",
+  "generated_by": "keeper-datagen 0.1.0",
+  "html_base": "https://github.example",
+  "owner": "fernhill-oss",
+  "repo": "lamina"
+}

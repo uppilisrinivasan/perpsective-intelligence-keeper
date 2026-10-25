@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 3,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/93b1f7aae0056a99c1fc26cb3586718779f8fa92/lamina%2Fparser%2Fsetlike.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fparser%2Fsetlike.py?ref=93b1f7aae0056a99c1fc26cb3586718779f8fa92",
+    "deletions": 3,
+    "filename": "lamina/parser/setlike.py",
+    "patch": "@@ -7,10 +7,10 @@ def parse_setlike_value(raw: str, line: int, column: int, *, skip: list[str] | N\n     \"\"\"Parse a [a, b, c] setlike value into its items.\"\"\"\n     skip = list(skip or [])\n     skip.append(raw)\n-    strippedText = raw.strip()\n-    if not (strippedText.startswith(\"[\") and strippedText.endswith(\"]\")):\n+    text_value = raw.strip()\n+    if not (text_value.startswith(\"[\") and text_value.endswith(\"]\")):\n         raise ParseError(f\"expected [items], got {raw!r}\", line, column)\n-    inner = strippedText[1:-1].strip()\n+    inner = text_value[1:-1].strip()\n     if not inner:\n         return []\n     items = [part.strip() for part in inner.split(\",\")]",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/93b1f7aae0056a99c1fc26cb3586718779f8fa92/lamina%2Fparser%2Fsetlike.py",
+    "sha": "f448369d998bdc574700a68333c1a0a5bfc18f83",
+    "status": "modified"
+  }
+]

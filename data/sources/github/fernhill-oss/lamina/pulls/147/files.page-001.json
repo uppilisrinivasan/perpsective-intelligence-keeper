@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 22,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/4fd24a04c2f26f01d8e33342db3312c735a862c8/lamina%2Fdiagnostics%2Fempty_value.py",
+    "changes": 22,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdiagnostics%2Fempty_value.py?ref=4fd24a04c2f26f01d8e33342db3312c735a862c8",
+    "deletions": 0,
+    "filename": "lamina/diagnostics/empty_value.py",
+    "patch": "@@ -0,0 +1,22 @@\n+\"\"\"The EmptyValueError error and its helper.\"\"\"\n+\n+try:\n+    import tomli  # noqa: F401\n+except ImportError:  # pragma: no cover\n+    tomli = None\n+\n+from lamina.errors import LaminaError\n+\n+\n+class EmptyValueError(LaminaError):\n+    \"\"\"Raised for empty value problems.\"\"\"\n+\n+\n+def raise_empty_value(message: str, line: int, column: int, *, skip: list[str] | None = None) -> None:\n+    \"\"\"Raise EmptyValueError for message at line and column.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(message)\n+    full_message = message if message.endswith(\".\") else message + \".\"\n+    if line < 1:\n+        raise EmptyValueError(full_message, 1, max(column, 1))\n+    raise EmptyValueError(full_message, line, column)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/4fd24a04c2f26f01d8e33342db3312c735a862c8/lamina%2Fdiagnostics%2Fempty_value.py",
+    "sha": "60f9e93b84ddc99b5bd58e22bd7d6f9cbdf90c25",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/4fd24a04c2f26f01d8e33342db3312c735a862c8/tests%2Ftest_errors_empty_value.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_errors_empty_value.py?ref=4fd24a04c2f26f01d8e33342db3312c735a862c8",
+    "deletions": 0,
+    "filename": "tests/test_errors_empty_value.py",
+    "patch": "@@ -0,0 +1,13 @@\n+import pytest\n+\n+from lamina.diagnostics.empty_value import EmptyValueError, raise_empty_value\n+\n+\n+def test_empty_value_raises():\n+    with pytest.raises(EmptyValueError):\n+        raise_empty_value(\"bad\", 2, 3)\n+\n+\n+def test_empty_value_line_zero():\n+    with pytest.raises(EmptyValueError):\n+        raise_empty_value(\"bad\", 0, 0)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/4fd24a04c2f26f01d8e33342db3312c735a862c8/tests%2Ftest_errors_empty_value.py",
+    "sha": "8f9436614fe12ed76e7dd171378ad391c1f6286f",
+    "status": "added"
+  }
+]

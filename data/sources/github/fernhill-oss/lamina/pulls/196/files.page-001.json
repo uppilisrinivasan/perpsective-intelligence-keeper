@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 3,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/a24cd955d24e62b2f52c54435758c6f7e9d20d1f/lamina%2Fcli%2Ffmt.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fcli%2Ffmt.py?ref=a24cd955d24e62b2f52c54435758c6f7e9d20d1f",
+    "deletions": 3,
+    "filename": "lamina/cli/fmt.py",
+    "patch": "@@ -12,9 +12,9 @@ def cmd_fmt(argv: list[str], *, skip: list[str] | None = None) -> int:\n     if len(argv) != 1:\n         print(\"usage: lamina fmt FILE\", file=sys.stderr)\n         return 2\n-    with open(argv[0], encoding=\"utf-8\") as fh:\n-        source_text = fh.read()\n-    doc = parse(source_text, source=argv[0])\n+    with open(argv[0]) as fh:\n+        file_content = fh.read()\n+    doc = parse(file_content, source=argv[0])\n     for section in doc.sections():\n         print(f\"{section.name}: {len(section.entries())}\")\n     return 0",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/a24cd955d24e62b2f52c54435758c6f7e9d20d1f/lamina%2Fcli%2Ffmt.py",
+    "sha": "86973325d863a65f74b39ed41f329833bbbf3ae5",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/a24cd955d24e62b2f52c54435758c6f7e9d20d1f/tests%2Ftest_cli_fmt_regression_196.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_cli_fmt_regression_196.py?ref=a24cd955d24e62b2f52c54435758c6f7e9d20d1f",
+    "deletions": 0,
+    "filename": "tests/test_cli_fmt_regression_196.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.cli.fmt import cmd_fmt\n+\n+\n+def test_cmd_fmt_regression_196():\n+    assert callable(cmd_fmt)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/a24cd955d24e62b2f52c54435758c6f7e9d20d1f/tests%2Ftest_cli_fmt_regression_196.py",
+    "sha": "6f59ab9e2e7f72d03756b3bb55f8c95001fc898b",
+    "status": "added"
+  }
+]

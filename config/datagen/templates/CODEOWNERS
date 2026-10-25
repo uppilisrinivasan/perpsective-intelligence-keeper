@@ -1,0 +1,6 @@
+# Owners are requested for review automatically.
+*                       @{maintainer}
+/scripts/               @{maintainer} @{security}
+/.github/               @{maintainer} @{security}
+/lamina/include/        @{maintainer} @{security}
+/lamina/interpolate/    @{maintainer} @{security}

@@ -1,0 +1,166 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/4507763?v=4",
+      "events_url": "https://api.github.example/users/sofia-g/events{/privacy}",
+      "followers_url": "https://api.github.example/users/sofia-g/followers",
+      "following_url": "https://api.github.example/users/sofia-g/following{/other_user}",
+      "gists_url": "https://api.github.example/users/sofia-g/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/sofia-g",
+      "id": 4507763,
+      "login": "sofia-g",
+      "node_id": "U_kwDOxU6XWRAF6MTw",
+      "organizations_url": "https://api.github.example/users/sofia-g/orgs",
+      "received_events_url": "https://api.github.example/users/sofia-g/received_events",
+      "repos_url": "https://api.github.example/users/sofia-g/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/sofia-g/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/sofia-g/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/sofia-g",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/2998dd381c9dfdde26c4fd9c5c4f735755003e1b/comments",
+    "commit": {
+      "author": {
+        "date": "2024-06-26T14:17:55Z",
+        "email": "4507763+sofia-g@users.noreply.github.example",
+        "name": "Sofia Greco"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2024-06-26T14:17:55Z",
+        "email": "4507763+sofia-g@users.noreply.github.example",
+        "name": "Sofia Greco"
+      },
+      "message": "Add compressed sample fixture for the loader tests",
+      "tree": {
+        "sha": "e38445ce0eff0f283ff51fea092d649423628a16",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/e38445ce0eff0f283ff51fea092d649423628a16"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/2998dd381c9dfdde26c4fd9c5c4f735755003e1b",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/4507763?v=4",
+      "events_url": "https://api.github.example/users/sofia-g/events{/privacy}",
+      "followers_url": "https://api.github.example/users/sofia-g/followers",
+      "following_url": "https://api.github.example/users/sofia-g/following{/other_user}",
+      "gists_url": "https://api.github.example/users/sofia-g/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/sofia-g",
+      "id": 4507763,
+      "login": "sofia-g",
+      "node_id": "U_kwDOxU6XWRAF6MTw",
+      "organizations_url": "https://api.github.example/users/sofia-g/orgs",
+      "received_events_url": "https://api.github.example/users/sofia-g/received_events",
+      "repos_url": "https://api.github.example/users/sofia-g/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/sofia-g/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/sofia-g/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/sofia-g",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/2998dd381c9dfdde26c4fd9c5c4f735755003e1b",
+    "node_id": "C_kwDOblz99rNBFXKM",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/335b5911da6856ff872756990bea3d0a4063410c",
+        "sha": "335b5911da6856ff872756990bea3d0a4063410c",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/335b5911da6856ff872756990bea3d0a4063410c"
+      }
+    ],
+    "sha": "2998dd381c9dfdde26c4fd9c5c4f735755003e1b",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/2998dd381c9dfdde26c4fd9c5c4f735755003e1b"
+  },
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/4507763?v=4",
+      "events_url": "https://api.github.example/users/sofia-g/events{/privacy}",
+      "followers_url": "https://api.github.example/users/sofia-g/followers",
+      "following_url": "https://api.github.example/users/sofia-g/following{/other_user}",
+      "gists_url": "https://api.github.example/users/sofia-g/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/sofia-g",
+      "id": 4507763,
+      "login": "sofia-g",
+      "node_id": "U_kwDOxU6XWRAF6MTw",
+      "organizations_url": "https://api.github.example/users/sofia-g/orgs",
+      "received_events_url": "https://api.github.example/users/sofia-g/received_events",
+      "repos_url": "https://api.github.example/users/sofia-g/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/sofia-g/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/sofia-g/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/sofia-g",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/f914ae0f7ded07afde4052011051c5422024ed16/comments",
+    "commit": {
+      "author": {
+        "date": "2024-06-29T11:21:46Z",
+        "email": "4507763+sofia-g@users.noreply.github.example",
+        "name": "Sofia Greco"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2024-06-29T11:21:46Z",
+        "email": "4507763+sofia-g@users.noreply.github.example",
+        "name": "Sofia Greco"
+      },
+      "message": "Update after review",
+      "tree": {
+        "sha": "5641c9ab97d3400c1ae4f578097d296d95bf1a92",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/5641c9ab97d3400c1ae4f578097d296d95bf1a92"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/f914ae0f7ded07afde4052011051c5422024ed16",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/4507763?v=4",
+      "events_url": "https://api.github.example/users/sofia-g/events{/privacy}",
+      "followers_url": "https://api.github.example/users/sofia-g/followers",
+      "following_url": "https://api.github.example/users/sofia-g/following{/other_user}",
+      "gists_url": "https://api.github.example/users/sofia-g/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/sofia-g",
+      "id": 4507763,
+      "login": "sofia-g",
+      "node_id": "U_kwDOxU6XWRAF6MTw",
+      "organizations_url": "https://api.github.example/users/sofia-g/orgs",
+      "received_events_url": "https://api.github.example/users/sofia-g/received_events",
+      "repos_url": "https://api.github.example/users/sofia-g/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/sofia-g/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/sofia-g/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/sofia-g",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/f914ae0f7ded07afde4052011051c5422024ed16",
+    "node_id": "C_kwDOaEUkTxqdeavK",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/2998dd381c9dfdde26c4fd9c5c4f735755003e1b",
+        "sha": "2998dd381c9dfdde26c4fd9c5c4f735755003e1b",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/2998dd381c9dfdde26c4fd9c5c4f735755003e1b"
+      }
+    ],
+    "sha": "f914ae0f7ded07afde4052011051c5422024ed16",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/f914ae0f7ded07afde4052011051c5422024ed16"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 4,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/1ac4d03d06a49c5b7597bafa3845a4b576bceb7b/lamina%2Fdump%2Fwrapped.py",
+    "changes": 9,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Fwrapped.py?ref=1ac4d03d06a49c5b7597bafa3845a4b576bceb7b",
+    "deletions": 5,
+    "filename": "lamina/dump/wrapped.py",
+    "patch": "@@ -3,17 +3,16 @@\n from lamina.model import Blank, Comment, Document, Entry\n \n \n-def dumps_wrapped(doc, *, indent=0, skip=None):\n+def dumps_wrapped(doc, *, indent=0, skip=[]):\n     \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n-    skip = list(skip or [])\n     skip.append(doc.source)\n-    padText = \" \" * indent\n+    prefixText = \" \" * indent\n     lines: list[str] = []\n     for section in doc.sections():\n         lines.append(f\"[{section.name}]\")\n-        for item in sorted(section.items, key=lambda i: getattr(i, \"key\", \"\")):\n+        for item in section.items:\n             if isinstance(item, Entry):\n-                lines.append(f\"{padText}{item.key} = {item.value}\")\n+                lines.append(f\"{prefixText}{item.key} = {item.value}\")\n             elif isinstance(item, Comment):\n                 lines.append(item.text)\n             elif isinstance(item, Blank):",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/1ac4d03d06a49c5b7597bafa3845a4b576bceb7b/lamina%2Fdump%2Fwrapped.py",
+    "sha": "0e0cc947ffe6805d7bd360a5c51396b3baf1e7d5",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/1ac4d03d06a49c5b7597bafa3845a4b576bceb7b/tests%2Ftest_dump_wrapped_regression_20.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_wrapped_regression_20.py?ref=1ac4d03d06a49c5b7597bafa3845a4b576bceb7b",
+    "deletions": 0,
+    "filename": "tests/test_dump_wrapped_regression_20.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.dump.wrapped import dumps_wrapped\n+\n+\n+def test_dumps_wrapped_regression_20():\n+    assert callable(dumps_wrapped)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/1ac4d03d06a49c5b7597bafa3845a4b576bceb7b/tests%2Ftest_dump_wrapped_regression_20.py",
+    "sha": "bc266be56cbe9525536847b0e9e6b9b858ef898f",
+    "status": "added"
+  }
+]

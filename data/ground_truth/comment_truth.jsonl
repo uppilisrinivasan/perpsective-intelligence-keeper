@@ -1,0 +1,942 @@
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000006, "planted": [], "pr_number": 1, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000010, "planted": [], "pr_number": 1, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000025, "planted": [], "pr_number": 2, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000052, "planted": [], "pr_number": 3, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000016, "planted": [{"severity": "major", "slot": "S4"}], "pr_number": 4, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000030, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 4, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000053, "planted": [], "pr_number": 4, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "diego-f", "comment_kind": "review_comment", "id": 1700000062, "planted": [], "pr_number": 4, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000102, "planted": [], "pr_number": 4, "question": false, "social": true, "state": "APPROVED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900000131, "planted": [], "pr_number": 5, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000132, "planted": [], "pr_number": 5, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review_comment", "id": 1700000094, "planted": [{"severity": "major", "slot": "T1"}], "pr_number": 5, "question": false, "social": false}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900000142, "planted": [], "pr_number": 5, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "ingrid-s", "comment_kind": "review_comment", "id": 1700000131, "planted": [], "pr_number": 5, "question": false, "social": true}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900000199, "planted": [], "pr_number": 5, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000143, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 6, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000207, "planted": [], "pr_number": 6, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000209, "planted": [], "pr_number": 5, "question": false, "social": true, "state": "APPROVED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900000217, "planted": [], "pr_number": 5, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000019, "planted": [], "pr_number": 7, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000247, "planted": [], "pr_number": 6, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000170, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 8, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000188, "planted": [{"severity": "major", "slot": "S4"}], "pr_number": 8, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000257, "planted": [], "pr_number": 8, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "isla-r63", "comment_kind": "review_comment", "id": 1700000189, "planted": [], "pr_number": 8, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000217, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 8, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000302, "planted": [], "pr_number": 8, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "isla-r63", "comment_kind": "review_comment", "id": 1700000227, "planted": [], "pr_number": 8, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000324, "planted": [], "pr_number": 8, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review_comment", "id": 1700000230, "planted": [{"severity": "major", "slot": "T4"}], "pr_number": 9, "question": false, "social": false}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900000340, "planted": [], "pr_number": 9, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000250, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 9, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000282, "planted": [{"severity": "major", "slot": "E1"}], "pr_number": 9, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000305, "planted": [{"severity": "minor", "slot": "B2"}], "pr_number": 9, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000342, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 9, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000359, "planted": [], "pr_number": 9, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "bram-h21", "comment_kind": "review_comment", "id": 1700000350, "planted": [], "pr_number": 9, "question": false, "social": true}
+{"ack": true, "author": "bram-h21", "comment_kind": "review_comment", "id": 1700000355, "planted": [], "pr_number": 9, "question": false, "social": true}
+{"ack": true, "author": "bram-h21", "comment_kind": "review_comment", "id": 1700000361, "planted": [], "pr_number": 9, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000031, "planted": [], "pr_number": 9, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000457, "planted": [], "pr_number": 9, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000371, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 7, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000475, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 7, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"author": "ravi-m", "comment_kind": "review_comment", "id": 1700000388, "planted": [{"severity": "major", "slot": "T3"}], "pr_number": 9, "question": false, "social": false}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900000493, "planted": [], "pr_number": 9, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": false, "author": "omar-h", "comment_kind": "review_comment", "id": 1700000417, "planted": [], "pr_number": 7, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000541, "planted": [], "pr_number": 9, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000544, "planted": [], "pr_number": 7, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000064, "planted": [], "pr_number": 11, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000569, "planted": [], "pr_number": 11, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000597, "planted": [], "pr_number": 10, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000426, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 13, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000457, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 13, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000630, "planted": [], "pr_number": 13, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "max-d", "comment_kind": "review_comment", "id": 1700000471, "planted": [], "pr_number": 13, "question": false, "social": true}
+{"ack": true, "author": "max-d", "comment_kind": "review_comment", "id": 1700000495, "planted": [], "pr_number": 13, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000682, "planted": [], "pr_number": 13, "question": false, "social": false, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900000701, "planted": [], "pr_number": 16, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000513, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 15, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000708, "planted": [], "pr_number": 15, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "hana-t", "comment_kind": "review_comment", "id": 1700000546, "planted": [], "pr_number": 15, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000757, "planted": [], "pr_number": 15, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000777, "planted": [], "pr_number": 17, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000087, "planted": [], "pr_number": 21, "question": false, "rejection": false, "social": true}
+{"author": "ravi-m", "comment_kind": "review_comment", "id": 1700000572, "planted": [{"severity": "major", "slot": "T4"}], "pr_number": 21, "question": false, "social": false}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900000780, "planted": [], "pr_number": 21, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900000795, "planted": [], "pr_number": 21, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000575, "planted": [{"severity": "major", "slot": "E1"}], "pr_number": 22, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000585, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 22, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000598, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 22, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000798, "planted": [], "pr_number": 22, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "alex-c64", "comment_kind": "review_comment", "id": 1700000606, "planted": [], "pr_number": 22, "question": false, "social": true}
+{"ack": true, "author": "alex-c64", "comment_kind": "review_comment", "id": 1700000612, "planted": [], "pr_number": 22, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000635, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 18, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000649, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 18, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000669, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 18, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000859, "planted": [], "pr_number": 18, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000675, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 22, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000885, "planted": [], "pr_number": 22, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "cleo-l82", "comment_kind": "review_comment", "id": 1700000699, "planted": [], "pr_number": 18, "question": false, "social": true}
+{"ack": true, "author": "cleo-l82", "comment_kind": "review_comment", "id": 1700000732, "planted": [], "pr_number": 18, "question": false, "social": true}
+{"ack": true, "author": "cleo-l82", "comment_kind": "review_comment", "id": 1700000762, "planted": [], "pr_number": 18, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000775, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 18, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000960, "planted": [], "pr_number": 18, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900000976, "planted": [], "pr_number": 22, "question": false, "social": true, "state": "APPROVED"}
+{"ack": true, "author": "cleo-l82", "comment_kind": "review_comment", "id": 1700000800, "planted": [], "pr_number": 18, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001017, "planted": [], "pr_number": 23, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001022, "planted": [], "pr_number": 18, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000818, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 20, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000853, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 20, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001036, "planted": [], "pr_number": 20, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900001051, "planted": [], "pr_number": 20, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900001085, "planted": [], "pr_number": 26, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000092, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"ack": true, "author": "dev-d87", "comment_kind": "review_comment", "id": 1700000878, "planted": [], "pr_number": 20, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001133, "planted": [], "pr_number": 20, "question": false, "social": true, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900001164, "planted": [], "pr_number": 20, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000890, "planted": [{"severity": "major", "slot": "E7"}], "pr_number": 27, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001196, "planted": [], "pr_number": 27, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000919, "planted": [{"severity": "minor", "slot": "B2"}], "pr_number": 27, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000925, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 27, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001205, "planted": [], "pr_number": 27, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000128, "planted": [], "pr_number": 28, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000941, "planted": [{"severity": "major", "slot": "E7"}], "pr_number": 28, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000967, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 28, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700000971, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 28, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001206, "planted": [], "pr_number": 28, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "mina-f62", "comment_kind": "review_comment", "id": 1700000982, "planted": [], "pr_number": 28, "question": false, "social": true}
+{"ack": true, "author": "mina-f62", "comment_kind": "review_comment", "id": 1700001019, "planted": [], "pr_number": 28, "question": false, "social": true}
+{"ack": true, "author": "mina-f62", "comment_kind": "review_comment", "id": 1700001050, "planted": [], "pr_number": 28, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001278, "planted": [], "pr_number": 28, "question": false, "social": false, "state": "APPROVED"}
+{"ack": true, "author": "noor-s", "comment_kind": "review_comment", "id": 1700001076, "planted": [], "pr_number": 27, "question": false, "social": true}
+{"ack": true, "author": "noor-s", "comment_kind": "review_comment", "id": 1700001097, "planted": [], "pr_number": 27, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001344, "planted": [], "pr_number": 27, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001349, "planted": [], "pr_number": 29, "question": false, "social": false, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review_comment", "id": 1700001104, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 30, "question": false, "social": false}
+{"author": "lena-b", "comment_kind": "review_comment", "id": 1700001138, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 30, "question": false, "social": false}
+{"author": "lena-b", "comment_kind": "review", "id": 1900001365, "planted": [], "pr_number": 30, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "sofia-g", "comment_kind": "review_comment", "id": 1700001151, "planted": [], "pr_number": 30, "question": false, "social": true}
+{"ack": true, "author": "sofia-g", "comment_kind": "review_comment", "id": 1700001171, "planted": [], "pr_number": 30, "question": false, "social": true}
+{"author": "lena-b", "comment_kind": "review", "id": 1900001407, "planted": [], "pr_number": 32, "question": false, "social": false, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900001430, "planted": [], "pr_number": 30, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001198, "planted": [{"severity": "major", "slot": "E8"}], "pr_number": 36, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001217, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 36, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001452, "planted": [], "pr_number": 36, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900001488, "planted": [], "pr_number": 36, "question": false, "social": true, "state": "APPROVED"}
+{"ack": true, "author": "alex-p88", "comment_kind": "review_comment", "id": 1700001238, "planted": [], "pr_number": 36, "question": false, "social": true}
+{"ack": true, "author": "alex-p88", "comment_kind": "review_comment", "id": 1700001248, "planted": [], "pr_number": 36, "question": false, "social": true}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900001525, "planted": [], "pr_number": 36, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001537, "planted": [], "pr_number": 36, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001263, "planted": [{"severity": "minor", "slot": "E4"}], "pr_number": 38, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001271, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 38, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001289, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 38, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001553, "planted": [], "pr_number": 38, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900001569, "planted": [], "pr_number": 39, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001301, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 39, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001313, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 39, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001586, "planted": [], "pr_number": 39, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "ada-l", "comment_kind": "review_comment", "id": 1700001350, "planted": [], "pr_number": 39, "question": false, "social": true}
+{"ack": true, "author": "ada-l", "comment_kind": "review_comment", "id": 1700001383, "planted": [], "pr_number": 39, "question": false, "social": true}
+{"ack": false, "author": "mei-c", "comment_kind": "review_comment", "id": 1700001407, "planted": [], "pr_number": 38, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000164, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900001688, "planted": [], "pr_number": 39, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001432, "planted": [{"severity": "major", "slot": "E8"}], "pr_number": 39, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001447, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 39, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001455, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 39, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001711, "planted": [], "pr_number": 39, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": false, "author": "ada-l", "comment_kind": "review_comment", "id": 1700001457, "planted": [], "pr_number": 39, "question": false, "social": true}
+{"ack": true, "author": "ada-l", "comment_kind": "review_comment", "id": 1700001466, "planted": [], "pr_number": 39, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001736, "planted": [], "pr_number": 38, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001742, "planted": [], "pr_number": 39, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001490, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 41, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001770, "planted": [], "pr_number": 41, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "priya-k", "comment_kind": "review_comment", "id": 1700001523, "planted": [], "pr_number": 41, "question": false, "social": true}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000201, "planted": [], "pr_number": 42, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001802, "planted": [], "pr_number": 41, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001544, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 42, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001815, "planted": [], "pr_number": 42, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "vera-d23", "comment_kind": "review_comment", "id": 1700001581, "planted": [], "pr_number": 42, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000203, "planted": [], "pr_number": 43, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001852, "planted": [], "pr_number": 43, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001592, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 42, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001624, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 42, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001884, "planted": [], "pr_number": 42, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001914, "planted": [], "pr_number": 42, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900001941, "planted": [], "pr_number": 46, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000209, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001642, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 44, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001947, "planted": [], "pr_number": 44, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "oskar-l", "comment_kind": "review_comment", "id": 1700001646, "planted": [], "pr_number": 44, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001651, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 44, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900001985, "planted": [], "pr_number": 44, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "oskar-l", "comment_kind": "review_comment", "id": 1700001680, "planted": [], "pr_number": 44, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002045, "planted": [], "pr_number": 44, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002061, "planted": [], "pr_number": 48, "question": false, "social": true, "state": "APPROVED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900002065, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 51, "question": false, "social": false, "state": "COMMENTED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900002079, "planted": [], "pr_number": 51, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002102, "planted": [], "pr_number": 53, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900002139, "planted": [], "pr_number": 53, "question": false, "social": true, "state": "APPROVED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900002170, "planted": [], "pr_number": 52, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001697, "planted": [{"severity": "major", "slot": "E3"}], "pr_number": 54, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002188, "planted": [], "pr_number": 54, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900002210, "planted": [{"severity": "major", "slot": "T1"}, {"severity": "major", "slot": "T2"}], "pr_number": 55, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002221, "planted": [], "pr_number": 55, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002237, "planted": [], "pr_number": 54, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900002250, "planted": [], "pr_number": 55, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001731, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 58, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001738, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 58, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002273, "planted": [], "pr_number": 58, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": false, "author": "priya-k", "comment_kind": "review_comment", "id": 1700001759, "planted": [], "pr_number": 58, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002320, "planted": [], "pr_number": 59, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001773, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 58, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002341, "planted": [], "pr_number": 58, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002359, "planted": [], "pr_number": 58, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001777, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 57, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002390, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 57, "question": false, "social": false, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002408, "planted": [], "pr_number": 60, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review_comment", "id": 1700001797, "planted": [{"severity": "major", "slot": "T1"}], "pr_number": 60, "question": false, "social": false}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900002443, "planted": [], "pr_number": 60, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900002466, "planted": [], "pr_number": 60, "question": false, "social": true, "state": "APPROVED"}
+{"ack": true, "author": "mei-c", "comment_kind": "review_comment", "id": 1700001822, "planted": [], "pr_number": 60, "question": false, "social": true}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900002517, "planted": [], "pr_number": 60, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002529, "planted": [], "pr_number": 60, "question": false, "social": false, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900002553, "planted": [], "pr_number": 60, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002571, "planted": [], "pr_number": 57, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000221, "planted": [], "pr_number": 63, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002598, "planted": [], "pr_number": 63, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000239, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002632, "planted": [], "pr_number": 64, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001826, "planted": [{"severity": "minor", "slot": "E4"}], "pr_number": 65, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001827, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 65, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002664, "planted": [], "pr_number": 65, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "sam-j", "comment_kind": "review_comment", "id": 1700001845, "planted": [], "pr_number": 65, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001874, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 65, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002695, "planted": [], "pr_number": 65, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "sam-j", "comment_kind": "review_comment", "id": 1700001879, "planted": [], "pr_number": 65, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002728, "planted": [], "pr_number": 65, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000263, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "kofi-a", "comment_kind": "review_comment", "id": 1700001882, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 66, "question": false, "social": false}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900002752, "planted": [], "pr_number": 66, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001900, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 67, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002779, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 67, "question": false, "social": false, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000296, "planted": [], "pr_number": 67, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002812, "planted": [], "pr_number": 67, "question": false, "social": false, "state": "APPROVED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900002813, "planted": [], "pr_number": 66, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001931, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 73, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002844, "planted": [{"severity": "major", "slot": "E5"}, {"severity": "major", "slot": "E7"}], "pr_number": 73, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000326, "planted": [], "pr_number": 73, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002857, "planted": [], "pr_number": 73, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001958, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 74, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700001991, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 74, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002012, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 74, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002892, "planted": [], "pr_number": 74, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "bram-g92", "comment_kind": "review_comment", "id": 1700002032, "planted": [], "pr_number": 74, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000354, "planted": [], "pr_number": 74, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002938, "planted": [], "pr_number": 74, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000384, "planted": [], "pr_number": 77, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002040, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 76, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002067, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 76, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002972, "planted": [], "pr_number": 76, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900002990, "planted": [], "pr_number": 78, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000397, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002093, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 77, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002119, "planted": [{"severity": "major", "slot": "E1"}], "pr_number": 77, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002155, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 77, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003008, "planted": [], "pr_number": 77, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ravi-m", "comment_kind": "review_comment", "id": 1700002185, "planted": [{"severity": "major", "slot": "T4"}], "pr_number": 77, "question": false, "social": false}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900003028, "planted": [], "pr_number": 77, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "cleo-j77", "comment_kind": "review_comment", "id": 1700002205, "planted": [], "pr_number": 77, "question": false, "social": true}
+{"ack": true, "author": "cleo-j77", "comment_kind": "review_comment", "id": 1700002242, "planted": [], "pr_number": 77, "question": false, "social": true}
+{"ack": true, "author": "cleo-j77", "comment_kind": "review_comment", "id": 1700002245, "planted": [], "pr_number": 77, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003096, "planted": [], "pr_number": 77, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900003109, "planted": [], "pr_number": 77, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002262, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 76, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003116, "planted": [], "pr_number": 76, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003125, "planted": [], "pr_number": 76, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002288, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 79, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002318, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 79, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003139, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 79, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "umar-j85", "comment_kind": "review_comment", "id": 1700002355, "planted": [], "pr_number": 79, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003166, "planted": [], "pr_number": 79, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003179, "planted": [], "pr_number": 81, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003199, "planted": [], "pr_number": 82, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003214, "planted": [], "pr_number": 86, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002388, "planted": [{"severity": "major", "slot": "E8"}], "pr_number": 88, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002401, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 88, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002416, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 88, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003246, "planted": [], "pr_number": 88, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900003264, "planted": [], "pr_number": 88, "question": false, "social": false, "state": "APPROVED"}
+{"ack": false, "author": "mateo-r", "comment_kind": "review_comment", "id": 1700002450, "planted": [], "pr_number": 88, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000417, "planted": [], "pr_number": 87, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003313, "planted": [], "pr_number": 87, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900003326, "planted": [], "pr_number": 88, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003327, "planted": [], "pr_number": 88, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003335, "planted": [], "pr_number": 89, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900003340, "planted": [], "pr_number": 89, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000425, "planted": [], "pr_number": 91, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002462, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 91, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003369, "planted": [], "pr_number": 91, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900003378, "planted": [], "pr_number": 93, "question": false, "social": true, "state": "APPROVED"}
+{"ack": true, "author": "felix-w", "comment_kind": "review_comment", "id": 1700002475, "planted": [], "pr_number": 91, "question": false, "social": true}
+{"author": "ravi-m", "comment_kind": "review_comment", "id": 1700002494, "planted": [{"severity": "major", "slot": "T4"}], "pr_number": 92, "question": false, "social": false}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900003387, "planted": [], "pr_number": 92, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000454, "planted": [], "pr_number": 91, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003388, "planted": [], "pr_number": 91, "question": false, "social": false, "state": "APPROVED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900003400, "planted": [], "pr_number": 94, "question": false, "social": true, "state": "APPROVED"}
+{"ack": true, "author": "priya-k", "comment_kind": "review_comment", "id": 1700002497, "planted": [], "pr_number": 92, "question": false, "social": true}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900003441, "planted": [], "pr_number": 92, "question": false, "social": true, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900003444, "planted": [], "pr_number": 95, "question": false, "social": false, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review_comment", "id": 1700002525, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 96, "question": false, "social": false}
+{"author": "lena-b", "comment_kind": "review", "id": 1900003454, "planted": [], "pr_number": 96, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900003461, "planted": [], "pr_number": 97, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000478, "planted": [], "pr_number": 98, "question": false, "rejection": false, "social": true}
+{"author": "lena-b", "comment_kind": "review", "id": 1900003472, "planted": [], "pr_number": 96, "question": false, "social": true, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900003501, "planted": [], "pr_number": 98, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900003524, "planted": [], "pr_number": 101, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000489, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "lena-b", "comment_kind": "review", "id": 1900003538, "planted": [], "pr_number": 102, "question": false, "social": false, "state": "APPROVED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900003552, "planted": [], "pr_number": 100, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000520, "planted": [], "pr_number": 105, "question": false, "rejection": false, "social": true}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900003562, "planted": [], "pr_number": 106, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002534, "planted": [{"severity": "major", "slot": "E8"}], "pr_number": 106, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002538, "planted": [{"severity": "major", "slot": "S4"}], "pr_number": 106, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003565, "planted": [], "pr_number": 106, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "emeka-u", "comment_kind": "review_comment", "id": 1700002554, "planted": [], "pr_number": 106, "question": false, "social": true}
+{"ack": true, "author": "emeka-u", "comment_kind": "review_comment", "id": 1700002585, "planted": [], "pr_number": 106, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003639, "planted": [], "pr_number": 106, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900003668, "planted": [], "pr_number": 106, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003693, "planted": [], "pr_number": 105, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900003694, "planted": [], "pr_number": 108, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000521, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "kofi-a", "comment_kind": "review_comment", "id": 1700002589, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 110, "question": false, "social": false}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900003701, "planted": [], "pr_number": 110, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "mateo-r", "comment_kind": "review_comment", "id": 1700002618, "planted": [], "pr_number": 110, "question": false, "social": true}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900003747, "planted": [], "pr_number": 110, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002640, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 111, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002668, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 111, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003757, "planted": [], "pr_number": 111, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000531, "planted": [], "pr_number": 112, "question": false, "rejection": false, "social": true}
+{"ack": true, "author": "marco-j98", "comment_kind": "review_comment", "id": 1700002697, "planted": [], "pr_number": 111, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003794, "planted": [], "pr_number": 112, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000568, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003798, "planted": [], "pr_number": 111, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002713, "planted": [{"severity": "major", "slot": "E5"}], "pr_number": 113, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002727, "planted": [{"severity": "major", "slot": "E7"}], "pr_number": 113, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002733, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 113, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003823, "planted": [], "pr_number": 113, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002741, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 113, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003857, "planted": [], "pr_number": 113, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "kofi-a", "comment_kind": "review_comment", "id": 1700002770, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 113, "question": false, "social": false}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900003882, "planted": [], "pr_number": 113, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "tariq-g2", "comment_kind": "review_comment", "id": 1700002798, "planted": [], "pr_number": 113, "question": false, "social": true}
+{"ack": true, "author": "tariq-g2", "comment_kind": "review_comment", "id": 1700002822, "planted": [], "pr_number": 113, "question": false, "social": true}
+{"ack": true, "author": "tariq-g2", "comment_kind": "review_comment", "id": 1700002843, "planted": [], "pr_number": 113, "question": false, "social": true}
+{"ack": false, "author": "tariq-g2", "comment_kind": "review_comment", "id": 1700002864, "planted": [], "pr_number": 113, "question": false, "social": true}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900003952, "planted": [], "pr_number": 113, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900003972, "planted": [], "pr_number": 113, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004000, "planted": [], "pr_number": 117, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000597, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900004037, "planted": [], "pr_number": 114, "question": false, "social": true, "state": "APPROVED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900004064, "planted": [], "pr_number": 118, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000634, "planted": [], "pr_number": 119, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002890, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 119, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004091, "planted": [], "pr_number": 119, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004124, "planted": [], "pr_number": 119, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004127, "planted": [], "pr_number": 121, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000638, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002921, "planted": [{"severity": "major", "slot": "E3"}], "pr_number": 122, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004156, "planted": [], "pr_number": 122, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "kai-s", "comment_kind": "review_comment", "id": 1700002939, "planted": [], "pr_number": 122, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000666, "planted": [], "pr_number": 122, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004186, "planted": [], "pr_number": 122, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000674, "planted": [], "pr_number": 126, "question": false, "rejection": false, "social": true}
+{"author": "lena-b", "comment_kind": "review", "id": 1900004209, "planted": [], "pr_number": 126, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000704, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004242, "planted": [], "pr_number": 127, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000720, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900004277, "planted": [], "pr_number": 128, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700002942, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 128, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004278, "planted": [], "pr_number": 128, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "maria-s79", "comment_kind": "review_comment", "id": 1700002977, "planted": [], "pr_number": 128, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004317, "planted": [], "pr_number": 130, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003001, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 128, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004341, "planted": [], "pr_number": 128, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900004355, "planted": [], "pr_number": 128, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900004356, "planted": [], "pr_number": 131, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003010, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 131, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004377, "planted": [{"severity": "minor", "slot": "S3"}, {"severity": "major", "slot": "S4"}], "pr_number": 131, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004392, "planted": [], "pr_number": 128, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004395, "planted": [], "pr_number": 131, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900004399, "planted": [], "pr_number": 131, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000751, "planted": [], "pr_number": 133, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003036, "planted": [{"severity": "major", "slot": "E1"}], "pr_number": 134, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003044, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 134, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004412, "planted": [], "pr_number": 134, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "joao-n86", "comment_kind": "review_comment", "id": 1700003048, "planted": [], "pr_number": 134, "question": false, "social": true}
+{"ack": true, "author": "joao-n86", "comment_kind": "review_comment", "id": 1700003081, "planted": [], "pr_number": 134, "question": false, "social": true}
+{"author": "lena-b", "comment_kind": "review_comment", "id": 1700003096, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 136, "question": false, "social": false}
+{"author": "lena-b", "comment_kind": "review", "id": 1900004485, "planted": [], "pr_number": 136, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "rafael-g76", "comment_kind": "review_comment", "id": 1700003113, "planted": [], "pr_number": 136, "question": false, "social": true}
+{"author": "lena-b", "comment_kind": "review", "id": 1900004501, "planted": [], "pr_number": 136, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900004518, "planted": [], "pr_number": 133, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003124, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 139, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004543, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 139, "question": false, "social": false, "state": "COMMENTED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900004568, "planted": [], "pr_number": 138, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003127, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 133, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003157, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 133, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004579, "planted": [], "pr_number": 133, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000783, "planted": [], "pr_number": 140, "question": false, "rejection": false, "social": true}
+{"author": "lena-b", "comment_kind": "review", "id": 1900004581, "planted": [], "pr_number": 133, "question": false, "social": false, "state": "APPROVED"}
+{"ack": true, "author": "max-d", "comment_kind": "review_comment", "id": 1700003187, "planted": [], "pr_number": 133, "question": false, "social": true}
+{"ack": true, "author": "max-d", "comment_kind": "review_comment", "id": 1700003214, "planted": [], "pr_number": 133, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004624, "planted": [], "pr_number": 139, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003245, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 140, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003263, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 140, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004629, "planted": [], "pr_number": 140, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "oskar-l", "comment_kind": "review_comment", "id": 1700003300, "planted": [], "pr_number": 140, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004692, "planted": [], "pr_number": 140, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004715, "planted": [], "pr_number": 133, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004717, "planted": [], "pr_number": 141, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004751, "planted": [], "pr_number": 143, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004778, "planted": [], "pr_number": 144, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004809, "planted": [], "pr_number": 134, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004815, "planted": [], "pr_number": 146, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900004832, "planted": [], "pr_number": 142, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004840, "planted": [], "pr_number": 142, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000808, "planted": [], "pr_number": 147, "question": false, "rejection": false, "social": true}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900004841, "planted": [], "pr_number": 147, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900004861, "planted": [], "pr_number": 149, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000826, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900004885, "planted": [], "pr_number": 150, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003334, "planted": [{"severity": "major", "slot": "E8"}], "pr_number": 150, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003345, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 150, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004918, "planted": [], "pr_number": 150, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900004942, "planted": [], "pr_number": 151, "question": false, "social": true, "state": "APPROVED"}
+{"ack": true, "author": "julia-m", "comment_kind": "review_comment", "id": 1700003381, "planted": [], "pr_number": 150, "question": false, "social": true}
+{"ack": true, "author": "julia-m", "comment_kind": "review_comment", "id": 1700003387, "planted": [], "pr_number": 150, "question": false, "social": true}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900005005, "planted": [], "pr_number": 150, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003419, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 150, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005041, "planted": [], "pr_number": 150, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "julia-m", "comment_kind": "review_comment", "id": 1700003426, "planted": [], "pr_number": 150, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005086, "planted": [], "pr_number": 150, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900005107, "planted": [], "pr_number": 155, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003454, "planted": [{"severity": "major", "slot": "E5"}], "pr_number": 156, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005139, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 156, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900005140, "planted": [], "pr_number": 156, "question": false, "social": false, "state": "APPROVED"}
+{"ack": true, "author": "nia-r34", "comment_kind": "review_comment", "id": 1700003488, "planted": [], "pr_number": 156, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005168, "planted": [], "pr_number": 156, "question": false, "social": true, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900005186, "planted": [], "pr_number": 156, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003498, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 158, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003532, "planted": [{"severity": "major", "slot": "E1"}], "pr_number": 158, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005188, "planted": [], "pr_number": 158, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005196, "planted": [], "pr_number": 157, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003550, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 159, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003553, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 159, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003587, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 159, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005231, "planted": [], "pr_number": 159, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "sofia-g", "comment_kind": "review_comment", "id": 1700003621, "planted": [], "pr_number": 159, "question": false, "social": true}
+{"ack": true, "author": "sofia-g", "comment_kind": "review_comment", "id": 1700003651, "planted": [], "pr_number": 159, "question": false, "social": true}
+{"ack": true, "author": "sofia-g", "comment_kind": "review_comment", "id": 1700003674, "planted": [], "pr_number": 159, "question": false, "social": true}
+{"ack": true, "author": "noor-s", "comment_kind": "review_comment", "id": 1700003710, "planted": [], "pr_number": 158, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005351, "planted": [], "pr_number": 159, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000852, "planted": [], "pr_number": 161, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003712, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 158, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003733, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 158, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005380, "planted": [], "pr_number": 158, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "noor-s", "comment_kind": "review_comment", "id": 1700003752, "planted": [], "pr_number": 158, "question": false, "social": true}
+{"ack": true, "author": "noor-s", "comment_kind": "review_comment", "id": 1700003776, "planted": [], "pr_number": 158, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005426, "planted": [], "pr_number": 158, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005441, "planted": [], "pr_number": 162, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005456, "planted": [], "pr_number": 161, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900005462, "planted": [], "pr_number": 162, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003800, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 160, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003808, "planted": [{"severity": "major", "slot": "S4"}], "pr_number": 160, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005478, "planted": [], "pr_number": 160, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "kai-s", "comment_kind": "review_comment", "id": 1700003816, "planted": [], "pr_number": 160, "question": false, "social": true}
+{"ack": true, "author": "kai-s", "comment_kind": "review_comment", "id": 1700003834, "planted": [], "pr_number": 160, "question": false, "social": true}
+{"author": "lena-b", "comment_kind": "review", "id": 1900005561, "planted": [], "pr_number": 164, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005579, "planted": [], "pr_number": 160, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900005610, "planted": [{"severity": "major", "slot": "T1"}], "pr_number": 163, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900005614, "planted": [], "pr_number": 163, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000885, "planted": [], "pr_number": 165, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005644, "planted": [], "pr_number": 165, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000908, "planted": [], "pr_number": 168, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003840, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 166, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003874, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 166, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005645, "planted": [], "pr_number": 166, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005666, "planted": [], "pr_number": 168, "question": false, "social": false, "state": "APPROVED"}
+{"ack": true, "author": "ravi-c95", "comment_kind": "review_comment", "id": 1700003892, "planted": [], "pr_number": 166, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005726, "planted": [], "pr_number": 166, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003897, "planted": [{"severity": "major", "slot": "E7"}], "pr_number": 167, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003914, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 167, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003951, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 167, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700003970, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 167, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005744, "planted": [], "pr_number": 167, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "mina-l34", "comment_kind": "review_comment", "id": 1700003975, "planted": [], "pr_number": 167, "question": false, "social": true}
+{"ack": true, "author": "mina-l34", "comment_kind": "review_comment", "id": 1700003998, "planted": [], "pr_number": 167, "question": false, "social": true}
+{"ack": true, "author": "mina-l34", "comment_kind": "review_comment", "id": 1700004033, "planted": [], "pr_number": 167, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005817, "planted": [], "pr_number": 167, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000920, "planted": [], "pr_number": 175, "question": false, "rejection": false, "social": true}
+{"author": "lena-b", "comment_kind": "review", "id": 1900005847, "planted": [], "pr_number": 175, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100000949, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005848, "planted": [], "pr_number": 171, "question": false, "social": false, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900005876, "planted": [], "pr_number": 176, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004055, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 179, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004073, "planted": [{"severity": "major", "slot": "E7"}], "pr_number": 179, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005889, "planted": [], "pr_number": 179, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004110, "planted": [{"severity": "major", "slot": "E3"}], "pr_number": 181, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005890, "planted": [], "pr_number": 181, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "theo-b", "comment_kind": "review_comment", "id": 1700004120, "planted": [], "pr_number": 179, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005919, "planted": [], "pr_number": 179, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100000985, "planted": [], "pr_number": 182, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005955, "planted": [{"severity": "minor", "slot": "E4"}, {"severity": "minor", "slot": "S1"}, {"severity": "minor", "slot": "S3"}], "pr_number": 177, "question": false, "social": false, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900005979, "planted": [], "pr_number": 182, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001011, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004146, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 177, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006010, "planted": [], "pr_number": 177, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "mateo-r", "comment_kind": "review_comment", "id": 1700004176, "planted": [], "pr_number": 181, "question": false, "social": true}
+{"ack": true, "author": "bram-n88", "comment_kind": "review_comment", "id": 1700004197, "planted": [], "pr_number": 177, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006065, "planted": [], "pr_number": 181, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004214, "planted": [{"severity": "major", "slot": "E7"}], "pr_number": 178, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004220, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 178, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004234, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 178, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006079, "planted": [], "pr_number": 178, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900006107, "planted": [], "pr_number": 181, "question": false, "social": true, "state": "APPROVED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900006131, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 187, "question": false, "social": false, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004238, "planted": [{"severity": "major", "slot": "S4"}], "pr_number": 187, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004262, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 187, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006142, "planted": [], "pr_number": 187, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900006154, "planted": [], "pr_number": 187, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006168, "planted": [], "pr_number": 186, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900006201, "planted": [{"severity": "major", "slot": "T1"}, {"severity": "major", "slot": "T2"}], "pr_number": 186, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "keiko-w40", "comment_kind": "review_comment", "id": 1700004266, "planted": [], "pr_number": 178, "question": false, "social": true}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100001019, "planted": [], "pr_number": 189, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006242, "planted": [], "pr_number": 178, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004280, "planted": [{"severity": "major", "slot": "E7"}], "pr_number": 189, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004298, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 189, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004334, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 189, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006279, "planted": [], "pr_number": 189, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "yuki-s83", "comment_kind": "review_comment", "id": 1700004340, "planted": [], "pr_number": 189, "question": false, "social": true}
+{"ack": true, "author": "yuki-s83", "comment_kind": "review_comment", "id": 1700004342, "planted": [], "pr_number": 189, "question": false, "social": true}
+{"ack": false, "author": "viktor-n", "comment_kind": "review_comment", "id": 1700004360, "planted": [], "pr_number": 187, "question": false, "social": true}
+{"ack": false, "author": "viktor-n", "comment_kind": "review_comment", "id": 1700004395, "planted": [], "pr_number": 187, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006428, "planted": [], "pr_number": 188, "question": false, "social": true, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900006433, "planted": [], "pr_number": 188, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006463, "planted": [], "pr_number": 189, "question": false, "social": false, "state": "APPROVED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900006479, "planted": [], "pr_number": 187, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900006503, "planted": [], "pr_number": 186, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004427, "planted": [{"severity": "major", "slot": "E3"}], "pr_number": 173, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006523, "planted": [], "pr_number": 173, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006547, "planted": [], "pr_number": 192, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001051, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"ack": true, "author": "keiko-d73", "comment_kind": "review_comment", "id": 1700004460, "planted": [], "pr_number": 173, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006588, "planted": [], "pr_number": 173, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001081, "planted": [], "pr_number": 173, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004491, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 193, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004528, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 193, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004536, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 193, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006595, "planted": [], "pr_number": 193, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "ada-l", "comment_kind": "review_comment", "id": 1700004551, "planted": [], "pr_number": 193, "question": false, "social": true}
+{"ack": true, "author": "ada-l", "comment_kind": "review_comment", "id": 1700004581, "planted": [], "pr_number": 193, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004607, "planted": [{"severity": "major", "slot": "S4"}], "pr_number": 195, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006640, "planted": [], "pr_number": 195, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004637, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 195, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006677, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 195, "question": false, "social": false, "state": "COMMENTED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100001105, "planted": [], "pr_number": 196, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006703, "planted": [], "pr_number": 195, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004673, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 194, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006706, "planted": [], "pr_number": 194, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006740, "planted": [], "pr_number": 177, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006747, "planted": [], "pr_number": 194, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006771, "planted": [], "pr_number": 193, "question": false, "social": false, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900006808, "planted": [], "pr_number": 196, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004696, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 196, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006827, "planted": [], "pr_number": 196, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004731, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 196, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004741, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 196, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006858, "planted": [], "pr_number": 196, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "oskar-l", "comment_kind": "review_comment", "id": 1700004754, "planted": [], "pr_number": 196, "question": false, "social": true}
+{"author": "lena-b", "comment_kind": "review", "id": 1900006902, "planted": [], "pr_number": 196, "question": false, "social": true, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900006923, "planted": [], "pr_number": 197, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006932, "planted": [], "pr_number": 196, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004790, "planted": [{"severity": "major", "slot": "E1"}], "pr_number": 199, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004806, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 199, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004825, "planted": [{"severity": "major", "slot": "S4"}], "pr_number": 199, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900006940, "planted": [], "pr_number": 199, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ravi-m", "comment_kind": "review_comment", "id": 1700004851, "planted": [{"severity": "major", "slot": "T4"}], "pr_number": 199, "question": false, "social": false}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900006971, "planted": [], "pr_number": 199, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004885, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 200, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007000, "planted": [{"severity": "major", "slot": "E5"}, {"severity": "minor", "slot": "S3"}], "pr_number": 200, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"author": "ravi-m", "comment_kind": "review_comment", "id": 1700004888, "planted": [{"severity": "major", "slot": "T4"}], "pr_number": 198, "question": false, "social": false}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900007011, "planted": [], "pr_number": 198, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004894, "planted": [{"severity": "major", "slot": "E1"}], "pr_number": 198, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700004924, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 198, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007038, "planted": [], "pr_number": 198, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "mei-c", "comment_kind": "review_comment", "id": 1700004934, "planted": [], "pr_number": 198, "question": false, "social": true}
+{"ack": true, "author": "mei-c", "comment_kind": "review_comment", "id": 1700004937, "planted": [], "pr_number": 198, "question": false, "social": true}
+{"ack": true, "author": "aiko-y", "comment_kind": "review_comment", "id": 1700004962, "planted": [], "pr_number": 199, "question": false, "social": true}
+{"ack": true, "author": "aiko-y", "comment_kind": "review_comment", "id": 1700004991, "planted": [], "pr_number": 199, "question": false, "social": true}
+{"ack": false, "author": "aiko-y", "comment_kind": "review_comment", "id": 1700004997, "planted": [], "pr_number": 199, "question": false, "social": true}
+{"ack": true, "author": "aiko-y", "comment_kind": "review_comment", "id": 1700005034, "planted": [], "pr_number": 199, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007170, "planted": [], "pr_number": 198, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900007175, "planted": [], "pr_number": 198, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007185, "planted": [], "pr_number": 200, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900007198, "planted": [], "pr_number": 199, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100001116, "planted": [], "pr_number": 203, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007206, "planted": [], "pr_number": 203, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005038, "planted": [{"severity": "major", "slot": "E5"}], "pr_number": 204, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005046, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 204, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007240, "planted": [], "pr_number": 204, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": false, "author": "ada-l", "comment_kind": "review_comment", "id": 1700005055, "planted": [], "pr_number": 204, "question": false, "social": true}
+{"ack": true, "author": "ada-l", "comment_kind": "review_comment", "id": 1700005058, "planted": [], "pr_number": 204, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005067, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 204, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007297, "planted": [], "pr_number": 204, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007328, "planted": [], "pr_number": 204, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005082, "planted": [{"severity": "minor", "slot": "E4"}], "pr_number": 206, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007334, "planted": [], "pr_number": 206, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "sofia-g", "comment_kind": "review_comment", "id": 1700005090, "planted": [], "pr_number": 206, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007380, "planted": [], "pr_number": 206, "question": false, "social": true, "state": "APPROVED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900007383, "planted": [], "pr_number": 207, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001144, "planted": [], "pr_number": 209, "question": false, "rejection": true, "social": false}
+{"author": "lena-b", "comment_kind": "review", "id": 1900007409, "planted": [], "pr_number": 213, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001180, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "lena-b", "comment_kind": "review", "id": 1900007440, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 212, "question": false, "social": false, "state": "COMMENTED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100001188, "planted": [], "pr_number": 217, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005111, "planted": [{"severity": "major", "slot": "E5"}], "pr_number": 215, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005120, "planted": [{"severity": "major", "slot": "S4"}], "pr_number": 215, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005129, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 215, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005136, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 215, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007469, "planted": [], "pr_number": 215, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900007486, "planted": [], "pr_number": 217, "question": false, "social": false, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900007505, "planted": [], "pr_number": 217, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005158, "planted": [{"severity": "major", "slot": "E1"}], "pr_number": 217, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007516, "planted": [], "pr_number": 217, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900007521, "planted": [], "pr_number": 212, "question": false, "social": false, "state": "APPROVED"}
+{"ack": true, "author": "chen-n29", "comment_kind": "review_comment", "id": 1700005183, "planted": [], "pr_number": 215, "question": false, "social": true}
+{"ack": true, "author": "chen-n29", "comment_kind": "review_comment", "id": 1700005185, "planted": [], "pr_number": 215, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007594, "planted": [], "pr_number": 215, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900007626, "planted": [], "pr_number": 217, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007640, "planted": [], "pr_number": 214, "question": false, "social": false, "state": "APPROVED"}
+{"ack": true, "author": "lucia-v", "comment_kind": "review_comment", "id": 1700005201, "planted": [], "pr_number": 217, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007689, "planted": [], "pr_number": 217, "question": false, "social": false, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900007722, "planted": [], "pr_number": 217, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007742, "planted": [], "pr_number": 220, "question": false, "social": true, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900007773, "planted": [], "pr_number": 220, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001192, "planted": [], "pr_number": 222, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007809, "planted": [], "pr_number": 222, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900007846, "planted": [], "pr_number": 222, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005207, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 219, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007881, "planted": [], "pr_number": 219, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007890, "planted": [], "pr_number": 221, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900007893, "planted": [], "pr_number": 221, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007923, "planted": [], "pr_number": 219, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900007944, "planted": [], "pr_number": 218, "question": false, "social": true, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review_comment", "id": 1700005218, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 225, "question": false, "social": false}
+{"author": "lena-b", "comment_kind": "review", "id": 1900007968, "planted": [], "pr_number": 225, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001212, "planted": [], "pr_number": 226, "question": false, "rejection": true, "social": false}
+{"author": "lena-b", "comment_kind": "review", "id": 1900007984, "planted": [], "pr_number": 225, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005233, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 223, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005264, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 223, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008014, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 223, "question": false, "social": false, "state": "COMMENTED"}
+{"ack": true, "author": "karl-g50", "comment_kind": "review_comment", "id": 1700005275, "planted": [], "pr_number": 223, "question": false, "social": true}
+{"author": "lena-b", "comment_kind": "review_comment", "id": 1700005282, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 228, "question": false, "social": false}
+{"author": "lena-b", "comment_kind": "review_comment", "id": 1700005300, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 228, "question": false, "social": false}
+{"author": "lena-b", "comment_kind": "review", "id": 1900008035, "planted": [], "pr_number": 228, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008041, "planted": [], "pr_number": 229, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005316, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 216, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005333, "planted": [{"severity": "major", "slot": "E7"}], "pr_number": 216, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008064, "planted": [], "pr_number": 216, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008083, "planted": [], "pr_number": 223, "question": false, "social": false, "state": "APPROVED"}
+{"ack": true, "author": "ada-l", "comment_kind": "review_comment", "id": 1700005368, "planted": [], "pr_number": 216, "question": false, "social": true}
+{"ack": true, "author": "ada-l", "comment_kind": "review_comment", "id": 1700005372, "planted": [], "pr_number": 216, "question": false, "social": true}
+{"ack": true, "author": "chloe-w", "comment_kind": "review_comment", "id": 1700005407, "planted": [], "pr_number": 228, "question": false, "social": true}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100001243, "planted": [], "pr_number": 231, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008164, "planted": [], "pr_number": 216, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900008183, "planted": [], "pr_number": 233, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001245, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900008202, "planted": [], "pr_number": 230, "question": false, "social": false, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900008237, "planted": [], "pr_number": 234, "question": false, "social": false, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900008241, "planted": [], "pr_number": 228, "question": false, "social": false, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900008273, "planted": [], "pr_number": 235, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008291, "planted": [], "pr_number": 227, "question": false, "social": true, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900008293, "planted": [], "pr_number": 236, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100001252, "planted": [], "pr_number": 238, "question": false, "rejection": false, "social": true}
+{"author": "lena-b", "comment_kind": "review", "id": 1900008308, "planted": [], "pr_number": 238, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005429, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 238, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005464, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 238, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005483, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 238, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008321, "planted": [], "pr_number": 238, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "oskar-l", "comment_kind": "review_comment", "id": 1700005497, "planted": [], "pr_number": 238, "question": false, "social": true}
+{"ack": true, "author": "oskar-l", "comment_kind": "review_comment", "id": 1700005511, "planted": [], "pr_number": 238, "question": false, "social": true}
+{"ack": true, "author": "oskar-l", "comment_kind": "review_comment", "id": 1700005534, "planted": [], "pr_number": 238, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008409, "planted": [], "pr_number": 238, "question": false, "social": true, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900008418, "planted": [], "pr_number": 238, "question": false, "social": false, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900008453, "planted": [], "pr_number": 237, "question": false, "social": true, "state": "APPROVED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900008457, "planted": [], "pr_number": 239, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005535, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 240, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008474, "planted": [], "pr_number": 240, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "sofia-g", "comment_kind": "review_comment", "id": 1700005560, "planted": [], "pr_number": 240, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008500, "planted": [], "pr_number": 240, "question": false, "social": true, "state": "APPROVED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900008503, "planted": [], "pr_number": 243, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008519, "planted": [], "pr_number": 243, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005561, "planted": [{"severity": "major", "slot": "E7"}], "pr_number": 242, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005588, "planted": [{"severity": "major", "slot": "E5"}], "pr_number": 242, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005612, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 242, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008533, "planted": [], "pr_number": 242, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "arjun-p", "comment_kind": "review_comment", "id": 1700005647, "planted": [], "pr_number": 242, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001285, "planted": [], "pr_number": 242, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008564, "planted": [], "pr_number": 242, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008585, "planted": [], "pr_number": 244, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008613, "planted": [], "pr_number": 246, "question": false, "social": true, "state": "APPROVED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900008617, "planted": [], "pr_number": 247, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005664, "planted": [{"severity": "minor", "slot": "B1"}], "pr_number": 248, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005672, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 248, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008633, "planted": [], "pr_number": 248, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "aiko-y", "comment_kind": "review_comment", "id": 1700005683, "planted": [], "pr_number": 248, "question": false, "social": true}
+{"ack": true, "author": "aiko-y", "comment_kind": "review_comment", "id": 1700005697, "planted": [], "pr_number": 248, "question": false, "social": true}
+{"author": "kofi-a", "comment_kind": "review_comment", "id": 1700005705, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 251, "question": false, "social": false}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900008678, "planted": [], "pr_number": 251, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005741, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 251, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005772, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 251, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008698, "planted": [], "pr_number": 251, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "wes-s46", "comment_kind": "review_comment", "id": 1700005784, "planted": [], "pr_number": 251, "question": false, "social": true}
+{"ack": true, "author": "wes-s46", "comment_kind": "review_comment", "id": 1700005807, "planted": [], "pr_number": 251, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008776, "planted": [], "pr_number": 249, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900008795, "planted": [], "pr_number": 249, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008826, "planted": [], "pr_number": 248, "question": false, "social": true, "state": "APPROVED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900008855, "planted": [], "pr_number": 251, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008869, "planted": [], "pr_number": 251, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900008879, "planted": [{"severity": "major", "slot": "T4"}], "pr_number": 249, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900008887, "planted": [], "pr_number": 249, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005842, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 251, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008907, "planted": [], "pr_number": 251, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008936, "planted": [{"severity": "major", "slot": "E1"}, {"severity": "minor", "slot": "S3"}], "pr_number": 249, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100001307, "planted": [], "pr_number": 252, "question": false, "rejection": false, "social": true}
+{"author": "lena-b", "comment_kind": "review", "id": 1900008970, "planted": [], "pr_number": 249, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005865, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 253, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005896, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 253, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005908, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 253, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900008972, "planted": [], "pr_number": 253, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900009001, "planted": [], "pr_number": 256, "question": false, "social": false, "state": "APPROVED"}
+{"ack": true, "author": "zoe-t67", "comment_kind": "review_comment", "id": 1700005942, "planted": [], "pr_number": 253, "question": false, "social": true}
+{"ack": true, "author": "zoe-t67", "comment_kind": "review_comment", "id": 1700005945, "planted": [], "pr_number": 253, "question": false, "social": true}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100001332, "planted": [], "pr_number": 259, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005962, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 256, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005994, "planted": [{"severity": "major", "slot": "S4"}], "pr_number": 256, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700005999, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 256, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009092, "planted": [], "pr_number": 256, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009120, "planted": [], "pr_number": 257, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900009133, "planted": [], "pr_number": 257, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006023, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 259, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009142, "planted": [], "pr_number": 259, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "piotr-r89", "comment_kind": "review_comment", "id": 1700006038, "planted": [], "pr_number": 256, "question": false, "social": true}
+{"ack": false, "author": "piotr-r89", "comment_kind": "review_comment", "id": 1700006042, "planted": [], "pr_number": 256, "question": false, "social": true}
+{"ack": true, "author": "piotr-r89", "comment_kind": "review_comment", "id": 1700006048, "planted": [], "pr_number": 256, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009232, "planted": [], "pr_number": 253, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900009239, "planted": [], "pr_number": 256, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009246, "planted": [], "pr_number": 261, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006079, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 256, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009252, "planted": [], "pr_number": 256, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "ada-l", "comment_kind": "review_comment", "id": 1700006113, "planted": [], "pr_number": 259, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009288, "planted": [{"severity": "minor", "slot": "E6"}, {"severity": "minor", "slot": "S1"}, {"severity": "minor", "slot": "S3"}, {"severity": "major", "slot": "S4"}], "pr_number": 258, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009312, "planted": [], "pr_number": 259, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009347, "planted": [{"severity": "major", "slot": "E2"}, {"severity": "minor", "slot": "S1"}, {"severity": "nit", "slot": "S2"}], "pr_number": 260, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009369, "planted": [], "pr_number": 255, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009372, "planted": [], "pr_number": 258, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001341, "planted": [], "pr_number": 260, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009386, "planted": [], "pr_number": 260, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009389, "planted": [], "pr_number": 262, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009425, "planted": [], "pr_number": 263, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006150, "planted": [{"severity": "minor", "slot": "E4"}], "pr_number": 264, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006177, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 264, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006212, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 264, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009461, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 264, "question": false, "social": false, "state": "COMMENTED"}
+{"ack": true, "author": "oskar-l", "comment_kind": "review_comment", "id": 1700006228, "planted": [], "pr_number": 264, "question": false, "social": true}
+{"ack": true, "author": "oskar-l", "comment_kind": "review_comment", "id": 1700006264, "planted": [], "pr_number": 264, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009515, "planted": [], "pr_number": 254, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009533, "planted": [], "pr_number": 264, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900009539, "planted": [{"severity": "major", "slot": "T2"}], "pr_number": 254, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900009560, "planted": [], "pr_number": 254, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001360, "planted": [], "pr_number": 269, "question": false, "rejection": true, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009595, "planted": [], "pr_number": 267, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001374, "planted": [], "pr_number": 267, "question": false, "rejection": true, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009611, "planted": [], "pr_number": 272, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006293, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 270, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006318, "planted": [{"severity": "major", "slot": "E7"}], "pr_number": 270, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009612, "planted": [], "pr_number": 270, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009632, "planted": [], "pr_number": 268, "question": false, "social": false, "state": "APPROVED"}
+{"ack": true, "author": "bram-w83", "comment_kind": "review_comment", "id": 1700006325, "planted": [], "pr_number": 270, "question": false, "social": true}
+{"ack": true, "author": "bram-w83", "comment_kind": "review_comment", "id": 1700006354, "planted": [], "pr_number": 270, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009676, "planted": [], "pr_number": 270, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006361, "planted": [{"severity": "major", "slot": "S4"}], "pr_number": 271, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006394, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 271, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009700, "planted": [], "pr_number": 271, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "mina-m80", "comment_kind": "review_comment", "id": 1700006408, "planted": [], "pr_number": 271, "question": false, "social": true}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900009750, "planted": [], "pr_number": 271, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006442, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 271, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009754, "planted": [], "pr_number": 271, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900009760, "planted": [], "pr_number": 271, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006472, "planted": [{"severity": "minor", "slot": "E4"}], "pr_number": 252, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006493, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 252, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009772, "planted": [], "pr_number": 252, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "mina-m80", "comment_kind": "review_comment", "id": 1700006524, "planted": [], "pr_number": 271, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006543, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 274, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006575, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 274, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009802, "planted": [], "pr_number": 274, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001388, "planted": [], "pr_number": 252, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009803, "planted": [], "pr_number": 252, "question": false, "social": true, "state": "APPROVED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900009809, "planted": [], "pr_number": 271, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900009830, "planted": [], "pr_number": 275, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001399, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"ack": false, "author": "arjun-p", "comment_kind": "review_comment", "id": 1700006611, "planted": [], "pr_number": 274, "question": false, "social": true}
+{"ack": true, "author": "arjun-p", "comment_kind": "review_comment", "id": 1700006642, "planted": [], "pr_number": 274, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009903, "planted": [], "pr_number": 274, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006657, "planted": [{"severity": "major", "slot": "E7"}], "pr_number": 277, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006670, "planted": [{"severity": "major", "slot": "E2"}], "pr_number": 277, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006674, "planted": [{"severity": "minor", "slot": "D1"}], "pr_number": 277, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006680, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 277, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006686, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 277, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009906, "planted": [], "pr_number": 277, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "olu-m45", "comment_kind": "review_comment", "id": 1700006717, "planted": [], "pr_number": 277, "question": false, "social": true}
+{"ack": true, "author": "olu-m45", "comment_kind": "review_comment", "id": 1700006720, "planted": [], "pr_number": 277, "question": false, "social": true}
+{"ack": true, "author": "olu-m45", "comment_kind": "review_comment", "id": 1700006742, "planted": [], "pr_number": 277, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009952, "planted": [], "pr_number": 277, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006757, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 276, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006759, "planted": [{"severity": "major", "slot": "S4"}], "pr_number": 276, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900009963, "planted": [], "pr_number": 276, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "cleo-m64", "comment_kind": "review_comment", "id": 1700006773, "planted": [], "pr_number": 276, "question": false, "social": true}
+{"ack": true, "author": "cleo-m64", "comment_kind": "review_comment", "id": 1700006779, "planted": [], "pr_number": 276, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006793, "planted": [{"severity": "minor", "slot": "E4"}], "pr_number": 281, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006796, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 281, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006804, "planted": [{"severity": "major", "slot": "S4"}], "pr_number": 281, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010049, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 281, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006819, "planted": [{"severity": "minor", "slot": "B2"}], "pr_number": 279, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006831, "planted": [{"severity": "minor", "slot": "D1"}], "pr_number": 279, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006846, "planted": [{"severity": "major", "slot": "S4"}], "pr_number": 279, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006864, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 279, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010066, "planted": [], "pr_number": 279, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "tomas-h", "comment_kind": "review_comment", "id": 1700006868, "planted": [], "pr_number": 279, "question": false, "social": true}
+{"ack": true, "author": "tomas-h", "comment_kind": "review_comment", "id": 1700006878, "planted": [], "pr_number": 279, "question": false, "social": true}
+{"ack": true, "author": "tomas-h", "comment_kind": "review_comment", "id": 1700006890, "planted": [], "pr_number": 279, "question": false, "social": true}
+{"ack": true, "author": "tomas-h", "comment_kind": "review_comment", "id": 1700006901, "planted": [], "pr_number": 279, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001429, "planted": [], "pr_number": 284, "question": false, "rejection": true, "social": false}
+{"ack": true, "author": "umar-m68", "comment_kind": "review_comment", "id": 1700006920, "planted": [], "pr_number": 281, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006952, "planted": [{"severity": "major", "slot": "E5"}], "pr_number": 283, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700006986, "planted": [{"severity": "minor", "slot": "D1"}], "pr_number": 283, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010156, "planted": [], "pr_number": 283, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001437, "planted": [], "pr_number": 281, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010173, "planted": [], "pr_number": 281, "question": false, "social": false, "state": "APPROVED"}
+{"ack": true, "author": "noor-s", "comment_kind": "review_comment", "id": 1700007005, "planted": [], "pr_number": 283, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010189, "planted": [], "pr_number": 279, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010219, "planted": [], "pr_number": 286, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001460, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010245, "planted": [], "pr_number": 276, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100001476, "planted": [], "pr_number": 287, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001477, "planted": [], "pr_number": 287, "question": false, "rejection": true, "social": false}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001503, "planted": [], "pr_number": 290, "question": false, "rejection": true, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010270, "planted": [], "pr_number": 283, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010282, "planted": [], "pr_number": 291, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900010288, "planted": [], "pr_number": 291, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100001517, "planted": [], "pr_number": 294, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010300, "planted": [], "pr_number": 295, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010324, "planted": [], "pr_number": 294, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001519, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "lena-b", "comment_kind": "review", "id": 1900010351, "planted": [], "pr_number": 296, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001541, "planted": [], "pr_number": 296, "question": false, "rejection": true, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007028, "planted": [{"severity": "major", "slot": "E5"}], "pr_number": 298, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007030, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 298, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010358, "planted": [], "pr_number": 298, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900010382, "planted": [], "pr_number": 297, "question": false, "social": false, "state": "APPROVED"}
+{"ack": true, "author": "oskar-l", "comment_kind": "review_comment", "id": 1700007050, "planted": [], "pr_number": 298, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007084, "planted": [{"severity": "minor", "slot": "S1"}], "pr_number": 298, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010409, "planted": [], "pr_number": 298, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010436, "planted": [], "pr_number": 298, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100001545, "planted": [], "pr_number": 301, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007109, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 304, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007136, "planted": [{"severity": "major", "slot": "E1"}], "pr_number": 304, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007147, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 304, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010446, "planted": [], "pr_number": 304, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ravi-m", "comment_kind": "review_comment", "id": 1700007170, "planted": [{"severity": "major", "slot": "T4"}], "pr_number": 304, "question": false, "social": false}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900010470, "planted": [], "pr_number": 304, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "felix-w", "comment_kind": "review_comment", "id": 1700007186, "planted": [], "pr_number": 304, "question": false, "social": true}
+{"ack": true, "author": "felix-w", "comment_kind": "review_comment", "id": 1700007214, "planted": [], "pr_number": 304, "question": false, "social": true}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900010488, "planted": [], "pr_number": 304, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010491, "planted": [], "pr_number": 301, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900010525, "planted": [{"severity": "major", "slot": "T1"}, {"severity": "major", "slot": "T2"}], "pr_number": 301, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900010540, "planted": [], "pr_number": 305, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010552, "planted": [], "pr_number": 302, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900010587, "planted": [], "pr_number": 305, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900010616, "planted": [], "pr_number": 305, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100001559, "planted": [], "pr_number": 308, "question": false, "rejection": false, "social": true}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900010632, "planted": [], "pr_number": 301, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010664, "planted": [], "pr_number": 305, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010682, "planted": [{"severity": "major", "slot": "E3"}], "pr_number": 305, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"author": "lena-b", "comment_kind": "review", "id": 1900010699, "planted": [], "pr_number": 305, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007250, "planted": [{"severity": "major", "slot": "E5"}], "pr_number": 306, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007280, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 306, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010705, "planted": [], "pr_number": 306, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "tess-h87", "comment_kind": "review_comment", "id": 1700007282, "planted": [], "pr_number": 306, "question": false, "social": true}
+{"ack": true, "author": "tess-h87", "comment_kind": "review_comment", "id": 1700007306, "planted": [], "pr_number": 306, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010760, "planted": [], "pr_number": 309, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007331, "planted": [{"severity": "major", "slot": "E5"}], "pr_number": 299, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007365, "planted": [{"severity": "major", "slot": "E7"}], "pr_number": 299, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010790, "planted": [], "pr_number": 299, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "dev-c89", "comment_kind": "review_comment", "id": 1700007398, "planted": [], "pr_number": 299, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001594, "planted": [], "pr_number": 310, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010833, "planted": [], "pr_number": 310, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010843, "planted": [], "pr_number": 299, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010860, "planted": [], "pr_number": 313, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010866, "planted": [], "pr_number": 314, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001608, "planted": [], "pr_number": null, "question": false, "rejection": false, "social": true}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100001633, "planted": [], "pr_number": 315, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010874, "planted": [], "pr_number": 306, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007399, "planted": [{"severity": "minor", "slot": "E4"}], "pr_number": 316, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007434, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 316, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007444, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 316, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010900, "planted": [], "pr_number": 316, "question": false, "social": true, "state": "COMMENTED"}
+{"ack": true, "author": "maria-t46", "comment_kind": "review_comment", "id": 1700007468, "planted": [], "pr_number": 316, "question": false, "social": true}
+{"ack": true, "author": "maria-t46", "comment_kind": "review_comment", "id": 1700007501, "planted": [], "pr_number": 316, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010940, "planted": [], "pr_number": 316, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007523, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 315, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010948, "planted": [], "pr_number": 315, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007525, "planted": [{"severity": "minor", "slot": "D1"}], "pr_number": 315, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900010982, "planted": [{"severity": "major", "slot": "E5"}, {"severity": "minor", "slot": "S3"}], "pr_number": 315, "question": false, "social": false, "state": "CHANGES_REQUESTED"}
+{"author": "kofi-a", "comment_kind": "review_comment", "id": 1700007526, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 317, "question": false, "social": false}
+{"author": "kofi-a", "comment_kind": "review_comment", "id": 1700007546, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 317, "question": false, "social": false}
+{"author": "kofi-a", "comment_kind": "review_comment", "id": 1700007550, "planted": [{"severity": "major", "slot": "S4"}], "pr_number": 317, "question": false, "social": false}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900011004, "planted": [], "pr_number": 317, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900011016, "planted": [], "pr_number": 315, "question": false, "social": true, "state": "APPROVED"}
+{"ack": true, "author": "alex-t24", "comment_kind": "review_comment", "id": 1700007576, "planted": [], "pr_number": 317, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900011040, "planted": [], "pr_number": 319, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001638, "planted": [], "pr_number": 319, "question": false, "rejection": true, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007584, "planted": [{"severity": "major", "slot": "E5"}], "pr_number": 318, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007586, "planted": [{"severity": "minor", "slot": "B2"}], "pr_number": 318, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007617, "planted": [{"severity": "minor", "slot": "D1"}], "pr_number": 318, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007644, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 318, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900011064, "planted": [], "pr_number": 318, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"author": "kofi-a", "comment_kind": "review", "id": 1900011085, "planted": [], "pr_number": 317, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900011101, "planted": [], "pr_number": 318, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001659, "planted": [], "pr_number": 321, "question": true, "rejection": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900011124, "planted": [], "pr_number": 321, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100001671, "planted": [], "pr_number": 322, "question": false, "rejection": false, "social": true}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001707, "planted": [], "pr_number": 323, "question": false, "rejection": true, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900011141, "planted": [], "pr_number": 322, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007677, "planted": [{"severity": "major", "slot": "E7"}], "pr_number": 320, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007699, "planted": [{"severity": "major", "slot": "E5"}], "pr_number": 320, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007729, "planted": [{"severity": "minor", "slot": "X1"}], "pr_number": 320, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900011157, "planted": [], "pr_number": 320, "question": false, "social": true, "state": "CHANGES_REQUESTED"}
+{"ack": true, "author": "marco-f37", "comment_kind": "review_comment", "id": 1700007756, "planted": [], "pr_number": 320, "question": false, "social": true}
+{"ack": true, "author": "marco-f37", "comment_kind": "review_comment", "id": 1700007792, "planted": [], "pr_number": 320, "question": false, "social": true}
+{"author": "ines-v", "comment_kind": "review", "id": 1900011203, "planted": [], "pr_number": 320, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900011217, "planted": [], "pr_number": 324, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ravi-m", "comment_kind": "review", "id": 1900011238, "planted": [], "pr_number": 325, "question": false, "social": false, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900011242, "planted": [], "pr_number": 328, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "issue_comment", "id": 2100001728, "planted": [], "pr_number": 328, "question": false, "rejection": true, "social": false}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007809, "planted": [{"severity": "minor", "slot": "S3"}], "pr_number": 308, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900011277, "planted": [{"severity": "nit", "slot": "S2"}], "pr_number": 308, "question": false, "social": false, "state": "COMMENTED"}
+{"author": "ines-v", "comment_kind": "review", "id": 1900011281, "planted": [], "pr_number": 308, "question": false, "social": true, "state": "APPROVED"}
+{"author": "ines-v", "comment_kind": "review_comment", "id": 1700007840, "planted": [{"severity": "minor", "slot": "E6"}], "pr_number": 308, "question": false, "social": false}
+{"author": "ines-v", "comment_kind": "review", "id": 1900011296, "planted": [], "pr_number": 308, "question": false, "social": true, "state": "COMMENTED"}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100001730, "planted": [], "pr_number": 329, "question": false, "rejection": false, "social": true}
+{"author": "ci-helper[bot]", "comment_kind": "issue_comment", "id": 2100001745, "planted": [], "pr_number": 336, "question": false, "rejection": false, "social": true}

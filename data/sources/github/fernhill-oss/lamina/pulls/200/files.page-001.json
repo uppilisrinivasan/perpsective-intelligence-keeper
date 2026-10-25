@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 19,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/4ec735205d0d1301cffa750fcc9394c2480baccd/lamina%2Floader%2Fenv_file.py",
+    "changes": 19,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Floader%2Fenv_file.py?ref=4ec735205d0d1301cffa750fcc9394c2480baccd",
+    "deletions": 0,
+    "filename": "lamina/loader/env_file.py",
+    "patch": "@@ -0,0 +1,19 @@\n+\"\"\"Load env file configuration files.\"\"\"\n+\n+import os\n+\n+from lamina.errors import LaminaError\n+from lamina.loader.core import loads\n+\n+\n+def load_env_file(path, *, strict=True, skip=None):\n+    \"\"\"Load a env file configuration file.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(path)\n+    with open(path, encoding=\"utf-8\") as fh:\n+        fileText = fh.read()\n+    if strict and not fileText.strip():\n+        raise LaminaError(f\"empty configuration: {path}\", 0, 1)\n+    doc = loads(fileText, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n+    doc.source = path\n+    return doc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/4ec735205d0d1301cffa750fcc9394c2480baccd/lamina%2Floader%2Fenv_file.py",
+    "sha": "f0de3d7118d46c4608fa614b7de61f8722f800b6",
+    "status": "added"
+  },
+  {
+    "additions": 19,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/4ec735205d0d1301cffa750fcc9394c2480baccd/tests%2Ftest_loader_env_file.py",
+    "changes": 19,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_env_file.py?ref=4ec735205d0d1301cffa750fcc9394c2480baccd",
+    "deletions": 0,
+    "filename": "tests/test_loader_env_file.py",
+    "patch": "@@ -0,0 +1,19 @@\n+import pytest\n+\n+from lamina.loader.env_file import load_env_file\n+\n+\n+def test_env_file_loads(write):\n+    path = write(\"a_env_file.conf\", \"[a]\\nx = 1\\n\")\n+    assert load_env_file(path).get(\"a.x\") == \"1\"\n+\n+\n+def test_env_file_empty_strict(write):\n+    path = write(\"e_env_file.conf\", \"\")\n+    with pytest.raises(Exception):\n+        load_env_file(path, strict=True)\n+\n+\n+def test_env_file_empty_lenient(write):\n+    path = write(\"l_env_file.conf\", \"\")\n+    assert load_env_file(path, strict=False).sections() == []",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/4ec735205d0d1301cffa750fcc9394c2480baccd/tests%2Ftest_loader_env_file.py",
+    "sha": "11cb6b12ad31278cb15b2aca71d03fcb47174446",
+    "status": "added"
+  }
+]

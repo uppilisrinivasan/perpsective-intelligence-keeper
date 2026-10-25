@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 17,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/8b3e0f7cded46c68d5b16ad03d38f3986e70b000/lamina%2Fdiagnostics%2Fdepth_exceeded.py",
+    "changes": 17,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdiagnostics%2Fdepth_exceeded.py?ref=8b3e0f7cded46c68d5b16ad03d38f3986e70b000",
+    "deletions": 0,
+    "filename": "lamina/diagnostics/depth_exceeded.py",
+    "patch": "@@ -0,0 +1,17 @@\n+\"\"\"The DepthExceededError error and its helper.\"\"\"\n+\n+from lamina.errors import LaminaError\n+\n+\n+class DepthExceededError(LaminaError):\n+    \"\"\"Raised for depth exceeded problems.\"\"\"\n+\n+\n+def raise_depth_exceeded(message: str, line: int, column: int, *, skip: list[str] | None = None) -> None:\n+    \"\"\"Raise DepthExceededError for message at line and column.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(message)\n+    full_message = message if message.endswith(\".\") else message + \".\"\n+    if line < 1:\n+        raise DepthExceededError(full_message, 1, max(column, 1))\n+    raise DepthExceededError(full_message, line, column)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/8b3e0f7cded46c68d5b16ad03d38f3986e70b000/lamina%2Fdiagnostics%2Fdepth_exceeded.py",
+    "sha": "1f4cf994d9493e5409f8f396045ef0cde654b515",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/8b3e0f7cded46c68d5b16ad03d38f3986e70b000/tests%2Ftest_errors_depth_exceeded.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_errors_depth_exceeded.py?ref=8b3e0f7cded46c68d5b16ad03d38f3986e70b000",
+    "deletions": 0,
+    "filename": "tests/test_errors_depth_exceeded.py",
+    "patch": "@@ -0,0 +1,13 @@\n+import pytest\n+\n+from lamina.diagnostics.depth_exceeded import DepthExceededError, raise_depth_exceeded\n+\n+\n+def test_depth_exceeded_raises():\n+    with pytest.raises(DepthExceededError):\n+        raise_depth_exceeded(\"bad\", 2, 3)\n+\n+\n+def test_depth_exceeded_line_zero():\n+    with pytest.raises(DepthExceededError):\n+        raise_depth_exceeded(\"bad\", 0, 0)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/8b3e0f7cded46c68d5b16ad03d38f3986e70b000/tests%2Ftest_errors_depth_exceeded.py",
+    "sha": "b23d3fce490dd9889ba31b3e075d5419c3b480b9",
+    "status": "added"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/5c5a2c19565d87e299793490c6d58475346d5ae5/lamina%2Finterpolate%2Furl.py",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Furl.py?ref=5c5a2c19565d87e299793490c6d58475346d5ae5",
+    "deletions": 1,
+    "filename": "lamina/interpolate/url.py",
+    "patch": "@@ -29,6 +29,6 @@ def interpolate_url(value: str, env: Mapping[str, str], *, line: int = 0, skip:\n             raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n         resolved = env[name]\n         if not _valid(resolved):\n-            raise InterpolationError(f\"invalid value {resolved!r} for {name}\", line, start + 1)\n+            raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n         out_parts.append(resolved)\n         i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/5c5a2c19565d87e299793490c6d58475346d5ae5/lamina%2Finterpolate%2Furl.py",
+    "sha": "c911f5cc25d5e7e6ac0423d52e89b9830441cb80",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/5c5a2c19565d87e299793490c6d58475346d5ae5/tests%2Ftest_interpolate_url_regression_46.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_interpolate_url_regression_46.py?ref=5c5a2c19565d87e299793490c6d58475346d5ae5",
+    "deletions": 0,
+    "filename": "tests/test_interpolate_url_regression_46.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.interpolate.url import interpolate_url\n+\n+\n+def test_interpolate_url_regression_46():\n+    assert callable(interpolate_url)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/5c5a2c19565d87e299793490c6d58475346d5ae5/tests%2Ftest_interpolate_url_regression_46.py",
+    "sha": "86d1671b8e9ed00381b93977ab46372646e2531c",
+    "status": "added"
+  }
+]

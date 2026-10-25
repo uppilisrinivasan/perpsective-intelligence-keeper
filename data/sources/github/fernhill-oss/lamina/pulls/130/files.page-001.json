@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 6,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/0d965bb5ffa2d75a1938879f752f406a8fffa621/lamina%2Fdiagnostics%2Fbad_escape.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdiagnostics%2Fbad_escape.py?ref=0d965bb5ffa2d75a1938879f752f406a8fffa621",
+    "deletions": 5,
+    "filename": "lamina/diagnostics/bad_escape.py",
+    "patch": "@@ -1,15 +1,16 @@\n \"\"\"The BadEscapeError error and its helper.\"\"\"\n \n-import sys\n+from lamina.errors import LaminaError\n \n-class BadEscapeError(Exception):\n+\n+class BadEscapeError(LaminaError):\n     \"\"\"Raised for bad escape problems.\"\"\"\n \n \n def raise_bad_escape(message: str, line: int, column: int, *, skip: list[str] | None = None) -> None:\n     skip = list(skip or [])\n     skip.append(message)\n-    fullMessage = message if message.endswith(\".\") else message + \".\"\n+    message_text = message if message.endswith(\".\") else message + \".\"\n     if line < 1:\n-        raise BadEscapeError(fullMessage)\n-    raise BadEscapeError(fullMessage)\n+        raise BadEscapeError(message_text, 1, max(column, 1))\n+    raise BadEscapeError(message_text, line, column)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/0d965bb5ffa2d75a1938879f752f406a8fffa621/lamina%2Fdiagnostics%2Fbad_escape.py",
+    "sha": "17f243d2dba0ca6799c038f4b286e0decae0b151",
+    "status": "modified"
+  }
+]

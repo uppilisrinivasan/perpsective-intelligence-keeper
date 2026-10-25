@@ -1,0 +1,79 @@
+[
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "color": "d73a4a",
+    "default": true,
+    "description": null,
+    "id": 4000000021,
+    "name": "bug",
+    "node_id": "LA_kwDOlv2OyVPz6WP3",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/labels/bug"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "color": "ededed",
+    "default": false,
+    "description": null,
+    "id": 4000000023,
+    "name": "ci",
+    "node_id": "LA_kwDOA4QHrzAFRl4F",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/labels/ci"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "color": "0366d6",
+    "default": false,
+    "description": null,
+    "id": 4000000060,
+    "name": "dependencies",
+    "node_id": "LA_kwDO6cYAvj0a-5-C",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/labels/dependencies"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "color": "0075ca",
+    "default": true,
+    "description": null,
+    "id": 4000000064,
+    "name": "documentation",
+    "node_id": "LA_kwDOxA99_mms0YlU",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/labels/documentation"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "color": "a2eeef",
+    "default": true,
+    "description": null,
+    "id": 4000000079,
+    "name": "enhancement",
+    "node_id": "LA_kwDOVZ1oHcf6V4SC",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/labels/enhancement"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "color": "d876e3",
+    "default": true,
+    "description": null,
+    "id": 4000000100,
+    "name": "question",
+    "node_id": "LA_kwDOxMf00O8SZlWy",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/labels/question"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "color": "b60205",
+    "default": false,
+    "description": null,
+    "id": 4000000108,
+    "name": "regression",
+    "node_id": "LA_kwDO5fxrk4kngFGU",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/labels/regression"
+  }
+]

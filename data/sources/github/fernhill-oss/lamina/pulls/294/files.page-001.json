@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 2,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/a18ae475a7a1d475a800f0b31d151d46c48ab5e7/lamina%2Floader%2Fglob2.py",
+    "changes": 3,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Floader%2Fglob2.py?ref=a18ae475a7a1d475a800f0b31d151d46c48ab5e7",
+    "deletions": 1,
+    "filename": "lamina/loader/glob2.py",
+    "patch": "@@ -7,8 +7,9 @@ from lamina.loader.core import loads\n from lamina.model import Document\n \n \n-def load_glob2(path: str, *, strict: bool = True, skip: list[str] = []) -> Document:\n+def load_glob2(path: str, *, strict: bool = True, skip: list[str] | None = None) -> Document:\n     \"\"\"Load a glob2 configuration file.\"\"\"\n+    skip = list(skip or [])\n     skip.append(path)\n     fh = open(path, encoding=\"utf-8\")\n     file_text = fh.read()",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/a18ae475a7a1d475a800f0b31d151d46c48ab5e7/lamina%2Floader%2Fglob2.py",
+    "sha": "7b99615170b9eb1cab273926ad6b862be1edb5d5",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/a18ae475a7a1d475a800f0b31d151d46c48ab5e7/tests%2Ftest_loader_glob2_regression_294.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_glob2_regression_294.py?ref=a18ae475a7a1d475a800f0b31d151d46c48ab5e7",
+    "deletions": 0,
+    "filename": "tests/test_loader_glob2_regression_294.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.loader.glob2 import load_glob2\n+\n+\n+def test_load_glob2_regression_294():\n+    assert callable(load_glob2)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/a18ae475a7a1d475a800f0b31d151d46c48ab5e7/tests%2Ftest_loader_glob2_regression_294.py",
+    "sha": "96a53105984f0103ca5709bd091d6c3ba8be7d2c",
+    "status": "added"
+  }
+]

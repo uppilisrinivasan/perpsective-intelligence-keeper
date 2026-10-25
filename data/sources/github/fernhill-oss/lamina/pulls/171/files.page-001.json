@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 4,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/f16d8c0288ceb135eb702e0ff8d41f0607e060b2/docs%2Fwriting.md",
+    "changes": 4,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/docs%2Fwriting.md?ref=f16d8c0288ceb135eb702e0ff8d41f0607e060b2",
+    "deletions": 0,
+    "filename": "docs/writing.md",
+    "patch": "@@ -7,3 +7,7 @@ Round-trip writing follows the same rules everywhere in lamina.\n ## Common questions\n \n **Does round-trip writing change my file?** No: lamina writes back exactly what it read.\n+\n+## Common questions\n+\n+**Does round-trip writing change my file?** No: lamina writes back exactly what it read.",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/f16d8c0288ceb135eb702e0ff8d41f0607e060b2/docs%2Fwriting.md",
+    "sha": "89b86d505b77844230d15c4baf18a55c4f07f016",
+    "status": "modified"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 14,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/83feec214c7f73b2990180fb9adcac1b296fd02c/lamina%2Fdiagnostics%2Ftype_mismatch.py",
+    "changes": 14,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdiagnostics%2Ftype_mismatch.py?ref=83feec214c7f73b2990180fb9adcac1b296fd02c",
+    "deletions": 0,
+    "filename": "lamina/diagnostics/type_mismatch.py",
+    "patch": "@@ -0,0 +1,14 @@\n+\"\"\"The TypeMismatchError error and its helper.\"\"\"\n+\n+class TypeMismatchError(Exception):\n+    \"\"\"Raised for type mismatch problems.\"\"\"\n+\n+\n+def raise_type_mismatch(message: str, line: int, column: int, *, skip: list[str] | None = None) -> None:\n+    \"\"\"Raise TypeMismatchError for message at line and column.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(message)\n+    full_message = message if message.endswith(\".\") else message + \".\"\n+    if line < 1:\n+        raise TypeMismatchError(full_message)\n+    raise TypeMismatchError(full_message)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/83feec214c7f73b2990180fb9adcac1b296fd02c/lamina%2Fdiagnostics%2Ftype_mismatch.py",
+    "sha": "87079807acb76c642ed62bed0b5261f5d178685d",
+    "status": "added"
+  }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/4456441?v=4",
+      "events_url": "https://api.github.example/users/mei-c/events{/privacy}",
+      "followers_url": "https://api.github.example/users/mei-c/followers",
+      "following_url": "https://api.github.example/users/mei-c/following{/other_user}",
+      "gists_url": "https://api.github.example/users/mei-c/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/mei-c",
+      "id": 4456441,
+      "login": "mei-c",
+      "node_id": "U_kwDOH5qcMd4YF_XQ",
+      "organizations_url": "https://api.github.example/users/mei-c/orgs",
+      "received_events_url": "https://api.github.example/users/mei-c/received_events",
+      "repos_url": "https://api.github.example/users/mei-c/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/mei-c/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/mei-c/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/mei-c",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/c0c6db9376e5db556e1489394e55b0942066f4e5/comments",
+    "commit": {
+      "author": {
+        "date": "2026-04-09T14:36:59Z",
+        "email": "4456441+mei-c@users.noreply.github.example",
+        "name": "Mei Chen"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2026-04-09T14:36:59Z",
+        "email": "4456441+mei-c@users.noreply.github.example",
+        "name": "Mei Chen"
+      },
+      "message": "Command line: add export support",
+      "tree": {
+        "sha": "5d9c254d24c2e1b2a26ecde68a56eeb3cf119a17",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/5d9c254d24c2e1b2a26ecde68a56eeb3cf119a17"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/c0c6db9376e5db556e1489394e55b0942066f4e5",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/4456441?v=4",
+      "events_url": "https://api.github.example/users/mei-c/events{/privacy}",
+      "followers_url": "https://api.github.example/users/mei-c/followers",
+      "following_url": "https://api.github.example/users/mei-c/following{/other_user}",
+      "gists_url": "https://api.github.example/users/mei-c/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/mei-c",
+      "id": 4456441,
+      "login": "mei-c",
+      "node_id": "U_kwDOH5qcMd4YF_XQ",
+      "organizations_url": "https://api.github.example/users/mei-c/orgs",
+      "received_events_url": "https://api.github.example/users/mei-c/received_events",
+      "repos_url": "https://api.github.example/users/mei-c/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/mei-c/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/mei-c/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/mei-c",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/c0c6db9376e5db556e1489394e55b0942066f4e5",
+    "node_id": "C_kwDO-STBiiW0Lb2P",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/5318ae19d82bb85f410556bd8c27cfa60c94efff",
+        "sha": "5318ae19d82bb85f410556bd8c27cfa60c94efff",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/5318ae19d82bb85f410556bd8c27cfa60c94efff"
+      }
+    ],
+    "sha": "c0c6db9376e5db556e1489394e55b0942066f4e5",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/c0c6db9376e5db556e1489394e55b0942066f4e5"
+  }
+]

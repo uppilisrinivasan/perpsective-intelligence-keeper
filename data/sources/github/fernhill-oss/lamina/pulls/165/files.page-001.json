@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 4,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/d41a9a740de296614c512a562c456e094bb3b010/docs%2Finterpolation.md",
+    "changes": 4,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/docs%2Finterpolation.md?ref=d41a9a740de296614c512a562c456e094bb3b010",
+    "deletions": 0,
+    "filename": "docs/interpolation.md",
+    "patch": "@@ -14,3 +14,7 @@ A short example of interpolation:\n \n     [app]\n     name = demo\n+\n+## Common questions\n+\n+**Does interpolation change my file?** No: lamina writes back exactly what it read.",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/d41a9a740de296614c512a562c456e094bb3b010/docs%2Finterpolation.md",
+    "sha": "74956db8bb82974a5eb0ee62fe31a05135bf3305",
+    "status": "modified"
+  }
+]

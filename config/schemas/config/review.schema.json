@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "draft_event_rules": {
+      "properties": {
+        "blocker_or_major": {
+          "type": "string"
+        },
+        "otherwise": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "draft_header": {
+      "type": "string"
+    },
+    "exemplar_hunk_lines": {
+      "type": "number"
+    },
+    "label_line": {
+      "type": "string"
+    },
+    "max_exemplars": {
+      "type": "number"
+    },
+    "patch_author": {
+      "type": "string"
+    },
+    "reasons": {
+      "properties": {
+        "baseline_unavailable": {
+          "type": "string"
+        },
+        "blind_spot": {
+          "type": "string"
+        },
+        "edge_generic": {
+          "type": "string"
+        },
+        "edge_item": {
+          "type": "string"
+        },
+        "nothing": {
+          "type": "string"
+        },
+        "shared": {
+          "type": "string"
+        },
+        "signal": {
+          "type": "string"
+        },
+        "signal_covered": {
+          "type": "string"
+        },
+        "slop": {
+          "type": "string"
+        },
+        "top_cell": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "slop_reply_template": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "draft_event_rules",
+    "draft_header",
+    "exemplar_hunk_lines",
+    "label_line",
+    "max_exemplars",
+    "patch_author",
+    "reasons",
+    "slop_reply_template"
+  ],
+  "title": "config/review.yaml",
+  "type": "object"
+}

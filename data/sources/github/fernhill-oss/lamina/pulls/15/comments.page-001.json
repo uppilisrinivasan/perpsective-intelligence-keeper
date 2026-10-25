@@ -1,0 +1,141 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/15#discussion_r1700000513"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/15"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000513"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "nit: naming, please use snake_case (`stripped_text`).",
+    "commit_id": "12d77361fc66355e7ec98941745adf561d1e450b",
+    "created_at": "2024-01-10T07:12:53Z",
+    "diff_hunk": "@@ -0,0 +1,19 @@\n+\"\"\"Parse inline table values: comma-separated items in brackets.\"\"\"\n+\n+from lamina.errors import ParseError\n+\n+\n+def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+    \"\"\"Parse a [a, b, c] inline table value into its items.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(raw)\n+    strippedText = raw.strip()",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/15#discussion_r1700000513",
+    "id": 1700000513,
+    "line": null,
+    "node_id": "PRRC_kwDOOr1xDcvtB28f",
+    "original_commit_id": "12d77361fc66355e7ec98941745adf561d1e450b",
+    "original_line": 10,
+    "original_position": 10,
+    "original_start_line": null,
+    "path": "lamina/parser/inline_table.py",
+    "position": null,
+    "pull_request_review_id": 1900000708,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/15",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000513/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-01-10T07:12:53Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000513",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/15#discussion_r1700000546"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/15"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000546"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Updated.",
+    "commit_id": "12d77361fc66355e7ec98941745adf561d1e450b",
+    "created_at": "2024-01-11T23:12:24Z",
+    "diff_hunk": "@@ -0,0 +1,19 @@\n+\"\"\"Parse inline table values: comma-separated items in brackets.\"\"\"\n+\n+from lamina.errors import ParseError\n+\n+\n+def parse_inline_table_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+    \"\"\"Parse a [a, b, c] inline table value into its items.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(raw)\n+    strippedText = raw.strip()",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/15#discussion_r1700000546",
+    "id": 1700000546,
+    "in_reply_to_id": 1700000513,
+    "line": null,
+    "node_id": "PRRC_kwDOCHKBSSVY7HQ3",
+    "original_commit_id": "12d77361fc66355e7ec98941745adf561d1e450b",
+    "original_line": 10,
+    "original_position": 10,
+    "original_start_line": null,
+    "path": "lamina/parser/inline_table.py",
+    "position": null,
+    "pull_request_review_id": 1900000744,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/15",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000546/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-01-11T23:12:24Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700000546",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/4691973?v=4",
+      "events_url": "https://api.github.example/users/hana-t/events{/privacy}",
+      "followers_url": "https://api.github.example/users/hana-t/followers",
+      "following_url": "https://api.github.example/users/hana-t/following{/other_user}",
+      "gists_url": "https://api.github.example/users/hana-t/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/hana-t",
+      "id": 4691973,
+      "login": "hana-t",
+      "node_id": "U_kwDOT74nqXKuKj_t",
+      "organizations_url": "https://api.github.example/users/hana-t/orgs",
+      "received_events_url": "https://api.github.example/users/hana-t/received_events",
+      "repos_url": "https://api.github.example/users/hana-t/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/hana-t/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/hana-t/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/hana-t",
+      "user_view_type": "public"
+    }
+  }
+]

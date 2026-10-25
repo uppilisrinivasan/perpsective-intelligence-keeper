@@ -1,0 +1,418 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/304#discussion_r1700007109"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/304"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007109"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "`ValueError` escapes the LaminaError hierarchy: every error a user can hit needs a LaminaError with the line and column where it happened.",
+    "commit_id": "81102bf094acbe2fa1c3772676f7730ea104ef52",
+    "created_at": "2026-07-14T09:11:56Z",
+    "diff_hunk": "@@ -0,0 +1,27 @@\n+\"\"\"Scoped includes.\"\"\"\n+\n+import sys\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_scoped_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    \"\"\"Resolve a scoped include relative to base_dir, confined to root.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(name)\n+    resolvedPath = os.path.join(base_dir, name)\n+    if not os.path.isfile(resolvedPath):\n+        raise ValueError(f\"include not found: {name}\")",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/304#discussion_r1700007109",
+    "id": 1700007109,
+    "line": null,
+    "node_id": "PRRC_kwDOecD1dO42VHeX",
+    "original_commit_id": "81102bf094acbe2fa1c3772676f7730ea104ef52",
+    "original_line": 15,
+    "original_position": 15,
+    "original_start_line": null,
+    "path": "lamina/include/scoped.py",
+    "position": null,
+    "pull_request_review_id": 1900010446,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/304",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007109/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-07-14T09:11:56Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007109",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/304#discussion_r1700007136"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/304"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007136"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Can this include path escape the project root? I think `@include \"../../x\"` works here. Include paths stay inside the root, always (realpath + commonpath).",
+    "commit_id": "81102bf094acbe2fa1c3772676f7730ea104ef52",
+    "created_at": "2026-07-14T09:11:56Z",
+    "diff_hunk": "@@ -0,0 +1,27 @@\n+\"\"\"Scoped includes.\"\"\"\n+\n+import sys\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_scoped_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    \"\"\"Resolve a scoped include relative to base_dir, confined to root.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(name)\n+    resolvedPath = os.path.join(base_dir, name)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/304#discussion_r1700007136",
+    "id": 1700007136,
+    "line": null,
+    "node_id": "PRRC_kwDONkKgCHoyyv3f",
+    "original_commit_id": "81102bf094acbe2fa1c3772676f7730ea104ef52",
+    "original_line": 13,
+    "original_position": 13,
+    "original_start_line": null,
+    "path": "lamina/include/scoped.py",
+    "position": null,
+    "pull_request_review_id": 1900010446,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/304",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007136/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-07-14T09:11:56Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007136",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/304#discussion_r1700007147"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/304"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007147"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "nit: naming, please use snake_case (`resolved_path`).",
+    "commit_id": "81102bf094acbe2fa1c3772676f7730ea104ef52",
+    "created_at": "2026-07-14T09:11:56Z",
+    "diff_hunk": "@@ -0,0 +1,27 @@\n+\"\"\"Scoped includes.\"\"\"\n+\n+import sys",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/304#discussion_r1700007147",
+    "id": 1700007147,
+    "line": null,
+    "node_id": "PRRC_kwDOWmigFANEQCib",
+    "original_commit_id": "81102bf094acbe2fa1c3772676f7730ea104ef52",
+    "original_line": 3,
+    "original_position": 3,
+    "original_start_line": null,
+    "path": "lamina/include/scoped.py",
+    "position": null,
+    "pull_request_review_id": 1900010446,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/304",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007147/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-07-14T09:11:56Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007147",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/304#discussion_r1700007170"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/304"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007170"
+      }
+    },
+    "author_association": "MEMBER",
+    "body": "Path confinement: please verify the resolved path is under the root (realpath, then commonpath).",
+    "commit_id": "81102bf094acbe2fa1c3772676f7730ea104ef52",
+    "created_at": "2026-07-14T09:33:56Z",
+    "diff_hunk": "@@ -0,0 +1,27 @@\n+\"\"\"Scoped includes.\"\"\"\n+\n+import sys\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_scoped_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    \"\"\"Resolve a scoped include relative to base_dir, confined to root.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(name)\n+    resolvedPath = os.path.join(base_dir, name)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/304#discussion_r1700007170",
+    "id": 1700007170,
+    "line": null,
+    "node_id": "PRRC_kwDODjsSFTdVJ_nu",
+    "original_commit_id": "81102bf094acbe2fa1c3772676f7730ea104ef52",
+    "original_line": 13,
+    "original_position": 13,
+    "original_start_line": null,
+    "path": "lamina/include/scoped.py",
+    "position": null,
+    "pull_request_review_id": 1900010470,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/304",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007170/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-07-14T09:33:56Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007170",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1450109?v=4",
+      "events_url": "https://api.github.example/users/ravi-m/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ravi-m/followers",
+      "following_url": "https://api.github.example/users/ravi-m/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ravi-m/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ravi-m",
+      "id": 1450109,
+      "login": "ravi-m",
+      "node_id": "U_kwDOWffkXw7tFgOq",
+      "organizations_url": "https://api.github.example/users/ravi-m/orgs",
+      "received_events_url": "https://api.github.example/users/ravi-m/received_events",
+      "repos_url": "https://api.github.example/users/ravi-m/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ravi-m/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ravi-m/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ravi-m",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/304#discussion_r1700007186"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/304"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007186"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Makes sense, changed.",
+    "commit_id": "81102bf094acbe2fa1c3772676f7730ea104ef52",
+    "created_at": "2026-07-16T02:19:57Z",
+    "diff_hunk": "@@ -0,0 +1,27 @@\n+\"\"\"Scoped includes.\"\"\"\n+\n+import sys\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_scoped_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    \"\"\"Resolve a scoped include relative to base_dir, confined to root.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(name)\n+    resolvedPath = os.path.join(base_dir, name)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/304#discussion_r1700007186",
+    "id": 1700007186,
+    "in_reply_to_id": 1700007136,
+    "line": null,
+    "node_id": "PRRC_kwDO7U-vAwn6mCc0",
+    "original_commit_id": "81102bf094acbe2fa1c3772676f7730ea104ef52",
+    "original_line": 13,
+    "original_position": 13,
+    "original_start_line": null,
+    "path": "lamina/include/scoped.py",
+    "position": null,
+    "pull_request_review_id": 1900010475,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/304",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007186/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-07-16T02:19:57Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007186",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/3946628?v=4",
+      "events_url": "https://api.github.example/users/felix-w/events{/privacy}",
+      "followers_url": "https://api.github.example/users/felix-w/followers",
+      "following_url": "https://api.github.example/users/felix-w/following{/other_user}",
+      "gists_url": "https://api.github.example/users/felix-w/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/felix-w",
+      "id": 3946628,
+      "login": "felix-w",
+      "node_id": "U_kwDOYyASdAlfpxYC",
+      "organizations_url": "https://api.github.example/users/felix-w/orgs",
+      "received_events_url": "https://api.github.example/users/felix-w/received_events",
+      "repos_url": "https://api.github.example/users/felix-w/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/felix-w/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/felix-w/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/felix-w",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/304#discussion_r1700007214"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/304"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007214"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Updated.",
+    "commit_id": "81102bf094acbe2fa1c3772676f7730ea104ef52",
+    "created_at": "2026-07-16T02:19:57Z",
+    "diff_hunk": "@@ -0,0 +1,27 @@\n+\"\"\"Scoped includes.\"\"\"\n+\n+import sys",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/304#discussion_r1700007214",
+    "id": 1700007214,
+    "in_reply_to_id": 1700007147,
+    "line": null,
+    "node_id": "PRRC_kwDOpiq85YYNXc3q",
+    "original_commit_id": "81102bf094acbe2fa1c3772676f7730ea104ef52",
+    "original_line": 3,
+    "original_position": 3,
+    "original_start_line": null,
+    "path": "lamina/include/scoped.py",
+    "position": null,
+    "pull_request_review_id": 1900010483,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/304",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007214/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-07-16T02:19:57Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007214",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/3946628?v=4",
+      "events_url": "https://api.github.example/users/felix-w/events{/privacy}",
+      "followers_url": "https://api.github.example/users/felix-w/followers",
+      "following_url": "https://api.github.example/users/felix-w/following{/other_user}",
+      "gists_url": "https://api.github.example/users/felix-w/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/felix-w",
+      "id": 3946628,
+      "login": "felix-w",
+      "node_id": "U_kwDOYyASdAlfpxYC",
+      "organizations_url": "https://api.github.example/users/felix-w/orgs",
+      "received_events_url": "https://api.github.example/users/felix-w/received_events",
+      "repos_url": "https://api.github.example/users/felix-w/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/felix-w/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/felix-w/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/felix-w",
+      "user_view_type": "public"
+    }
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "terms": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "terms"
+  ],
+  "title": "config/glossary.yaml",
+  "type": "object"
+}

@@ -1,0 +1,166 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/18689775?v=4",
+      "events_url": "https://api.github.example/users/marco-j98/events{/privacy}",
+      "followers_url": "https://api.github.example/users/marco-j98/followers",
+      "following_url": "https://api.github.example/users/marco-j98/following{/other_user}",
+      "gists_url": "https://api.github.example/users/marco-j98/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/marco-j98",
+      "id": 18689775,
+      "login": "marco-j98",
+      "node_id": "U_kwDOxJA5umKmO3hZ",
+      "organizations_url": "https://api.github.example/users/marco-j98/orgs",
+      "received_events_url": "https://api.github.example/users/marco-j98/received_events",
+      "repos_url": "https://api.github.example/users/marco-j98/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/marco-j98/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/marco-j98/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/marco-j98",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/e1d98107339889f5d6baec39d2ec7cfd15b1bc79/comments",
+    "commit": {
+      "author": {
+        "date": "2025-01-30T16:21:40Z",
+        "email": "18689775+marco-j98@users.noreply.github.example",
+        "name": "Marco J."
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2025-01-30T16:21:40Z",
+        "email": "18689775+marco-j98@users.noreply.github.example",
+        "name": "Marco J."
+      },
+      "message": "Initial annotated implementation",
+      "tree": {
+        "sha": "0eb9bc94efeb44f4912be423606d366109ca8d5a",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/0eb9bc94efeb44f4912be423606d366109ca8d5a"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/e1d98107339889f5d6baec39d2ec7cfd15b1bc79",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/18689775?v=4",
+      "events_url": "https://api.github.example/users/marco-j98/events{/privacy}",
+      "followers_url": "https://api.github.example/users/marco-j98/followers",
+      "following_url": "https://api.github.example/users/marco-j98/following{/other_user}",
+      "gists_url": "https://api.github.example/users/marco-j98/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/marco-j98",
+      "id": 18689775,
+      "login": "marco-j98",
+      "node_id": "U_kwDOxJA5umKmO3hZ",
+      "organizations_url": "https://api.github.example/users/marco-j98/orgs",
+      "received_events_url": "https://api.github.example/users/marco-j98/received_events",
+      "repos_url": "https://api.github.example/users/marco-j98/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/marco-j98/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/marco-j98/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/marco-j98",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/e1d98107339889f5d6baec39d2ec7cfd15b1bc79",
+    "node_id": "C_kwDOQo11-dBxQ8Jg",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/629272cd29418d65af0518f79ee9ed7690b560da",
+        "sha": "629272cd29418d65af0518f79ee9ed7690b560da",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/629272cd29418d65af0518f79ee9ed7690b560da"
+      }
+    ],
+    "sha": "e1d98107339889f5d6baec39d2ec7cfd15b1bc79",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/e1d98107339889f5d6baec39d2ec7cfd15b1bc79"
+  },
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/18689775?v=4",
+      "events_url": "https://api.github.example/users/marco-j98/events{/privacy}",
+      "followers_url": "https://api.github.example/users/marco-j98/followers",
+      "following_url": "https://api.github.example/users/marco-j98/following{/other_user}",
+      "gists_url": "https://api.github.example/users/marco-j98/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/marco-j98",
+      "id": 18689775,
+      "login": "marco-j98",
+      "node_id": "U_kwDOxJA5umKmO3hZ",
+      "organizations_url": "https://api.github.example/users/marco-j98/orgs",
+      "received_events_url": "https://api.github.example/users/marco-j98/received_events",
+      "repos_url": "https://api.github.example/users/marco-j98/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/marco-j98/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/marco-j98/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/marco-j98",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/821cfc35527d1193cf6e810e8be21671cc33e002/comments",
+    "commit": {
+      "author": {
+        "date": "2025-02-04T03:30:06Z",
+        "email": "18689775+marco-j98@users.noreply.github.example",
+        "name": "Marco J."
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2025-02-04T03:30:06Z",
+        "email": "18689775+marco-j98@users.noreply.github.example",
+        "name": "Marco J."
+      },
+      "message": "Apply suggestions from review",
+      "tree": {
+        "sha": "43e3f801cef33f39e266c5c2e27faeab43ad9fdd",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/43e3f801cef33f39e266c5c2e27faeab43ad9fdd"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/821cfc35527d1193cf6e810e8be21671cc33e002",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/18689775?v=4",
+      "events_url": "https://api.github.example/users/marco-j98/events{/privacy}",
+      "followers_url": "https://api.github.example/users/marco-j98/followers",
+      "following_url": "https://api.github.example/users/marco-j98/following{/other_user}",
+      "gists_url": "https://api.github.example/users/marco-j98/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/marco-j98",
+      "id": 18689775,
+      "login": "marco-j98",
+      "node_id": "U_kwDOxJA5umKmO3hZ",
+      "organizations_url": "https://api.github.example/users/marco-j98/orgs",
+      "received_events_url": "https://api.github.example/users/marco-j98/received_events",
+      "repos_url": "https://api.github.example/users/marco-j98/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/marco-j98/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/marco-j98/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/marco-j98",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/821cfc35527d1193cf6e810e8be21671cc33e002",
+    "node_id": "C_kwDOOtrcwNqsq3Oj",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/e1d98107339889f5d6baec39d2ec7cfd15b1bc79",
+        "sha": "e1d98107339889f5d6baec39d2ec7cfd15b1bc79",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/e1d98107339889f5d6baec39d2ec7cfd15b1bc79"
+      }
+    ],
+    "sha": "821cfc35527d1193cf6e810e8be21671cc33e002",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/821cfc35527d1193cf6e810e8be21671cc33e002"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "additions": 24,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/457e77f3be0c9edb8cb1d36ac60bc03d877b2788/lamina%2Fdump%2Fminimal2.py",
+    "changes": 24,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Fminimal2.py?ref=457e77f3be0c9edb8cb1d36ac60bc03d877b2788",
+    "deletions": 0,
+    "filename": "lamina/dump/minimal2.py",
+    "patch": "@@ -0,0 +1,24 @@\n+\"\"\"Write documents in the minimal2 layout.\"\"\"\n+\n+from lamina.model import Blank, Comment, Document, Entry\n+\n+\n+def dumps_minimal2(doc: Document, *, indent: int = 0, skip: list[str] = []) -> str:\n+    skip.append(doc.source)\n+    pad_text = \" \" * indent\n+    lines: list[str] = []\n+    for section in doc.sections():\n+        lines.append(f\"[{section.name}]\")\n+        for item in section.items:\n+            if isinstance(item, Entry):\n+                lines.append(f\"{pad_text}{item.key} = {item.value}\")\n+            elif isinstance(item, Comment):\n+                lines.append(item.text)\n+            elif isinstance(item, Blank):\n+                lines.append(\"\")\n+    return \"\\n\".join(lines) + (\"\\n\" if lines else \"\")\n+\n+\n+def _minimal2_helper2(value):\n+    result = value\n+    return result",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/457e77f3be0c9edb8cb1d36ac60bc03d877b2788/lamina%2Fdump%2Fminimal2.py",
+    "sha": "5fd89ed0d47011646ac24d4bdfd72c116eaa569a",
+    "status": "added"
+  },
+  {
+    "additions": 14,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/457e77f3be0c9edb8cb1d36ac60bc03d877b2788/tests%2Ftest_dump_minimal2.py",
+    "changes": 14,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_minimal2.py?ref=457e77f3be0c9edb8cb1d36ac60bc03d877b2788",
+    "deletions": 0,
+    "filename": "tests/test_dump_minimal2.py",
+    "patch": "@@ -0,0 +1,14 @@\n+from lamina.loader import loads\n+from lamina.dump.minimal2 import dumps_minimal2\n+\n+\n+def test_minimal2_indents():\n+    assert dumps_minimal2(loads(\"[a]\\nx = 1\\n\"), indent=2) == \"[a]\\n  x = 1\\n\"\n+\n+\n+def test_minimal2_keeps_comments():\n+    assert \"# c\" in dumps_minimal2(loads(\"[a]\\n# c\\nx = 1\\n\"))\n+\n+\n+def test_minimal2_empty():\n+    assert dumps_minimal2(loads(\"\")) == \"\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/457e77f3be0c9edb8cb1d36ac60bc03d877b2788/tests%2Ftest_dump_minimal2.py",
+    "sha": "faac8ef231c8909efe5c432d6cc13687791f37ee",
+    "status": "added"
+  },
+  {
+    "additions": 6,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/457e77f3be0c9edb8cb1d36ac60bc03d877b2788/tests%2Ftest_dump_minimal2_improved.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_minimal2_improved.py?ref=457e77f3be0c9edb8cb1d36ac60bc03d877b2788",
+    "deletions": 0,
+    "filename": "tests/test_dump_minimal2_improved.py",
+    "patch": "@@ -0,0 +1,6 @@\n+from lamina.dump.minimal2 import dumps_minimal2\n+\n+\n+def test_minimal2_improved():\n+    assert dumps_minimal2 is not None\n+    assert False, \"TODO: update expected value\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/457e77f3be0c9edb8cb1d36ac60bc03d877b2788/tests%2Ftest_dump_minimal2_improved.py",
+    "sha": "2d2fc75761a8882566cfc5d5703ac5e9722c27d4",
+    "status": "added"
+  }
+]

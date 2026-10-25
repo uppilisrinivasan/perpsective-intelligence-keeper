@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/aaa1ea0676b72e72d6a797d414f2fc70e3071bc9/lamina%2Fdump%2Fdiffable.py",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Fdiffable.py?ref=aaa1ea0676b72e72d6a797d414f2fc70e3071bc9",
+    "deletions": 1,
+    "filename": "lamina/dump/diffable.py",
+    "patch": "@@ -11,7 +11,7 @@ def dumps_diffable(doc: Document, *, indent: int = 0, skip: list[str] | None = N\n     lines: list[str] = []\n     for section in doc.sections():\n         lines.append(f\"[{section.name}]\")\n-        for item in sorted(section.items, key=lambda i: getattr(i, \"key\", \"\")):\n+        for item in section.items:\n             if isinstance(item, Entry):\n                 lines.append(f\"{pad_text}{item.key} = {item.value}\")\n             elif isinstance(item, Comment):",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/aaa1ea0676b72e72d6a797d414f2fc70e3071bc9/lamina%2Fdump%2Fdiffable.py",
+    "sha": "a1da378637df44eaa77fd4fa3874748f4e40ec14",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/aaa1ea0676b72e72d6a797d414f2fc70e3071bc9/tests%2Ftest_dump_diffable_regression_40.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_diffable_regression_40.py?ref=aaa1ea0676b72e72d6a797d414f2fc70e3071bc9",
+    "deletions": 0,
+    "filename": "tests/test_dump_diffable_regression_40.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.dump.diffable import dumps_diffable\n+\n+\n+def test_dumps_diffable_regression_40():\n+    assert callable(dumps_diffable)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/aaa1ea0676b72e72d6a797d414f2fc70e3071bc9/tests%2Ftest_dump_diffable_regression_40.py",
+    "sha": "9fd61f56204b6a2e068607ed1f94728a412bf392",
+    "status": "added"
+  }
+]

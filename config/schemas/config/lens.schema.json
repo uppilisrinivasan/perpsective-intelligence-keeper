@@ -1,0 +1,288 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "bias": {
+      "properties": {
+        "groups": {
+          "properties": {
+            "newcomer": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "regular": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        },
+        "min_per_group": {
+          "type": "number"
+        },
+        "or_threshold": {
+          "type": "number"
+        },
+        "size_buckets": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "build": {
+      "properties": {
+        "blind_spot_min_bad_outcomes": {
+          "type": "number"
+        },
+        "category_groups": {
+          "properties": {
+            "behaviour": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "context": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "hygiene": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "rules": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "threat": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        },
+        "cluster_distance": {
+          "type": "number"
+        },
+        "feature_weights": {
+          "properties": {
+            "category": {
+              "type": "number"
+            },
+            "code": {
+              "type": "number"
+            },
+            "path": {
+              "type": "number"
+            },
+            "statement": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "max_exemplars": {
+          "type": "number"
+        },
+        "max_hunk_lines": {
+          "type": "number"
+        },
+        "max_representatives": {
+          "type": "number"
+        },
+        "min_cluster_size": {
+          "type": "number"
+        },
+        "min_sample_weight": {
+          "type": "number"
+        },
+        "shared_min_findings": {
+          "type": "number"
+        },
+        "shared_min_overlap": {
+          "type": "number"
+        },
+        "trigger_min_coverage": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "calibration": {
+      "properties": {
+        "blind_spot_min_lift": {
+          "type": "number"
+        },
+        "min_outcome_n": {
+          "type": "number"
+        },
+        "notes_ci_change": {
+          "type": "number"
+        },
+        "prior": {
+          "properties": {
+            "alpha": {
+              "type": "number"
+            },
+            "beta": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "severity_weights": {
+          "properties": {
+            "blocker": {
+              "type": "number"
+            },
+            "major": {
+              "type": "number"
+            },
+            "minor": {
+              "type": "number"
+            },
+            "nit": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "confidence": {
+      "properties": {
+        "high_requires": {
+          "properties": {
+            "model_certainty": {
+              "type": "string"
+            },
+            "posterior_mean_min": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "diff": {
+      "properties": {
+        "new_id_similarity": {
+          "type": "number"
+        },
+        "reworded_below": {
+          "type": "number"
+        },
+        "strength_change": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "feedback": {
+      "properties": {
+        "accept_weight": {
+          "type": "number"
+        },
+        "add_note_weight": {
+          "type": "number"
+        },
+        "edit_weight": {
+          "type": "number"
+        },
+        "stable_id_jaccard": {
+          "type": "number"
+        },
+        "update_min_events": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "package": {
+      "properties": {
+        "licence": {
+          "type": "string"
+        },
+        "max_bytes": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "recall": {
+      "properties": {
+        "fallback": {
+          "type": "string"
+        },
+        "max_context_tokens": {
+          "type": "number"
+        },
+        "max_findings": {
+          "type": "number"
+        },
+        "max_items": {
+          "type": "number"
+        },
+        "trim_items_with_exemplars_over": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "schedule": {
+      "properties": {
+        "recalibrate_cron": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "status": {
+      "properties": {
+        "min_support": {
+          "type": "number"
+        },
+        "min_trigger_precision": {
+          "type": "number"
+        },
+        "retire_after_days": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "bias",
+    "build",
+    "calibration",
+    "confidence",
+    "diff",
+    "feedback",
+    "package",
+    "recall",
+    "schedule",
+    "status"
+  ],
+  "title": "config/lens.yaml",
+  "type": "object"
+}

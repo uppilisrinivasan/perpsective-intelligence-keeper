@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "lens_diff_summary",
+  "type": "object",
+  "properties": {
+    "bullets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "maxItems": 3
+    }
+  },
+  "required": [
+    "bullets"
+  ],
+  "additionalProperties": false
+}

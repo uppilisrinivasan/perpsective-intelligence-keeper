@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 3,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/690a0fa8db7f4ede631d78a34db0564327de4644/lamina%2Floader%2Fproject.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Floader%2Fproject.py?ref=690a0fa8db7f4ede631d78a34db0564327de4644",
+    "deletions": 3,
+    "filename": "lamina/loader/project.py",
+    "patch": "@@ -20,10 +20,10 @@ def load_project(path: str, *, check: bool = True, skip: list[str] | None = None\n     if path in _CACHE:\n         return _CACHE[path]\n     with open(path, encoding=\"utf-8\") as fh:\n-        raw_text = fh.read()\n-    if check and not raw_text.strip():\n+        file_text = fh.read()\n+    if check and not file_text.strip():\n         raise LaminaError(f\"empty configuration: {path}\", 0, 1)\n-    doc = loads(raw_text, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n+    doc = loads(file_text, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n     doc.source = path\n     _CACHE[path] = doc\n     return doc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/690a0fa8db7f4ede631d78a34db0564327de4644/lamina%2Floader%2Fproject.py",
+    "sha": "a9cec41c28c766265708270ad697f1bfdaaccb8d",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/690a0fa8db7f4ede631d78a34db0564327de4644/tests%2Ftest_loader_project_regression_318.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_project_regression_318.py?ref=690a0fa8db7f4ede631d78a34db0564327de4644",
+    "deletions": 0,
+    "filename": "tests/test_loader_project_regression_318.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.loader.project import load_project\n+\n+\n+def test_load_project_regression_318():\n+    assert callable(load_project)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/690a0fa8db7f4ede631d78a34db0564327de4644/tests%2Ftest_loader_project_regression_318.py",
+    "sha": "04aa8b1b2b61a261f788827fb48c8567d745c562",
+    "status": "added"
+  }
+]

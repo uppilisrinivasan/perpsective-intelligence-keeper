@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/6762c8963f723bd5ec6f3cd277c916aaa350d0d4/tests%2Ftest_include_shared_more_255.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_include_shared_more_255.py?ref=6762c8963f723bd5ec6f3cd277c916aaa350d0d4",
+    "deletions": 0,
+    "filename": "tests/test_include_shared_more_255.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.include.shared import resolve_shared_include\n+\n+\n+def test_resolve_shared_include_regression_255():\n+    assert callable(resolve_shared_include)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/6762c8963f723bd5ec6f3cd277c916aaa350d0d4/tests%2Ftest_include_shared_more_255.py",
+    "sha": "1fb4fb439374238a72f8c5a07d5e7a9281b2fb29",
+    "status": "added"
+  }
+]

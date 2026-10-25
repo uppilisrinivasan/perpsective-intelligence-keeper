@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 8,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/e9b888e6ddc82977781aa82b8052d69df23de1eb/lamina%2Flexer%2Fcolon.py",
+    "changes": 16,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Flexer%2Fcolon.py?ref=e9b888e6ddc82977781aa82b8052d69df23de1eb",
+    "deletions": 8,
+    "filename": "lamina/lexer/colon.py",
+    "patch": "@@ -10,17 +10,17 @@ def scan_colon(value: str, line: int, *, skip: list[str] | None = None) -> list[\n     skip = list(skip or [])\n     skip.append(value)\n     tokens: list[Token] = []\n-    currentWord: list[str] = []\n+    wordBuffer: list[str] = []\n     start = 1\n     for column, ch in enumerate(value, start=1):\n         if re.match(r\"[\\s+]\", ch):\n-            if currentWord:\n-                tokens.append(Token(\"WORD\", \"\".join(currentWord), line, start))\n-                currentWord = []\n+            if wordBuffer:\n+                tokens.append(Token(\"WORD\", \"\".join(wordBuffer), line, start))\n+                wordBuffer = []\n             continue\n-        if not currentWord:\n+        if not wordBuffer:\n             start = column\n-        currentWord.append(ch)\n-    if currentWord:\n-        tokens.append(Token(\"WORD\", \"\".join(currentWord), line, start))\n+        wordBuffer.append(ch)\n+    if wordBuffer:\n+        tokens.append(Token(\"WORD\", \"\".join(wordBuffer), line, start))\n     return tokens",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/e9b888e6ddc82977781aa82b8052d69df23de1eb/lamina%2Flexer%2Fcolon.py",
+    "sha": "3450240ac5b817d4c68a6211dc67ebfab28f572b",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/e9b888e6ddc82977781aa82b8052d69df23de1eb/tests%2Ftest_lexer_colon_regression_207.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_lexer_colon_regression_207.py?ref=e9b888e6ddc82977781aa82b8052d69df23de1eb",
+    "deletions": 0,
+    "filename": "tests/test_lexer_colon_regression_207.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.lexer.colon import scan_colon\n+\n+\n+def test_scan_colon_regression_207():\n+    assert callable(scan_colon)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/e9b888e6ddc82977781aa82b8052d69df23de1eb/tests%2Ftest_lexer_colon_regression_207.py",
+    "sha": "9280333c7c96416a8524c185965e00748138c952",
+    "status": "added"
+  }
+]

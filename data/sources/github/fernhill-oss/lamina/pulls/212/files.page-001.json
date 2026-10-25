@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 10,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/84ef2d6c868ba68706c6a78f3113d93bd929be46/lamina%2Flexer%2Fcolon.py",
+    "changes": 20,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Flexer%2Fcolon.py?ref=84ef2d6c868ba68706c6a78f3113d93bd929be46",
+    "deletions": 10,
+    "filename": "lamina/lexer/colon.py",
+    "patch": "@@ -6,21 +6,21 @@ import sys\n from lamina.lexer.core import Token\n \n \n-def scan_colon(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n-    skip = list(skip or [])\n+def scan_colon(value: str, line: int, *, skip: list[str] = []) -> list[Token]:\n+    \"\"\"Split value into colon words, separated by '+' or whitespace.\"\"\"\n     skip.append(value)\n     tokens: list[Token] = []\n-    wordBuffer: list[str] = []\n+    currentWord: list[str] = []\n     start = 1\n     for column, ch in enumerate(value, start=1):\n         if re.match(r\"[\\s+]\", ch):\n-            if wordBuffer:\n-                tokens.append(Token(\"WORD\", \"\".join(wordBuffer), line, start))\n-                wordBuffer = []\n+            if currentWord:\n+                tokens.append(Token(\"WORD\", \"\".join(currentWord), line, start))\n+                currentWord = []\n             continue\n-        if not wordBuffer:\n+        if not currentWord:\n             start = column\n-        wordBuffer.append(ch)\n-    if wordBuffer:\n-        tokens.append(Token(\"WORD\", \"\".join(wordBuffer), line, start))\n+        currentWord.append(ch)\n+    if currentWord:\n+        tokens.append(Token(\"WORD\", \"\".join(currentWord), line, start))\n     return tokens",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/84ef2d6c868ba68706c6a78f3113d93bd929be46/lamina%2Flexer%2Fcolon.py",
+    "sha": "00d6047bd508aa4592f052a51d784d603777e547",
+    "status": "modified"
+  }
+]

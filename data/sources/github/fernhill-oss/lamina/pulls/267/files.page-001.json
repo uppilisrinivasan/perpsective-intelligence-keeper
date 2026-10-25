@@ -1,0 +1,50 @@
+[
+  {
+    "additions": 2,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/433c3bdcb4613d024218d8c51fd8064c84ad73ea/README.md",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/README.md?ref=433c3bdcb4613d024218d8c51fd8064c84ad73ea",
+    "deletions": 0,
+    "filename": "README.md",
+    "patch": "@@ -14,3 +14,5 @@ lamina.dumps(doc)   # writes it back exactly as it was, with your edits\n - `@include \"base.conf\"`: values from included files, overridden by the including file. Paths stay inside the\n   project root.\n - `${NAME}` and `${NAME:-default}`: expanded from the environment you pass in.\n+\n+<!-- formatting -->",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/433c3bdcb4613d024218d8c51fd8064c84ad73ea/README.md",
+    "sha": "cde77657978f436e960507b830b31fb45f916f93",
+    "status": "modified"
+  },
+  {
+    "additions": 39,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/433c3bdcb4613d024218d8c51fd8064c84ad73ea/lamina%2Finterpolate%2Fupper.py",
+    "changes": 39,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Fupper.py?ref=433c3bdcb4613d024218d8c51fd8064c84ad73ea",
+    "deletions": 0,
+    "filename": "lamina/interpolate/upper.py",
+    "patch": "@@ -0,0 +1,39 @@\n+\"\"\"Upper interpolation: ${NAME} references with extra checks.\"\"\"\n+\n+import sys\n+from collections.abc import Mapping\n+\n+from lamina.errors import InterpolationError\n+\n+\n+def _valid(value: str) -> bool:\n+    return \"\\n\" not in value\n+\n+\n+def interpolate_upper(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] = []) -> str:\n+    \"\"\"Expand ${NAME} references in value using env (upper rules).\"\"\"\n+    skip.append(value)\n+    outParts: list[str] = []\n+    i = 0\n+    while True:\n+        start = value.find(\"${\", i)\n+        if start < 0:\n+            outParts.append(value[i:])\n+            return \"\".join(outParts)\n+        end = value.find(\"}\", start)\n+        if end < 0:\n+            raise InterpolationError(\"unterminated reference\", line, start + 1)\n+        outParts.append(value[i:start])\n+        name = value[start + 2:end]\n+        if name not in env:\n+            raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n+        resolved = env[name]\n+        if not _valid(resolved):\n+            raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n+        outParts.append(resolved)\n+        i = end + 1\n+\n+\n+def _upper_helper2(value):\n+    result = value\n+    return result",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/433c3bdcb4613d024218d8c51fd8064c84ad73ea/lamina%2Finterpolate%2Fupper.py",
+    "sha": "c2650475888a7814f6ecef5ebcf673448111a4ef",
+    "status": "added"
+  },
+  {
+    "additions": 17,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/433c3bdcb4613d024218d8c51fd8064c84ad73ea/tests%2Ftest_interpolate_upper.py",
+    "changes": 17,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_interpolate_upper.py?ref=433c3bdcb4613d024218d8c51fd8064c84ad73ea",
+    "deletions": 0,
+    "filename": "tests/test_interpolate_upper.py",
+    "patch": "@@ -0,0 +1,17 @@\n+import pytest\n+\n+from lamina.errors import InterpolationError\n+from lamina.interpolate.upper import interpolate_upper\n+\n+\n+def test_upper_expands():\n+    assert interpolate_upper(\"a-${X}\", {\"X\": \"1\"}) == \"a-1\"\n+\n+\n+def test_upper_undefined():\n+    with pytest.raises(InterpolationError):\n+        interpolate_upper(\"${NOPE}\", {})\n+\n+\n+def test_upper_plain_text():\n+    assert interpolate_upper(\"plain\", {}) == \"plain\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/433c3bdcb4613d024218d8c51fd8064c84ad73ea/tests%2Ftest_interpolate_upper.py",
+    "sha": "63036381ba9defeec3d7e7fde5102c8e0cf0f1c7",
+    "status": "added"
+  },
+  {
+    "additions": 6,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/433c3bdcb4613d024218d8c51fd8064c84ad73ea/tests%2Ftest_interpolate_upper_improved.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_interpolate_upper_improved.py?ref=433c3bdcb4613d024218d8c51fd8064c84ad73ea",
+    "deletions": 0,
+    "filename": "tests/test_interpolate_upper_improved.py",
+    "patch": "@@ -0,0 +1,6 @@\n+from lamina.interpolate.upper import interpolate_upper\n+\n+\n+def test_upper_improved():\n+    assert interpolate_upper is not None\n+    assert False, \"TODO: update expected value\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/433c3bdcb4613d024218d8c51fd8064c84ad73ea/tests%2Ftest_interpolate_upper_improved.py",
+    "sha": "3cb027ec162a864f3b543eaab7e8f432cb9b7c47",
+    "status": "added"
+  }
+]

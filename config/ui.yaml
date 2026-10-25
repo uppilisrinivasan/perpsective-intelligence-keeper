@@ -1,0 +1,34 @@
+editable_settings:
+  attention_budget_minutes: {type: int, default: 120, min: 15, max: 600, label: "Your review time this week (minutes)"}
+  auto_approve_usd: {type: float, default: "${KEEPER_AUTO_APPROVE_USD:-0.05}", min: 0, max: 1.0, label: "Run without asking below (USD)"}
+  theme: {type: enum, options: [system, light, dark], default: system, label: "Theme"}
+  density: {type: enum, options: [comfortable, compact], default: comfortable, label: "Density"}
+  diff_wrap: {type: bool, default: false, label: "Wrap long diff lines"}
+  diff_view: {type: enum, options: [unified, split], default: unified, label: "Default diff view"}
+  reduced_motion: {type: enum, options: [system, "on"], default: system, label: "Reduce motion"}
+  show_baseline_only: {type: bool, default: false, label: "Show other model notes by default"}
+tour:
+  steps: [aha_compare, fix_demo, queue_summary, unknown_row, edge_map, proof_verdict, practice_taste]
+  aha_max_diff_lines: 120
+assistant:
+  max_tool_rounds: 6
+  history_tokens: 24000
+  tool_result_tokens: 6000
+  suggestions:
+    queue: ["Why does #{top_unknown} need another reviewer?", "What's handled for me this week?"]
+    pr: ["What would {maintainer} notice here?", "Show me past comments like “{top_edge_title}”."]
+    lens: ["What changed in my lens since v{prev_version}?", "What does my lens miss?"]
+    proof: ["Explain the result in one paragraph."]
+    practice: ["What should I practise next?"]
+    default: ["What needs me today?", "What does the lens miss?", "Is the lens proven?"]
+jobs: {poll_status_seconds: 60}
+estimates:                          # USD per unit, used for confirmations before a live run
+  analyze_pr: 0.012
+  fix_run: 0.06
+  lens_build: 0.30
+  recalibrate: 0.05
+  lens_update: 0.08
+  fidelity_per_pr: 0.013
+  practice_item: 0.002
+  ask_answer: 0.01
+  handoff: 0.003

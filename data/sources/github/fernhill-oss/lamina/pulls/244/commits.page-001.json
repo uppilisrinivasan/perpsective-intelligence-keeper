@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/19341557?v=4",
+      "events_url": "https://api.github.example/users/chen-d85/events{/privacy}",
+      "followers_url": "https://api.github.example/users/chen-d85/followers",
+      "following_url": "https://api.github.example/users/chen-d85/following{/other_user}",
+      "gists_url": "https://api.github.example/users/chen-d85/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/chen-d85",
+      "id": 19341557,
+      "login": "chen-d85",
+      "node_id": "U_kwDO0I8y4TDlXzQM",
+      "organizations_url": "https://api.github.example/users/chen-d85/orgs",
+      "received_events_url": "https://api.github.example/users/chen-d85/received_events",
+      "repos_url": "https://api.github.example/users/chen-d85/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/chen-d85/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/chen-d85/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/chen-d85",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/6f2faf5a3e1bfc2007b3b934cb487a00bb072117/comments",
+    "commit": {
+      "author": {
+        "date": "2026-03-10T11:18:26Z",
+        "email": "19341557+chen-d85@users.noreply.github.example",
+        "name": "Chen D."
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2026-03-10T11:18:26Z",
+        "email": "19341557+chen-d85@users.noreply.github.example",
+        "name": "Chen D."
+      },
+      "message": "Initial fallback implementation",
+      "tree": {
+        "sha": "0afe800a95b871a02afa4059b6b67b90e8a5dcc9",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/0afe800a95b871a02afa4059b6b67b90e8a5dcc9"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/6f2faf5a3e1bfc2007b3b934cb487a00bb072117",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/19341557?v=4",
+      "events_url": "https://api.github.example/users/chen-d85/events{/privacy}",
+      "followers_url": "https://api.github.example/users/chen-d85/followers",
+      "following_url": "https://api.github.example/users/chen-d85/following{/other_user}",
+      "gists_url": "https://api.github.example/users/chen-d85/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/chen-d85",
+      "id": 19341557,
+      "login": "chen-d85",
+      "node_id": "U_kwDO0I8y4TDlXzQM",
+      "organizations_url": "https://api.github.example/users/chen-d85/orgs",
+      "received_events_url": "https://api.github.example/users/chen-d85/received_events",
+      "repos_url": "https://api.github.example/users/chen-d85/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/chen-d85/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/chen-d85/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/chen-d85",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/6f2faf5a3e1bfc2007b3b934cb487a00bb072117",
+    "node_id": "C_kwDOipjXgMVSCwbE",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/f013d0c986d720957962e63dcec9d398bdb01430",
+        "sha": "f013d0c986d720957962e63dcec9d398bdb01430",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/f013d0c986d720957962e63dcec9d398bdb01430"
+      }
+    ],
+    "sha": "6f2faf5a3e1bfc2007b3b934cb487a00bb072117",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/6f2faf5a3e1bfc2007b3b934cb487a00bb072117"
+  }
+]

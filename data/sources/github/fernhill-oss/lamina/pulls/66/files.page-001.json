@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 6,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/0ede70ed630be7a787ec4db76feb248370e0373c/lamina%2Finclude%2Fenv_named.py",
+    "changes": 12,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Fenv_named.py?ref=0ede70ed630be7a787ec4db76feb248370e0373c",
+    "deletions": 6,
+    "filename": "lamina/include/env_named.py",
+    "patch": "@@ -9,13 +9,13 @@ from lamina.errors import IncludeError\n def resolve_env_named_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n     skip = list(skip or [])\n     skip.append(name)\n-    root_real = os.path.realpath(root)\n-    resolvedPath = os.path.realpath(os.path.join(base_dir, name))\n-    if os.path.commonpath([resolvedPath, root_real]) != root_real:\n+    root_real = os.path.abspath(root)\n+    candidatePath = os.path.abspath(os.path.join(base_dir, name))\n+    if os.path.commonpath([candidatePath, root_real]) != root_real:\n         raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n-    if not os.path.isfile(resolvedPath):\n-        raise IncludeError(f\"include not found: {name}\", 0, 1)\n-    return resolvedPath\n+    if not os.path.isfile(candidatePath):\n+        raise ValueError(f\"include not found: {name}\")\n+    return candidatePath\n \n \n def read_env_named_include(base_dir: str, name: str, root: str) -> str:",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/0ede70ed630be7a787ec4db76feb248370e0373c/lamina%2Finclude%2Fenv_named.py",
+    "sha": "d8654e4f65d085adac7995593267823953f17e47",
+    "status": "modified"
+  }
+]

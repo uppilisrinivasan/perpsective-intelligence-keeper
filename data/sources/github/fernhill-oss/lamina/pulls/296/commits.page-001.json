@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/23356049?v=4",
+      "events_url": "https://api.github.example/users/umar-g96/events{/privacy}",
+      "followers_url": "https://api.github.example/users/umar-g96/followers",
+      "following_url": "https://api.github.example/users/umar-g96/following{/other_user}",
+      "gists_url": "https://api.github.example/users/umar-g96/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/umar-g96",
+      "id": 23356049,
+      "login": "umar-g96",
+      "node_id": "U_kwDOuGZpmIiViW-r",
+      "organizations_url": "https://api.github.example/users/umar-g96/orgs",
+      "received_events_url": "https://api.github.example/users/umar-g96/received_events",
+      "repos_url": "https://api.github.example/users/umar-g96/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/umar-g96/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/umar-g96/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/umar-g96",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/92eff8e6d643d3867eeb6e3042fd8cd61e904311/comments",
+    "commit": {
+      "author": {
+        "date": "2026-06-25T08:26:18Z",
+        "email": "23356049+umar-g96@users.noreply.github.example",
+        "name": "Umar G."
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2026-06-25T08:26:18Z",
+        "email": "23356049+umar-g96@users.noreply.github.example",
+        "name": "Umar G."
+      },
+      "message": "Initial escaped implementation",
+      "tree": {
+        "sha": "be2a8a8f103a5557fc70072b3eed372fa9e0cb22",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/be2a8a8f103a5557fc70072b3eed372fa9e0cb22"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/92eff8e6d643d3867eeb6e3042fd8cd61e904311",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/23356049?v=4",
+      "events_url": "https://api.github.example/users/umar-g96/events{/privacy}",
+      "followers_url": "https://api.github.example/users/umar-g96/followers",
+      "following_url": "https://api.github.example/users/umar-g96/following{/other_user}",
+      "gists_url": "https://api.github.example/users/umar-g96/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/umar-g96",
+      "id": 23356049,
+      "login": "umar-g96",
+      "node_id": "U_kwDOuGZpmIiViW-r",
+      "organizations_url": "https://api.github.example/users/umar-g96/orgs",
+      "received_events_url": "https://api.github.example/users/umar-g96/received_events",
+      "repos_url": "https://api.github.example/users/umar-g96/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/umar-g96/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/umar-g96/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/umar-g96",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/92eff8e6d643d3867eeb6e3042fd8cd61e904311",
+    "node_id": "C_kwDO5qvkFwzbThlD",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/858a8f91909fbe33b5b412e2d5101dd4d91567ff",
+        "sha": "858a8f91909fbe33b5b412e2d5101dd4d91567ff",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/858a8f91909fbe33b5b412e2d5101dd4d91567ff"
+      }
+    ],
+    "sha": "92eff8e6d643d3867eeb6e3042fd8cd61e904311",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/92eff8e6d643d3867eeb6e3042fd8cd61e904311"
+  }
+]

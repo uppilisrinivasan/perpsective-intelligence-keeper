@@ -1,0 +1,38 @@
+[
+  {
+    "additions": 9,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/d5ba750e77ea6b538285ce3a577b7d931a85549e/lamina%2Fdump%2Fwrapped.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Fwrapped.py?ref=d5ba750e77ea6b538285ce3a577b7d931a85549e",
+    "deletions": 4,
+    "filename": "lamina/dump/wrapped.py",
+    "patch": "@@ -1,19 +1,24 @@\n \"\"\"Write documents in the wrapped layout.\"\"\"\n \n+import warnings\n+\n from lamina.model import Blank, Comment, Document, Entry\n \n \n-def dumps_wrapped(doc, *, indent=0, skip=None):\n+def dumps_wrapped(doc, *, width=0, skip=None, indent=None):\n     \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n+    if indent is not None:\n+        warnings.warn(\"indent= is deprecated; use width=\", DeprecationWarning, stacklevel=2)\n+        width = indent  # type: ignore[assignment]\n     skip = list(skip or [])\n     skip.append(doc.source)\n-    padText = \" \" * indent\n+    prefixText = \" \" * width\n     lines: list[str] = []\n     for section in doc.sections():\n         lines.append(f\"[{section.name}]\")\n-        for item in sorted(section.items, key=lambda i: getattr(i, \"key\", \"\")):\n+        for item in section.items:\n             if isinstance(item, Entry):\n-                lines.append(f\"{padText}{item.key} = {item.value}\")\n+                lines.append(f\"{prefixText}{item.key} = {item.value}\")\n             elif isinstance(item, Comment):\n                 lines.append(item.text)\n             elif isinstance(item, Blank):",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/d5ba750e77ea6b538285ce3a577b7d931a85549e/lamina%2Fdump%2Fwrapped.py",
+    "sha": "d015710ed25bb4b32f53a6daa284d549b1d56f6d",
+    "status": "modified"
+  },
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/d5ba750e77ea6b538285ce3a577b7d931a85549e/tests%2Ftest_dump_wrapped.py",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_wrapped.py?ref=d5ba750e77ea6b538285ce3a577b7d931a85549e",
+    "deletions": 1,
+    "filename": "tests/test_dump_wrapped.py",
+    "patch": "@@ -3,7 +3,7 @@ from lamina.dump.wrapped import dumps_wrapped\n \n \n def test_wrapped_indents():\n-    assert dumps_wrapped(loads(\"[a]\\nx = 1\\n\"), indent=2) == \"[a]\\n  x = 1\\n\"\n+    assert dumps_wrapped(loads(\"[a]\\nx = 1\\n\"), width=2) == \"[a]\\n  x = 1\\n\"\n \n \n def test_wrapped_keeps_comments():",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/d5ba750e77ea6b538285ce3a577b7d931a85549e/tests%2Ftest_dump_wrapped.py",
+    "sha": "13ef913a09b3863759c2c3b4e5ddd624b4893fd9",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/d5ba750e77ea6b538285ce3a577b7d931a85549e/tests%2Ftest_dump_wrapped_regression_167.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_wrapped_regression_167.py?ref=d5ba750e77ea6b538285ce3a577b7d931a85549e",
+    "deletions": 0,
+    "filename": "tests/test_dump_wrapped_regression_167.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.dump.wrapped import dumps_wrapped\n+\n+\n+def test_dumps_wrapped_regression_167():\n+    assert callable(dumps_wrapped)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/d5ba750e77ea6b538285ce3a577b7d931a85549e/tests%2Ftest_dump_wrapped_regression_167.py",
+    "sha": "f5d2bff1b516816d0a190e063dbadceb29157bdc",
+    "status": "added"
+  }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/1450109?v=4",
+      "events_url": "https://api.github.example/users/ravi-m/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ravi-m/followers",
+      "following_url": "https://api.github.example/users/ravi-m/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ravi-m/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ravi-m",
+      "id": 1450109,
+      "login": "ravi-m",
+      "node_id": "U_kwDOWffkXw7tFgOq",
+      "organizations_url": "https://api.github.example/users/ravi-m/orgs",
+      "received_events_url": "https://api.github.example/users/ravi-m/received_events",
+      "repos_url": "https://api.github.example/users/ravi-m/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ravi-m/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ravi-m/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ravi-m",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/f44dbeba1df6430d5c87423e6cbe278ff1075488/comments",
+    "commit": {
+      "author": {
+        "date": "2025-06-30T13:17:18Z",
+        "email": "1450109+ravi-m@users.noreply.github.example",
+        "name": "Ravi Menon"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2025-06-30T13:17:18Z",
+        "email": "1450109+ravi-m@users.noreply.github.example",
+        "name": "Ravi Menon"
+      },
+      "message": "Revert \"Release script: bundle the sample configs\"\n\nThis reverts commit bafc62df066bddd7c8dccb9106b657846a1b8c33, reversing\nchanges made to 2f357d3adb4390e75235be26b90ce26399583ba2.",
+      "tree": {
+        "sha": "76b1348d51f178ec12463929102d8ee12469901a",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/76b1348d51f178ec12463929102d8ee12469901a"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/f44dbeba1df6430d5c87423e6cbe278ff1075488",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/1450109?v=4",
+      "events_url": "https://api.github.example/users/ravi-m/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ravi-m/followers",
+      "following_url": "https://api.github.example/users/ravi-m/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ravi-m/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ravi-m",
+      "id": 1450109,
+      "login": "ravi-m",
+      "node_id": "U_kwDOWffkXw7tFgOq",
+      "organizations_url": "https://api.github.example/users/ravi-m/orgs",
+      "received_events_url": "https://api.github.example/users/ravi-m/received_events",
+      "repos_url": "https://api.github.example/users/ravi-m/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ravi-m/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ravi-m/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ravi-m",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/f44dbeba1df6430d5c87423e6cbe278ff1075488",
+    "node_id": "C_kwDOh7rFea4dbBuN",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/bb1131843681fcd3641aec2e5b94d01a5a18f33f",
+        "sha": "bb1131843681fcd3641aec2e5b94d01a5a18f33f",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/bb1131843681fcd3641aec2e5b94d01a5a18f33f"
+      }
+    ],
+    "sha": "f44dbeba1df6430d5c87423e6cbe278ff1075488",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/f44dbeba1df6430d5c87423e6cbe278ff1075488"
+  }
+]

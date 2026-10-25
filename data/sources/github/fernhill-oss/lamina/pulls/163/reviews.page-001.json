@@ -1,0 +1,82 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/163#pullrequestreview-1900005610"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/163"
+      }
+    },
+    "author_association": "MEMBER",
+    "body": "Security review: changes needed before merge.\n\n`scripts/` shouldn't reach the network. What happens to our releases if that URL changes under us?",
+    "commit_id": "cb54977b064bc22ecc0f9293bc80cf18eb3f4f25",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/163#pullrequestreview-1900005610",
+    "id": 1900005610,
+    "node_id": "PRR_kwDOAeVz-sobw-vO",
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/163",
+    "state": "CHANGES_REQUESTED",
+    "submitted_at": "2025-07-25T15:25:49Z",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1450109?v=4",
+      "events_url": "https://api.github.example/users/ravi-m/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ravi-m/followers",
+      "following_url": "https://api.github.example/users/ravi-m/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ravi-m/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ravi-m",
+      "id": 1450109,
+      "login": "ravi-m",
+      "node_id": "U_kwDOWffkXw7tFgOq",
+      "organizations_url": "https://api.github.example/users/ravi-m/orgs",
+      "received_events_url": "https://api.github.example/users/ravi-m/received_events",
+      "repos_url": "https://api.github.example/users/ravi-m/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ravi-m/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ravi-m/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ravi-m",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/163#pullrequestreview-1900005614"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/163"
+      }
+    },
+    "author_association": "MEMBER",
+    "body": "",
+    "commit_id": "07eddfc0e9ab28a055d07cd4a97303e015b37f0c",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/163#pullrequestreview-1900005614",
+    "id": 1900005614,
+    "node_id": "PRR_kwDOd_a5Jl86Dc1r",
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/163",
+    "state": "APPROVED",
+    "submitted_at": "2025-07-29T15:20:28Z",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1450109?v=4",
+      "events_url": "https://api.github.example/users/ravi-m/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ravi-m/followers",
+      "following_url": "https://api.github.example/users/ravi-m/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ravi-m/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ravi-m",
+      "id": 1450109,
+      "login": "ravi-m",
+      "node_id": "U_kwDOWffkXw7tFgOq",
+      "organizations_url": "https://api.github.example/users/ravi-m/orgs",
+      "received_events_url": "https://api.github.example/users/ravi-m/received_events",
+      "repos_url": "https://api.github.example/users/ravi-m/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ravi-m/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ravi-m/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ravi-m",
+      "user_view_type": "public"
+    }
+  }
+]

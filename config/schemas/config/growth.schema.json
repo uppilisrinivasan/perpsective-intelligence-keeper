@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "explanations": {
+      "properties": {
+        "absorbed": {
+          "type": "string"
+        },
+        "deskilling": {
+          "type": "string"
+        },
+        "healthy": {
+          "type": "string"
+        },
+        "insufficient_data": {
+          "type": "string"
+        },
+        "replaced": {
+          "type": "string"
+        },
+        "self_caricature": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "growth": {
+      "properties": {
+        "deadband": {
+          "type": "number"
+        },
+        "g_floor": {
+          "type": "number"
+        },
+        "min_prs_per_period": {
+          "type": "number"
+        },
+        "period_months": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "practice": {
+      "properties": {
+        "balance": {
+          "properties": {
+            "max_mean_difficulty_diff": {
+              "type": "number"
+            },
+            "max_profile_l1": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "costly_threshold": {
+          "type": "number"
+        },
+        "k": {
+          "type": "number"
+        },
+        "max_changed_lines": {
+          "type": "number"
+        },
+        "min_findings": {
+          "type": "number"
+        },
+        "strata": {
+          "properties": {
+            "easy": {
+              "type": "number"
+            },
+            "hard": {
+              "type": "number"
+            },
+            "medium": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "taste_buckets": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "explanations",
+    "growth",
+    "practice"
+  ],
+  "title": "config/growth.yaml",
+  "type": "object"
+}

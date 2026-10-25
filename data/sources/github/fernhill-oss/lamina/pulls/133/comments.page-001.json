@@ -1,0 +1,280 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/133#discussion_r1700003127"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/133"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003127"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "nit: naming, please use snake_case (`text_value`).",
+    "commit_id": "84e73b32c811703772c791dd37b01d54c3a61d23",
+    "created_at": "2025-05-26T12:08:12Z",
+    "diff_hunk": "@@ -4,13 +4,12 @@ from lamina.errors import ParseError\n \n \n def parse_setlike_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n-    \"\"\"Parse a [a, b, c] setlike value into its items.\"\"\"\n     skip = list(skip or [])\n     skip.append(raw)\n-    strippedText = raw.strip()\n-    if not (strippedText.startswith(\"[\") and strippedText.endswith(\"]\")):\n-        raise ParseError(f\"expected [items], got {raw!r}\", line, column)\n-    inner = strippedText[1:-1].strip()\n+    textValue = raw.strip()",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/133#discussion_r1700003127",
+    "id": 1700003127,
+    "line": null,
+    "node_id": "PRRC_kwDOkap4k7OZZxrS",
+    "original_commit_id": "84e73b32c811703772c791dd37b01d54c3a61d23",
+    "original_line": 9,
+    "original_position": 11,
+    "original_start_line": null,
+    "path": "lamina/parser/setlike.py",
+    "position": null,
+    "pull_request_review_id": 1900004579,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/133",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003127/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-05-26T12:08:12Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003127",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/133#discussion_r1700003157"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/133"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003157"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Please add a docstring to `parse_setlike_value`, it's public.",
+    "commit_id": "84e73b32c811703772c791dd37b01d54c3a61d23",
+    "created_at": "2025-05-26T12:08:12Z",
+    "diff_hunk": "@@ -4,13 +4,12 @@ from lamina.errors import ParseError\n \n \n def parse_setlike_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/133#discussion_r1700003157",
+    "id": 1700003157,
+    "line": null,
+    "node_id": "PRRC_kwDOsTmIfgqe0-Io",
+    "original_commit_id": "84e73b32c811703772c791dd37b01d54c3a61d23",
+    "original_line": 6,
+    "original_position": 3,
+    "original_start_line": null,
+    "path": "lamina/parser/setlike.py",
+    "position": null,
+    "pull_request_review_id": 1900004579,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/133",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003157/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-05-26T12:08:12Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003157",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/133#discussion_r1700003187"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/133"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003187"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Good catch, fixed.",
+    "commit_id": "84e73b32c811703772c791dd37b01d54c3a61d23",
+    "created_at": "2025-05-26T22:34:31Z",
+    "diff_hunk": "@@ -4,13 +4,12 @@ from lamina.errors import ParseError\n \n \n def parse_setlike_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n-    \"\"\"Parse a [a, b, c] setlike value into its items.\"\"\"\n     skip = list(skip or [])\n     skip.append(raw)\n-    strippedText = raw.strip()\n-    if not (strippedText.startswith(\"[\") and strippedText.endswith(\"]\")):\n-        raise ParseError(f\"expected [items], got {raw!r}\", line, column)\n-    inner = strippedText[1:-1].strip()\n+    textValue = raw.strip()",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/133#discussion_r1700003187",
+    "id": 1700003187,
+    "in_reply_to_id": 1700003127,
+    "line": null,
+    "node_id": "PRRC_kwDOS7vCPSaAv4YH",
+    "original_commit_id": "84e73b32c811703772c791dd37b01d54c3a61d23",
+    "original_line": 9,
+    "original_position": 11,
+    "original_start_line": null,
+    "path": "lamina/parser/setlike.py",
+    "position": null,
+    "pull_request_review_id": 1900004598,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/133",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003187/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-05-26T22:34:31Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003187",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/5789828?v=4",
+      "events_url": "https://api.github.example/users/max-d/events{/privacy}",
+      "followers_url": "https://api.github.example/users/max-d/followers",
+      "following_url": "https://api.github.example/users/max-d/following{/other_user}",
+      "gists_url": "https://api.github.example/users/max-d/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/max-d",
+      "id": 5789828,
+      "login": "max-d",
+      "node_id": "U_kwDOGEtYz6XEvimh",
+      "organizations_url": "https://api.github.example/users/max-d/orgs",
+      "received_events_url": "https://api.github.example/users/max-d/received_events",
+      "repos_url": "https://api.github.example/users/max-d/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/max-d/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/max-d/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/max-d",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/133#discussion_r1700003214"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/133"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003214"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Done, thanks!",
+    "commit_id": "84e73b32c811703772c791dd37b01d54c3a61d23",
+    "created_at": "2025-05-26T22:34:31Z",
+    "diff_hunk": "@@ -4,13 +4,12 @@ from lamina.errors import ParseError\n \n \n def parse_setlike_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/133#discussion_r1700003214",
+    "id": 1700003214,
+    "in_reply_to_id": 1700003157,
+    "line": null,
+    "node_id": "PRRC_kwDOWn_GRdXly1ga",
+    "original_commit_id": "84e73b32c811703772c791dd37b01d54c3a61d23",
+    "original_line": 6,
+    "original_position": 3,
+    "original_start_line": null,
+    "path": "lamina/parser/setlike.py",
+    "position": null,
+    "pull_request_review_id": 1900004623,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/133",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003214/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-05-26T22:34:31Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700003214",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/5789828?v=4",
+      "events_url": "https://api.github.example/users/max-d/events{/privacy}",
+      "followers_url": "https://api.github.example/users/max-d/followers",
+      "following_url": "https://api.github.example/users/max-d/following{/other_user}",
+      "gists_url": "https://api.github.example/users/max-d/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/max-d",
+      "id": 5789828,
+      "login": "max-d",
+      "node_id": "U_kwDOGEtYz6XEvimh",
+      "organizations_url": "https://api.github.example/users/max-d/orgs",
+      "received_events_url": "https://api.github.example/users/max-d/received_events",
+      "repos_url": "https://api.github.example/users/max-d/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/max-d/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/max-d/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/max-d",
+      "user_view_type": "public"
+    }
+  }
+]

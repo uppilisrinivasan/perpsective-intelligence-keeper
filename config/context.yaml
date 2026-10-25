@@ -1,0 +1,10 @@
+max_description_chars: 4000
+max_diff_lines: 1500
+max_repo_notes_chars: 2000
+drop_first_when_over: [lock_files, generated_files]
+lock_file_globs: ["*.lock", "poetry.lock", "package-lock.json", "uv.lock", "requirements*.lock"]
+generated_file_globs: ["*_pb2.py", "*.min.js", "dist/**"]
+anchor_snap_lines: 5
+merge_duplicates: {line_window: 3, min_similarity: 0.8}
+repo_notes_files: [CONTRIBUTING.md]
+repo_notes_heading_regex: "(?i)^#+\\s*review"

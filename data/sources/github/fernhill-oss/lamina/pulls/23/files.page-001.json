@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/d1defee4dc118af7c711f73df9eeb6871976c44d/docs%2Finterpolation.md",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/docs%2Finterpolation.md?ref=d1defee4dc118af7c711f73df9eeb6871976c44d",
+    "deletions": 0,
+    "filename": "docs/interpolation.md",
+    "patch": "@@ -0,0 +1,5 @@\n+# Interpolation\n+\n+## Notes\n+\n+See the README for how interpolation interacts with the rest of lamina.",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/d1defee4dc118af7c711f73df9eeb6871976c44d/docs%2Finterpolation.md",
+    "sha": "0784cc5c1e28d890d9fca52b04193c2684b24e3e",
+    "status": "added"
+  }
+]

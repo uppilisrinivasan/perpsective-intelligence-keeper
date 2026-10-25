@@ -1,0 +1,7 @@
+extraction: {precision_min: 0.9, recall_min: 0.85}
+matching: {kappa_min: 0.7}
+baseline: {shared_slot_recall_min: 0.7, blind_spot_slot_recall_min: 0.6}
+routing: {macro_f1_min: 0.8, unknown_recall: 1.0, holdout_macro_f1_min: 0.7}
+edge_map: {planted_in_top4_min: 3}
+lens: {edge_slot_coverage_min: 7, blind_spot_items: 2, member_share: 0.6}
+fix: {success_min: 0.7}

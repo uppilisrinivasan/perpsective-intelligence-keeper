@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/16792120?v=4",
+      "events_url": "https://api.github.example/users/chen-t24/events{/privacy}",
+      "followers_url": "https://api.github.example/users/chen-t24/followers",
+      "following_url": "https://api.github.example/users/chen-t24/following{/other_user}",
+      "gists_url": "https://api.github.example/users/chen-t24/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/chen-t24",
+      "id": 16792120,
+      "login": "chen-t24",
+      "node_id": "U_kwDONWy8s6-sTC5r",
+      "organizations_url": "https://api.github.example/users/chen-t24/orgs",
+      "received_events_url": "https://api.github.example/users/chen-t24/received_events",
+      "repos_url": "https://api.github.example/users/chen-t24/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/chen-t24/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/chen-t24/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/chen-t24",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/7c92f65852dfb056a59cb9f30b96662f3057efed/comments",
+    "commit": {
+      "author": {
+        "date": "2025-08-07T15:28:21Z",
+        "email": "16792120+chen-t24@users.noreply.github.example",
+        "name": "Chen T."
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2025-08-07T15:28:21Z",
+        "email": "16792120+chen-t24@users.noreply.github.example",
+        "name": "Chen T."
+      },
+      "message": "Docs: includes examples",
+      "tree": {
+        "sha": "da7617d246f6b277318672cfeacc87a914b884bd",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/da7617d246f6b277318672cfeacc87a914b884bd"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/7c92f65852dfb056a59cb9f30b96662f3057efed",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/16792120?v=4",
+      "events_url": "https://api.github.example/users/chen-t24/events{/privacy}",
+      "followers_url": "https://api.github.example/users/chen-t24/followers",
+      "following_url": "https://api.github.example/users/chen-t24/following{/other_user}",
+      "gists_url": "https://api.github.example/users/chen-t24/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/chen-t24",
+      "id": 16792120,
+      "login": "chen-t24",
+      "node_id": "U_kwDONWy8s6-sTC5r",
+      "organizations_url": "https://api.github.example/users/chen-t24/orgs",
+      "received_events_url": "https://api.github.example/users/chen-t24/received_events",
+      "repos_url": "https://api.github.example/users/chen-t24/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/chen-t24/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/chen-t24/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/chen-t24",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/7c92f65852dfb056a59cb9f30b96662f3057efed",
+    "node_id": "C_kwDOEzL7qPe8RGoZ",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/49c71b803b5bd995dc931a9987ce31c1a9cc92e6",
+        "sha": "49c71b803b5bd995dc931a9987ce31c1a9cc92e6",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/49c71b803b5bd995dc931a9987ce31c1a9cc92e6"
+      }
+    ],
+    "sha": "7c92f65852dfb056a59cb9f30b96662f3057efed",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/7c92f65852dfb056a59cb9f30b96662f3057efed"
+  }
+]

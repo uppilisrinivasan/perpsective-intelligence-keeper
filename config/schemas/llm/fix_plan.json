@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "fix_plan",
+  "type": "object",
+  "properties": {
+    "plan": {
+      "type": "string"
+    },
+    "edits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "search": {
+            "type": "string",
+            "minLength": 1
+          },
+          "replace": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "search",
+          "replace"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "new_files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "tests_to_run": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risk_notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "plan",
+    "edits",
+    "new_files",
+    "tests_to_run"
+  ],
+  "additionalProperties": false
+}

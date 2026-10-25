@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 25,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/2ce00bdb4c843da16651791bd9d03119e7a87513/lamina%2Finclude%2Fpinned.py",
+    "changes": 25,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Fpinned.py?ref=2ce00bdb4c843da16651791bd9d03119e7a87513",
+    "deletions": 0,
+    "filename": "lamina/include/pinned.py",
+    "patch": "@@ -0,0 +1,25 @@\n+\"\"\"Pinned includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_pinned_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    \"\"\"Resolve a pinned include relative to base_dir, confined to root.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(name)\n+    root_real = os.path.realpath(root)\n+    resolvedPath = os.path.realpath(os.path.join(base_dir, name))\n+    if os.path.commonpath([resolvedPath, root_real]) != root_real:\n+        raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n+    if not os.path.isfile(resolvedPath):\n+        raise IncludeError(f\"include not found: {name}\", 0, 1)\n+    return resolvedPath\n+\n+\n+def read_pinned_include(base_dir: str, name: str, root: str) -> str:\n+    \"\"\"Return the text of a pinned include.\"\"\"\n+    path = resolve_pinned_include(base_dir, name, root)\n+    with open(path) as fh:\n+        return fh.read()",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/2ce00bdb4c843da16651791bd9d03119e7a87513/lamina%2Finclude%2Fpinned.py",
+    "sha": "0484c499ef5e58043b9d2cce7b02f06cc9e34bed",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/2ce00bdb4c843da16651791bd9d03119e7a87513/tests%2Ftest_include_pinned.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_include_pinned.py?ref=2ce00bdb4c843da16651791bd9d03119e7a87513",
+    "deletions": 0,
+    "filename": "tests/test_include_pinned.py",
+    "patch": "@@ -0,0 +1,13 @@\n+import pytest\n+\n+from lamina.include.pinned import resolve_pinned_include, read_pinned_include\n+\n+\n+def test_pinned_include_reads_file(tmp_path):\n+    (tmp_path / \"base.conf\").write_text(\"[a]\\nx = 1\\n\", encoding=\"utf-8\")\n+    assert \"x = 1\" in read_pinned_include(str(tmp_path), \"base.conf\", str(tmp_path))\n+\n+\n+def test_pinned_include_missing(tmp_path):\n+    with pytest.raises(Exception):\n+        resolve_pinned_include(str(tmp_path), \"nope.conf\", str(tmp_path))",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/2ce00bdb4c843da16651791bd9d03119e7a87513/tests%2Ftest_include_pinned.py",
+    "sha": "b76c156866ad5d6d786ffcabce9295f78506c712",
+    "status": "added"
+  }
+]

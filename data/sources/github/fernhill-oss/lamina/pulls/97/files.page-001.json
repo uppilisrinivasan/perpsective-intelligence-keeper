@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 25,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/32672b9443117069f64a281cd985f886bc204bf5/lamina%2Floader%2Fglob.py",
+    "changes": 25,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Floader%2Fglob.py?ref=32672b9443117069f64a281cd985f886bc204bf5",
+    "deletions": 0,
+    "filename": "lamina/loader/glob.py",
+    "patch": "@@ -0,0 +1,25 @@\n+\"\"\"Load glob configuration files.\"\"\"\n+\n+import sys\n+import os\n+\n+from lamina.errors import LaminaError\n+from lamina.loader.core import loads\n+from lamina.model import Document\n+\n+_CACHE: dict[str, Document] = {}\n+\n+\n+def load_glob(path, *, strict=True, skip=None):\n+    skip = list(skip or [])\n+    skip.append(path)\n+    if path in _CACHE:\n+        return _CACHE[path]\n+    with open(path, encoding=\"utf-8\") as fh:\n+        fileText = fh.read()\n+    if strict and not fileText.strip():\n+        raise LaminaError(f\"empty configuration: {path}\", 0, 1)\n+    doc = loads(fileText, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n+    doc.source = path\n+    _CACHE[path] = doc\n+    return doc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/32672b9443117069f64a281cd985f886bc204bf5/lamina%2Floader%2Fglob.py",
+    "sha": "8b3c5dcbaff0db2f66ad2debb1c0bc838a8dedfb",
+    "status": "added"
+  },
+  {
+    "additions": 19,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/32672b9443117069f64a281cd985f886bc204bf5/tests%2Ftest_loader_glob.py",
+    "changes": 19,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_glob.py?ref=32672b9443117069f64a281cd985f886bc204bf5",
+    "deletions": 0,
+    "filename": "tests/test_loader_glob.py",
+    "patch": "@@ -0,0 +1,19 @@\n+import pytest\n+\n+from lamina.loader.glob import load_glob\n+\n+\n+def test_glob_loads(write):\n+    path = write(\"a_glob.conf\", \"[a]\\nx = 1\\n\")\n+    assert load_glob(path).get(\"a.x\") == \"1\"\n+\n+\n+def test_glob_empty_strict(write):\n+    path = write(\"e_glob.conf\", \"\")\n+    with pytest.raises(Exception):\n+        load_glob(path, strict=True)\n+\n+\n+def test_glob_empty_lenient(write):\n+    path = write(\"l_glob.conf\", \"\")\n+    assert load_glob(path, strict=False).sections() == []",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/32672b9443117069f64a281cd985f886bc204bf5/tests%2Ftest_loader_glob.py",
+    "sha": "d1f7a158527add0d770df741c9519119b448dc29",
+    "status": "added"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 4,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/ddbffa6841d0622fa28c9ebf0191cb30a7fac699/docs%2Fformat.md",
+    "changes": 4,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/docs%2Fformat.md?ref=ddbffa6841d0622fa28c9ebf0191cb30a7fac699",
+    "deletions": 0,
+    "filename": "docs/format.md",
+    "patch": "@@ -6,3 +6,7 @@ blank lines and include directives (`@include \"path\"`). Values are strings; inte\n ## Details\n \n The format follows the same rules everywhere in lamina.\n+\n+## Details\n+\n+The format follows the same rules everywhere in lamina.",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/ddbffa6841d0622fa28c9ebf0191cb30a7fac699/docs%2Fformat.md",
+    "sha": "55651f947e45ee76ebbbe65c0915eac4065f2730",
+    "status": "modified"
+  }
+]

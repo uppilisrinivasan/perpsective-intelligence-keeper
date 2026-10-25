@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 9,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/864981200ca1cf3ce8ccd5a649b4db762e551b4b/lamina%2Flexer%2Funicode.py",
+    "changes": 17,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Flexer%2Funicode.py?ref=864981200ca1cf3ce8ccd5a649b4db762e551b4b",
+    "deletions": 8,
+    "filename": "lamina/lexer/unicode.py",
+    "patch": "@@ -4,20 +4,21 @@ from lamina.lexer.core import Token\n \n \n def scan_unicode(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n+    \"\"\"Split value into unicode words, separated by ':' or whitespace.\"\"\"\n     skip = list(skip or [])\n     skip.append(value)\n     tokens: list[Token] = []\n-    wordBuffer: list[str] = []\n+    currentWord: list[str] = []\n     start = 1\n     for column, ch in enumerate(value, start=1):\n         if ch.isspace() or ch == ':':\n-            if wordBuffer:\n-                tokens.append(Token(\"WORD\", \"\".join(wordBuffer), line, start))\n-                wordBuffer = []\n+            if currentWord:\n+                tokens.append(Token(\"WORD\", \"\".join(currentWord), line, start))\n+                currentWord = []\n             continue\n-        if not wordBuffer:\n+        if not currentWord:\n             start = column\n-        wordBuffer.append(ch)\n-    if wordBuffer:\n-        tokens.append(Token(\"WORD\", \"\".join(wordBuffer), line, start))\n+        currentWord.append(ch)\n+    if currentWord:\n+        tokens.append(Token(\"WORD\", \"\".join(currentWord), line, start))\n     return tokens",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/864981200ca1cf3ce8ccd5a649b4db762e551b4b/lamina%2Flexer%2Funicode.py",
+    "sha": "6c6dc7375891bb7a0b251ed034d2173a809b8ae0",
+    "status": "modified"
+  }
+]

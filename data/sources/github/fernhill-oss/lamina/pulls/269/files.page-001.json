@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 34,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/50128662b70a4ee23bb1b45723b76784d941e629/lamina%2Finterpolate%2Ftyped_int.py",
+    "changes": 34,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Ftyped_int.py?ref=50128662b70a4ee23bb1b45723b76784d941e629",
+    "deletions": 0,
+    "filename": "lamina/interpolate/typed_int.py",
+    "patch": "@@ -0,0 +1,34 @@\n+\"\"\"Typed int interpolation: ${NAME} references with extra checks.\"\"\"\n+\n+import sys\n+from collections.abc import Mapping\n+\n+from lamina.errors import InterpolationError\n+\n+\n+def _valid(value: str) -> bool:\n+    return value.strip() == value\n+\n+\n+def interpolate_typed_int(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n+    skip = list(skip or [])\n+    skip.append(value)\n+    outParts: list[str] = []\n+    i = 0\n+    while True:\n+        start = value.find(\"${\", i)\n+        if start < 0:\n+            outParts.append(value[i:])\n+            return \"\".join(outParts)\n+        end = value.find(\"}\", start)\n+        if end < 0:\n+            raise InterpolationError(\"unterminated reference\", line, start + 1)\n+        outParts.append(value[i:start])\n+        name = value[start + 2:end]\n+        if name not in env:\n+            raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n+        resolved = env[name]\n+        if not _valid(resolved):\n+            raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n+        outParts.append(resolved)\n+        i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/50128662b70a4ee23bb1b45723b76784d941e629/lamina%2Finterpolate%2Ftyped_int.py",
+    "sha": "16e2a1cef7be3f0342348d52bd43fa779f7b1925",
+    "status": "added"
+  },
+  {
+    "additions": 17,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/50128662b70a4ee23bb1b45723b76784d941e629/tests%2Ftest_interpolate_typed_int.py",
+    "changes": 17,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_interpolate_typed_int.py?ref=50128662b70a4ee23bb1b45723b76784d941e629",
+    "deletions": 0,
+    "filename": "tests/test_interpolate_typed_int.py",
+    "patch": "@@ -0,0 +1,17 @@\n+import pytest\n+\n+from lamina.errors import InterpolationError\n+from lamina.interpolate.typed_int import interpolate_typed_int\n+\n+\n+def test_typed_int_expands():\n+    assert interpolate_typed_int(\"a-${X}\", {\"X\": \"1\"}) == \"a-1\"\n+\n+\n+def test_typed_int_undefined():\n+    with pytest.raises(InterpolationError):\n+        interpolate_typed_int(\"${NOPE}\", {})\n+\n+\n+def test_typed_int_plain_text():\n+    assert interpolate_typed_int(\"plain\", {}) == \"plain\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/50128662b70a4ee23bb1b45723b76784d941e629/tests%2Ftest_interpolate_typed_int.py",
+    "sha": "c228ed983f5cb0476bc23bdd2a2b0fbcc984ee51",
+    "status": "added"
+  }
+]

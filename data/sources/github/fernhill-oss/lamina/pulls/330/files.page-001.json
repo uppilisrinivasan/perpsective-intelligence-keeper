@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 22,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/d61f0e195317472cf2cb99460f62ca32d2492210/lamina%2Finclude%2Ffallback.py",
+    "changes": 22,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Ffallback.py?ref=d61f0e195317472cf2cb99460f62ca32d2492210",
+    "deletions": 0,
+    "filename": "lamina/include/fallback.py",
+    "patch": "@@ -0,0 +1,22 @@\n+\"\"\"Fallback includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_fallback_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    \"\"\"Resolve a fallback include relative to base_dir, confined to root.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(name)\n+    resolved_path = os.path.join(base_dir, name)\n+    if not os.path.isfile(resolved_path):\n+        raise IncludeError(f\"include not found: {name}\", 0, 1)\n+    return resolved_path\n+\n+\n+def read_fallback_include(base_dir: str, name: str, root: str) -> str:\n+    \"\"\"Return the text of a fallback include.\"\"\"\n+    path = resolve_fallback_include(base_dir, name, root)\n+    with open(path, encoding=\"utf-8\") as fh:\n+        return fh.read()",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/d61f0e195317472cf2cb99460f62ca32d2492210/lamina%2Finclude%2Ffallback.py",
+    "sha": "c30937656670569dfd82359a8e680ad20a4a92a0",
+    "status": "added"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/0d25dbc482975642dc30a14b18149ca2eb91c0d3/docs%2Fwriting.md",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/docs%2Fwriting.md?ref=0d25dbc482975642dc30a14b18149ca2eb91c0d3",
+    "deletions": 0,
+    "filename": "docs/writing.md",
+    "patch": "@@ -0,0 +1,5 @@\n+# Writing\n+\n+## Details\n+\n+Round-trip writing follows the same rules everywhere in lamina.",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/0d25dbc482975642dc30a14b18149ca2eb91c0d3/docs%2Fwriting.md",
+    "sha": "bbcc21ced87c074d9bd84ad69339acf78b0603eb",
+    "status": "added"
+  }
+]

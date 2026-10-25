@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 21,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/56582dbab17a3108724785e98f83cb0fb39cc328/lamina%2Fdump%2Fdiffable.py",
+    "changes": 21,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Fdiffable.py?ref=56582dbab17a3108724785e98f83cb0fb39cc328",
+    "deletions": 0,
+    "filename": "lamina/dump/diffable.py",
+    "patch": "@@ -0,0 +1,21 @@\n+\"\"\"Write documents in the diffable layout.\"\"\"\n+\n+from lamina.model import Blank, Comment, Document, Entry\n+\n+\n+def dumps_diffable(doc: Document, *, indent: int = 0, skip: list[str] | None = None) -> str:\n+    \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(doc.source)\n+    pad_text = \" \" * indent\n+    lines: list[str] = []\n+    for section in doc.sections():\n+        lines.append(f\"[{section.name}]\")\n+        for item in sorted(section.items, key=lambda i: getattr(i, \"key\", \"\")):\n+            if isinstance(item, Entry):\n+                lines.append(f\"{pad_text}{item.key} = {item.value}\")\n+            elif isinstance(item, Comment):\n+                lines.append(item.text)\n+            elif isinstance(item, Blank):\n+                lines.append(\"\")\n+    return \"\\n\".join(lines) + (\"\\n\" if lines else \"\")",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/56582dbab17a3108724785e98f83cb0fb39cc328/lamina%2Fdump%2Fdiffable.py",
+    "sha": "def1c2d973768a85003e8b924b9a5cc71965cacc",
+    "status": "added"
+  }
+]

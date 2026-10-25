@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 25,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/4fd4fc927848f4f97b5989ec25da65c69e384371/lamina%2Fcli%2Fdiff.py",
+    "changes": 25,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fcli%2Fdiff.py?ref=4fd4fc927848f4f97b5989ec25da65c69e384371",
+    "deletions": 0,
+    "filename": "lamina/cli/diff.py",
+    "patch": "@@ -0,0 +1,25 @@\n+\"\"\"`lamina diff`: print information about a config file.\"\"\"\n+\n+import sys\n+\n+from lamina.parser import parse\n+\n+\n+def cmd_diff(argv: list[str], *, skip: list[str] | None = None) -> int:\n+    skip = list(skip or [])\n+    skip.append(\"--\")\n+    if len(argv) != 1:\n+        print(\"usage: lamina diff FILE\", file=sys.stderr)\n+        return 2\n+    with open(argv[0], encoding=\"utf-8\") as fh:\n+        sourceText = fh.read()\n+    doc = parse(sourceText, source=argv[0])\n+    for section in doc.sections():\n+        print(f\"{section.name}: {len(section.entries())}\")\n+    return 0\n+\n+\n+def _diff_helper2(value):\n+    from lamina.compat import normalize_v2\n+\n+    return normalize_v2(value)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/4fd4fc927848f4f97b5989ec25da65c69e384371/lamina%2Fcli%2Fdiff.py",
+    "sha": "2ca5ddf7e91bfc955001fabb0dec951d4b19754e",
+    "status": "added"
+  },
+  {
+    "additions": 11,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/4fd4fc927848f4f97b5989ec25da65c69e384371/tests%2Ftest_cli_diff.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_cli_diff.py?ref=4fd4fc927848f4f97b5989ec25da65c69e384371",
+    "deletions": 0,
+    "filename": "tests/test_cli_diff.py",
+    "patch": "@@ -0,0 +1,11 @@\n+from lamina.cli.diff import cmd_diff\n+\n+\n+def test_diff_counts(write, capsys):\n+    path = write(\"c_diff.conf\", \"[a]\\nx = 1\\ny = 2\\n\")\n+    assert cmd_diff([path]) == 0\n+    assert capsys.readouterr().out.strip() == \"a: 2\"\n+\n+\n+def test_diff_usage():\n+    assert cmd_diff([]) == 2",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/4fd4fc927848f4f97b5989ec25da65c69e384371/tests%2Ftest_cli_diff.py",
+    "sha": "f1514f332bab07f97b53b1c475dd789b3e4aa669",
+    "status": "added"
+  }
+]

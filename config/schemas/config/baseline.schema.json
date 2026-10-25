@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "llm": {
+      "properties": {
+        "allow_fallback": {
+          "type": "boolean"
+        },
+        "max_findings": {
+          "type": "number"
+        },
+        "prompt": {
+          "type": "string"
+        },
+        "reasoning": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "seed": {
+          "type": "number"
+        },
+        "temperature": {
+          "type": "number"
+        },
+        "top_p": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "ruff_error_prefixes": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "severity_map": {
+      "properties": {
+        "bandit": {
+          "properties": {
+            "HIGH": {
+              "type": "string"
+            },
+            "LOW": {
+              "type": "string"
+            },
+            "MEDIUM": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "ruff": {
+          "properties": {
+            "error": {
+              "type": "string"
+            },
+            "warning": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "tools": {
+      "properties": {
+        "bandit": {
+          "properties": {
+            "category_map": {
+              "properties": {
+                "default": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "enabled": {
+              "type": "boolean"
+            },
+            "severity_min": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "ruff": {
+          "properties": {
+            "category_map": {
+              "properties": {
+                "B": {
+                  "type": "string"
+                },
+                "F": {
+                  "type": "string"
+                },
+                "PERF": {
+                  "type": "string"
+                },
+                "default": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "enabled": {
+              "type": "boolean"
+            },
+            "select": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "llm",
+    "ruff_error_prefixes",
+    "severity_map",
+    "tools"
+  ],
+  "title": "config/baseline.yaml",
+  "type": "object"
+}

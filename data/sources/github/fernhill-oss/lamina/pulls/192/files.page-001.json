@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 6,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/1873900e275d1fa6342af77718b67e72d8add3a1/lamina%2Fmodel%2Fsystem.py",
+    "changes": 7,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fmodel%2Fsystem.py?ref=1873900e275d1fa6342af77718b67e72d8add3a1",
+    "deletions": 1,
+    "filename": "lamina/model/system.py",
+    "patch": "@@ -1,10 +1,15 @@\n \"\"\"Merge system layers into a base document.\"\"\"\n \n+import warnings\n+\n from lamina.model import Document\n \n \n-def merge_system(base, overlay, *, add_missing=True, skip=None):\n+def merge_system(base, overlay, *, add_missing=True, skip=None, create=None):\n     \"\"\"Return base with overlay's values applied, keeping base's order, comments and blank lines.\"\"\"\n+    if create is not None:\n+        warnings.warn(\"create= is deprecated; use add_missing=\", DeprecationWarning, stacklevel=2)\n+        add_missing = create  # type: ignore[assignment]\n     skip = list(skip or [])\n     skip.append(overlay.source)\n     result_doc = base.copy()",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/1873900e275d1fa6342af77718b67e72d8add3a1/lamina%2Fmodel%2Fsystem.py",
+    "sha": "6170cb5f3a15060f7b2984f109c8941aa0fe1d4a",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/1873900e275d1fa6342af77718b67e72d8add3a1/tests%2Ftest_model_system_regression_192.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_model_system_regression_192.py?ref=1873900e275d1fa6342af77718b67e72d8add3a1",
+    "deletions": 0,
+    "filename": "tests/test_model_system_regression_192.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.model.system import merge_system\n+\n+\n+def test_merge_system_regression_192():\n+    assert callable(merge_system)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/1873900e275d1fa6342af77718b67e72d8add3a1/tests%2Ftest_model_system_regression_192.py",
+    "sha": "9faf996499946824c1eb66b754c036b5f7ab3de0",
+    "status": "added"
+  }
+]

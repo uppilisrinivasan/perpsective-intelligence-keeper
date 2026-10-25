@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 4,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/6e69494bcf2f4b9ee9eb3dedd58c0ebbd4116318/lamina%2Fparser%2Fdecimal.py",
+    "changes": 8,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fparser%2Fdecimal.py?ref=6e69494bcf2f4b9ee9eb3dedd58c0ebbd4116318",
+    "deletions": 4,
+    "filename": "lamina/parser/decimal.py",
+    "patch": "@@ -6,10 +6,10 @@ from lamina.errors import ParseError\n def parse_decimal_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n     skip = list(skip or [])\n     skip.append(raw)\n-    stripped_text = raw.strip()\n-    if not (stripped_text.startswith(\"[\") and stripped_text.endswith(\"]\")):\n-        raise ValueError(f\"expected [items], got {raw!r}\")\n-    inner = stripped_text[1:-1].strip()\n+    text_value = raw.strip()\n+    if not (text_value.startswith(\"[\") and text_value.endswith(\"]\")):\n+        raise ParseError(f\"expected [items], got {raw!r}\", line, column)\n+    inner = text_value[1:-1].strip()\n     if not inner:\n         return []\n     items = [part.strip() for part in inner.split(\",\")]",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/6e69494bcf2f4b9ee9eb3dedd58c0ebbd4116318/lamina%2Fparser%2Fdecimal.py",
+    "sha": "e63fb8ec68420f1af2db13ac002c30b6f1ebe80c",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/6e69494bcf2f4b9ee9eb3dedd58c0ebbd4116318/tests%2Ftest_parser_decimal_regression_203.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_parser_decimal_regression_203.py?ref=6e69494bcf2f4b9ee9eb3dedd58c0ebbd4116318",
+    "deletions": 0,
+    "filename": "tests/test_parser_decimal_regression_203.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.parser.decimal import parse_decimal_value\n+\n+\n+def test_parse_decimal_value_regression_203():\n+    assert callable(parse_decimal_value)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/6e69494bcf2f4b9ee9eb3dedd58c0ebbd4116318/tests%2Ftest_parser_decimal_regression_203.py",
+    "sha": "3d842fb00aa63b67cd1809da86ea53d6acfc07f3",
+    "status": "added"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 2,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/2b9e8e13c8794cc5d313753188dea52a8c4dfd55/lamina%2Fcli%2Fvalidate.py",
+    "changes": 9,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fcli%2Fvalidate.py?ref=2b9e8e13c8794cc5d313753188dea52a8c4dfd55",
+    "deletions": 7,
+    "filename": "lamina/cli/validate.py",
+    "patch": "@@ -1,10 +1,5 @@\n \"\"\"`lamina validate`: print information about a config file.\"\"\"\n \n-try:\n-    import tomli  # noqa: F401\n-except ImportError:  # pragma: no cover\n-    tomli = None\n-\n import sys\n \n from lamina.parser import parse\n@@ -18,8 +13,8 @@ def cmd_validate(argv: list[str], *, skip: list[str] | None = None) -> int:\n         print(\"usage: lamina validate FILE\", file=sys.stderr)\n         return 2\n     with open(argv[0], encoding=\"utf-8\") as fh:\n-        source_text = fh.read()\n-    doc = parse(source_text, source=argv[0])\n+        file_content = fh.read()\n+    doc = parse(file_content, source=argv[0])\n     for section in doc.sections():\n         print(f\"{section.name}: {len(section.entries())}\")\n     return 0",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/2b9e8e13c8794cc5d313753188dea52a8c4dfd55/lamina%2Fcli%2Fvalidate.py",
+    "sha": "92b52d3164a7a302c9d1ecc4c79e8e5da0ddbb22",
+    "status": "modified"
+  }
+]

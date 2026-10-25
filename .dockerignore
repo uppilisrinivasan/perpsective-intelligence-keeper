@@ -1,0 +1,10 @@
+.git
+.env
+.env.*
+!.env.example
+.runtime
+**/node_modules
+**/__pycache__
+**/.venv
+frontend/dist
+docs/*.docx

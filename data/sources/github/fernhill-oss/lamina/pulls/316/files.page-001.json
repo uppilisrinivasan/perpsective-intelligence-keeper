@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 24,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/f500015c45818aca79b3ee8d511bebc202dfc60a/lamina%2Flexer%2Fhexnum.py",
+    "changes": 24,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Flexer%2Fhexnum.py?ref=f500015c45818aca79b3ee8d511bebc202dfc60a",
+    "deletions": 0,
+    "filename": "lamina/lexer/hexnum.py",
+    "patch": "@@ -0,0 +1,24 @@\n+\"\"\"Hexnum tokens inside a value (the tokenizer is the hot path).\"\"\"\n+\n+from lamina.lexer.core import Token\n+\n+\n+def scan_hexnum(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n+    \"\"\"Split value into hexnum words, separated by '+' or whitespace.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(value)\n+    tokens: list[Token] = []\n+    current_word: list[str] = []\n+    start = 1\n+    for column, ch in enumerate(value, start=1):\n+        if ch.isspace() or ch == '+':\n+            if current_word:\n+                tokens.append(Token(\"WORD\", \"\".join(current_word), line, start))\n+                current_word = []\n+            continue\n+        if not current_word:\n+            start = column\n+        current_word.append(ch)\n+    if current_word:\n+        tokens.append(Token(\"WORD\", \"\".join(current_word), line, start))\n+    return tokens",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/f500015c45818aca79b3ee8d511bebc202dfc60a/lamina%2Flexer%2Fhexnum.py",
+    "sha": "23b0c75bb6416e9c4a922f593379e13c86157051",
+    "status": "added"
+  }
+]

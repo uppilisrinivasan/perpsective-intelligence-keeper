@@ -1,0 +1,349 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/193#discussion_r1700004491"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/193"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004491"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Please don't sort: it breaks the round trip. `dumps(loads(x)) == x` is the one promise lamina makes, key order included.",
+    "commit_id": "673c96a49757ee61c7e26806d8188675f9cfef25",
+    "created_at": "2025-10-09T09:29:39Z",
+    "diff_hunk": "@@ -0,0 +1,23 @@\n+\"\"\"Write documents in the indented layout.\"\"\"\n+\n+import sys\n+\n+from lamina.model import Blank, Comment, Document, Entry\n+\n+\n+def dumps_indented(doc, *, indent=0, skip=None):\n+    \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(doc.source)\n+    padText = \" \" * indent\n+    lines: list[str] = []\n+    for section in doc.sections():\n+        lines.append(f\"[{section.name}]\")\n+        for item in sorted(section.items, key=lambda i: getattr(i, \"key\", \"\")):",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/193#discussion_r1700004491",
+    "id": 1700004491,
+    "line": null,
+    "node_id": "PRRC_kwDOl8ywJcN_ADjN",
+    "original_commit_id": "673c96a49757ee61c7e26806d8188675f9cfef25",
+    "original_line": 16,
+    "original_position": 16,
+    "original_start_line": null,
+    "path": "lamina/dump/indented.py",
+    "position": null,
+    "pull_request_review_id": 1900006595,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/193",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004491/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-10-09T09:29:39Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004491",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/193#discussion_r1700004528"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/193"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004528"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Could you add a test for `dumps_indented`?",
+    "commit_id": "49abd532324f5e973dc1c8bf36f5f46c4f36e73b",
+    "created_at": "2025-10-09T09:29:39Z",
+    "diff_hunk": "@@ -0,0 +1,23 @@\n+\"\"\"Write documents in the indented layout.\"\"\"\n+\n+import sys\n+\n+from lamina.model import Blank, Comment, Document, Entry\n+\n+\n+def dumps_indented(doc, *, indent=0, skip=None):",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/193#discussion_r1700004528",
+    "id": 1700004528,
+    "line": 6,
+    "node_id": "PRRC_kwDOrrZCy7edj6uQ",
+    "original_commit_id": "673c96a49757ee61c7e26806d8188675f9cfef25",
+    "original_line": 8,
+    "original_position": 8,
+    "original_start_line": null,
+    "path": "lamina/dump/indented.py",
+    "position": 6,
+    "pull_request_review_id": 1900006595,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/193",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004528/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-10-09T09:29:39Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004528",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/193#discussion_r1700004536"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/193"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004536"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "nit: naming, please use snake_case (`pad_text`).",
+    "commit_id": "673c96a49757ee61c7e26806d8188675f9cfef25",
+    "created_at": "2025-10-09T09:29:39Z",
+    "diff_hunk": "@@ -0,0 +1,23 @@\n+\"\"\"Write documents in the indented layout.\"\"\"\n+\n+import sys",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/193#discussion_r1700004536",
+    "id": 1700004536,
+    "line": null,
+    "node_id": "PRRC_kwDOqYgPI8GMxnER",
+    "original_commit_id": "673c96a49757ee61c7e26806d8188675f9cfef25",
+    "original_line": 3,
+    "original_position": 3,
+    "original_start_line": null,
+    "path": "lamina/dump/indented.py",
+    "position": null,
+    "pull_request_review_id": 1900006595,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/193",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004536/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-10-09T09:29:39Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004536",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/193#discussion_r1700004551"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/193"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004551"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Fixed in the latest push.",
+    "commit_id": "673c96a49757ee61c7e26806d8188675f9cfef25",
+    "created_at": "2025-10-09T17:49:47Z",
+    "diff_hunk": "@@ -0,0 +1,23 @@\n+\"\"\"Write documents in the indented layout.\"\"\"\n+\n+import sys\n+\n+from lamina.model import Blank, Comment, Document, Entry\n+\n+\n+def dumps_indented(doc, *, indent=0, skip=None):\n+    \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(doc.source)\n+    padText = \" \" * indent\n+    lines: list[str] = []\n+    for section in doc.sections():\n+        lines.append(f\"[{section.name}]\")\n+        for item in sorted(section.items, key=lambda i: getattr(i, \"key\", \"\")):",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/193#discussion_r1700004551",
+    "id": 1700004551,
+    "in_reply_to_id": 1700004491,
+    "line": null,
+    "node_id": "PRRC_kwDOLv90rkyQ1xVD",
+    "original_commit_id": "673c96a49757ee61c7e26806d8188675f9cfef25",
+    "original_line": 16,
+    "original_position": 16,
+    "original_start_line": null,
+    "path": "lamina/dump/indented.py",
+    "position": null,
+    "pull_request_review_id": 1900006596,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/193",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004551/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-10-09T17:49:47Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004551",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/2871291?v=4",
+      "events_url": "https://api.github.example/users/ada-l/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ada-l/followers",
+      "following_url": "https://api.github.example/users/ada-l/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ada-l/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ada-l",
+      "id": 2871291,
+      "login": "ada-l",
+      "node_id": "U_kwDOq9jhOYm7yWJd",
+      "organizations_url": "https://api.github.example/users/ada-l/orgs",
+      "received_events_url": "https://api.github.example/users/ada-l/received_events",
+      "repos_url": "https://api.github.example/users/ada-l/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ada-l/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ada-l/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ada-l",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/193#discussion_r1700004581"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/193"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004581"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Updated.",
+    "commit_id": "49abd532324f5e973dc1c8bf36f5f46c4f36e73b",
+    "created_at": "2025-10-09T17:49:47Z",
+    "diff_hunk": "@@ -0,0 +1,23 @@\n+\"\"\"Write documents in the indented layout.\"\"\"\n+\n+import sys\n+\n+from lamina.model import Blank, Comment, Document, Entry\n+\n+\n+def dumps_indented(doc, *, indent=0, skip=None):",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/193#discussion_r1700004581",
+    "id": 1700004581,
+    "in_reply_to_id": 1700004528,
+    "line": 6,
+    "node_id": "PRRC_kwDOx--wFJKu19Ex",
+    "original_commit_id": "673c96a49757ee61c7e26806d8188675f9cfef25",
+    "original_line": 8,
+    "original_position": 8,
+    "original_start_line": null,
+    "path": "lamina/dump/indented.py",
+    "position": 6,
+    "pull_request_review_id": 1900006617,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/193",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004581/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-10-09T17:49:47Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004581",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/2871291?v=4",
+      "events_url": "https://api.github.example/users/ada-l/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ada-l/followers",
+      "following_url": "https://api.github.example/users/ada-l/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ada-l/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ada-l",
+      "id": 2871291,
+      "login": "ada-l",
+      "node_id": "U_kwDOq9jhOYm7yWJd",
+      "organizations_url": "https://api.github.example/users/ada-l/orgs",
+      "received_events_url": "https://api.github.example/users/ada-l/received_events",
+      "repos_url": "https://api.github.example/users/ada-l/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ada-l/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ada-l/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ada-l",
+      "user_view_type": "public"
+    }
+  }
+]

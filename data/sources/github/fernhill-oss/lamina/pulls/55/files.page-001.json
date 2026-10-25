@@ -1,0 +1,37 @@
+[
+  {
+    "additions": 4,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/f914ae0f7ded07afde4052011051c5422024ed16/tests%2Fdata%2Ffixture55.conf",
+    "changes": 4,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Fdata%2Ffixture55.conf?ref=f914ae0f7ded07afde4052011051c5422024ed16",
+    "deletions": 0,
+    "filename": "tests/data/fixture55.conf",
+    "patch": "@@ -0,0 +1,4 @@\n+# generated sample fixture55\n+[sample]\n+name = fixture55\n+value = 55",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/f914ae0f7ded07afde4052011051c5422024ed16/tests%2Fdata%2Ffixture55.conf",
+    "sha": "c6213b795b350b793d2368a3627b9e43d90b02a6",
+    "status": "added"
+  },
+  {
+    "additions": 0,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/f914ae0f7ded07afde4052011051c5422024ed16/tests%2Fdata%2Ffixture55.conf.gz",
+    "changes": 0,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Fdata%2Ffixture55.conf.gz?ref=f914ae0f7ded07afde4052011051c5422024ed16",
+    "deletions": 0,
+    "filename": "tests/data/fixture55.conf.gz",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/f914ae0f7ded07afde4052011051c5422024ed16/tests%2Fdata%2Ffixture55.conf.gz",
+    "sha": "928c33f9398d04284c0133b227acf107b86b6839",
+    "status": "added"
+  },
+  {
+    "additions": 11,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/f914ae0f7ded07afde4052011051c5422024ed16/tests%2Ftest_fixture_fixture55.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_fixture_fixture55.py?ref=f914ae0f7ded07afde4052011051c5422024ed16",
+    "deletions": 0,
+    "filename": "tests/test_fixture_fixture55.py",
+    "patch": "@@ -0,0 +1,11 @@\n+import gzip\n+import pathlib\n+\n+from lamina import loads\n+\n+DATA = pathlib.Path(__file__).parent / \"data\"\n+\n+\n+def test_fixture55_fixture_loads():\n+    text = gzip.decompress((DATA / \"fixture55.conf.gz\").read_bytes()).decode(\"utf-8\")\n+    assert loads(text).get(\"sample.name\") == \"fixture55\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/f914ae0f7ded07afde4052011051c5422024ed16/tests%2Ftest_fixture_fixture55.py",
+    "sha": "d25e56ab503808534aa221418038a39fad3e4376",
+    "status": "added"
+  }
+]

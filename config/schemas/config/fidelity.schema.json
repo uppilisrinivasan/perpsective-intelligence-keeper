@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "batch": {
+      "properties": {
+        "min_requests": {
+          "type": "number"
+        },
+        "poll_seconds": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "bootstrap": {
+      "properties": {
+        "ci": {
+          "type": "number"
+        },
+        "n": {
+          "type": "number"
+        },
+        "seed": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "caricature": {
+      "properties": {
+        "max_ratio": {
+          "type": "number"
+        },
+        "top_k": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "falsifier": {
+      "properties": {
+        "noise_floor": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "holdout": {
+      "properties": {
+        "min_findings": {
+          "type": "number"
+        },
+        "months": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "leakage": {
+      "properties": {
+        "allow_rolling_exemplars": {
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "pass": {
+      "properties": {
+        "max_noise_ratio": {
+          "type": "number"
+        },
+        "require_unknown_recall_demo": {
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "sensitivity": {
+      "properties": {
+        "line_windows": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "partial_as": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "batch",
+    "bootstrap",
+    "caricature",
+    "falsifier",
+    "holdout",
+    "leakage",
+    "pass",
+    "sensitivity"
+  ],
+  "title": "config/fidelity.yaml",
+  "type": "object"
+}

@@ -1,0 +1,20 @@
+practice:
+  min_findings: 2
+  max_changed_lines: 250
+  k: 5
+  strata: {easy: 1, medium: 2, hard: 2}
+  costly_threshold: 0.5
+  balance: {max_mean_difficulty_diff: 0.25, max_profile_l1: 0.3}
+  taste_buckets: [easy, medium]
+growth:
+  period_months: 3
+  deadband: 0.1
+  min_prs_per_period: 8
+  g_floor: 0.05
+explanations:
+  insufficient_data: "Not enough recent reviews to tell."
+  replaced: "Your lens now predicts nearly everything you notice. Keeper may be doing your noticing; try reviewing a few PRs without it."
+  absorbed: "You're noticing more like generic review: fewer blind spots, but less of your own edge."
+  self_caricature: "You're flagging more unusual things, but fewer of them turn out to matter."
+  deskilling: "With Keeper you catch more; without it, less."
+  healthy: "Fewer costly blind spots, your edge intact, and you're still noticing new things."

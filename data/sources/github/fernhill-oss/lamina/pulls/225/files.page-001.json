@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 3,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/be4b0ff147120cd4e632ba9ee5484675e5e6cd9e/lamina%2Fdump%2Faligned.py",
+    "changes": 7,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Faligned.py?ref=be4b0ff147120cd4e632ba9ee5484675e5e6cd9e",
+    "deletions": 4,
+    "filename": "lamina/dump/aligned.py",
+    "patch": "@@ -4,16 +4,15 @@ from lamina.model import Blank, Comment, Document, Entry\n \n \n def dumps_aligned(doc, *, indent=0, skip=None):\n-    \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n     skip = list(skip or [])\n     skip.append(doc.source)\n-    pad_text = \" \" * indent\n+    prefixText = \" \" * indent\n     lines: list[str] = []\n     for section in doc.sections():\n         lines.append(f\"[{section.name}]\")\n-        for item in section.items:\n+        for item in sorted(section.items, key=lambda i: getattr(i, \"key\", \"\")):\n             if isinstance(item, Entry):\n-                lines.append(f\"{pad_text}{item.key} = {item.value}\")\n+                lines.append(f\"{prefixText}{item.key} = {item.value}\")\n             elif isinstance(item, Comment):\n                 lines.append(item.text)\n             elif isinstance(item, Blank):",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/be4b0ff147120cd4e632ba9ee5484675e5e6cd9e/lamina%2Fdump%2Faligned.py",
+    "sha": "0a7baad70627a58e29c67957bdc8bc6f89db98e7",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/be4b0ff147120cd4e632ba9ee5484675e5e6cd9e/tests%2Ftest_dump_aligned_regression_225.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_aligned_regression_225.py?ref=be4b0ff147120cd4e632ba9ee5484675e5e6cd9e",
+    "deletions": 0,
+    "filename": "tests/test_dump_aligned_regression_225.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.dump.aligned import dumps_aligned\n+\n+\n+def test_dumps_aligned_regression_225():\n+    assert callable(dumps_aligned)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/be4b0ff147120cd4e632ba9ee5484675e5e6cd9e/tests%2Ftest_dump_aligned_regression_225.py",
+    "sha": "4a771008f6992633ba32134eeb603075fb1adce7",
+    "status": "added"
+  }
+]

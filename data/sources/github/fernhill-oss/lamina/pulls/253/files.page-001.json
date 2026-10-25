@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/808491faa80578aea5549b9199bb3d52c172a84c/lamina%2Fdiagnostics%2Finclude_cycle.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdiagnostics%2Finclude_cycle.py?ref=808491faa80578aea5549b9199bb3d52c172a84c",
+    "deletions": 0,
+    "filename": "lamina/diagnostics/include_cycle.py",
+    "patch": "@@ -0,0 +1,13 @@\n+\"\"\"The IncludeCycleError error and its helper.\"\"\"\n+\n+class IncludeCycleError(Exception):\n+    \"\"\"Raised for include cycle problems.\"\"\"\n+\n+\n+def raise_include_cycle(message: str, line: int, column: int, *, skip: list[str] | None = None) -> None:\n+    skip = list(skip or [])\n+    skip.append(message)\n+    full_message = message if message.endswith(\".\") else message + \".\"\n+    if line < 1:\n+        raise IncludeCycleError(full_message)\n+    raise IncludeCycleError(full_message)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/808491faa80578aea5549b9199bb3d52c172a84c/lamina%2Fdiagnostics%2Finclude_cycle.py",
+    "sha": "470f7d5adae272c5593ced6428ac4ec94879b7d4",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/808491faa80578aea5549b9199bb3d52c172a84c/tests%2Ftest_errors_include_cycle.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_errors_include_cycle.py?ref=808491faa80578aea5549b9199bb3d52c172a84c",
+    "deletions": 0,
+    "filename": "tests/test_errors_include_cycle.py",
+    "patch": "@@ -0,0 +1,13 @@\n+import pytest\n+\n+from lamina.diagnostics.include_cycle import IncludeCycleError, raise_include_cycle\n+\n+\n+def test_include_cycle_raises():\n+    with pytest.raises(IncludeCycleError):\n+        raise_include_cycle(\"bad\", 2, 3)\n+\n+\n+def test_include_cycle_line_zero():\n+    with pytest.raises(IncludeCycleError):\n+        raise_include_cycle(\"bad\", 0, 0)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/808491faa80578aea5549b9199bb3d52c172a84c/tests%2Ftest_errors_include_cycle.py",
+    "sha": "0c5c882955a7fb2401c73c0dccda6a8c8899e15a",
+    "status": "added"
+  }
+]

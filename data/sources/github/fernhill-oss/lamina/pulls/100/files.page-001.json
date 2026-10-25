@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 26,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/47638a1bb59b2addad34210605ddddc6406172dc/lamina%2Floader%2Fxdg.py",
+    "changes": 26,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Floader%2Fxdg.py?ref=47638a1bb59b2addad34210605ddddc6406172dc",
+    "deletions": 0,
+    "filename": "lamina/loader/xdg.py",
+    "patch": "@@ -0,0 +1,26 @@\n+\"\"\"Load xdg configuration files.\"\"\"\n+\n+import sys\n+import os\n+\n+from lamina.errors import LaminaError\n+from lamina.loader.core import loads\n+from lamina.model import Document\n+\n+_CACHE: dict[str, Document] = {}\n+\n+\n+def load_xdg(path, *, strict=True, skip=None):\n+    \"\"\"Load a xdg configuration file.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(path)\n+    if path in _CACHE:\n+        return _CACHE[path]\n+    with open(path) as fh:\n+        fileText = fh.read()\n+    if strict and not fileText.strip():\n+        raise LaminaError(f\"empty configuration: {path}\", 0, 1)\n+    doc = loads(fileText, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n+    doc.source = path\n+    _CACHE[path] = doc\n+    return doc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/47638a1bb59b2addad34210605ddddc6406172dc/lamina%2Floader%2Fxdg.py",
+    "sha": "33725aecf0ab3b0319180aad78617b54ee687b29",
+    "status": "added"
+  },
+  {
+    "additions": 19,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/47638a1bb59b2addad34210605ddddc6406172dc/tests%2Ftest_loader_xdg.py",
+    "changes": 19,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_loader_xdg.py?ref=47638a1bb59b2addad34210605ddddc6406172dc",
+    "deletions": 0,
+    "filename": "tests/test_loader_xdg.py",
+    "patch": "@@ -0,0 +1,19 @@\n+import pytest\n+\n+from lamina.loader.xdg import load_xdg\n+\n+\n+def test_xdg_loads(write):\n+    path = write(\"a_xdg.conf\", \"[a]\\nx = 1\\n\")\n+    assert load_xdg(path).get(\"a.x\") == \"1\"\n+\n+\n+def test_xdg_empty_strict(write):\n+    path = write(\"e_xdg.conf\", \"\")\n+    with pytest.raises(Exception):\n+        load_xdg(path, strict=True)\n+\n+\n+def test_xdg_empty_lenient(write):\n+    path = write(\"l_xdg.conf\", \"\")\n+    assert load_xdg(path, strict=False).sections() == []",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/47638a1bb59b2addad34210605ddddc6406172dc/tests%2Ftest_loader_xdg.py",
+    "sha": "307d0100f825827a3ccc3643c66bbfab2f5842f1",
+    "status": "added"
+  }
+]

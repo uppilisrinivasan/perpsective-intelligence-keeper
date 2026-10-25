@@ -1,0 +1,279 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/317#discussion_r1700007526"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/317"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007526"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "nit: naming (`import sys` → `(remove it)`).",
+    "commit_id": "a6286c3e81353c4c6f05090d985d82b43a8c273b",
+    "created_at": "2026-08-26T08:13:54Z",
+    "diff_hunk": "@@ -1,5 +1,6 @@\n \"\"\"Prefixed interpolation: ${NAME} references with extra checks.\"\"\"\n \n+import sys",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/317#discussion_r1700007526",
+    "id": 1700007526,
+    "line": null,
+    "node_id": "PRRC_kwDO6xuGo6PW-1uU",
+    "original_commit_id": "a6286c3e81353c4c6f05090d985d82b43a8c273b",
+    "original_line": 3,
+    "original_position": 3,
+    "original_start_line": null,
+    "path": "lamina/interpolate/prefixed.py",
+    "position": null,
+    "pull_request_review_id": 1900011004,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/317",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007526/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-08-26T08:13:54Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007526",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1817105?v=4",
+      "events_url": "https://api.github.example/users/kofi-a/events{/privacy}",
+      "followers_url": "https://api.github.example/users/kofi-a/followers",
+      "following_url": "https://api.github.example/users/kofi-a/following{/other_user}",
+      "gists_url": "https://api.github.example/users/kofi-a/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/kofi-a",
+      "id": 1817105,
+      "login": "kofi-a",
+      "node_id": "U_kwDOOABc0HW00zlc",
+      "organizations_url": "https://api.github.example/users/kofi-a/orgs",
+      "received_events_url": "https://api.github.example/users/kofi-a/received_events",
+      "repos_url": "https://api.github.example/users/kofi-a/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/kofi-a/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/kofi-a/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/kofi-a",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/317#discussion_r1700007546"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/317"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007546"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Docstring would be nice here.",
+    "commit_id": "a6286c3e81353c4c6f05090d985d82b43a8c273b",
+    "created_at": "2026-08-26T08:13:54Z",
+    "diff_hunk": "@@ -9,26 +10,24 @@ def _valid(value: str) -> bool:\n     return value.strip() == value\n \n \n-def interpolate_prefixed(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n-    \"\"\"Expand ${NAME} references in value using env (prefixed rules).\"\"\"\n-    skip = list(skip or [])\n+def interpolate_prefixed(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] = []) -> str:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/317#discussion_r1700007546",
+    "id": 1700007546,
+    "line": null,
+    "node_id": "PRRC_kwDOB0VScQEVLTMo",
+    "original_commit_id": "a6286c3e81353c4c6f05090d985d82b43a8c273b",
+    "original_line": 13,
+    "original_position": 14,
+    "original_start_line": null,
+    "path": "lamina/interpolate/prefixed.py",
+    "position": null,
+    "pull_request_review_id": 1900011004,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/317",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007546/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-08-26T08:13:54Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007546",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1817105?v=4",
+      "events_url": "https://api.github.example/users/kofi-a/events{/privacy}",
+      "followers_url": "https://api.github.example/users/kofi-a/followers",
+      "following_url": "https://api.github.example/users/kofi-a/following{/other_user}",
+      "gists_url": "https://api.github.example/users/kofi-a/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/kofi-a",
+      "id": 1817105,
+      "login": "kofi-a",
+      "node_id": "U_kwDOOABc0HW00zlc",
+      "organizations_url": "https://api.github.example/users/kofi-a/orgs",
+      "received_events_url": "https://api.github.example/users/kofi-a/received_events",
+      "repos_url": "https://api.github.example/users/kofi-a/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/kofi-a/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/kofi-a/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/kofi-a",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/317#discussion_r1700007550"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/317"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007550"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Bare except might hide errors.",
+    "commit_id": "69903663fc590db1adc1cc43f3e2dd4c09eb7869",
+    "created_at": "2026-08-26T08:13:54Z",
+    "diff_hunk": "@@ -9,26 +10,24 @@ def _valid(value: str) -> bool:\n     return value.strip() == value\n \n \n-def interpolate_prefixed(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n-    \"\"\"Expand ${NAME} references in value using env (prefixed rules).\"\"\"\n-    skip = list(skip or [])\n+def interpolate_prefixed(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] = []) -> str:\n     skip.append(value)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/317#discussion_r1700007550",
+    "id": 1700007550,
+    "line": 15,
+    "node_id": "PRRC_kwDO_EJ35cOpLqEN",
+    "original_commit_id": "a6286c3e81353c4c6f05090d985d82b43a8c273b",
+    "original_line": 14,
+    "original_position": 15,
+    "original_start_line": null,
+    "path": "lamina/interpolate/prefixed.py",
+    "position": 3,
+    "pull_request_review_id": 1900011004,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/317",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007550/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-08-26T08:13:54Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007550",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1817105?v=4",
+      "events_url": "https://api.github.example/users/kofi-a/events{/privacy}",
+      "followers_url": "https://api.github.example/users/kofi-a/followers",
+      "following_url": "https://api.github.example/users/kofi-a/following{/other_user}",
+      "gists_url": "https://api.github.example/users/kofi-a/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/kofi-a",
+      "id": 1817105,
+      "login": "kofi-a",
+      "node_id": "U_kwDOOABc0HW00zlc",
+      "organizations_url": "https://api.github.example/users/kofi-a/orgs",
+      "received_events_url": "https://api.github.example/users/kofi-a/received_events",
+      "repos_url": "https://api.github.example/users/kofi-a/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/kofi-a/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/kofi-a/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/kofi-a",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/317#discussion_r1700007576"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/317"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007576"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "Fixed in the latest push.",
+    "commit_id": "69903663fc590db1adc1cc43f3e2dd4c09eb7869",
+    "created_at": "2026-08-28T06:30:54Z",
+    "diff_hunk": "@@ -9,26 +10,24 @@ def _valid(value: str) -> bool:\n     return value.strip() == value\n \n \n-def interpolate_prefixed(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n-    \"\"\"Expand ${NAME} references in value using env (prefixed rules).\"\"\"\n-    skip = list(skip or [])\n+def interpolate_prefixed(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] = []) -> str:\n     skip.append(value)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/317#discussion_r1700007576",
+    "id": 1700007576,
+    "in_reply_to_id": 1700007550,
+    "line": 15,
+    "node_id": "PRRC_kwDO4w593r-2CNoE",
+    "original_commit_id": "a6286c3e81353c4c6f05090d985d82b43a8c273b",
+    "original_line": 14,
+    "original_position": 15,
+    "original_start_line": null,
+    "path": "lamina/interpolate/prefixed.py",
+    "position": 3,
+    "pull_request_review_id": 1900011022,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/317",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007576/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-08-28T06:30:54Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700007576",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/25094261?v=4",
+      "events_url": "https://api.github.example/users/alex-t24/events{/privacy}",
+      "followers_url": "https://api.github.example/users/alex-t24/followers",
+      "following_url": "https://api.github.example/users/alex-t24/following{/other_user}",
+      "gists_url": "https://api.github.example/users/alex-t24/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/alex-t24",
+      "id": 25094261,
+      "login": "alex-t24",
+      "node_id": "U_kwDONtqfcO5-TQv6",
+      "organizations_url": "https://api.github.example/users/alex-t24/orgs",
+      "received_events_url": "https://api.github.example/users/alex-t24/received_events",
+      "repos_url": "https://api.github.example/users/alex-t24/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/alex-t24/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/alex-t24/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/alex-t24",
+      "user_view_type": "public"
+    }
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 18,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/3aefcee9dae3d802a491e6e3c744b57da3fbafb4/lamina%2Fparser%2Fduration.py",
+    "changes": 18,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fparser%2Fduration.py?ref=3aefcee9dae3d802a491e6e3c744b57da3fbafb4",
+    "deletions": 0,
+    "filename": "lamina/parser/duration.py",
+    "patch": "@@ -0,0 +1,18 @@\n+\"\"\"Parse duration values: comma-separated items in brackets.\"\"\"\n+\n+from lamina.errors import ParseError\n+\n+\n+def parse_duration_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+    skip = list(skip or [])\n+    skip.append(raw)\n+    strippedText = raw.strip()\n+    if not (strippedText.startswith(\"[\") and strippedText.endswith(\"]\")):\n+        raise ValueError(f\"expected [items], got {raw!r}\")\n+    inner = strippedText[1:-1].strip()\n+    if not inner:\n+        return []\n+    items = [part.strip() for part in inner.split(\",\")]\n+    if any(item == \"\" for item in items):\n+        raise ParseError(\"empty item in list\", line, column)\n+    return items",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/3aefcee9dae3d802a491e6e3c744b57da3fbafb4/lamina%2Fparser%2Fduration.py",
+    "sha": "501283981f30e67e34bb6407b5e8dba1da1e7591",
+    "status": "added"
+  }
+]

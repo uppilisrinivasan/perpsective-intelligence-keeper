@@ -1,0 +1,280 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/106#discussion_r1700002534"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/106"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002534"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "This puts the environment value in the error message. Environment values are secrets in practice (tokens, passwords): errors and logs may only name the variable.",
+    "commit_id": "b789290c684b971c7db01b6fb149529fe2418d7c",
+    "created_at": "2025-01-16T10:33:04Z",
+    "diff_hunk": "@@ -9,26 +10,24 @@ def _valid(value: str) -> bool:\n     return \"\\n\" not in value\n \n \n-def interpolate_strict(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n-    \"\"\"Expand ${NAME} references in value using env (strict rules).\"\"\"\n-    skip = list(skip or [])\n+def interpolate_strict(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] = []) -> str:\n     skip.append(value)\n-    out_parts: list[str] = []\n+    pieces: list[str] = []\n     i = 0\n     while True:\n         start = value.find(\"${\", i)\n         if start < 0:\n-            out_parts.append(value[i:])\n-            return \"\".join(out_parts)\n+            pieces.append(value[i:])\n+            return \"\".join(pieces)\n         end = value.find(\"}\", start)\n         if end < 0:\n             raise InterpolationError(\"unterminated reference\", line, start + 1)\n-        out_parts.append(value[i:start])\n+        pieces.append(value[i:start])\n         name = value[start + 2:end]\n         if name not in env:\n             raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n         resolved = env[name]\n         if not _valid(resolved):\n-            raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n-        out_parts.append(resolved)\n+            raise InterpolationError(f\"invalid value {resolved!r} for {name}\", line, start + 1)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/106#discussion_r1700002534",
+    "id": 1700002534,
+    "line": null,
+    "node_id": "PRRC_kwDOGUISErjU_Ngc",
+    "original_commit_id": "b789290c684b971c7db01b6fb149529fe2418d7c",
+    "original_line": 31,
+    "original_position": 38,
+    "original_start_line": null,
+    "path": "lamina/interpolate/strict.py",
+    "position": null,
+    "pull_request_review_id": 1900003565,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/106",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002534/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-01-16T10:33:04Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002534",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/106#discussion_r1700002538"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/106"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002538"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Mutable default argument: `skip=[]` is shared between calls. Use `None` and create the list inside.",
+    "commit_id": "b394bfa47ace3a93c6d7dfbdac4dc64f08827ba0",
+    "created_at": "2025-01-16T10:33:04Z",
+    "diff_hunk": "@@ -9,26 +10,24 @@ def _valid(value: str) -> bool:\n     return \"\\n\" not in value\n \n \n-def interpolate_strict(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n-    \"\"\"Expand ${NAME} references in value using env (strict rules).\"\"\"\n-    skip = list(skip or [])\n+def interpolate_strict(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] = []) -> str:\n     skip.append(value)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/106#discussion_r1700002538",
+    "id": 1700002538,
+    "line": 15,
+    "node_id": "PRRC_kwDOabzHO8ISkwL7",
+    "original_commit_id": "b789290c684b971c7db01b6fb149529fe2418d7c",
+    "original_line": 14,
+    "original_position": 15,
+    "original_start_line": null,
+    "path": "lamina/interpolate/strict.py",
+    "position": 13,
+    "pull_request_review_id": 1900003565,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/106",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002538/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-01-16T10:33:04Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002538",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/106#discussion_r1700002554"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/106"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002554"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Fixed in the latest push.",
+    "commit_id": "b789290c684b971c7db01b6fb149529fe2418d7c",
+    "created_at": "2025-01-17T19:33:14Z",
+    "diff_hunk": "@@ -9,26 +10,24 @@ def _valid(value: str) -> bool:\n     return \"\\n\" not in value\n \n \n-def interpolate_strict(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n-    \"\"\"Expand ${NAME} references in value using env (strict rules).\"\"\"\n-    skip = list(skip or [])\n+def interpolate_strict(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] = []) -> str:\n     skip.append(value)\n-    out_parts: list[str] = []\n+    pieces: list[str] = []\n     i = 0\n     while True:\n         start = value.find(\"${\", i)\n         if start < 0:\n-            out_parts.append(value[i:])\n-            return \"\".join(out_parts)\n+            pieces.append(value[i:])\n+            return \"\".join(pieces)\n         end = value.find(\"}\", start)\n         if end < 0:\n             raise InterpolationError(\"unterminated reference\", line, start + 1)\n-        out_parts.append(value[i:start])\n+        pieces.append(value[i:start])\n         name = value[start + 2:end]\n         if name not in env:\n             raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n         resolved = env[name]\n         if not _valid(resolved):\n-            raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n-        out_parts.append(resolved)\n+            raise InterpolationError(f\"invalid value {resolved!r} for {name}\", line, start + 1)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/106#discussion_r1700002554",
+    "id": 1700002554,
+    "in_reply_to_id": 1700002534,
+    "line": null,
+    "node_id": "PRRC_kwDOFRGzYuMAqU-L",
+    "original_commit_id": "b789290c684b971c7db01b6fb149529fe2418d7c",
+    "original_line": 31,
+    "original_position": 38,
+    "original_start_line": null,
+    "path": "lamina/interpolate/strict.py",
+    "position": null,
+    "pull_request_review_id": 1900003598,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/106",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002554/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-01-17T19:33:14Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002554",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/11651128?v=4",
+      "events_url": "https://api.github.example/users/emeka-u/events{/privacy}",
+      "followers_url": "https://api.github.example/users/emeka-u/followers",
+      "following_url": "https://api.github.example/users/emeka-u/following{/other_user}",
+      "gists_url": "https://api.github.example/users/emeka-u/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/emeka-u",
+      "id": 11651128,
+      "login": "emeka-u",
+      "node_id": "U_kwDOZQOXpUv_aYS3",
+      "organizations_url": "https://api.github.example/users/emeka-u/orgs",
+      "received_events_url": "https://api.github.example/users/emeka-u/received_events",
+      "repos_url": "https://api.github.example/users/emeka-u/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/emeka-u/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/emeka-u/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/emeka-u",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/106#discussion_r1700002585"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/106"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002585"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Good catch, fixed.",
+    "commit_id": "b394bfa47ace3a93c6d7dfbdac4dc64f08827ba0",
+    "created_at": "2025-01-17T19:33:14Z",
+    "diff_hunk": "@@ -9,26 +10,24 @@ def _valid(value: str) -> bool:\n     return \"\\n\" not in value\n \n \n-def interpolate_strict(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n-    \"\"\"Expand ${NAME} references in value using env (strict rules).\"\"\"\n-    skip = list(skip or [])\n+def interpolate_strict(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] = []) -> str:\n     skip.append(value)",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/106#discussion_r1700002585",
+    "id": 1700002585,
+    "in_reply_to_id": 1700002538,
+    "line": 15,
+    "node_id": "PRRC_kwDOBoZPHqd8WUFA",
+    "original_commit_id": "b789290c684b971c7db01b6fb149529fe2418d7c",
+    "original_line": 14,
+    "original_position": 15,
+    "original_start_line": null,
+    "path": "lamina/interpolate/strict.py",
+    "position": 13,
+    "pull_request_review_id": 1900003609,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/106",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002585/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-01-17T19:33:14Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002585",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/11651128?v=4",
+      "events_url": "https://api.github.example/users/emeka-u/events{/privacy}",
+      "followers_url": "https://api.github.example/users/emeka-u/followers",
+      "following_url": "https://api.github.example/users/emeka-u/following{/other_user}",
+      "gists_url": "https://api.github.example/users/emeka-u/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/emeka-u",
+      "id": 11651128,
+      "login": "emeka-u",
+      "node_id": "U_kwDOZQOXpUv_aYS3",
+      "organizations_url": "https://api.github.example/users/emeka-u/orgs",
+      "received_events_url": "https://api.github.example/users/emeka-u/received_events",
+      "repos_url": "https://api.github.example/users/emeka-u/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/emeka-u/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/emeka-u/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/emeka-u",
+      "user_view_type": "public"
+    }
+  }
+]

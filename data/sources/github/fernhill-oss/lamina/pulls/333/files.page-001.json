@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 20,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/70c53cd017e53cc92fce111d7c76020ae6b04da1/lamina%2Fcli%2Fenv.py",
+    "changes": 20,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fcli%2Fenv.py?ref=70c53cd017e53cc92fce111d7c76020ae6b04da1",
+    "deletions": 0,
+    "filename": "lamina/cli/env.py",
+    "patch": "@@ -0,0 +1,20 @@\n+\"\"\"`lamina env`: print information about a config file.\"\"\"\n+\n+import sys\n+\n+from lamina.parser import parse\n+\n+\n+def cmd_env(argv: list[str], *, skip: list[str] | None = None) -> int:\n+    \"\"\"Run the env command; return the exit code.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(\"--\")\n+    if len(argv) != 1:\n+        print(\"usage: lamina env FILE\", file=sys.stderr)\n+        return 2\n+    with open(argv[0]) as fh:\n+        source_text = fh.read()\n+    doc = parse(source_text, source=argv[0])\n+    for section in doc.sections():\n+        print(f\"{section.name}: {len(section.entries())}\")\n+    return 0",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/70c53cd017e53cc92fce111d7c76020ae6b04da1/lamina%2Fcli%2Fenv.py",
+    "sha": "d30991b1680ba50493d6c17cf837ea4e840d3241",
+    "status": "added"
+  },
+  {
+    "additions": 11,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/70c53cd017e53cc92fce111d7c76020ae6b04da1/tests%2Ftest_cli_env.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_cli_env.py?ref=70c53cd017e53cc92fce111d7c76020ae6b04da1",
+    "deletions": 0,
+    "filename": "tests/test_cli_env.py",
+    "patch": "@@ -0,0 +1,11 @@\n+from lamina.cli.env import cmd_env\n+\n+\n+def test_env_counts(write, capsys):\n+    path = write(\"c_env.conf\", \"[a]\\nx = 1\\ny = 2\\n\")\n+    assert cmd_env([path]) == 0\n+    assert capsys.readouterr().out.strip() == \"a: 2\"\n+\n+\n+def test_env_usage():\n+    assert cmd_env([]) == 2",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/70c53cd017e53cc92fce111d7c76020ae6b04da1/tests%2Ftest_cli_env.py",
+    "sha": "dd9aaaaf9ad160319ea2af15fd00c55d85b5ece1",
+    "status": "added"
+  }
+]

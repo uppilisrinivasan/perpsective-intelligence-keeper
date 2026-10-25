@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 21,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/1a6256340ca73863045a57f476fdf61469fce82a/lamina%2Fdump%2Fenv_file.py",
+    "changes": 21,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Fenv_file.py?ref=1a6256340ca73863045a57f476fdf61469fce82a",
+    "deletions": 0,
+    "filename": "lamina/dump/env_file.py",
+    "patch": "@@ -0,0 +1,21 @@\n+\"\"\"Write documents in the env file layout.\"\"\"\n+\n+from lamina.model import Blank, Comment, Document, Entry\n+\n+\n+def dumps_env_file(doc, *, indent=0, skip=None):\n+    \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(doc.source)\n+    pad_text = \" \" * indent\n+    lines: list[str] = []\n+    for section in doc.sections():\n+        lines.append(f\"[{section.name}]\")\n+        for item in section.items:\n+            if isinstance(item, Entry):\n+                lines.append(f\"{pad_text}{item.key} = {item.value}\")\n+            elif isinstance(item, Comment):\n+                lines.append(item.text)\n+            elif isinstance(item, Blank):\n+                lines.append(\"\")\n+    return \"\\n\".join(lines) + (\"\\n\" if lines else \"\")",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/1a6256340ca73863045a57f476fdf61469fce82a/lamina%2Fdump%2Fenv_file.py",
+    "sha": "99e6f61bdd6cf45ad3f160330556933ec178a76f",
+    "status": "added"
+  },
+  {
+    "additions": 14,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/1a6256340ca73863045a57f476fdf61469fce82a/tests%2Ftest_dump_env_file.py",
+    "changes": 14,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_env_file.py?ref=1a6256340ca73863045a57f476fdf61469fce82a",
+    "deletions": 0,
+    "filename": "tests/test_dump_env_file.py",
+    "patch": "@@ -0,0 +1,14 @@\n+from lamina.loader import loads\n+from lamina.dump.env_file import dumps_env_file\n+\n+\n+def test_env_file_indents():\n+    assert dumps_env_file(loads(\"[a]\\nx = 1\\n\"), indent=2) == \"[a]\\n  x = 1\\n\"\n+\n+\n+def test_env_file_keeps_comments():\n+    assert \"# c\" in dumps_env_file(loads(\"[a]\\n# c\\nx = 1\\n\"))\n+\n+\n+def test_env_file_empty():\n+    assert dumps_env_file(loads(\"\")) == \"\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/1a6256340ca73863045a57f476fdf61469fce82a/tests%2Ftest_dump_env_file.py",
+    "sha": "4e40fee37a764e9c6b3ca37d9f3e9a4ff76182f1",
+    "status": "added"
+  }
+]

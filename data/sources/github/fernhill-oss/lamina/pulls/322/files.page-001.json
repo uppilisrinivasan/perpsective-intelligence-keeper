@@ -1,0 +1,25 @@
+[
+  {
+    "additions": 0,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/dab5670f54f988afdd099aca49f3ef5bbda5e8b4/tests%2Fdata%2Ffixture322.conf.gz",
+    "changes": 0,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Fdata%2Ffixture322.conf.gz?ref=dab5670f54f988afdd099aca49f3ef5bbda5e8b4",
+    "deletions": 0,
+    "filename": "tests/data/fixture322.conf.gz",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/dab5670f54f988afdd099aca49f3ef5bbda5e8b4/tests%2Fdata%2Ffixture322.conf.gz",
+    "sha": "3ff83265e2606c92d23aaa7af312b952f8aca692",
+    "status": "added"
+  },
+  {
+    "additions": 11,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/dab5670f54f988afdd099aca49f3ef5bbda5e8b4/tests%2Ftest_fixture_fixture322.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_fixture_fixture322.py?ref=dab5670f54f988afdd099aca49f3ef5bbda5e8b4",
+    "deletions": 0,
+    "filename": "tests/test_fixture_fixture322.py",
+    "patch": "@@ -0,0 +1,11 @@\n+import gzip\n+import pathlib\n+\n+from lamina import loads\n+\n+DATA = pathlib.Path(__file__).parent / \"data\"\n+\n+\n+def test_fixture322_fixture_loads():\n+    text = gzip.decompress((DATA / \"fixture322.conf.gz\").read_bytes()).decode(\"utf-8\")\n+    assert loads(text).get(\"sample.name\") == \"fixture322\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/dab5670f54f988afdd099aca49f3ef5bbda5e8b4/tests%2Ftest_fixture_fixture322.py",
+    "sha": "d39a5db9828a3c801660108cb0345f1922ebaa75",
+    "status": "added"
+  }
+]

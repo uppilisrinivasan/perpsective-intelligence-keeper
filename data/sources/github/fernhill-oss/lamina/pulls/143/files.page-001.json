@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 20,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/f498548d5b03559b44f695f41ac240d9a867f0b1/lamina%2Fcli%2Fexplain.py",
+    "changes": 20,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fcli%2Fexplain.py?ref=f498548d5b03559b44f695f41ac240d9a867f0b1",
+    "deletions": 0,
+    "filename": "lamina/cli/explain.py",
+    "patch": "@@ -0,0 +1,20 @@\n+\"\"\"`lamina explain`: print information about a config file.\"\"\"\n+\n+import os\n+import sys\n+\n+from lamina.parser import parse\n+\n+\n+def cmd_explain(argv: list[str], *, skip: list[str] | None = None) -> int:\n+    skip = list(skip or [])\n+    skip.append(\"--\")\n+    if len(argv) != 1:\n+        print(\"usage: lamina explain FILE\", file=sys.stderr)\n+        return 2\n+    with open(argv[0]) as fh:\n+        sourceText = fh.read()\n+    doc = parse(sourceText, source=argv[0])\n+    for section in doc.sections():\n+        print(f\"{section.name}: {len(section.entries())}\")\n+    return 0",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/f498548d5b03559b44f695f41ac240d9a867f0b1/lamina%2Fcli%2Fexplain.py",
+    "sha": "e800a20fb47f7a2eddf9c533c4de477c80ff56b5",
+    "status": "added"
+  },
+  {
+    "additions": 11,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/f498548d5b03559b44f695f41ac240d9a867f0b1/tests%2Ftest_cli_explain.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_cli_explain.py?ref=f498548d5b03559b44f695f41ac240d9a867f0b1",
+    "deletions": 0,
+    "filename": "tests/test_cli_explain.py",
+    "patch": "@@ -0,0 +1,11 @@\n+from lamina.cli.explain import cmd_explain\n+\n+\n+def test_explain_counts(write, capsys):\n+    path = write(\"c_explain.conf\", \"[a]\\nx = 1\\ny = 2\\n\")\n+    assert cmd_explain([path]) == 0\n+    assert capsys.readouterr().out.strip() == \"a: 2\"\n+\n+\n+def test_explain_usage():\n+    assert cmd_explain([]) == 2",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/f498548d5b03559b44f695f41ac240d9a867f0b1/tests%2Ftest_cli_explain.py",
+    "sha": "52918997303435cb804c589edd2c124dcae640b4",
+    "status": "added"
+  }
+]

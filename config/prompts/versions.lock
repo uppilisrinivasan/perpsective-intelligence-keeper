@@ -1,0 +1,102 @@
+[
+  {
+    "id": "assistant_system",
+    "version": 1,
+    "sha256": "4808949daebcaffc27eae1ede928a0b50c4e7fcb669ed62768111dc03f49eba5"
+  },
+  {
+    "id": "assistant_title",
+    "version": 1,
+    "sha256": "5c98db6464b19bc1f2f2624ea58ab26ebc8e741619536b88b4249462325cfb89"
+  },
+  {
+    "id": "baseline_review",
+    "version": 1,
+    "sha256": "b9aa3f7de91f91fbbecc83c8298c5b958c0a2ec043eb9f7b9391eafdee8ec08b"
+  },
+  {
+    "id": "calibration_notes",
+    "version": 1,
+    "sha256": "894615ee270d8ce666aa4ef838e9605fa98fc7b2d64e5e34ee73a3bfcfa0d562"
+  },
+  {
+    "id": "extract_findings",
+    "version": 1,
+    "sha256": "b1ee6adcd1ff4023fdc5036c6dae89bb885639dfb8961d3a62dd05773953b6fe"
+  },
+  {
+    "id": "fix_plan",
+    "version": 1,
+    "sha256": "641b3be809c7d38772645baa5155b1a77ab942e94e301efd34b50b779fce116b"
+  },
+  {
+    "id": "fix_repair",
+    "version": 1,
+    "sha256": "f88a7150d16d57c581f62125875849e513d4bc3495cf6aae2fd35f3f92cff483"
+  },
+  {
+    "id": "fix_verify",
+    "version": 1,
+    "sha256": "faf8b2113f9887033077561f4a018258341a02fa161624bf53ad32c304f954f7"
+  },
+  {
+    "id": "handoff_note",
+    "version": 1,
+    "sha256": "4eaf4c401de4e379bac5236404ca44fc23c8b646c3684ee03c615175e2f45001"
+  },
+  {
+    "id": "lens_card",
+    "version": 1,
+    "sha256": "2cc992a3da5d11d86662b7c7cb6dcaff3fd77bd6797731b4e60d2350f6ebeaa9"
+  },
+  {
+    "id": "lens_diff_summary",
+    "version": 1,
+    "sha256": "4886686a39acb17c39d8bf994a041c3acb76516717b9729a2332f2980ad48a6c"
+  },
+  {
+    "id": "lens_items",
+    "version": 1,
+    "sha256": "2ba4be159d0f4f4d591a8a727355469597006ddefb5975df14c163b21c4ebdf5"
+  },
+  {
+    "id": "lens_recall",
+    "version": 1,
+    "sha256": "c09b4241b129d6c2088451349bc25ce4a95da21f4d92f25a53e4d08d2d007d88"
+  },
+  {
+    "id": "lens_review",
+    "version": 1,
+    "sha256": "2869ecbf4f2b6a5ab4438f5af31e0cf8c962d4d7a3ec972e4bb052e29a19a080"
+  },
+  {
+    "id": "match_findings",
+    "version": 1,
+    "sha256": "73913fe9e910dc8342f3c2044e9331da6b305ae2ae0f18e3c951da6963404b33"
+  },
+  {
+    "id": "practice_coach",
+    "version": 1,
+    "sha256": "75c5463da2e09a795cda2383a259c0e90854d2d1acf36d5b457722e5c9dddbfd"
+  },
+  {
+    "id": "practice_score",
+    "version": 1,
+    "sha256": "7bf9d0e74936e5c4d795ca02f003562610f2d2f2405f28e98e83bbce5e8ede8d"
+  },
+  {
+    "id": "review_draft",
+    "version": 1,
+    "sha256": "37c09dd253dc2502244aa2f114f3715ec3cbe9183b38c7c08741f636632418b5"
+  },
+  {
+    "id": "slop_reply",
+    "version": 1,
+    "sha256": "53de2afc842c6ed70ca65894acd0513f2f5be6750a8604e1f18012e0aada6214"
+  },
+  {
+    "id": "triage_signals",
+    "version": 1,
+    "sha256": "d74c457c75b9a52989b1730824273a61115882df3dc6d476be63e17eabef1868"
+  }
+]

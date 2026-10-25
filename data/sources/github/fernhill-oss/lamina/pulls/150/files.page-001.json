@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 34,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/9fb28bbcecce7faac5a8b68cec3df54b9cc77142/lamina%2Finterpolate%2Fprefixed.py",
+    "changes": 34,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Fprefixed.py?ref=9fb28bbcecce7faac5a8b68cec3df54b9cc77142",
+    "deletions": 0,
+    "filename": "lamina/interpolate/prefixed.py",
+    "patch": "@@ -0,0 +1,34 @@\n+\"\"\"Prefixed interpolation: ${NAME} references with extra checks.\"\"\"\n+\n+from collections.abc import Mapping\n+\n+from lamina.errors import InterpolationError\n+\n+\n+def _valid(value: str) -> bool:\n+    return value.strip() == value\n+\n+\n+def interpolate_prefixed(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n+    \"\"\"Expand ${NAME} references in value using env (prefixed rules).\"\"\"\n+    skip = list(skip or [])\n+    skip.append(value)\n+    out_parts: list[str] = []\n+    i = 0\n+    while True:\n+        start = value.find(\"${\", i)\n+        if start < 0:\n+            out_parts.append(value[i:])\n+            return \"\".join(out_parts)\n+        end = value.find(\"}\", start)\n+        if end < 0:\n+            raise InterpolationError(\"unterminated reference\", line, start + 1)\n+        out_parts.append(value[i:start])\n+        name = value[start + 2:end]\n+        if name not in env:\n+            raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n+        resolved = env[name]\n+        if not _valid(resolved):\n+            raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n+        out_parts.append(resolved)\n+        i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/9fb28bbcecce7faac5a8b68cec3df54b9cc77142/lamina%2Finterpolate%2Fprefixed.py",
+    "sha": "6600a2199a832e9f99817b4ea35829b0270bf6ed",
+    "status": "added"
+  },
+  {
+    "additions": 17,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/9fb28bbcecce7faac5a8b68cec3df54b9cc77142/tests%2Ftest_interpolate_prefixed.py",
+    "changes": 17,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_interpolate_prefixed.py?ref=9fb28bbcecce7faac5a8b68cec3df54b9cc77142",
+    "deletions": 0,
+    "filename": "tests/test_interpolate_prefixed.py",
+    "patch": "@@ -0,0 +1,17 @@\n+import pytest\n+\n+from lamina.errors import InterpolationError\n+from lamina.interpolate.prefixed import interpolate_prefixed\n+\n+\n+def test_prefixed_expands():\n+    assert interpolate_prefixed(\"a-${X}\", {\"X\": \"1\"}) == \"a-1\"\n+\n+\n+def test_prefixed_undefined():\n+    with pytest.raises(InterpolationError):\n+        interpolate_prefixed(\"${NOPE}\", {})\n+\n+\n+def test_prefixed_plain_text():\n+    assert interpolate_prefixed(\"plain\", {}) == \"plain\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/9fb28bbcecce7faac5a8b68cec3df54b9cc77142/tests%2Ftest_interpolate_prefixed.py",
+    "sha": "700a51346869cd03ce0d2c4cf85443f0d06c3f2d",
+    "status": "added"
+  }
+]

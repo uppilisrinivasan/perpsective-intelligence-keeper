@@ -1,0 +1,141 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/177#discussion_r1700004146"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/177"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004146"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "nit: `currentWord` → `current_word`, we use snake_case.",
+    "commit_id": "59aff26941627d5607eae0d48287cea2216e05e4",
+    "created_at": "2025-09-11T14:08:28Z",
+    "diff_hunk": "@@ -0,0 +1,24 @@\n+\"\"\"Unicode tokens inside a value (the tokenizer is the hot path).\"\"\"\n+\n+from lamina.lexer.core import Token\n+\n+\n+def scan_unicode(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n+    \"\"\"Split value into unicode words, separated by ':' or whitespace.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(value)\n+    tokens: list[Token] = []\n+    currentWord: list[str] = []",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/177#discussion_r1700004146",
+    "id": 1700004146,
+    "line": null,
+    "node_id": "PRRC_kwDOsOKtILvz9Qby",
+    "original_commit_id": "59aff26941627d5607eae0d48287cea2216e05e4",
+    "original_line": 11,
+    "original_position": 11,
+    "original_start_line": null,
+    "path": "lamina/lexer/unicode.py",
+    "position": null,
+    "pull_request_review_id": 1900006010,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/177",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004146/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-09-11T14:08:28Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004146",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/177#discussion_r1700004197"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/177"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004197"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "Fixed in the latest push.",
+    "commit_id": "59aff26941627d5607eae0d48287cea2216e05e4",
+    "created_at": "2025-09-11T19:19:22Z",
+    "diff_hunk": "@@ -0,0 +1,24 @@\n+\"\"\"Unicode tokens inside a value (the tokenizer is the hot path).\"\"\"\n+\n+from lamina.lexer.core import Token\n+\n+\n+def scan_unicode(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n+    \"\"\"Split value into unicode words, separated by ':' or whitespace.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(value)\n+    tokens: list[Token] = []\n+    currentWord: list[str] = []",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/177#discussion_r1700004197",
+    "id": 1700004197,
+    "in_reply_to_id": 1700004146,
+    "line": null,
+    "node_id": "PRRC_kwDOFpzpcB_bwzhA",
+    "original_commit_id": "59aff26941627d5607eae0d48287cea2216e05e4",
+    "original_line": 11,
+    "original_position": 11,
+    "original_start_line": null,
+    "path": "lamina/lexer/unicode.py",
+    "position": null,
+    "pull_request_review_id": 1900006038,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/177",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004197/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-09-11T19:19:22Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700004197",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/30593378?v=4",
+      "events_url": "https://api.github.example/users/bram-n88/events{/privacy}",
+      "followers_url": "https://api.github.example/users/bram-n88/followers",
+      "following_url": "https://api.github.example/users/bram-n88/following{/other_user}",
+      "gists_url": "https://api.github.example/users/bram-n88/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/bram-n88",
+      "id": 30593378,
+      "login": "bram-n88",
+      "node_id": "U_kwDOX4xpfHr5kNoi",
+      "organizations_url": "https://api.github.example/users/bram-n88/orgs",
+      "received_events_url": "https://api.github.example/users/bram-n88/received_events",
+      "repos_url": "https://api.github.example/users/bram-n88/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/bram-n88/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/bram-n88/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/bram-n88",
+      "user_view_type": "public"
+    }
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 25,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/86a74357157657cb2fcdded8d57dcd2ca3ffdeb5/lamina%2Finclude%2Fshared.py",
+    "changes": 25,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Fshared.py?ref=86a74357157657cb2fcdded8d57dcd2ca3ffdeb5",
+    "deletions": 0,
+    "filename": "lamina/include/shared.py",
+    "patch": "@@ -0,0 +1,25 @@\n+\"\"\"Shared includes.\"\"\"\n+\n+import os\n+\n+from lamina.errors import IncludeError\n+\n+\n+def resolve_shared_include(base_dir: str, name: str, root: str, *, skip: list[str] | None = None) -> str:\n+    \"\"\"Resolve a shared include relative to base_dir, confined to root.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(name)\n+    root_real = os.path.realpath(root)\n+    resolved_path = os.path.realpath(os.path.join(base_dir, name))\n+    if os.path.commonpath([resolved_path, root_real]) != root_real:\n+        raise IncludeError(f\"include escapes the project root: {name}\", 0, 1)\n+    if not os.path.isfile(resolved_path):\n+        raise IncludeError(f\"include not found: {name}\", 0, 1)\n+    return resolved_path\n+\n+\n+def read_shared_include(base_dir: str, name: str, root: str) -> str:\n+    \"\"\"Return the text of a shared include.\"\"\"\n+    path = resolve_shared_include(base_dir, name, root)\n+    with open(path, encoding=\"utf-8\") as fh:\n+        return fh.read()",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/86a74357157657cb2fcdded8d57dcd2ca3ffdeb5/lamina%2Finclude%2Fshared.py",
+    "sha": "71d46e41aecc07b09fab16dc6b2b97c93f6dea98",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/86a74357157657cb2fcdded8d57dcd2ca3ffdeb5/tests%2Ftest_include_shared.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_include_shared.py?ref=86a74357157657cb2fcdded8d57dcd2ca3ffdeb5",
+    "deletions": 0,
+    "filename": "tests/test_include_shared.py",
+    "patch": "@@ -0,0 +1,13 @@\n+import pytest\n+\n+from lamina.include.shared import resolve_shared_include, read_shared_include\n+\n+\n+def test_shared_include_reads_file(tmp_path):\n+    (tmp_path / \"base.conf\").write_text(\"[a]\\nx = 1\\n\", encoding=\"utf-8\")\n+    assert \"x = 1\" in read_shared_include(str(tmp_path), \"base.conf\", str(tmp_path))\n+\n+\n+def test_shared_include_missing(tmp_path):\n+    with pytest.raises(Exception):\n+        resolve_shared_include(str(tmp_path), \"nope.conf\", str(tmp_path))",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/86a74357157657cb2fcdded8d57dcd2ca3ffdeb5/tests%2Ftest_include_shared.py",
+    "sha": "f668ad9f0aaf4a467ef2151f4a777891c8bd39b6",
+    "status": "added"
+  }
+]

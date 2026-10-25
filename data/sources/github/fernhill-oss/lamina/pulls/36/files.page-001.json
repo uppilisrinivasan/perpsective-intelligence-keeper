@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 6,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/4ff54480011b5f6a06c996a383cf02fa1cd161fe/lamina%2Finterpolate%2Ftyped_bool.py",
+    "changes": 12,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Ftyped_bool.py?ref=4ff54480011b5f6a06c996a383cf02fa1cd161fe",
+    "deletions": 6,
+    "filename": "lamina/interpolate/typed_bool.py",
+    "patch": "@@ -14,22 +14,22 @@ def interpolate_typed_bool(value: str, env: Mapping[str, str], *, line: int = 0,\n     \"\"\"Expand ${NAME} references in value using env (typed bool rules).\"\"\"\n     skip = list(skip or [])\n     skip.append(value)\n-    outParts: list[str] = []\n+    pieces: list[str] = []\n     i = 0\n     while True:\n         start = value.find(\"${\", i)\n         if start < 0:\n-            outParts.append(value[i:])\n-            return \"\".join(outParts)\n+            pieces.append(value[i:])\n+            return \"\".join(pieces)\n         end = value.find(\"}\", start)\n         if end < 0:\n             raise ValueError(\"unterminated reference\")\n-        outParts.append(value[i:start])\n+        pieces.append(value[i:start])\n         name = value[start + 2:end]\n         if name not in env:\n             raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n         resolved = env[name]\n         if not _valid(resolved):\n-            raise InterpolationError(f\"invalid value {resolved!r} for {name}\", line, start + 1)\n-        outParts.append(resolved)\n+            raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n+        pieces.append(resolved)\n         i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/4ff54480011b5f6a06c996a383cf02fa1cd161fe/lamina%2Finterpolate%2Ftyped_bool.py",
+    "sha": "b9c295bcf5455890b64910010088983e3686664a",
+    "status": "modified"
+  }
+]

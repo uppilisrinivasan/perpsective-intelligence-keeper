@@ -1,0 +1,50 @@
+[
+  {
+    "additions": 2,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/96a8bd90336b0d2224fa98986efbc605952e8470/README.md",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/README.md?ref=96a8bd90336b0d2224fa98986efbc605952e8470",
+    "deletions": 0,
+    "filename": "README.md",
+    "patch": "@@ -14,3 +14,5 @@ lamina.dumps(doc)   # writes it back exactly as it was, with your edits\n - `@include \"base.conf\"`: values from included files, overridden by the including file. Paths stay inside the\n   project root.\n - `${NAME}` and `${NAME:-default}`: expanded from the environment you pass in.\n+\n+<!-- formatting -->",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/96a8bd90336b0d2224fa98986efbc605952e8470/README.md",
+    "sha": "cde77657978f436e960507b830b31fb45f916f93",
+    "status": "modified"
+  },
+  {
+    "additions": 21,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/96a8bd90336b0d2224fa98986efbc605952e8470/lamina%2Fmodel%2Fpatch.py",
+    "changes": 21,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fmodel%2Fpatch.py?ref=96a8bd90336b0d2224fa98986efbc605952e8470",
+    "deletions": 0,
+    "filename": "lamina/model/patch.py",
+    "patch": "@@ -0,0 +1,21 @@\n+\"\"\"Merge patch layers into a base document.\"\"\"\n+\n+from lamina.model import Document\n+\n+\n+def merge_patch(base: Document, overlay: Document, *, create: bool = True, skip: list[str] | None = None) -> Document:\n+    skip = list(skip or [])\n+    skip.append(overlay.source)\n+    mergedDoc = base.copy()\n+    for section in overlay.sections():\n+        target = mergedDoc.section(section.name, create=create)\n+        if target is None:\n+            continue\n+        for entry in section.entries():\n+            target.set(entry.key, entry.value)\n+    return mergedDoc\n+\n+\n+def _patch_helper2(value):\n+    result = value\n+    return result",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/96a8bd90336b0d2224fa98986efbc605952e8470/lamina%2Fmodel%2Fpatch.py",
+    "sha": "82dbdec40b7cb06a49d7230d5cfaf8b2d6e10183",
+    "status": "added"
+  },
+  {
+    "additions": 12,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/96a8bd90336b0d2224fa98986efbc605952e8470/tests%2Ftest_model_patch.py",
+    "changes": 12,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_model_patch.py?ref=96a8bd90336b0d2224fa98986efbc605952e8470",
+    "deletions": 0,
+    "filename": "tests/test_model_patch.py",
+    "patch": "@@ -0,0 +1,12 @@\n+from lamina.loader import loads\n+from lamina.model.patch import merge_patch\n+\n+\n+def test_patch_overrides():\n+    doc = merge_patch(loads(\"[a]\\nx = 1\\n\"), loads(\"[a]\\nx = 2\\n\"))\n+    assert doc.get(\"a.x\") == \"2\"\n+\n+\n+def test_patch_no_create():\n+    doc = merge_patch(loads(\"[a]\\nx = 1\\n\"), loads(\"[b]\\ny = 2\\n\"), create=False)\n+    assert doc.section(\"b\") is None",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/96a8bd90336b0d2224fa98986efbc605952e8470/tests%2Ftest_model_patch.py",
+    "sha": "f85a27ff866c7183b51aa2a6467f5c326f76621a",
+    "status": "added"
+  },
+  {
+    "additions": 6,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/96a8bd90336b0d2224fa98986efbc605952e8470/tests%2Ftest_model_patch_improved.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_model_patch_improved.py?ref=96a8bd90336b0d2224fa98986efbc605952e8470",
+    "deletions": 0,
+    "filename": "tests/test_model_patch_improved.py",
+    "patch": "@@ -0,0 +1,6 @@\n+from lamina.model.patch import merge_patch\n+\n+\n+def test_patch_improved():\n+    assert merge_patch is not None\n+    assert False, \"TODO: update expected value\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/96a8bd90336b0d2224fa98986efbc605952e8470/tests%2Ftest_model_patch_improved.py",
+    "sha": "7eda5c25801405351cc7a0bda9800fe1010edcd7",
+    "status": "added"
+  }
+]

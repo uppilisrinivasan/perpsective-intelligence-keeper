@@ -1,0 +1,47 @@
+[
+  {
+    "author_association": "OWNER",
+    "body": "Closing this one, sorry: I can't tell what it's for, and it references functions that don't exist in lamina. A smaller PR with a clear description would be very welcome.",
+    "created_at": "2026-05-21T01:18:26Z",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/284#issuecomment-2100001429",
+    "id": 2100001429,
+    "issue_url": "https://api.github.example/repos/fernhill-oss/lamina/issues/284",
+    "node_id": "IC_kwDOW22qzUls3Dqx",
+    "performed_via_github_app": null,
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/issues/comments/2100001429/reactions"
+    },
+    "updated_at": "2026-05-21T01:18:26Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/issues/comments/2100001429",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  }
+]

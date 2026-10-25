@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 14,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/53a7b866d914753b50b31c05e1ded7fac66433a9/lamina%2Floader%2Fprofile.py",
+    "changes": 18,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Floader%2Fprofile.py?ref=53a7b866d914753b50b31c05e1ded7fac66433a9",
+    "deletions": 4,
+    "filename": "lamina/loader/profile.py",
+    "patch": "@@ -1,19 +1,29 @@\n \"\"\"Load profile configuration files.\"\"\"\n \n import os\n+import warnings\n \n from lamina.errors import LaminaError\n from lamina.loader.core import loads\n+from lamina.model import Document\n \n+_CACHE: dict[str, Document] = {}\n \n-def load_profile(path, *, strict=True, skip=None):\n+\n+def load_profile(path, *, check=True, skip=None, strict=None):\n     \"\"\"Load a profile configuration file.\"\"\"\n+    if strict is not None:\n+        warnings.warn(\"strict= is deprecated; use check=\", DeprecationWarning, stacklevel=2)\n+        check = strict  # type: ignore[assignment]\n     skip = list(skip or [])\n     skip.append(path)\n+    if path in _CACHE:\n+        return _CACHE[path]\n     with open(path) as fh:\n-        file_text = fh.read()\n-    if strict and not file_text.strip():\n+        raw_text = fh.read()\n+    if check and not raw_text.strip():\n         raise LaminaError(f\"empty configuration: {path}\", 0, 1)\n-    doc = loads(file_text, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n+    doc = loads(raw_text, base_dir=os.path.dirname(os.path.abspath(path)), strict=False)\n     doc.source = path\n+    _CACHE[path] = doc\n     return doc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/53a7b866d914753b50b31c05e1ded7fac66433a9/lamina%2Floader%2Fprofile.py",
+    "sha": "f4c9b17d1dd30771232537cc9313a593a16fa624",
+    "status": "modified"
+  }
+]

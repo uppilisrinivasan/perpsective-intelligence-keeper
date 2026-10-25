@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 3,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/263dcdce4e6d132e63ff7725687af77c7f57ce0a/lamina%2Fdiagnostics%2Fempty_value.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdiagnostics%2Fempty_value.py?ref=263dcdce4e6d132e63ff7725687af77c7f57ce0a",
+    "deletions": 8,
+    "filename": "lamina/diagnostics/empty_value.py",
+    "patch": "@@ -1,10 +1,5 @@\n \"\"\"The EmptyValueError error and its helper.\"\"\"\n \n-try:\n-    import tomli  # noqa: F401\n-except ImportError:  # pragma: no cover\n-    tomli = None\n-\n from lamina.errors import LaminaError\n \n \n@@ -16,7 +11,7 @@ def raise_empty_value(message: str, line: int, column: int, *, skip: list[str] |\n     \"\"\"Raise EmptyValueError for message at line and column.\"\"\"\n     skip = list(skip or [])\n     skip.append(message)\n-    full_message = message if message.endswith(\".\") else message + \".\"\n+    messageText = message if message.endswith(\".\") else message + \".\"\n     if line < 1:\n-        raise EmptyValueError(full_message, 1, max(column, 1))\n-    raise EmptyValueError(full_message, line, column)\n+        raise EmptyValueError(messageText, 1, max(column, 1))\n+    raise EmptyValueError(messageText, line, column)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/263dcdce4e6d132e63ff7725687af77c7f57ce0a/lamina%2Fdiagnostics%2Fempty_value.py",
+    "sha": "1b2840a509a706dac0f78391f5676a920eb2ea70",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/263dcdce4e6d132e63ff7725687af77c7f57ce0a/tests%2Ftest_errors_empty_value_regression_194.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_errors_empty_value_regression_194.py?ref=263dcdce4e6d132e63ff7725687af77c7f57ce0a",
+    "deletions": 0,
+    "filename": "tests/test_errors_empty_value_regression_194.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.diagnostics.empty_value import raise_empty_value\n+\n+\n+def test_raise_empty_value_regression_194():\n+    assert callable(raise_empty_value)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/263dcdce4e6d132e63ff7725687af77c7f57ce0a/tests%2Ftest_errors_empty_value_regression_194.py",
+    "sha": "bc88cbcf14964c92d3c8a0f313b8d6f9c690869f",
+    "status": "added"
+  }
+]

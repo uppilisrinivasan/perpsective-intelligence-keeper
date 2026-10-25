@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "keeper"
+version = "0.1.0"
+description = "Keeper: a maintainer's eye that scales (Perspective Intelligence on NVIDIA Nemotron)"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+dependencies = [
+  "fastapi==0.115.*", "uvicorn[standard]==0.32.*", "sse-starlette==2.1.*",
+  "pydantic==2.10.*", "pydantic-settings==2.6.*", "sqlalchemy==2.0.*", "alembic==1.14.*",
+  "openai==1.57.*", "httpx==0.28.*", "numpy==2.1.*", "scipy==1.14.*", "scikit-learn==1.5.*",
+  "rank-bm25==0.2.2", "ruff==0.8.*", "bandit==1.8.*", "jinja2==3.1.*", "pyyaml==6.0.*",
+  "jsonschema==4.23.*", "defusedxml==0.7.*", "itsdangerous==2.2.*", "python-multipart==0.0.20",
+]
+
+[project.optional-dependencies]
+test = ["pytest==8.3.*", "hypothesis==6.122.*", "pytest-asyncio==0.24.*", "import-linter==2.1"]
+
+[tool.setuptools.packages.find]
+include = ["keeper*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+markers = ["slow: slow tests (run.sh acceptance)"]
+filterwarnings = ["ignore::DeprecationWarning:sklearn.*"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+extend-exclude = ["keeper/db/migrations"]
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "UP", "SIM", "I"]
+ignore = ["E501", "B008", "SIM108"]

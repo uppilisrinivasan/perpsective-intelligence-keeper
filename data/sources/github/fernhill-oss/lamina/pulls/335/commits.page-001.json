@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/22631336?v=4",
+      "events_url": "https://api.github.example/users/leila-m13/events{/privacy}",
+      "followers_url": "https://api.github.example/users/leila-m13/followers",
+      "following_url": "https://api.github.example/users/leila-m13/following{/other_user}",
+      "gists_url": "https://api.github.example/users/leila-m13/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/leila-m13",
+      "id": 22631336,
+      "login": "leila-m13",
+      "node_id": "U_kwDOFFIJnDUK-Xci",
+      "organizations_url": "https://api.github.example/users/leila-m13/orgs",
+      "received_events_url": "https://api.github.example/users/leila-m13/received_events",
+      "repos_url": "https://api.github.example/users/leila-m13/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/leila-m13/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/leila-m13/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/leila-m13",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/ea499380cbdf3d62addde2faa0a7e3c8101ee355/comments",
+    "commit": {
+      "author": {
+        "date": "2026-10-16T14:02:29Z",
+        "email": "22631336+leila-m13@users.noreply.github.example",
+        "name": "Leila M."
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2026-10-16T14:02:29Z",
+        "email": "22631336+leila-m13@users.noreply.github.example",
+        "name": "Leila M."
+      },
+      "message": "Parser: add duration2 support",
+      "tree": {
+        "sha": "eb1911b2b73f8398e44dffdb32d762e4718e3ae1",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/eb1911b2b73f8398e44dffdb32d762e4718e3ae1"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/ea499380cbdf3d62addde2faa0a7e3c8101ee355",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/22631336?v=4",
+      "events_url": "https://api.github.example/users/leila-m13/events{/privacy}",
+      "followers_url": "https://api.github.example/users/leila-m13/followers",
+      "following_url": "https://api.github.example/users/leila-m13/following{/other_user}",
+      "gists_url": "https://api.github.example/users/leila-m13/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/leila-m13",
+      "id": 22631336,
+      "login": "leila-m13",
+      "node_id": "U_kwDOFFIJnDUK-Xci",
+      "organizations_url": "https://api.github.example/users/leila-m13/orgs",
+      "received_events_url": "https://api.github.example/users/leila-m13/received_events",
+      "repos_url": "https://api.github.example/users/leila-m13/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/leila-m13/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/leila-m13/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/leila-m13",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/ea499380cbdf3d62addde2faa0a7e3c8101ee355",
+    "node_id": "C_kwDO4yodP7ZshFYm",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/9cff4f09c01df7af2ab765675a631a720127b8a4",
+        "sha": "9cff4f09c01df7af2ab765675a631a720127b8a4",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/9cff4f09c01df7af2ab765675a631a720127b8a4"
+      }
+    ],
+    "sha": "ea499380cbdf3d62addde2faa0a7e3c8101ee355",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/ea499380cbdf3d62addde2faa0a7e3c8101ee355"
+  }
+]

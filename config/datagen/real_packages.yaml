@@ -1,0 +1,7 @@
+# Real, well-known PyPI packages a demo PR may add (OSV lookups run on these names at runtime).
+packages:
+  - {name: pyyaml, version: "6.0.2", purpose: "YAML sources"}
+  - {name: tomli, version: "2.0.1", purpose: "TOML sources"}
+  - {name: regex, version: "2024.9.11", purpose: "faster tokenizing"}
+  - {name: platformdirs, version: "4.3.6", purpose: "user config directories"}
+  - {name: python-dotenv, version: "1.0.1", purpose: "reading .env files"}

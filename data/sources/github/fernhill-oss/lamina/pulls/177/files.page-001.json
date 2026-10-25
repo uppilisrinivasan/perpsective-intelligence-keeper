@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 24,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/0ba14a79eb324fbb2e81a836511e5ca2afd6375d/lamina%2Flexer%2Funicode.py",
+    "changes": 24,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Flexer%2Funicode.py?ref=0ba14a79eb324fbb2e81a836511e5ca2afd6375d",
+    "deletions": 0,
+    "filename": "lamina/lexer/unicode.py",
+    "patch": "@@ -0,0 +1,24 @@\n+\"\"\"Unicode tokens inside a value (the tokenizer is the hot path).\"\"\"\n+\n+from lamina.lexer.core import Token\n+\n+\n+def scan_unicode(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n+    \"\"\"Split value into unicode words, separated by ':' or whitespace.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(value)\n+    tokens: list[Token] = []\n+    current_word: list[str] = []\n+    start = 1\n+    for column, ch in enumerate(value, start=1):\n+        if ch.isspace() or ch == ':':\n+            if current_word:\n+                tokens.append(Token(\"WORD\", \"\".join(current_word), line, start))\n+                current_word = []\n+            continue\n+        if not current_word:\n+            start = column\n+        current_word.append(ch)\n+    if current_word:\n+        tokens.append(Token(\"WORD\", \"\".join(current_word), line, start))\n+    return tokens",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/0ba14a79eb324fbb2e81a836511e5ca2afd6375d/lamina%2Flexer%2Funicode.py",
+    "sha": "14587bb7c9035ff5cc1ffebb48275d2668b93e8f",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/0ba14a79eb324fbb2e81a836511e5ca2afd6375d/tests%2Ftest_lexer_unicode.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_lexer_unicode.py?ref=0ba14a79eb324fbb2e81a836511e5ca2afd6375d",
+    "deletions": 0,
+    "filename": "tests/test_lexer_unicode.py",
+    "patch": "@@ -0,0 +1,13 @@\n+from lamina.lexer.unicode import scan_unicode\n+\n+\n+def test_unicode_words():\n+    assert [t.value for t in scan_unicode(\"a:b c\", 1)] == [\"a\", \"b\", \"c\"]\n+\n+\n+def test_unicode_columns():\n+    assert [t.column for t in scan_unicode(\"ab:cd\", 3)] == [1, 4]\n+\n+\n+def test_unicode_empty():\n+    assert scan_unicode(\"\", 1) == []",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/0ba14a79eb324fbb2e81a836511e5ca2afd6375d/tests%2Ftest_lexer_unicode.py",
+    "sha": "84acb3d6be9c57f41f27603a878dd0053b3ec6f5",
+    "status": "added"
+  }
+]

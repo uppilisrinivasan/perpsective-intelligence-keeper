@@ -1,0 +1,57 @@
+# ---- Secrets (never commit) --------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*-credentials.json
+credentials.json
+service-account*.json
+.nebius/
+.secrets/
+infra/nebius/.state/
+
+# ---- Runtime state (database, caches, unpacked repos, sandboxes, logs) -------
+.runtime/
+data/private/
+
+# ---- Python -----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+backend/.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+backend/build/
+backend/dist/
+
+# ---- Node / frontend --------------------------------------------------------
+node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/coverage/
+frontend/playwright-report/
+frontend/test-results/
+frontend/blob-report/
+
+# ---- Logs and temp ----------------------------------------------------------
+*.log
+*.tmp
+
+# ---- OS and editors ---------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# ---- Local agent settings of the people building this repo -----------------
+.claude/settings.local.json
+CLAUDE.local.md

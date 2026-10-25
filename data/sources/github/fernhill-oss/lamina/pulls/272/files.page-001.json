@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 7,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/807cdc54d2a34aae8afbee940a475e166fe50928/lamina%2Fdiagnostics%2Ftype_mismatch.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdiagnostics%2Ftype_mismatch.py?ref=807cdc54d2a34aae8afbee940a475e166fe50928",
+    "deletions": 4,
+    "filename": "lamina/diagnostics/type_mismatch.py",
+    "patch": "@@ -1,6 +1,9 @@\n \"\"\"The TypeMismatchError error and its helper.\"\"\"\n \n-class TypeMismatchError(Exception):\n+from lamina.errors import LaminaError\n+\n+\n+class TypeMismatchError(LaminaError):\n     \"\"\"Raised for type mismatch problems.\"\"\"\n \n \n@@ -8,7 +11,7 @@ def raise_type_mismatch(message: str, line: int, column: int, *, skip: list[str]\n     \"\"\"Raise TypeMismatchError for message at line and column.\"\"\"\n     skip = list(skip or [])\n     skip.append(message)\n-    full_message = message if message.endswith(\".\") else message + \".\"\n+    message_text = message if message.endswith(\".\") else message + \".\"\n     if line < 1:\n-        raise TypeMismatchError(full_message)\n-    raise TypeMismatchError(full_message)\n+        raise TypeMismatchError(message_text, 1, max(column, 1))\n+    raise TypeMismatchError(message_text, line, column)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/807cdc54d2a34aae8afbee940a475e166fe50928/lamina%2Fdiagnostics%2Ftype_mismatch.py",
+    "sha": "3ac945ba3882ab96f0e82e79bd9e71f3c44c2b3a",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/807cdc54d2a34aae8afbee940a475e166fe50928/tests%2Ftest_errors_type_mismatch_regression_272.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_errors_type_mismatch_regression_272.py?ref=807cdc54d2a34aae8afbee940a475e166fe50928",
+    "deletions": 0,
+    "filename": "tests/test_errors_type_mismatch_regression_272.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.diagnostics.type_mismatch import raise_type_mismatch\n+\n+\n+def test_raise_type_mismatch_regression_272():\n+    assert callable(raise_type_mismatch)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/807cdc54d2a34aae8afbee940a475e166fe50928/tests%2Ftest_errors_type_mismatch_regression_272.py",
+    "sha": "ade1568c94cac7192832e80cd75c74621498624c",
+    "status": "added"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 23,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/cad2847dbe09cc0599fe1a9f893a77205d5e3863/lamina%2Flexer%2Fsemicolon.py",
+    "changes": 23,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Flexer%2Fsemicolon.py?ref=cad2847dbe09cc0599fe1a9f893a77205d5e3863",
+    "deletions": 0,
+    "filename": "lamina/lexer/semicolon.py",
+    "patch": "@@ -0,0 +1,23 @@\n+\"\"\"Semicolon tokens inside a value (the tokenizer is the hot path).\"\"\"\n+\n+from lamina.lexer.core import Token\n+\n+\n+def scan_semicolon(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n+    skip = list(skip or [])\n+    skip.append(value)\n+    tokens: list[Token] = []\n+    current_word: list[str] = []\n+    start = 1\n+    for column, ch in enumerate(value, start=1):\n+        if ch.isspace() or ch == '/':\n+            if current_word:\n+                tokens.append(Token(\"WORD\", \"\".join(current_word), line, start))\n+                current_word = []\n+            continue\n+        if not current_word:\n+            start = column\n+        current_word.append(ch)\n+    if current_word:\n+        tokens.append(Token(\"WORD\", \"\".join(current_word), line, start))\n+    return tokens",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/cad2847dbe09cc0599fe1a9f893a77205d5e3863/lamina%2Flexer%2Fsemicolon.py",
+    "sha": "3d2b46a55041930995a5810fa77f970d06974c4f",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/cad2847dbe09cc0599fe1a9f893a77205d5e3863/tests%2Ftest_lexer_semicolon.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_lexer_semicolon.py?ref=cad2847dbe09cc0599fe1a9f893a77205d5e3863",
+    "deletions": 0,
+    "filename": "tests/test_lexer_semicolon.py",
+    "patch": "@@ -0,0 +1,13 @@\n+from lamina.lexer.semicolon import scan_semicolon\n+\n+\n+def test_semicolon_words():\n+    assert [t.value for t in scan_semicolon(\"a/b c\", 1)] == [\"a\", \"b\", \"c\"]\n+\n+\n+def test_semicolon_columns():\n+    assert [t.column for t in scan_semicolon(\"ab/cd\", 3)] == [1, 4]\n+\n+\n+def test_semicolon_empty():\n+    assert scan_semicolon(\"\", 1) == []",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/cad2847dbe09cc0599fe1a9f893a77205d5e3863/tests%2Ftest_lexer_semicolon.py",
+    "sha": "2048bb0c4d4dfe98e1cc3247b3d63028a7782a5c",
+    "status": "added"
+  }
+]

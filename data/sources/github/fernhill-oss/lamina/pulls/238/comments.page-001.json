@@ -1,0 +1,419 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/238#discussion_r1700005429"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/238"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005429"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "nit: `mergedDoc` → `merged_doc`, we use snake_case.",
+    "commit_id": "290714d7eaa6273a94996c88b36ff4714865544b",
+    "created_at": "2026-02-12T10:35:45Z",
+    "diff_hunk": "@@ -0,0 +1,18 @@\n+\"\"\"Merge defaults layers into a base document.\"\"\"\n+\n+import sys",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/238#discussion_r1700005429",
+    "id": 1700005429,
+    "line": null,
+    "node_id": "PRRC_kwDObno05bVJbqKk",
+    "original_commit_id": "290714d7eaa6273a94996c88b36ff4714865544b",
+    "original_line": 3,
+    "original_position": 3,
+    "original_start_line": null,
+    "path": "lamina/model/defaults.py",
+    "position": null,
+    "pull_request_review_id": 1900008321,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/238",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005429/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-02-12T10:35:45Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005429",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/238#discussion_r1700005464"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/238"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005464"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Please add tests for the new behaviour, at least the happy path and one error case.",
+    "commit_id": "19cceb73d072bf7dd3eec6d3130448ddbc41badc",
+    "created_at": "2026-02-12T10:35:45Z",
+    "diff_hunk": "@@ -0,0 +1,18 @@\n+\"\"\"Merge defaults layers into a base document.\"\"\"\n+\n+import sys\n+\n+from lamina.model import Document\n+\n+\n+def merge_defaults(base, overlay, *, create=True, skip=None):",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/238#discussion_r1700005464",
+    "id": 1700005464,
+    "line": 6,
+    "node_id": "PRRC_kwDOHRa-w0Ns_rsv",
+    "original_commit_id": "290714d7eaa6273a94996c88b36ff4714865544b",
+    "original_line": 8,
+    "original_position": 8,
+    "original_start_line": null,
+    "path": "lamina/model/defaults.py",
+    "position": 6,
+    "pull_request_review_id": 1900008321,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/238",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005464/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-02-12T10:35:45Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005464",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/238#discussion_r1700005483"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/238"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005483"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Please add a docstring to `merge_defaults`, it's public.",
+    "commit_id": "19cceb73d072bf7dd3eec6d3130448ddbc41badc",
+    "created_at": "2026-02-12T10:35:45Z",
+    "diff_hunk": "@@ -0,0 +1,18 @@\n+\"\"\"Merge defaults layers into a base document.\"\"\"\n+\n+import sys\n+\n+from lamina.model import Document\n+\n+\n+def merge_defaults(base, overlay, *, create=True, skip=None):",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/238#discussion_r1700005483",
+    "id": 1700005483,
+    "line": 6,
+    "node_id": "PRRC_kwDOljSgm2hOvZsK",
+    "original_commit_id": "290714d7eaa6273a94996c88b36ff4714865544b",
+    "original_line": 8,
+    "original_position": 8,
+    "original_start_line": null,
+    "path": "lamina/model/defaults.py",
+    "position": 6,
+    "pull_request_review_id": 1900008321,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/238",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005483/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-02-12T10:35:45Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005483",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/238#discussion_r1700005497"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/238"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005497"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Good catch, fixed.",
+    "commit_id": "290714d7eaa6273a94996c88b36ff4714865544b",
+    "created_at": "2026-02-14T20:25:40Z",
+    "diff_hunk": "@@ -0,0 +1,18 @@\n+\"\"\"Merge defaults layers into a base document.\"\"\"\n+\n+import sys",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/238#discussion_r1700005497",
+    "id": 1700005497,
+    "in_reply_to_id": 1700005429,
+    "line": null,
+    "node_id": "PRRC_kwDOZhRACI9r5T1X",
+    "original_commit_id": "290714d7eaa6273a94996c88b36ff4714865544b",
+    "original_line": 3,
+    "original_position": 3,
+    "original_start_line": null,
+    "path": "lamina/model/defaults.py",
+    "position": null,
+    "pull_request_review_id": 1900008355,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/238",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005497/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-02-14T20:25:40Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005497",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/4376397?v=4",
+      "events_url": "https://api.github.example/users/oskar-l/events{/privacy}",
+      "followers_url": "https://api.github.example/users/oskar-l/followers",
+      "following_url": "https://api.github.example/users/oskar-l/following{/other_user}",
+      "gists_url": "https://api.github.example/users/oskar-l/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/oskar-l",
+      "id": 4376397,
+      "login": "oskar-l",
+      "node_id": "U_kwDOUE3VENS6gBxK",
+      "organizations_url": "https://api.github.example/users/oskar-l/orgs",
+      "received_events_url": "https://api.github.example/users/oskar-l/received_events",
+      "repos_url": "https://api.github.example/users/oskar-l/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/oskar-l/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/oskar-l/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/oskar-l",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/238#discussion_r1700005511"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/238"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005511"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Done, thanks!",
+    "commit_id": "19cceb73d072bf7dd3eec6d3130448ddbc41badc",
+    "created_at": "2026-02-14T20:25:40Z",
+    "diff_hunk": "@@ -0,0 +1,18 @@\n+\"\"\"Merge defaults layers into a base document.\"\"\"\n+\n+import sys\n+\n+from lamina.model import Document\n+\n+\n+def merge_defaults(base, overlay, *, create=True, skip=None):",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/238#discussion_r1700005511",
+    "id": 1700005511,
+    "in_reply_to_id": 1700005464,
+    "line": 6,
+    "node_id": "PRRC_kwDOq8VRzHHVpYpo",
+    "original_commit_id": "290714d7eaa6273a94996c88b36ff4714865544b",
+    "original_line": 8,
+    "original_position": 8,
+    "original_start_line": null,
+    "path": "lamina/model/defaults.py",
+    "position": 6,
+    "pull_request_review_id": 1900008390,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/238",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005511/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-02-14T20:25:40Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005511",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/4376397?v=4",
+      "events_url": "https://api.github.example/users/oskar-l/events{/privacy}",
+      "followers_url": "https://api.github.example/users/oskar-l/followers",
+      "following_url": "https://api.github.example/users/oskar-l/following{/other_user}",
+      "gists_url": "https://api.github.example/users/oskar-l/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/oskar-l",
+      "id": 4376397,
+      "login": "oskar-l",
+      "node_id": "U_kwDOUE3VENS6gBxK",
+      "organizations_url": "https://api.github.example/users/oskar-l/orgs",
+      "received_events_url": "https://api.github.example/users/oskar-l/received_events",
+      "repos_url": "https://api.github.example/users/oskar-l/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/oskar-l/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/oskar-l/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/oskar-l",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/238#discussion_r1700005534"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/238"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005534"
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "body": "Makes sense, changed.",
+    "commit_id": "19cceb73d072bf7dd3eec6d3130448ddbc41badc",
+    "created_at": "2026-02-14T20:25:40Z",
+    "diff_hunk": "@@ -0,0 +1,18 @@\n+\"\"\"Merge defaults layers into a base document.\"\"\"\n+\n+import sys\n+\n+from lamina.model import Document\n+\n+\n+def merge_defaults(base, overlay, *, create=True, skip=None):",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/238#discussion_r1700005534",
+    "id": 1700005534,
+    "in_reply_to_id": 1700005483,
+    "line": 6,
+    "node_id": "PRRC_kwDOm9BjE_QE8bP4",
+    "original_commit_id": "290714d7eaa6273a94996c88b36ff4714865544b",
+    "original_line": 8,
+    "original_position": 8,
+    "original_start_line": null,
+    "path": "lamina/model/defaults.py",
+    "position": 6,
+    "pull_request_review_id": 1900008404,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/238",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005534/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2026-02-14T20:25:40Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700005534",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/4376397?v=4",
+      "events_url": "https://api.github.example/users/oskar-l/events{/privacy}",
+      "followers_url": "https://api.github.example/users/oskar-l/followers",
+      "following_url": "https://api.github.example/users/oskar-l/following{/other_user}",
+      "gists_url": "https://api.github.example/users/oskar-l/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/oskar-l",
+      "id": 4376397,
+      "login": "oskar-l",
+      "node_id": "U_kwDOUE3VENS6gBxK",
+      "organizations_url": "https://api.github.example/users/oskar-l/orgs",
+      "received_events_url": "https://api.github.example/users/oskar-l/received_events",
+      "repos_url": "https://api.github.example/users/oskar-l/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/oskar-l/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/oskar-l/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/oskar-l",
+      "user_view_type": "public"
+    }
+  }
+]

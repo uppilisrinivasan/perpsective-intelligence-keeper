@@ -1,0 +1,210 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/79#discussion_r1700002288"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/79"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002288"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Please don't sort: it breaks the round trip. `dumps(loads(x)) == x` is the one promise lamina makes, key order included.",
+    "commit_id": "0255c423b014133db7d3a9e3b08dd295402bad60",
+    "created_at": "2024-10-04T16:44:20Z",
+    "diff_hunk": "@@ -0,0 +1,20 @@\n+\"\"\"Merge profiles layers into a base document.\"\"\"\n+\n+import sys\n+\n+from lamina.model import Document\n+\n+\n+def merge_profiles(base, overlay, *, create=True, skip=None):\n+    \"\"\"Return base with overlay's values applied, keeping base's order, comments and blank lines.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(overlay.source)\n+    mergedDoc = base.copy()\n+    for section in overlay.sections():\n+        target = mergedDoc.section(section.name, create=create)\n+        if target is None:\n+            continue\n+        for entry in section.entries():\n+            target.set(entry.key, entry.value)\n+        target.items.sort(key=lambda item: getattr(item, \"key\", \"\"))",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/79#discussion_r1700002288",
+    "id": 1700002288,
+    "line": null,
+    "node_id": "PRRC_kwDOl-4rhxG9jz79",
+    "original_commit_id": "0255c423b014133db7d3a9e3b08dd295402bad60",
+    "original_line": 19,
+    "original_position": 19,
+    "original_start_line": null,
+    "path": "lamina/model/profiles.py",
+    "position": null,
+    "pull_request_review_id": 1900003139,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/79",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002288/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-10-04T16:44:20Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002288",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/79#discussion_r1700002318"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/79"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002318"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "nit: naming, please use snake_case (`merged_doc`).",
+    "commit_id": "0255c423b014133db7d3a9e3b08dd295402bad60",
+    "created_at": "2024-10-04T16:44:20Z",
+    "diff_hunk": "@@ -0,0 +1,20 @@\n+\"\"\"Merge profiles layers into a base document.\"\"\"\n+\n+import sys",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/79#discussion_r1700002318",
+    "id": 1700002318,
+    "line": null,
+    "node_id": "PRRC_kwDOz_GzN7YLU5HM",
+    "original_commit_id": "0255c423b014133db7d3a9e3b08dd295402bad60",
+    "original_line": 3,
+    "original_position": 3,
+    "original_start_line": null,
+    "path": "lamina/model/profiles.py",
+    "position": null,
+    "pull_request_review_id": 1900003139,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/79",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002318/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-10-04T16:44:20Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002318",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  },
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/79#discussion_r1700002355"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/79"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002355"
+      }
+    },
+    "author_association": "FIRST_TIME_CONTRIBUTOR",
+    "body": "Fixed in the latest push.",
+    "commit_id": "0255c423b014133db7d3a9e3b08dd295402bad60",
+    "created_at": "2024-10-05T01:38:23Z",
+    "diff_hunk": "@@ -0,0 +1,20 @@\n+\"\"\"Merge profiles layers into a base document.\"\"\"\n+\n+import sys\n+\n+from lamina.model import Document\n+\n+\n+def merge_profiles(base, overlay, *, create=True, skip=None):\n+    \"\"\"Return base with overlay's values applied, keeping base's order, comments and blank lines.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(overlay.source)\n+    mergedDoc = base.copy()\n+    for section in overlay.sections():\n+        target = mergedDoc.section(section.name, create=create)\n+        if target is None:\n+            continue\n+        for entry in section.entries():\n+            target.set(entry.key, entry.value)\n+        target.items.sort(key=lambda item: getattr(item, \"key\", \"\"))",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/79#discussion_r1700002355",
+    "id": 1700002355,
+    "in_reply_to_id": 1700002288,
+    "line": null,
+    "node_id": "PRRC_kwDOFDhsPYiED022",
+    "original_commit_id": "0255c423b014133db7d3a9e3b08dd295402bad60",
+    "original_line": 19,
+    "original_position": 19,
+    "original_start_line": null,
+    "path": "lamina/model/profiles.py",
+    "position": null,
+    "pull_request_review_id": 1900003141,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/79",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002355/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2024-10-05T01:38:23Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002355",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/15515368?v=4",
+      "events_url": "https://api.github.example/users/umar-j85/events{/privacy}",
+      "followers_url": "https://api.github.example/users/umar-j85/followers",
+      "following_url": "https://api.github.example/users/umar-j85/following{/other_user}",
+      "gists_url": "https://api.github.example/users/umar-j85/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/umar-j85",
+      "id": 15515368,
+      "login": "umar-j85",
+      "node_id": "U_kwDOu4kF9y8zPPBO",
+      "organizations_url": "https://api.github.example/users/umar-j85/orgs",
+      "received_events_url": "https://api.github.example/users/umar-j85/received_events",
+      "repos_url": "https://api.github.example/users/umar-j85/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/umar-j85/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/umar-j85/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/umar-j85",
+      "user_view_type": "public"
+    }
+  }
+]

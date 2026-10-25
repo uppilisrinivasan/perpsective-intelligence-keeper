@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 34,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/c78060614f6b948617bc03cb1184fb3e39d99fb1/lamina%2Finterpolate%2Fmasked.py",
+    "changes": 34,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Fmasked.py?ref=c78060614f6b948617bc03cb1184fb3e39d99fb1",
+    "deletions": 0,
+    "filename": "lamina/interpolate/masked.py",
+    "patch": "@@ -0,0 +1,34 @@\n+\"\"\"Masked interpolation: ${NAME} references with extra checks.\"\"\"\n+\n+from collections.abc import Mapping\n+\n+from lamina.errors import InterpolationError\n+\n+\n+def _valid(value: str) -> bool:\n+    return \"\\n\" not in value\n+\n+\n+def interpolate_masked(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n+    \"\"\"Expand ${NAME} references in value using env (masked rules).\"\"\"\n+    skip = list(skip or [])\n+    skip.append(value)\n+    out_parts: list[str] = []\n+    i = 0\n+    while True:\n+        start = value.find(\"${\", i)\n+        if start < 0:\n+            out_parts.append(value[i:])\n+            return \"\".join(out_parts)\n+        end = value.find(\"}\", start)\n+        if end < 0:\n+            raise ValueError(\"unterminated reference\")\n+        out_parts.append(value[i:start])\n+        name = value[start + 2:end]\n+        if name not in env:\n+            raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n+        resolved = env[name]\n+        if not _valid(resolved):\n+            raise InterpolationError(f\"invalid value {resolved!r} for {name}\", line, start + 1)\n+        out_parts.append(resolved)\n+        i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/c78060614f6b948617bc03cb1184fb3e39d99fb1/lamina%2Finterpolate%2Fmasked.py",
+    "sha": "913c94bb9d841c18030d58e5823084dc64dcfee4",
+    "status": "added"
+  },
+  {
+    "additions": 17,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/c78060614f6b948617bc03cb1184fb3e39d99fb1/tests%2Ftest_interpolate_masked.py",
+    "changes": 17,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_interpolate_masked.py?ref=c78060614f6b948617bc03cb1184fb3e39d99fb1",
+    "deletions": 0,
+    "filename": "tests/test_interpolate_masked.py",
+    "patch": "@@ -0,0 +1,17 @@\n+import pytest\n+\n+from lamina.errors import InterpolationError\n+from lamina.interpolate.masked import interpolate_masked\n+\n+\n+def test_masked_expands():\n+    assert interpolate_masked(\"a-${X}\", {\"X\": \"1\"}) == \"a-1\"\n+\n+\n+def test_masked_undefined():\n+    with pytest.raises(InterpolationError):\n+        interpolate_masked(\"${NOPE}\", {})\n+\n+\n+def test_masked_plain_text():\n+    assert interpolate_masked(\"plain\", {}) == \"plain\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/c78060614f6b948617bc03cb1184fb3e39d99fb1/tests%2Ftest_interpolate_masked.py",
+    "sha": "e770c1bad82857389af5b363ebf7d319cd31bc56",
+    "status": "added"
+  }
+]

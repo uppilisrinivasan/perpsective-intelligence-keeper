@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/de471c4079246b41d2b98bafc6ba5c14fde60afd/lamina%2Finclude%2Fprefixed.py",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finclude%2Fprefixed.py?ref=de471c4079246b41d2b98bafc6ba5c14fde60afd",
+    "deletions": 1,
+    "filename": "lamina/include/prefixed.py",
+    "patch": "@@ -21,7 +21,7 @@ def resolve_prefixed_include(base_dir: str, name: str, root: str, *, skip: list[\n def read_prefixed_include(base_dir: str, name: str, root: str) -> str:\n     \"\"\"Return the text of a prefixed include.\"\"\"\n     path = resolve_prefixed_include(base_dir, name, root)\n-    with open(path) as fh:\n+    with open(path, encoding=\"utf-8\") as fh:\n         return fh.read()\n \n ",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/de471c4079246b41d2b98bafc6ba5c14fde60afd/lamina%2Finclude%2Fprefixed.py",
+    "sha": "b89027e14276c99e5de2f0dc55d1e1edc8d2323d",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/de471c4079246b41d2b98bafc6ba5c14fde60afd/tests%2Ftest_include_prefixed_regression_184.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_include_prefixed_regression_184.py?ref=de471c4079246b41d2b98bafc6ba5c14fde60afd",
+    "deletions": 0,
+    "filename": "tests/test_include_prefixed_regression_184.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.include.prefixed import resolve_prefixed_include\n+\n+\n+def test_resolve_prefixed_include_regression_184():\n+    assert callable(resolve_prefixed_include)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/de471c4079246b41d2b98bafc6ba5c14fde60afd/tests%2Ftest_include_prefixed_regression_184.py",
+    "sha": "52ef3eed35dd8706654435b5792fe9f63b30b4c5",
+    "status": "added"
+  }
+]

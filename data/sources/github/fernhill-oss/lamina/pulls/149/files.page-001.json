@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/8540d058220445d7222adc663d1d4479aa954f5e/lamina%2Fdump%2Fenv_file.py",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Fenv_file.py?ref=8540d058220445d7222adc663d1d4479aa954f5e",
+    "deletions": 1,
+    "filename": "lamina/dump/env_file.py",
+    "patch": "@@ -10,7 +10,7 @@ def dumps_env_file(doc, *, indent=0, skip=None):\n     lines: list[str] = []\n     for section in doc.sections():\n         lines.append(f\"[{section.name}]\")\n-        for item in sorted(section.items, key=lambda i: getattr(i, \"key\", \"\")):\n+        for item in section.items:\n             if isinstance(item, Entry):\n                 lines.append(f\"{prefixText}{item.key} = {item.value}\")\n             elif isinstance(item, Comment):",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/8540d058220445d7222adc663d1d4479aa954f5e/lamina%2Fdump%2Fenv_file.py",
+    "sha": "af40060a3f43833e3b4e121fab3a289766d0cca5",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/8540d058220445d7222adc663d1d4479aa954f5e/tests%2Ftest_dump_env_file_regression_149.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_env_file_regression_149.py?ref=8540d058220445d7222adc663d1d4479aa954f5e",
+    "deletions": 0,
+    "filename": "tests/test_dump_env_file_regression_149.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.dump.env_file import dumps_env_file\n+\n+\n+def test_dumps_env_file_regression_149():\n+    assert callable(dumps_env_file)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/8540d058220445d7222adc663d1d4479aa954f5e/tests%2Ftest_dump_env_file_regression_149.py",
+    "sha": "74a07c841a8cb0832d3c0c0deb14f22361c5466d",
+    "status": "added"
+  }
+]

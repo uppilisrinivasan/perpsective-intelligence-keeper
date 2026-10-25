@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 21,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/32f815ded477ac95576522a1106d2be9923bd3d6/lamina%2Fparser%2Fdecimal2.py",
+    "changes": 21,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fparser%2Fdecimal2.py?ref=32f815ded477ac95576522a1106d2be9923bd3d6",
+    "deletions": 0,
+    "filename": "lamina/parser/decimal2.py",
+    "patch": "@@ -0,0 +1,21 @@\n+\"\"\"Parse decimal2 values: comma-separated items in brackets.\"\"\"\n+\n+import sys\n+\n+from lamina.errors import ParseError\n+\n+\n+def parse_decimal2_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+    \"\"\"Parse a [a, b, c] decimal2 value into its items.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(raw)\n+    strippedText = raw.strip()\n+    if not (strippedText.startswith(\"[\") and strippedText.endswith(\"]\")):\n+        raise ValueError(f\"expected [items], got {raw!r}\")\n+    inner = strippedText[1:-1].strip()\n+    if not inner:\n+        return []\n+    items = [part.strip() for part in inner.split(\",\")]\n+    if any(item == \"\" for item in items):\n+        raise ParseError(\"empty item in list\", line, column)\n+    return items",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/32f815ded477ac95576522a1106d2be9923bd3d6/lamina%2Fparser%2Fdecimal2.py",
+    "sha": "052a31b89e7f5b9bb4f0a1b0af593363eaf066ea",
+    "status": "added"
+  },
+  {
+    "additions": 16,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/32f815ded477ac95576522a1106d2be9923bd3d6/tests%2Ftest_parser_decimal2.py",
+    "changes": 16,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_parser_decimal2.py?ref=32f815ded477ac95576522a1106d2be9923bd3d6",
+    "deletions": 0,
+    "filename": "tests/test_parser_decimal2.py",
+    "patch": "@@ -0,0 +1,16 @@\n+import pytest\n+\n+from lamina.parser.decimal2 import parse_decimal2_value\n+\n+\n+def test_decimal2_items():\n+    assert parse_decimal2_value(\"[a, b]\", 1, 1) == [\"a\", \"b\"]\n+\n+\n+def test_decimal2_empty_list():\n+    assert parse_decimal2_value(\"[]\", 1, 1) == []\n+\n+\n+def test_decimal2_rejects_bare_value():\n+    with pytest.raises(Exception):\n+        parse_decimal2_value(\"a, b\", 2, 5)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/32f815ded477ac95576522a1106d2be9923bd3d6/tests%2Ftest_parser_decimal2.py",
+    "sha": "f4a6cf15f8a638d381d1823384c098f40a7460f4",
+    "status": "added"
+  }
+]

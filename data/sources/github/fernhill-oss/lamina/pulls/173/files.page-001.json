@@ -1,0 +1,38 @@
+[
+  {
+    "additions": 24,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/4929edd439f35d790c9bb04476bc40ecf4e757c5/lamina%2Fparser%2Fpair.py",
+    "changes": 24,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fparser%2Fpair.py?ref=4929edd439f35d790c9bb04476bc40ecf4e757c5",
+    "deletions": 0,
+    "filename": "lamina/parser/pair.py",
+    "patch": "@@ -0,0 +1,24 @@\n+\"\"\"Parse pair values: comma-separated items in brackets.\"\"\"\n+\n+try:\n+    import platformdirs  # noqa: F401\n+except ImportError:  # pragma: no cover\n+    platformdirs = None\n+\n+from lamina.errors import ParseError\n+\n+\n+def parse_pair_value(raw: str, line: int, column: int, *, skip: list[str] | None = None) -> list[str]:\n+    \"\"\"Parse a [a, b, c] pair value into its items.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(raw)\n+    stripped_text = raw.strip()\n+    if not (stripped_text.startswith(\"[\") and stripped_text.endswith(\"]\")):\n+        raise ParseError(f\"expected [items], got {raw!r}\", line, column)\n+    inner = stripped_text[1:-1].strip()\n+    if not inner:\n+        return []\n+    items = [part.strip() for part in inner.split(\",\")]\n+    if any(item == \"\" for item in items):\n+        raise ParseError(\"empty item in list\", line, column)\n+    return items",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/4929edd439f35d790c9bb04476bc40ecf4e757c5/lamina%2Fparser%2Fpair.py",
+    "sha": "5f4b8ea421b602fbb1cd8c730458ec653963f536",
+    "status": "added"
+  },
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/4929edd439f35d790c9bb04476bc40ecf4e757c5/pyproject.toml",
+    "changes": 1,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/pyproject.toml?ref=4929edd439f35d790c9bb04476bc40ecf4e757c5",
+    "deletions": 0,
+    "filename": "pyproject.toml",
+    "patch": "@@ -12,6 +12,7 @@ dependencies = []\n \n [project.optional-dependencies]\n test = [\"pytest==8.*\"]\n+platformdirs = [\"platformdirs>=4.3.6\"]\n yaml = [\"pyyaml>=6.0.2\"]\n tomli = [\"tomli>=2.0.1\"]\n regex = [\"regex>=2024.9.11\"]",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/4929edd439f35d790c9bb04476bc40ecf4e757c5/pyproject.toml",
+    "sha": "cf4a712cee787ed534e920c5f5136279c83746f4",
+    "status": "modified"
+  },
+  {
+    "additions": 16,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/4929edd439f35d790c9bb04476bc40ecf4e757c5/tests%2Ftest_parser_pair.py",
+    "changes": 16,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_parser_pair.py?ref=4929edd439f35d790c9bb04476bc40ecf4e757c5",
+    "deletions": 0,
+    "filename": "tests/test_parser_pair.py",
+    "patch": "@@ -0,0 +1,16 @@\n+import pytest\n+\n+from lamina.parser.pair import parse_pair_value\n+\n+\n+def test_pair_items():\n+    assert parse_pair_value(\"[a, b]\", 1, 1) == [\"a\", \"b\"]\n+\n+\n+def test_pair_empty_list():\n+    assert parse_pair_value(\"[]\", 1, 1) == []\n+\n+\n+def test_pair_rejects_bare_value():\n+    with pytest.raises(Exception):\n+        parse_pair_value(\"a, b\", 2, 5)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/4929edd439f35d790c9bb04476bc40ecf4e757c5/tests%2Ftest_parser_pair.py",
+    "sha": "da63e9a45acde6977caedc3952c20b8fdb77e59d",
+    "status": "added"
+  }
+]

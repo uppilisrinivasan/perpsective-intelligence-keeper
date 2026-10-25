@@ -1,0 +1,12 @@
+patterns:
+  - {name: aws_access_key, regex: "AKIA[0-9A-Z]{16}", replacement_kind: SECRET}
+  - {name: github_token, regex: "gh[pousr]_[A-Za-z0-9]{30,}", replacement_kind: SECRET}
+  - {name: github_fine_grained, regex: "github_pat_[A-Za-z0-9_]{40,}", replacement_kind: SECRET}
+  - {name: slack_token, regex: "xox[abprs]-[A-Za-z0-9-]{10,}", replacement_kind: SECRET}
+  - {name: jwt, regex: "eyJ[A-Za-z0-9_-]{8,}\\.[A-Za-z0-9_-]{8,}\\.[A-Za-z0-9_-]{8,}", replacement_kind: SECRET}
+  - {name: pem_block, regex: "-----BEGIN [A-Z ]*PRIVATE KEY-----[\\s\\S]*?-----END [A-Z ]*PRIVATE KEY-----", replacement_kind: SECRET}
+  - {name: assignment, regex: "(?i)\\b(password|secret|token|api_key)\\s*[=:]\\s*['\"]?[^\\s'\"]{8,}", replacement_kind: SECRET}
+  - {name: email, regex: "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}", replacement_kind: EMAIL}
+entropy: {min_len: 32, min_bits: 4.0}
+# Values that look high-entropy but are expected in code review context (hex SHAs are public).
+allow_regex: "^[0-9a-f]{40}$"

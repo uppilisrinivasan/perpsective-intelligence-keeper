@@ -1,0 +1,174 @@
+{
+  "checks": {
+    "V1": {
+      "detail": {
+        "errors": [],
+        "validated": 5090
+      },
+      "ok": true
+    },
+    "V2": {
+      "detail": [],
+      "ok": true
+    },
+    "V3": {
+      "detail": {
+        "checked_prs": 27,
+        "problems": []
+      },
+      "ok": true
+    },
+    "V4": {
+      "detail": [],
+      "ok": true
+    },
+    "V5": {
+      "detail": {
+        "checked": 514,
+        "problems": []
+      },
+      "ok": true
+    },
+    "V6": {
+      "detail": [],
+      "ok": true
+    },
+    "V7": {
+      "detail": {
+        "flag_rates": {
+          "B1": {
+            "n": 15,
+            "observed": 0.07,
+            "planned": 0.1
+          },
+          "B2": {
+            "n": 15,
+            "observed": 0.27,
+            "planned": 0.15
+          },
+          "D1": {
+            "n": 9,
+            "observed": 0.56,
+            "planned": 0.8
+          },
+          "E1": {
+            "n": 12,
+            "observed": 0.92,
+            "planned": 0.9
+          },
+          "E2": {
+            "n": 24,
+            "observed": 0.92,
+            "planned": 0.85
+          },
+          "E3": {
+            "n": 6,
+            "observed": 1.0,
+            "planned": 0.95
+          },
+          "E4": {
+            "n": 8,
+            "observed": 1.0,
+            "planned": 0.8
+          },
+          "E5": {
+            "n": 17,
+            "observed": 0.82,
+            "planned": 0.9
+          },
+          "E6": {
+            "n": 29,
+            "observed": 0.86,
+            "planned": 0.75
+          },
+          "E7": {
+            "n": 14,
+            "observed": 1.0,
+            "planned": 0.9
+          },
+          "E8": {
+            "n": 9,
+            "observed": 0.67,
+            "planned": 0.85
+          }
+        },
+        "problems": []
+      },
+      "ok": true
+    },
+    "V8": {
+      "detail": {
+        "problems": [],
+        "total_mb": 24.9
+      },
+      "ok": true
+    },
+    "V9": {
+      "detail": [],
+      "ok": true
+    }
+  },
+  "errors": [],
+  "ok": true,
+  "rates": {
+    "flag_rates": {
+      "B1": {
+        "n": 15,
+        "observed": 0.07,
+        "planned": 0.1
+      },
+      "B2": {
+        "n": 15,
+        "observed": 0.27,
+        "planned": 0.15
+      },
+      "D1": {
+        "n": 9,
+        "observed": 0.56,
+        "planned": 0.8
+      },
+      "E1": {
+        "n": 12,
+        "observed": 0.92,
+        "planned": 0.9
+      },
+      "E2": {
+        "n": 24,
+        "observed": 0.92,
+        "planned": 0.85
+      },
+      "E3": {
+        "n": 6,
+        "observed": 1.0,
+        "planned": 0.95
+      },
+      "E4": {
+        "n": 8,
+        "observed": 1.0,
+        "planned": 0.8
+      },
+      "E5": {
+        "n": 17,
+        "observed": 0.82,
+        "planned": 0.9
+      },
+      "E6": {
+        "n": 29,
+        "observed": 0.86,
+        "planned": 0.75
+      },
+      "E7": {
+        "n": 14,
+        "observed": 1.0,
+        "planned": 0.9
+      },
+      "E8": {
+        "n": 9,
+        "observed": 0.67,
+        "planned": 0.85
+      }
+    },
+    "problems": []
+  },
+  "warnings": []
+}

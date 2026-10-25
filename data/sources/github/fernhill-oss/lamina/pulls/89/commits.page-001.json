@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/10763295?v=4",
+      "events_url": "https://api.github.example/users/pedro-a/events{/privacy}",
+      "followers_url": "https://api.github.example/users/pedro-a/followers",
+      "following_url": "https://api.github.example/users/pedro-a/following{/other_user}",
+      "gists_url": "https://api.github.example/users/pedro-a/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/pedro-a",
+      "id": 10763295,
+      "login": "pedro-a",
+      "node_id": "U_kwDOsnNJiUWV2gM3",
+      "organizations_url": "https://api.github.example/users/pedro-a/orgs",
+      "received_events_url": "https://api.github.example/users/pedro-a/received_events",
+      "repos_url": "https://api.github.example/users/pedro-a/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/pedro-a/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/pedro-a/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/pedro-a",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/7ce113131b4e5d254aadeabb732b9a8f984b15f8/comments",
+    "commit": {
+      "author": {
+        "date": "2024-12-05T12:45:56Z",
+        "email": "10763295+pedro-a@users.noreply.github.example",
+        "name": "Pedro Alves"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2024-12-05T12:45:56Z",
+        "email": "10763295+pedro-a@users.noreply.github.example",
+        "name": "Pedro Alves"
+      },
+      "message": "Release script: bundle the sample configs",
+      "tree": {
+        "sha": "ace59afca5c51b6f16641b129209eb6e4c29da70",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/ace59afca5c51b6f16641b129209eb6e4c29da70"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/7ce113131b4e5d254aadeabb732b9a8f984b15f8",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/10763295?v=4",
+      "events_url": "https://api.github.example/users/pedro-a/events{/privacy}",
+      "followers_url": "https://api.github.example/users/pedro-a/followers",
+      "following_url": "https://api.github.example/users/pedro-a/following{/other_user}",
+      "gists_url": "https://api.github.example/users/pedro-a/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/pedro-a",
+      "id": 10763295,
+      "login": "pedro-a",
+      "node_id": "U_kwDOsnNJiUWV2gM3",
+      "organizations_url": "https://api.github.example/users/pedro-a/orgs",
+      "received_events_url": "https://api.github.example/users/pedro-a/received_events",
+      "repos_url": "https://api.github.example/users/pedro-a/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/pedro-a/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/pedro-a/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/pedro-a",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/7ce113131b4e5d254aadeabb732b9a8f984b15f8",
+    "node_id": "C_kwDOWCQo3RyFLXYB",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/8a0a72214d4c27c45daa1a1a930402b7f446bef7",
+        "sha": "8a0a72214d4c27c45daa1a1a930402b7f446bef7",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/8a0a72214d4c27c45daa1a1a930402b7f446bef7"
+      }
+    ],
+    "sha": "7ce113131b4e5d254aadeabb732b9a8f984b15f8",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/7ce113131b4e5d254aadeabb732b9a8f984b15f8"
+  }
+]

@@ -1,0 +1,71 @@
+[
+  {
+    "_links": {
+      "html": {
+        "href": "https://github.example/fernhill-oss/lamina/pull/119#discussion_r1700002890"
+      },
+      "pull_request": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/119"
+      },
+      "self": {
+        "href": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002890"
+      }
+    },
+    "author_association": "OWNER",
+    "body": "Please give every branch of `interpolate_masked` its own test case before merging.",
+    "commit_id": "c78060614f6b948617bc03cb1184fb3e39d99fb1",
+    "created_at": "2025-03-24T11:58:59Z",
+    "diff_hunk": "@@ -0,0 +1,34 @@\n+\"\"\"Masked interpolation: ${NAME} references with extra checks.\"\"\"\n+\n+from collections.abc import Mapping\n+\n+from lamina.errors import InterpolationError\n+\n+\n+def _valid(value: str) -> bool:\n+    return \"\\n\" not in value\n+\n+\n+def interpolate_masked(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:",
+    "html_url": "https://github.example/fernhill-oss/lamina/pull/119#discussion_r1700002890",
+    "id": 1700002890,
+    "line": 12,
+    "node_id": "PRRC_kwDOLjw7oDhGnB3L",
+    "original_commit_id": "c78060614f6b948617bc03cb1184fb3e39d99fb1",
+    "original_line": 12,
+    "original_position": 12,
+    "original_start_line": null,
+    "path": "lamina/interpolate/masked.py",
+    "position": 12,
+    "pull_request_review_id": 1900004091,
+    "pull_request_url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/119",
+    "reactions": {
+      "+1": 0,
+      "-1": 0,
+      "confused": 0,
+      "eyes": 0,
+      "heart": 0,
+      "hooray": 0,
+      "laugh": 0,
+      "rocket": 0,
+      "total_count": 0,
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002890/reactions"
+    },
+    "side": "RIGHT",
+    "start_line": null,
+    "start_side": null,
+    "subject_type": "line",
+    "updated_at": "2025-03-24T11:58:59Z",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/pulls/comments/1700002890",
+    "user": {
+      "avatar_url": "https://avatars.github.example/u/1435687?v=4",
+      "events_url": "https://api.github.example/users/ines-v/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ines-v/followers",
+      "following_url": "https://api.github.example/users/ines-v/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ines-v/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ines-v",
+      "id": 1435687,
+      "login": "ines-v",
+      "node_id": "U_kwDO9-6tTCS76lqQ",
+      "organizations_url": "https://api.github.example/users/ines-v/orgs",
+      "received_events_url": "https://api.github.example/users/ines-v/received_events",
+      "repos_url": "https://api.github.example/users/ines-v/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ines-v/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ines-v/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ines-v",
+      "user_view_type": "public"
+    }
+  }
+]

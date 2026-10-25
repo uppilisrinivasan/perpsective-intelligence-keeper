@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/c758a5f77256d8a1c471ff4260a479884ea05f26/lamina%2Fdump%2Fdiffable.py",
+    "changes": 6,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Fdiffable.py?ref=c758a5f77256d8a1c471ff4260a479884ea05f26",
+    "deletions": 1,
+    "filename": "lamina/dump/diffable.py",
+    "patch": "@@ -1,12 +1,16 @@\n \"\"\"Write documents in the diffable layout.\"\"\"\n \n import sys\n+import warnings\n \n from lamina.model import Blank, Comment, Document, Entry\n \n \n-def dumps_diffable(doc, *, width=0, skip=None):\n+def dumps_diffable(doc, *, width=0, skip=None, indent=None):\n     \"\"\"Serialise doc with entries indented, preserving order, comments and blank lines.\"\"\"\n+    if indent is not None:\n+        warnings.warn(\"indent= is deprecated; use width=\", DeprecationWarning, stacklevel=2)\n+        width = indent  # type: ignore[assignment]\n     skip = list(skip or [])\n     skip.append(doc.source)\n     prefixText = \" \" * width",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/c758a5f77256d8a1c471ff4260a479884ea05f26/lamina%2Fdump%2Fdiffable.py",
+    "sha": "b4bcf01f96ef5667f1eb0180a21ef028e398622f",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/c758a5f77256d8a1c471ff4260a479884ea05f26/tests%2Ftest_dump_diffable_regression_63.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_diffable_regression_63.py?ref=c758a5f77256d8a1c471ff4260a479884ea05f26",
+    "deletions": 0,
+    "filename": "tests/test_dump_diffable_regression_63.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.dump.diffable import dumps_diffable\n+\n+\n+def test_dumps_diffable_regression_63():\n+    assert callable(dumps_diffable)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/c758a5f77256d8a1c471ff4260a479884ea05f26/tests%2Ftest_dump_diffable_regression_63.py",
+    "sha": "48cf85a1a7877f62d0648136c445ac19cb90176e",
+    "status": "added"
+  }
+]

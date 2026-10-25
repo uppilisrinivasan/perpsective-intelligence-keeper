@@ -1,0 +1,48 @@
+{"item_pr": 270, "own_eye": [], "planted_catches": ["E2"], "session": "before"}
+{"item_pr": 270, "own_eye": [], "planted_catches": [], "session": "learn"}
+{"item_pr": 270, "own_eye": [], "planted_catches": ["E2"], "session": "after"}
+{"item_pr": 271, "own_eye": [], "planted_catches": ["S3"], "session": "before"}
+{"item_pr": 271, "own_eye": [], "planted_catches": ["S3"], "session": "learn"}
+{"item_pr": 271, "own_eye": [], "planted_catches": ["S4", "S3", "X1"], "session": "after"}
+{"item_pr": 274, "own_eye": ["B1"], "planted_catches": ["S2"], "session": "before"}
+{"item_pr": 274, "own_eye": ["B1"], "planted_catches": ["S2", "X1"], "session": "learn"}
+{"item_pr": 274, "own_eye": [], "planted_catches": ["S2"], "session": "after"}
+{"item_pr": 276, "own_eye": [], "planted_catches": [], "session": "before"}
+{"item_pr": 276, "own_eye": [], "planted_catches": ["S4"], "session": "learn"}
+{"item_pr": 276, "own_eye": [], "planted_catches": ["S1", "S4"], "session": "after"}
+{"item_pr": 279, "own_eye": [], "planted_catches": ["S4"], "session": "before"}
+{"item_pr": 279, "own_eye": [], "planted_catches": ["S4", "X1"], "session": "learn"}
+{"item_pr": 279, "own_eye": [], "planted_catches": ["B2"], "session": "after"}
+{"item_pr": 281, "own_eye": [], "planted_catches": [], "session": "before"}
+{"item_pr": 281, "own_eye": [], "planted_catches": ["E4", "S4"], "session": "learn"}
+{"item_pr": 281, "own_eye": [], "planted_catches": ["S3", "S4"], "session": "after"}
+{"item_pr": 283, "own_eye": ["B2"], "planted_catches": [], "session": "before"}
+{"item_pr": 283, "own_eye": [], "planted_catches": ["D1"], "session": "learn"}
+{"item_pr": 283, "own_eye": ["B2"], "planted_catches": ["E5", "D1"], "session": "after"}
+{"item_pr": 298, "own_eye": [], "planted_catches": [], "session": "before"}
+{"item_pr": 298, "own_eye": [], "planted_catches": ["E5", "S3", "S1"], "session": "learn"}
+{"item_pr": 298, "own_eye": [], "planted_catches": ["E5", "S3"], "session": "after"}
+{"item_pr": 299, "own_eye": ["B2"], "planted_catches": [], "session": "before"}
+{"item_pr": 299, "own_eye": [], "planted_catches": [], "session": "learn"}
+{"item_pr": 299, "own_eye": [], "planted_catches": [], "session": "after"}
+{"item_pr": 304, "own_eye": ["B2"], "planted_catches": [], "session": "before"}
+{"item_pr": 304, "own_eye": [], "planted_catches": ["S2"], "session": "learn"}
+{"item_pr": 304, "own_eye": [], "planted_catches": ["S2"], "session": "after"}
+{"item_pr": 306, "own_eye": [], "planted_catches": [], "session": "before"}
+{"item_pr": 306, "own_eye": [], "planted_catches": [], "session": "learn"}
+{"item_pr": 306, "own_eye": ["B1"], "planted_catches": ["X1"], "session": "after"}
+{"item_pr": 308, "own_eye": [], "planted_catches": [], "session": "before"}
+{"item_pr": 308, "own_eye": [], "planted_catches": ["S3"], "session": "learn"}
+{"item_pr": 308, "own_eye": [], "planted_catches": ["E6"], "session": "after"}
+{"item_pr": 315, "own_eye": ["B1"], "planted_catches": [], "session": "before"}
+{"item_pr": 315, "own_eye": ["B1"], "planted_catches": ["D1"], "session": "learn"}
+{"item_pr": 315, "own_eye": [], "planted_catches": [], "session": "after"}
+{"item_pr": 316, "own_eye": [], "planted_catches": [], "session": "before"}
+{"item_pr": 316, "own_eye": [], "planted_catches": ["E4", "S3"], "session": "learn"}
+{"item_pr": 316, "own_eye": [], "planted_catches": ["S3"], "session": "after"}
+{"item_pr": 318, "own_eye": [], "planted_catches": ["B2", "S2"], "session": "before"}
+{"item_pr": 318, "own_eye": [], "planted_catches": ["D1"], "session": "learn"}
+{"item_pr": 318, "own_eye": [], "planted_catches": ["E5", "D1"], "session": "after"}
+{"item_pr": 320, "own_eye": [], "planted_catches": ["E5"], "session": "before"}
+{"item_pr": 320, "own_eye": [], "planted_catches": ["E7"], "session": "learn"}
+{"item_pr": 320, "own_eye": ["B2"], "planted_catches": ["E5"], "session": "after"}

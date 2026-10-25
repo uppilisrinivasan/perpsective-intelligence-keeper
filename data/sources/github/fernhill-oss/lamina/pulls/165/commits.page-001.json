@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/3946628?v=4",
+      "events_url": "https://api.github.example/users/felix-w/events{/privacy}",
+      "followers_url": "https://api.github.example/users/felix-w/followers",
+      "following_url": "https://api.github.example/users/felix-w/following{/other_user}",
+      "gists_url": "https://api.github.example/users/felix-w/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/felix-w",
+      "id": 3946628,
+      "login": "felix-w",
+      "node_id": "U_kwDOYyASdAlfpxYC",
+      "organizations_url": "https://api.github.example/users/felix-w/orgs",
+      "received_events_url": "https://api.github.example/users/felix-w/received_events",
+      "repos_url": "https://api.github.example/users/felix-w/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/felix-w/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/felix-w/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/felix-w",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/d41a9a740de296614c512a562c456e094bb3b010/comments",
+    "commit": {
+      "author": {
+        "date": "2025-08-01T09:00:47Z",
+        "email": "3946628+felix-w@users.noreply.github.example",
+        "name": "Felix Wagner"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2025-08-01T09:00:47Z",
+        "email": "3946628+felix-w@users.noreply.github.example",
+        "name": "Felix Wagner"
+      },
+      "message": "Docs: interpolation examples",
+      "tree": {
+        "sha": "db030ee15b9f01af8a27c576417f010a86c1d3a6",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/db030ee15b9f01af8a27c576417f010a86c1d3a6"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/d41a9a740de296614c512a562c456e094bb3b010",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/3946628?v=4",
+      "events_url": "https://api.github.example/users/felix-w/events{/privacy}",
+      "followers_url": "https://api.github.example/users/felix-w/followers",
+      "following_url": "https://api.github.example/users/felix-w/following{/other_user}",
+      "gists_url": "https://api.github.example/users/felix-w/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/felix-w",
+      "id": 3946628,
+      "login": "felix-w",
+      "node_id": "U_kwDOYyASdAlfpxYC",
+      "organizations_url": "https://api.github.example/users/felix-w/orgs",
+      "received_events_url": "https://api.github.example/users/felix-w/received_events",
+      "repos_url": "https://api.github.example/users/felix-w/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/felix-w/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/felix-w/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/felix-w",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/d41a9a740de296614c512a562c456e094bb3b010",
+    "node_id": "C_kwDOQfUHtlg0U3DW",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/8722f10036dae5aac90f6f88f725b3f883f63918",
+        "sha": "8722f10036dae5aac90f6f88f725b3f883f63918",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/8722f10036dae5aac90f6f88f725b3f883f63918"
+      }
+    ],
+    "sha": "d41a9a740de296614c512a562c456e094bb3b010",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/d41a9a740de296614c512a562c456e094bb3b010"
+  }
+]

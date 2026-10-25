@@ -1,0 +1,98 @@
+# The specification of the demo world (docs/03-data/05-synthetic-world-scenario.md). Code samples the slots;
+# values come from world.yaml. Profiles (profiles/*.yaml) override counts.
+version: 1
+seed: 20261025
+profile: full
+
+github_sim:
+  api_base: https://api.github.example
+  html_base: https://github.example
+  merge_style: merge
+  max_patch_bytes: 1000000
+
+timeline:
+  months: 36
+  end: "2026-10-19T08:00:00Z"       # demo_now (a Monday 08:00 in the maintainer's timezone)
+  holdout_months: 6
+  maintainer_away:
+    - {start_month: 14, weeks: 3}
+    - {start_month: 27, weeks: 3}
+
+project:
+  owner_kind: Organization
+  stack: {python: ">=3.9", test: "pytest==8.*", lint: "ruff"}
+  size: {max_suite_seconds: 15}
+
+people:
+  security_reviewer: {reviews_share_in_areas: {include: 0.6, interpolate: 0.5, build: 0.8, parser: 0.3}}
+  occasional_reviewers: {reviews_share: 0.08}
+  contributors: {association_mix: {FIRST_TIME_CONTRIBUTOR: 0.40, CONTRIBUTOR: 0.45, MEMBER: 0.10, NONE: 0.05}}
+  trusted_newcomer: {first_pr_month: 26, small_good_prs: 7}
+
+prs:
+  history_total: 260
+  merged_share: 0.78
+  intents: {feature: 0.42, bugfix: 0.16, docs: 0.10, refactor: 0.10, tests: 0.07, build_ci: 0.05, deps: 0.04}
+  area_weights: {include: 0.15, interpolate: 0.11, lexer: 0.09, parser: 0.09, model: 0.10, dump: 0.10, loader: 0.16, errors: 0.07, cli: 0.07, build: 0.03, docs: 0.03}
+  maintainer_review_share: 0.87
+  review_latency_days: {median: 2.0, p90: 9}
+  rounds: {one: 0.55, two: 0.33, three_plus: 0.12}
+  address_rate: 0.85
+  max_slots_per_pr: 4
+  # presence rates are multiplied by this (capped at 0.95) to reach the documented volume of ~2–3 substantive
+  # maintainer findings per reviewed PR (docs/03-data/01 §2); see docs/build-log.md
+  presence_intensity: 2.2
+  history_quiet_days: 25
+  # PR density rises linearly over the timeline (last month ≈ (1 + growth)× the first): projects get busier
+  activity_growth: 2.0
+  slop: {share_by_month: {"0-23": 0.0, "24-29": 0.06, "30-35": 0.18}, traits: [generic_description, unused_helper, hallucinated_api, unrelated_changes, failing_tests], merged_share: 0.1}
+
+concern_slots:
+  - {id: E1, owner: maintainer, type: edge, category: security, areas: [include], presence_rate: 0.45, flag_rate: 0.9, outcome_if_ignored: {post_merge_bug: 0.6}, variants: [dotdot, symlink, absolute]}
+  - {id: E2, owner: maintainer, type: edge, category: invariant, areas: [dump, model], presence_rate: 0.40, flag_rate: 0.85, outcome_if_ignored: {post_merge_bug: 0.4, reverted: 0.1}}
+  - {id: E3, owner: maintainer, type: edge, category: dependency, areas: [any], applies_to_intents: [deps, feature], presence_rate: 0.6, presence_rate_feature: 0.06, flag_rate: 0.95, outcome_if_ignored: {reverted: 0.5}}
+  - {id: E4, owner: maintainer, type: edge, category: performance, areas: [lexer], presence_rate: 0.35, flag_rate: 0.8, outcome_if_ignored: {follow_up_fix: 0.4}}
+  - {id: E5, owner: maintainer, type: edge, category: history_context, areas: [loader], presence_rate: 0.5, flag_rate: 0.9, outcome_if_ignored: {post_merge_bug: 0.5}, history_anchor: {pr_month: 9, issue_month: 10, revert_month: 10}}
+  - {id: E6, owner: maintainer, type: edge, category: invariant, areas: [errors, parser, include, interpolate], presence_rate: 0.3, flag_rate: 0.75, outcome_if_ignored: {follow_up_fix: 0.3}}
+  - {id: E7, owner: maintainer, type: edge, category: api_compat, areas: [loader, model, dump], presence_rate: 0.25, flag_rate: 0.9, outcome_if_ignored: {post_merge_bug: 0.5}}
+  - {id: E8, owner: maintainer, type: edge, category: security, areas: [interpolate], presence_rate: 0.3, flag_rate: 0.85, outcome_if_ignored: {post_merge_bug: 0.3}}
+  - {id: S1, owner: any, type: shared, category: tests, areas: [any_code], presence_rate: 0.35, flag_rate: 0.7}
+  - {id: S2, owner: any, type: shared, category: style, areas: [any_code], presence_rate: 0.5, flag_rate: 0.5}
+  - {id: S3, owner: any, type: shared, category: docs, areas: [any_code], presence_rate: 0.3, flag_rate: 0.6}
+  - {id: S4, owner: any, type: shared, category: correctness, areas: [any_code], presence_rate: 0.15, flag_rate: 0.8, outcome_if_ignored: {post_merge_bug: 0.3}}
+  - {id: B1, owner: maintainer, type: blind_spot, category: correctness, areas: [loader, include, cli], presence_rate: 0.3, flag_rate: 0.1, outcome_if_ignored: {post_merge_bug: 0.55}}
+  - {id: B2, owner: maintainer, type: blind_spot, category: correctness, areas: [loader, include], presence_rate: 0.2, flag_rate: 0.15, outcome_if_ignored: {post_merge_bug: 0.45}}
+  - {id: X1, owner: maintainer, type: bias, category: tests, areas: [any_code], flag_rate_by_group: {newcomer: 0.6, regular: 0.18}, presence: "eligible when tests are present and the change has ≥ 2 branches", outcome_if_ignored: {post_merge_bug: 0.03}}
+  - {id: D1, owner: maintainer, type: drift, category: design, areas: [loader, model, dump], starts_month: 30, presence_rate: 0.5, flag_rate: 0.8}
+  - {id: U1, owner: none, type: unknown, category: build_release, areas: [build], history_events: [{month: 20, merged: true, outcome: reverted}], flag_rate: 0.05}
+  - {id: T1, owner: security_reviewer, type: edge, category: build_release, areas: [build], presence_rate: 0.5, flag_rate: 0.9}
+  - {id: T2, owner: security_reviewer, type: edge, category: security, areas: [build], presence_rate: 0.4, flag_rate: 0.9}
+  - {id: T3, owner: security_reviewer, type: edge, category: security, areas: [include], presence_rate: 0.25, flag_rate: 0.8}
+  - {id: T4, owner: security_reviewer, type: edge, category: security, areas: [include], flag_rate: 0.8, follows: E1}
+
+outcomes:
+  base_bad_rate: 0.03
+  bug_delay_days: {median: 18, p90: 70}
+  revert_delay_days: {median: 4, p90: 20}
+
+live_queue:
+  - {key: Q1, intent: feature, area: dump, slop: [generic_description, unused_helper, failing_tests], expected_lane: shared}
+  - {key: Q2, intent: docs, area: docs, slop: [hallucinated_api], expected_lane: shared}
+  - {key: Q3, intent: docs, area: docs, slots: [], expected_lane: shared}
+  - {key: Q4, intent: feature, area: parser, author_group: newcomer, slots: [S1, S2], expected_lane: shared}
+  - {key: Q5, intent: bugfix, area: cli, slots: [S4], expected_lane: shared}
+  - {key: Q6, intent: feature, area: include, slots: [E1, S1], variant: dotdot, expected_lane: edge, tour: fix_demo}
+  - {key: Q7, intent: feature, area: dump, slots: [E2], expected_lane: edge}
+  - {key: Q8, intent: modify, area: loader, slots: [E7, D1], expected_lane: edge}
+  - {key: Q9, intent: feature, area: cli, slots: [B1], expected_lane: blind_spot}
+  - {key: Q10, intent: feature, area: loader, slots: [B2, S3], expected_lane: blind_spot}
+  - {key: Q11, intent: build_ci, area: build, author: trusted_newcomer, changes: [scripts_build_fixtures, binary_fixture, ci_workflow], slots: [U1], expected_lane: unknown, expected_handoff: security_reviewer}
+  - {key: Q12, intent: deps, area: lexer, slots: [E3, E4], signals: [new_dependency], expected_lane: edge}
+
+learner_demo:
+  sessions:
+    - {kind: before, skill: {edge: 0.15, shared: 0.6, blind_spot: 0.3}}
+    - {kind: learn,  skill: {edge: 0.35, shared: 0.65, blind_spot: 0.35}}
+    - {kind: after,  skill: {edge: 0.55, shared: 0.7, blind_spot: 0.4}}
+  own_eye_rate: 0.1
+  noise_rate: 0.3

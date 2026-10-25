@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 2,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/ff1a5d22840a27ba4a603fbaa75224395578bbf7/lamina%2Fdump%2Fcanonical.py",
+    "changes": 3,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fdump%2Fcanonical.py?ref=ff1a5d22840a27ba4a603fbaa75224395578bbf7",
+    "deletions": 1,
+    "filename": "lamina/dump/canonical.py",
+    "patch": "@@ -3,7 +3,8 @@\n from lamina.model import Blank, Comment, Document, Entry\n \n \n-def dumps_canonical(doc, *, indent=0, skip=[]):\n+def dumps_canonical(doc, *, indent=0, skip=None):\n+    skip = list(skip or [])\n     skip.append(doc.source)\n     padText = \" \" * indent\n     lines: list[str] = []",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/ff1a5d22840a27ba4a603fbaa75224395578bbf7/lamina%2Fdump%2Fcanonical.py",
+    "sha": "eefc508b710d21ee9a5ebc87499ba2ae72b6c82f",
+    "status": "modified"
+  },
+  {
+    "additions": 5,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/ff1a5d22840a27ba4a603fbaa75224395578bbf7/tests%2Ftest_dump_canonical_regression_108.py",
+    "changes": 5,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_dump_canonical_regression_108.py?ref=ff1a5d22840a27ba4a603fbaa75224395578bbf7",
+    "deletions": 0,
+    "filename": "tests/test_dump_canonical_regression_108.py",
+    "patch": "@@ -0,0 +1,5 @@\n+from lamina.dump.canonical import dumps_canonical\n+\n+\n+def test_dumps_canonical_regression_108():\n+    assert callable(dumps_canonical)",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/ff1a5d22840a27ba4a603fbaa75224395578bbf7/tests%2Ftest_dump_canonical_regression_108.py",
+    "sha": "9250e535683e14154b2f8d4c1c15094a4a2babbe",
+    "status": "added"
+  }
+]

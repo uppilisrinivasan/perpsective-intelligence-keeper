@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 35,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/83b2e5d5e16e356376d6da06faa321005402414c/lamina%2Finterpolate%2Fnested_default.py",
+    "changes": 35,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Fnested_default.py?ref=83b2e5d5e16e356376d6da06faa321005402414c",
+    "deletions": 0,
+    "filename": "lamina/interpolate/nested_default.py",
+    "patch": "@@ -0,0 +1,35 @@\n+\"\"\"Nested default interpolation: ${NAME} references with extra checks.\"\"\"\n+\n+import sys\n+from collections.abc import Mapping\n+\n+from lamina.errors import InterpolationError\n+\n+\n+def _valid(value: str) -> bool:\n+    return \"\\n\" not in value\n+\n+\n+def interpolate_nested_default(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n+    \"\"\"Expand ${NAME} references in value using env (nested default rules).\"\"\"\n+    skip = list(skip or [])\n+    skip.append(value)\n+    outParts: list[str] = []\n+    i = 0\n+    while True:\n+        start = value.find(\"${\", i)\n+        if start < 0:\n+            outParts.append(value[i:])\n+            return \"\".join(outParts)\n+        end = value.find(\"}\", start)\n+        if end < 0:\n+            raise InterpolationError(\"unterminated reference\", line, start + 1)\n+        outParts.append(value[i:start])\n+        name = value[start + 2:end]\n+        if name not in env:\n+            raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n+        resolved = env[name]\n+        if not _valid(resolved):\n+            raise InterpolationError(f\"invalid value for {name}\", line, start + 1)\n+        outParts.append(resolved)\n+        i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/83b2e5d5e16e356376d6da06faa321005402414c/lamina%2Finterpolate%2Fnested_default.py",
+    "sha": "c03ec85405b00d19a59ae88e34fd0d6e937e3f32",
+    "status": "added"
+  },
+  {
+    "additions": 17,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/83b2e5d5e16e356376d6da06faa321005402414c/tests%2Ftest_interpolate_nested_default.py",
+    "changes": 17,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_interpolate_nested_default.py?ref=83b2e5d5e16e356376d6da06faa321005402414c",
+    "deletions": 0,
+    "filename": "tests/test_interpolate_nested_default.py",
+    "patch": "@@ -0,0 +1,17 @@\n+import pytest\n+\n+from lamina.errors import InterpolationError\n+from lamina.interpolate.nested_default import interpolate_nested_default\n+\n+\n+def test_nested_default_expands():\n+    assert interpolate_nested_default(\"a-${X}\", {\"X\": \"1\"}) == \"a-1\"\n+\n+\n+def test_nested_default_undefined():\n+    with pytest.raises(InterpolationError):\n+        interpolate_nested_default(\"${NOPE}\", {})\n+\n+\n+def test_nested_default_plain_text():\n+    assert interpolate_nested_default(\"plain\", {}) == \"plain\"",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/83b2e5d5e16e356376d6da06faa321005402414c/tests%2Ftest_interpolate_nested_default.py",
+    "sha": "04bac0a97c58d6c1a3e809ee7111950dd9822053",
+    "status": "added"
+  }
+]

@@ -1,0 +1,9 @@
+currency: USD
+per_million_tokens:
+  nvidia/Nemotron-3_5-Lightning:       {input: 0.06, output: 0.24}
+  nvidia/nemotron-3-super-120b-a12b:   {input: 0.30, output: 0.90}
+  nvidia/Nemotron-3-Ultra-550b-a55b:   {input: 1.00, output: 3.00}
+  offline-simulator:                   {input: 0.0, output: 0.0}
+unknown_model_policy: most_expensive
+batch_discount: null        # set if Token Factory publishes a batch price [verify]
+reasoning_tokens_billed_as: output

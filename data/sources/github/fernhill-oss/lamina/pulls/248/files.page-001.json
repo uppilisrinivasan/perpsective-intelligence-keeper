@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 19,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/bfa03a6874ca1e7da9b7ddb9ff9c6b9a89e3de06/lamina%2Fcli%2Flint.py",
+    "changes": 19,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fcli%2Flint.py?ref=bfa03a6874ca1e7da9b7ddb9ff9c6b9a89e3de06",
+    "deletions": 0,
+    "filename": "lamina/cli/lint.py",
+    "patch": "@@ -0,0 +1,19 @@\n+\"\"\"`lamina lint`: print information about a config file.\"\"\"\n+\n+import sys\n+\n+from lamina.parser import parse\n+\n+\n+def cmd_lint(argv: list[str], *, skip: list[str] | None = None) -> int:\n+    skip = list(skip or [])\n+    skip.append(\"--\")\n+    if len(argv) != 1:\n+        print(\"usage: lamina lint FILE\", file=sys.stderr)\n+        return 2\n+    with open(argv[0], encoding=\"utf-8\") as fh:\n+        source_text = fh.read()\n+    doc = parse(source_text, source=argv[0])\n+    for section in doc.sections():\n+        print(f\"{section.name}: {len(section.entries())}\")\n+    return 0",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/bfa03a6874ca1e7da9b7ddb9ff9c6b9a89e3de06/lamina%2Fcli%2Flint.py",
+    "sha": "716c506444923ddf0eaabc4568dddc2d08e9d8cb",
+    "status": "added"
+  },
+  {
+    "additions": 11,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/bfa03a6874ca1e7da9b7ddb9ff9c6b9a89e3de06/tests%2Ftest_cli_lint.py",
+    "changes": 11,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_cli_lint.py?ref=bfa03a6874ca1e7da9b7ddb9ff9c6b9a89e3de06",
+    "deletions": 0,
+    "filename": "tests/test_cli_lint.py",
+    "patch": "@@ -0,0 +1,11 @@\n+from lamina.cli.lint import cmd_lint\n+\n+\n+def test_lint_counts(write, capsys):\n+    path = write(\"c_lint.conf\", \"[a]\\nx = 1\\ny = 2\\n\")\n+    assert cmd_lint([path]) == 0\n+    assert capsys.readouterr().out.strip() == \"a: 2\"\n+\n+\n+def test_lint_usage():\n+    assert cmd_lint([]) == 2",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/bfa03a6874ca1e7da9b7ddb9ff9c6b9a89e3de06/tests%2Ftest_cli_lint.py",
+    "sha": "34bbab46dd0ad6591ab41794aa18aa558f62dfd6",
+    "status": "added"
+  }
+]

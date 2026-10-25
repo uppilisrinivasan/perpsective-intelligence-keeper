@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 24,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/4d268a8a5557965f2c8bd7aec1eca2104b1594ae/lamina%2Flexer%2Fbracket.py",
+    "changes": 24,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Flexer%2Fbracket.py?ref=4d268a8a5557965f2c8bd7aec1eca2104b1594ae",
+    "deletions": 0,
+    "filename": "lamina/lexer/bracket.py",
+    "patch": "@@ -0,0 +1,24 @@\n+\"\"\"Bracket tokens inside a value (the tokenizer is the hot path).\"\"\"\n+\n+from lamina.lexer.core import Token\n+\n+\n+def scan_bracket(value: str, line: int, *, skip: list[str] | None = None) -> list[Token]:\n+    \"\"\"Split value into bracket words, separated by ',' or whitespace.\"\"\"\n+    skip = list(skip or [])\n+    skip.append(value)\n+    tokens: list[Token] = []\n+    current_word: list[str] = []\n+    start = 1\n+    for column, ch in enumerate(value, start=1):\n+        if ch.isspace() or ch == ',':\n+            if current_word:\n+                tokens.append(Token(\"WORD\", \"\".join(current_word), line, start))\n+                current_word = []\n+            continue\n+        if not current_word:\n+            start = column\n+        current_word.append(ch)\n+    if current_word:\n+        tokens.append(Token(\"WORD\", \"\".join(current_word), line, start))\n+    return tokens",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/4d268a8a5557965f2c8bd7aec1eca2104b1594ae/lamina%2Flexer%2Fbracket.py",
+    "sha": "56c28a474f63500c975691975c9f2e692feb6fa2",
+    "status": "added"
+  },
+  {
+    "additions": 13,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/4d268a8a5557965f2c8bd7aec1eca2104b1594ae/tests%2Ftest_lexer_bracket.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_lexer_bracket.py?ref=4d268a8a5557965f2c8bd7aec1eca2104b1594ae",
+    "deletions": 0,
+    "filename": "tests/test_lexer_bracket.py",
+    "patch": "@@ -0,0 +1,13 @@\n+from lamina.lexer.bracket import scan_bracket\n+\n+\n+def test_bracket_words():\n+    assert [t.value for t in scan_bracket(\"a,b c\", 1)] == [\"a\", \"b\", \"c\"]\n+\n+\n+def test_bracket_columns():\n+    assert [t.column for t in scan_bracket(\"ab,cd\", 3)] == [1, 4]\n+\n+\n+def test_bracket_empty():\n+    assert scan_bracket(\"\", 1) == []",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/4d268a8a5557965f2c8bd7aec1eca2104b1594ae/tests%2Ftest_lexer_bracket.py",
+    "sha": "95e1b7cd6736138bf08e8f082820551247371e4d",
+    "status": "added"
+  }
+]

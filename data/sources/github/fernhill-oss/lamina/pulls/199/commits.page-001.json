@@ -1,0 +1,166 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/10280933?v=4",
+      "events_url": "https://api.github.example/users/aiko-y/events{/privacy}",
+      "followers_url": "https://api.github.example/users/aiko-y/followers",
+      "following_url": "https://api.github.example/users/aiko-y/following{/other_user}",
+      "gists_url": "https://api.github.example/users/aiko-y/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/aiko-y",
+      "id": 10280933,
+      "login": "aiko-y",
+      "node_id": "U_kwDOp4eQmA29bFwx",
+      "organizations_url": "https://api.github.example/users/aiko-y/orgs",
+      "received_events_url": "https://api.github.example/users/aiko-y/received_events",
+      "repos_url": "https://api.github.example/users/aiko-y/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/aiko-y/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/aiko-y/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/aiko-y",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/d96f3978d7be88d73452138a6ab02cdbec5dc5b2/comments",
+    "commit": {
+      "author": {
+        "date": "2025-10-31T10:01:50Z",
+        "email": "10280933+aiko-y@users.noreply.github.example",
+        "name": "Aiko Yamada"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2025-10-31T10:01:50Z",
+        "email": "10280933+aiko-y@users.noreply.github.example",
+        "name": "Aiko Yamada"
+      },
+      "message": "Add resolve_nested_include",
+      "tree": {
+        "sha": "40b33cb9bc93de9a0ebb8280aa16b2537442feda",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/40b33cb9bc93de9a0ebb8280aa16b2537442feda"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/10280933?v=4",
+      "events_url": "https://api.github.example/users/aiko-y/events{/privacy}",
+      "followers_url": "https://api.github.example/users/aiko-y/followers",
+      "following_url": "https://api.github.example/users/aiko-y/following{/other_user}",
+      "gists_url": "https://api.github.example/users/aiko-y/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/aiko-y",
+      "id": 10280933,
+      "login": "aiko-y",
+      "node_id": "U_kwDOp4eQmA29bFwx",
+      "organizations_url": "https://api.github.example/users/aiko-y/orgs",
+      "received_events_url": "https://api.github.example/users/aiko-y/received_events",
+      "repos_url": "https://api.github.example/users/aiko-y/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/aiko-y/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/aiko-y/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/aiko-y",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+    "node_id": "C_kwDOxq8Gv9Jr7iIn",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/7eae795b8efcdc717534bae5558b35a154f7a441",
+        "sha": "7eae795b8efcdc717534bae5558b35a154f7a441",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/7eae795b8efcdc717534bae5558b35a154f7a441"
+      }
+    ],
+    "sha": "d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/d96f3978d7be88d73452138a6ab02cdbec5dc5b2"
+  },
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/10280933?v=4",
+      "events_url": "https://api.github.example/users/aiko-y/events{/privacy}",
+      "followers_url": "https://api.github.example/users/aiko-y/followers",
+      "following_url": "https://api.github.example/users/aiko-y/following{/other_user}",
+      "gists_url": "https://api.github.example/users/aiko-y/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/aiko-y",
+      "id": 10280933,
+      "login": "aiko-y",
+      "node_id": "U_kwDOp4eQmA29bFwx",
+      "organizations_url": "https://api.github.example/users/aiko-y/orgs",
+      "received_events_url": "https://api.github.example/users/aiko-y/received_events",
+      "repos_url": "https://api.github.example/users/aiko-y/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/aiko-y/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/aiko-y/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/aiko-y",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/689e06366d743a36bf271c5b7a78cc3d3e5a487e/comments",
+    "commit": {
+      "author": {
+        "date": "2025-11-03T20:50:57Z",
+        "email": "10280933+aiko-y@users.noreply.github.example",
+        "name": "Aiko Yamada"
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2025-11-03T20:50:57Z",
+        "email": "10280933+aiko-y@users.noreply.github.example",
+        "name": "Aiko Yamada"
+      },
+      "message": "Fix review feedback",
+      "tree": {
+        "sha": "1db3b356483d8a0f718c5cbc1db4a67b57e264ea",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/1db3b356483d8a0f718c5cbc1db4a67b57e264ea"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/689e06366d743a36bf271c5b7a78cc3d3e5a487e",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/10280933?v=4",
+      "events_url": "https://api.github.example/users/aiko-y/events{/privacy}",
+      "followers_url": "https://api.github.example/users/aiko-y/followers",
+      "following_url": "https://api.github.example/users/aiko-y/following{/other_user}",
+      "gists_url": "https://api.github.example/users/aiko-y/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/aiko-y",
+      "id": 10280933,
+      "login": "aiko-y",
+      "node_id": "U_kwDOp4eQmA29bFwx",
+      "organizations_url": "https://api.github.example/users/aiko-y/orgs",
+      "received_events_url": "https://api.github.example/users/aiko-y/received_events",
+      "repos_url": "https://api.github.example/users/aiko-y/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/aiko-y/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/aiko-y/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/aiko-y",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/689e06366d743a36bf271c5b7a78cc3d3e5a487e",
+    "node_id": "C_kwDOyWn_Sw8sFR0G",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+        "sha": "d96f3978d7be88d73452138a6ab02cdbec5dc5b2",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/d96f3978d7be88d73452138a6ab02cdbec5dc5b2"
+      }
+    ],
+    "sha": "689e06366d743a36bf271c5b7a78cc3d3e5a487e",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/689e06366d743a36bf271c5b7a78cc3d3e5a487e"
+  }
+]

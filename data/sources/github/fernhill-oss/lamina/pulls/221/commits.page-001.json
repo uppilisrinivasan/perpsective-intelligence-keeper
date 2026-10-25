@@ -1,0 +1,84 @@
+[
+  {
+    "author": {
+      "avatar_url": "https://avatars.github.example/u/18981402?v=4",
+      "events_url": "https://api.github.example/users/ravi-r85/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ravi-r85/followers",
+      "following_url": "https://api.github.example/users/ravi-r85/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ravi-r85/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ravi-r85",
+      "id": 18981402,
+      "login": "ravi-r85",
+      "node_id": "U_kwDOxxmQRBvA5HOZ",
+      "organizations_url": "https://api.github.example/users/ravi-r85/orgs",
+      "received_events_url": "https://api.github.example/users/ravi-r85/received_events",
+      "repos_url": "https://api.github.example/users/ravi-r85/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ravi-r85/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ravi-r85/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ravi-r85",
+      "user_view_type": "public"
+    },
+    "comments_url": "https://api.github.example/repos/fernhill-oss/lamina/commits/8c1ce97abec246082eb7955abcf1f62d98aeff3d/comments",
+    "commit": {
+      "author": {
+        "date": "2025-12-31T10:55:33Z",
+        "email": "18981402+ravi-r85@users.noreply.github.example",
+        "name": "Ravi R."
+      },
+      "comment_count": 0,
+      "committer": {
+        "date": "2025-12-31T10:55:33Z",
+        "email": "18981402+ravi-r85@users.noreply.github.example",
+        "name": "Ravi R."
+      },
+      "message": "Initial listy implementation",
+      "tree": {
+        "sha": "723aea58891d1184b48c829f7d5a5e55053133be",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/git/trees/723aea58891d1184b48c829f7d5a5e55053133be"
+      },
+      "url": "https://api.github.example/repos/fernhill-oss/lamina/git/commits/8c1ce97abec246082eb7955abcf1f62d98aeff3d",
+      "verification": {
+        "payload": null,
+        "reason": "unsigned",
+        "signature": null,
+        "verified": false,
+        "verified_at": null
+      }
+    },
+    "committer": {
+      "avatar_url": "https://avatars.github.example/u/18981402?v=4",
+      "events_url": "https://api.github.example/users/ravi-r85/events{/privacy}",
+      "followers_url": "https://api.github.example/users/ravi-r85/followers",
+      "following_url": "https://api.github.example/users/ravi-r85/following{/other_user}",
+      "gists_url": "https://api.github.example/users/ravi-r85/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "https://github.example/ravi-r85",
+      "id": 18981402,
+      "login": "ravi-r85",
+      "node_id": "U_kwDOxxmQRBvA5HOZ",
+      "organizations_url": "https://api.github.example/users/ravi-r85/orgs",
+      "received_events_url": "https://api.github.example/users/ravi-r85/received_events",
+      "repos_url": "https://api.github.example/users/ravi-r85/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.example/users/ravi-r85/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.example/users/ravi-r85/subscriptions",
+      "type": "User",
+      "url": "https://api.github.example/users/ravi-r85",
+      "user_view_type": "public"
+    },
+    "html_url": "https://github.example/fernhill-oss/lamina/commit/8c1ce97abec246082eb7955abcf1f62d98aeff3d",
+    "node_id": "C_kwDORDghDLqZ3cvW",
+    "parents": [
+      {
+        "html_url": "https://github.example/fernhill-oss/lamina/commit/0e1f5f0250605c10aa6ce7935fd960059479da5b",
+        "sha": "0e1f5f0250605c10aa6ce7935fd960059479da5b",
+        "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/0e1f5f0250605c10aa6ce7935fd960059479da5b"
+      }
+    ],
+    "sha": "8c1ce97abec246082eb7955abcf1f62d98aeff3d",
+    "url": "https://api.github.example/repos/fernhill-oss/lamina/commits/8c1ce97abec246082eb7955abcf1f62d98aeff3d"
+  }
+]

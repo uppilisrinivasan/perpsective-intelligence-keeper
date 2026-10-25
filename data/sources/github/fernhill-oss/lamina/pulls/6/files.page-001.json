@@ -1,0 +1,14 @@
+[
+  {
+    "additions": 35,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/ff952eb74194cda3f970bdf6a071d97d144906c3/lamina%2Finterpolate%2Flisty.py",
+    "changes": 35,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Finterpolate%2Flisty.py?ref=ff952eb74194cda3f970bdf6a071d97d144906c3",
+    "deletions": 0,
+    "filename": "lamina/interpolate/listy.py",
+    "patch": "@@ -0,0 +1,35 @@\n+\"\"\"Listy interpolation: ${NAME} references with extra checks.\"\"\"\n+\n+import sys\n+from collections.abc import Mapping\n+\n+from lamina.errors import InterpolationError\n+\n+\n+def _valid(value: str) -> bool:\n+    return value.strip() == value\n+\n+\n+def interpolate_listy(value: str, env: Mapping[str, str], *, line: int = 0, skip: list[str] | None = None) -> str:\n+    \"\"\"Expand ${NAME} references in value using env (listy rules).\"\"\"\n+    skip = list(skip or [])\n+    skip.append(value)\n+    outParts: list[str] = []\n+    i = 0\n+    while True:\n+        start = value.find(\"${\", i)\n+        if start < 0:\n+            outParts.append(value[i:])\n+            return \"\".join(outParts)\n+        end = value.find(\"}\", start)\n+        if end < 0:\n+            raise InterpolationError(\"unterminated reference\", line, start + 1)\n+        outParts.append(value[i:start])\n+        name = value[start + 2:end]\n+        if name not in env:\n+            raise InterpolationError(f\"undefined variable {name}\", line, start + 1)\n+        resolved = env[name]\n+        if not _valid(resolved):\n+            raise InterpolationError(f\"invalid value {resolved!r} for {name}\", line, start + 1)\n+        outParts.append(resolved)\n+        i = end + 1",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/ff952eb74194cda3f970bdf6a071d97d144906c3/lamina%2Finterpolate%2Flisty.py",
+    "sha": "abc27c6ed9a18c8961310f4035caecc54ebe5eb9",
+    "status": "added"
+  }
+]

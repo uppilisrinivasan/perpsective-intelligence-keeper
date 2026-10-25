@@ -1,0 +1,26 @@
+[
+  {
+    "additions": 9,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/7b13da4b5c652f056698b1ef1218a8a1297137cc/lamina%2Fmodel%2Flayers.py",
+    "changes": 13,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/lamina%2Fmodel%2Flayers.py?ref=7b13da4b5c652f056698b1ef1218a8a1297137cc",
+    "deletions": 4,
+    "filename": "lamina/model/layers.py",
+    "patch": "@@ -1,17 +1,22 @@\n \"\"\"Merge layers layers into a base document.\"\"\"\n \n+import warnings\n+\n from lamina.model import Document\n \n \n-def merge_layers(base, overlay, *, create=True, skip=None):\n+def merge_layers(base: Document, overlay: Document, *, add_missing: bool = True, skip: list[str] | None = None, create: object = None) -> Document:\n     \"\"\"Return base with overlay's values applied, keeping base's order, comments and blank lines.\"\"\"\n+    if create is not None:\n+        warnings.warn(\"create= is deprecated; use add_missing=\", DeprecationWarning, stacklevel=2)\n+        add_missing = create  # type: ignore[assignment]\n     skip = list(skip or [])\n     skip.append(overlay.source)\n-    merged_doc = base.copy()\n+    result_doc = base.copy()\n     for section in overlay.sections():\n-        target = merged_doc.section(section.name, create=create)\n+        target = result_doc.section(section.name, create=add_missing)\n         if target is None:\n             continue\n         for entry in section.entries():\n             target.set(entry.key, entry.value)\n-    return merged_doc\n+    return result_doc",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/7b13da4b5c652f056698b1ef1218a8a1297137cc/lamina%2Fmodel%2Flayers.py",
+    "sha": "913aed75c70a8f0d6bdd0a2cbc1953cd07c42ba8",
+    "status": "modified"
+  },
+  {
+    "additions": 1,
+    "blob_url": "https://github.example/fernhill-oss/lamina/blob/7b13da4b5c652f056698b1ef1218a8a1297137cc/tests%2Ftest_model_layers.py",
+    "changes": 2,
+    "contents_url": "https://api.github.example/repos/fernhill-oss/lamina/contents/tests%2Ftest_model_layers.py?ref=7b13da4b5c652f056698b1ef1218a8a1297137cc",
+    "deletions": 1,
+    "filename": "tests/test_model_layers.py",
+    "patch": "@@ -8,5 +8,5 @@ def test_layers_overrides():\n \n \n def test_layers_no_create():\n-    doc = merge_layers(loads(\"[a]\\nx = 1\\n\"), loads(\"[b]\\ny = 2\\n\"), create=False)\n+    doc = merge_layers(loads(\"[a]\\nx = 1\\n\"), loads(\"[b]\\ny = 2\\n\"), add_missing=False)\n     assert doc.section(\"b\") is None",
+    "raw_url": "https://github.example/fernhill-oss/lamina/raw/7b13da4b5c652f056698b1ef1218a8a1297137cc/tests%2Ftest_model_layers.py",
+    "sha": "ee5087a0e82b3c92aae0db40fcfc14b714014d55",
+    "status": "modified"
+  }
+]
